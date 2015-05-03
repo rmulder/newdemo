@@ -1,0 +1,24 @@
+/*
+WARNING: mobile-dsp.less is used to dynamically generate mobile-dsp.css. Do *NOT* edit mobile-dsp.css directly!!
+Declare LESS Variables here:
+*/
+// Core variables and mixins
+@import "variables.less";
+
+.logo {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: @logoPath no-repeat;
+  width: @logoWidth; /* Width of new image */
+  height: @logoHeight; /* Height of new image */
+  padding-left: @logoWidth; /* Equal to width of new image */
+  margin-left: 20px;
+}
+
+#docs {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

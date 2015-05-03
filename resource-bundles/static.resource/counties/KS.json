@@ -1,0 +1,527 @@
+[
+  {
+    "name": "Allen County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Anderson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Atchison County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Barber County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Barton County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bourbon County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Chase County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Chautauqua County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Cheyenne County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Cloud County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Coffey County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Comanche County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Cowley County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Decatur County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Dickinson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Doniphan County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Edwards County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Elk County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Ellis County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Ellsworth County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Finney County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Ford County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Geary County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Gove County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Graham County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Gray County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Greeley County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Greenwood County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Harper County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Harvey County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Haskell County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Hodgeman County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Jewell County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Kearny County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Kingman County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Kiowa County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Labette County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Lane County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Leavenworth County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Linn County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Lyon County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "McPherson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Meade County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Miami County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Mitchell County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Morris County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Morton County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Nemaha County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Neosho County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Ness County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Norton County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Osage County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Osborne County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Ottawa County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Pawnee County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Phillips County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Pottawatomie County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Pratt County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Rawlins County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Reno County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Republic County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Rice County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Riley County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Rooks County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Rush County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Russell County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Saline County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Sedgwick County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Seward County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Shawnee County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Sheridan County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Sherman County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Smith County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Stafford County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Stanton County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Stevens County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "Sumner County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "Thomas County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Trego County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Wabaunsee County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "Wallace County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "199"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "201"
+  },
+  {
+    "name": "Wichita County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "203"
+  },
+  {
+    "name": "Wilson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "205"
+  },
+  {
+    "name": "Woodson County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "207"
+  },
+  {
+    "name": "Wyandotte County",
+    "state_abbreviation": "KS",
+    "fips_county_cd": "209"
+  }
+]

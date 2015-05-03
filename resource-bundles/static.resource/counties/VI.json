@@ -1,0 +1,17 @@
+[
+  {
+    "name": "St. Croix Island",
+    "state_abbreviation": "VI",
+    "fips_county_cd": "010"
+  },
+  {
+    "name": "St. John Island",
+    "state_abbreviation": "VI",
+    "fips_county_cd": "020"
+  },
+  {
+    "name": "St. Thomas Island",
+    "state_abbreviation": "VI",
+    "fips_county_cd": "030"
+  }
+]

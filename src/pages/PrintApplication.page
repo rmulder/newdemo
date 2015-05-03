@@ -1,0 +1,22 @@
+<!--<apex:page standardController="Application__c" extensions="PrintApplication" action="printApp" showHeader="false" sidebar="false">-->
+<apex:page standardController="Application__c" extensions="PrintApplication" showHeader="false" sidebar="false">
+
+<apex:form >
+
+<style>
+	.btn{display:none;}
+</style>
+
+<apex:detail subject="{!appId}" relatedList="false"/>
+<apex:detail subject="{!aboutAccId}" relatedList="false" rendered="{!aboutAccId!=null}"/>
+
+</apex:form>
+
+<!-- script to print an application on page load -->
+<script>   
+    window.onload = function() {
+        window.print();
+    }
+</script>
+
+</apex:page>

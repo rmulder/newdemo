@@ -1,0 +1,292 @@
+[
+  {
+    "name": "Alameda County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Alpine County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Amador County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Butte County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Calaveras County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Colusa County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Contra Costa County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Del Norte County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "El Dorado County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Fresno County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Glenn County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Humboldt County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Imperial County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Inyo County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Kern County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Kings County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Lassen County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Los Angeles County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Madera County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Marin County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Mariposa County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Mendocino County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Merced County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Modoc County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Mono County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Monterey County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Napa County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Nevada County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Orange County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Placer County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Plumas County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Riverside County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Sacramento County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "San Benito County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "San Bernardino County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "San Diego County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "San Francisco County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "San Joaquin County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "San Luis Obispo County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "San Mateo County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Santa Barbara County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Santa Clara County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Santa Cruz County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Shasta County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Sierra County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Siskiyou County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Solano County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Sonoma County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Stanislaus County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Sutter County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Tehama County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Trinity County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Tulare County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Tuolumne County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Ventura County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Yolo County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Yuba County",
+    "state_abbreviation": "CA",
+    "fips_county_cd": "115"
+  }
+]

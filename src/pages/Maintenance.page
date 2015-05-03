@@ -1,0 +1,74 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" standardController="Application__c" cache="false" applyHtmlTag="false">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <apex:stylesheet value="{!URLFOR($Resource.static, 'css/dsp.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/dsp/modernizr.js')}"/>
+</head>
+<body id="thank-you">
+<apex:form >
+
+  <div class="container">
+    <header class="header">
+     <a href="#">
+    <img class="logo" width="150" height="46"/>
+  </a>
+
+      <hr/>
+      <!-- end .header --></header>
+    <div id="pgAboutYou"> <!-- end .progrssBar -->
+      <div id="subSteps">
+      </div>
+    </div>
+
+    <div class="grid_11"><!-- Secondary Applicant Info --><div class="thankyouBox">
+
+      <div>
+        <h4 class="sectionHeaderThankyou">Scheduled Maintenance</h4>
+        <p>&nbsp;</p>
+
+        <div class="bodyText">
+          <p class="bodyText">{!$Label.Sites_Scheduled_Maintenance_Page_Message}<br/>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+    <aside>
+      <div class="grid_5">
+        <!-- You are applying for -->
+      </div>
+    </aside>
+    <!-- content_wrap -->
+
+    <!-- end .content -->
+
+    <br/>
+    <div class="clear"></div>
+
+    <footer class="row"></footer>
+    <!-- end .container -->
+  </div>
+
+
+</apex:form>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="{!URLFOR($Resource.DSP, 'dsp/js/selectivizr.js')}"></script>
+  <script type="text/javascript" src="{!URLFOR($Resource.DSP, 'dsp/js/css3-mediaqueries.js')}"></script>
+  <![endif]-->
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/dsp/dsp-common.js')}"/>
+</body>
+</html>
+
+</apex:page>

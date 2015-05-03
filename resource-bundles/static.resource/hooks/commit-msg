@@ -1,0 +1,4 @@
+test "" != "$(grep 'TPI-' "$1")" || {
+        echo >&2 "ERROR: Commit message is missing Jira issue number."
+        exit 1
+}

@@ -1,0 +1,197 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Asotin County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Chelan County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Clallam County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Columbia County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Cowlitz County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Ferry County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Garfield County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Grays Harbor County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Island County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "King County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Kitsap County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Kittitas County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Klickitat County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Lewis County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Mason County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Okanogan County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Pacific County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Pend Oreille County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Pierce County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "San Juan County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Skagit County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Skamania County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Snohomish County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Spokane County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Stevens County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Thurston County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Wahkiakum County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Walla Walla County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Whatcom County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Whitman County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Yakima County",
+    "state_abbreviation": "WA",
+    "fips_county_cd": "077"
+  }
+]

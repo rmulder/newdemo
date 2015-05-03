@@ -1,0 +1,462 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Allen County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Bartholomew County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Blackford County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Daviess County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Dearborn County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Decatur County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "DeKalb County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Delaware County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Dubois County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Elkhart County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Floyd County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Fountain County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Fulton County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Gibson County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Hendricks County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Howard County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Huntington County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Jay County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Jennings County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Kosciusko County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "LaGrange County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "LaPorte County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Martin County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Miami County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Newton County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Noble County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Ohio County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Orange County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Owen County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Parke County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Porter County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Posey County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Pulaski County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Putnam County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Ripley County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Rush County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "St. Joseph County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Spencer County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Starke County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Steuben County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Sullivan County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Switzerland County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Tippecanoe County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Tipton County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Vanderburgh County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Vermillion County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Vigo County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Wabash County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Warrick County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Wells County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "White County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Whitley County",
+    "state_abbreviation": "IN",
+    "fips_county_cd": "183"
+  }
+]

@@ -1,0 +1,51 @@
+
+<div id="formContainer" class="minHeightStyle paddingbtm20">
+  <h4 class="sectionHeader">{{PageLabels.application_retrieval_header}}</h4>
+  <div class="padding-left20 font15">
+      <p style="margin-top: 25px;"><span style="color:indianred;">*</span>= Required Field</p>
+      <p style="margin-top: 10px;margin-bottom: 25px;">
+        {{PageLabels.application_retrieval_value}}
+      </p>
+  </div>
+  <div class="formFields" id="nameAdd">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <label for="last_name__c">Last Name <span class="required"> *</span></label>
+        <input type="text" class="col-xs-12 lastName required" name="last_name__c" id="last_name__c">
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <label for="email_address__c">Email <span class="required"> *</span></label>
+        <input type="email" class="col-xs-12 email required emailValidate" name="email_address__c" id="email_address__c">
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <label for="date_of_birth__c">Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+        <input type="text" id="date_of_birth__c" name="date_of_birth__c"
+               class="col-xs-12 datepicker3 dob dateUS required"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <label for="ssn_last_four_pa__c">Last 4 digits of SSN<span class="required"> *</span></label>
+        <input name="ssn_last_four_pa__c" id="ssn_last_four_pa__c" type="text" class="col-xs-12 Lastssn required"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="actionPanel">
+  <button type="submit" class="margin0 myButton floatRt primaryBtn font144">Submit</button>
+</div>
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+  <div class="server-errors hidden"></div>
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+</script>

@@ -1,0 +1,412 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Alcorn County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Amite County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Attala County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bolivar County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Chickasaw County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Choctaw County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Claiborne County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Clarke County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Coahoma County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Copiah County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Covington County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "DeSoto County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Forrest County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "George County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Grenada County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Hinds County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Holmes County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Humphreys County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Issaquena County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Itawamba County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Jefferson Davis County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Jones County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Kemper County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Lafayette County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Lamar County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Lauderdale County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Leake County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Leflore County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Lowndes County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Neshoba County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Newton County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Noxubee County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Oktibbeha County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Panola County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Pearl River County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Pontotoc County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Prentiss County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Quitman County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Rankin County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Sharkey County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Simpson County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Smith County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Stone County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Sunflower County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Tallahatchie County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Tate County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Tippah County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Tishomingo County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Tunica County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Walthall County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Webster County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Wilkinson County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Winston County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Yalobusha County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Yazoo County",
+    "state_abbreviation": "MS",
+    "fips_county_cd": "163"
+  }
+]

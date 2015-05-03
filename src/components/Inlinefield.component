@@ -1,0 +1,73 @@
+<apex:component >
+  <script type="text/javascript">
+    $j(document).ready(function(){
+      $j('option').each(function(){
+        $jopt = $j(this);
+        if($jopt.val() == ''){
+          $jopt.html('');
+        }
+      });
+
+      //make sure fields with values don't show labels on page load
+      $j('input,select,textarea').each(function(){
+        var $jinput = $j(this),
+            $jlabel =  $jinput.siblings('.inlineLabel');
+
+        if($jinput.val() != ''){
+          $jlabel.hide();
+        }
+      });
+
+      //setup event handlers to hide/show inline labels
+      /*  //code changed from the focus and blur event to keypress and keyup
+      $j('input,textarea').focus( function(){
+              var $jinput = $j(this),
+                  $jlabel =  $jinput.siblings('.inlineLabel');
+
+              $jlabel.hide();
+            }).blur( function(){
+                  var $jinput = $j(this),
+                       typed = $jinput.val(),
+                      $jlabel =  $jinput.siblings('.inlineLabel');
+
+                  if(typed == ''){
+                    $jlabel.show();
+                  }
+                });
+       */
+   $j('input,textarea').bind('keypress keyup contextmenu mouseup change', function(){
+        var $jinput = $j(this),
+            $jlabel =  $jinput.siblings('.inlineLabel');
+
+        $jlabel.hide();
+      }).bind('keyup blur', function(){
+            var $jinput = $j(this),
+                 typed = $jinput.val(),
+                $jlabel =  $jinput.siblings('.inlineLabel');
+
+            if(typed == ''){
+              $jlabel.show();
+            }
+          });
+
+      //hide all select labels
+    $j('select').each(function(){
+      $j(this).siblings('label').hide();
+    });
+
+    //change "__none__" to proper value from sibling label
+    $j('select option').each(function(){
+      var $opt =  $j(this),
+          val = $opt.val(),
+          $label = $opt.parent().siblings('label'),
+          labelVal = $label.html();
+      if(val == ''){
+        $opt.html(labelVal);
+      }
+    });
+   
+   });
+    
+    
+  </script>
+</apex:component>

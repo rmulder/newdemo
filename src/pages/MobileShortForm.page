@@ -1,0 +1,326 @@
+<apex:page docType="html-5.0" standardController="Application__c" extensions="mobileShortFormController" standardStylesheets="false" showHeader="false" id="PageId">
+<style>
+.myPrimary{
+border-radius: 2px;
+font-size: 1em;
+font-weight: bold;
+padding: 13px 16px;
+text-decoration: none;
+min-width: 6.250em;
+text-align: center;
+cursor: pointer;
+background-color: #5d9026;
+border: 1px solid #4b8f29;
+color: #ffffff !important;
+}
+</style>
+<html>
+<head>
+  <title>My Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <apex:stylesheet value="{!URLFOR($Resource.DSP_Mobile, 'css/jquery.mobile-1.3.2.min.css')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.DSP_Mobile, 'css/themes/dsp_mobile.min.css')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.static, 'css/bootstrap.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/jquery.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/bootstrap/bootstrap.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/jquery.mobile-1.3.2.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/jquery.validate.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/jquery.validate.additional-methods.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/jquery.mask.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/dsp.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/dsp-common.js')}"/>
+  
+  
+  <script>
+    $j('form').on('submit', function () {
+      alert('submitting form...');
+    });
+          $j(document).on('pageinit', function () {
+        $j('#mobile_form').validate({ /// or form #id
+          rules: {
+            field: "required"
+            },
+          submitHandler: function (form) {
+            alert('data submitted');
+            return true;
+          }
+          });
+      });
+
+  </script> 
+  <script type="text/javascript">
+    $j(document).ready(function(){
+      $j('option').each(function(){
+        $jopt = $j(this);
+        if($jopt.val() == ''){
+          $jopt.html('');
+        }
+      });
+
+      $j('.marginTop15').css('margin-top','15px');
+
+      //make sure fields with values don't show labels on page load
+      $j('input,select').each(function(){
+        var $jinput = $j(this),
+            $jlabel =  $jinput.siblings('.inlineLabel');
+
+        if($jinput.val() != ''){
+          $jlabel.hide();
+        }
+      });
+
+   
+   $j('input,textarea').keypress( function(){
+        var $jinput = $j(this),
+            $jlabel =  $jinput.siblings('.inlineLabel');
+
+        $jlabel.hide();
+      }).keyup( function(){
+            var $jinput = $j(this),
+                 typed = $jinput.val(),
+                $jlabel =  $jinput.siblings('.inlineLabel');
+
+            if(typed == ''){
+              $jlabel.show();
+            }
+          });
+
+      //hide all select labels
+    $j('select').each(function(){
+      $j(this).siblings('label').hide();
+    });
+
+    //change "__none__" to proper value from sibling label
+    $j('select option').each(function(){
+      var $opt =  $j(this),
+          val = $opt.val(),
+          $label = $opt.parent().siblings('label'),
+          labelVal = $label.html();
+      if(val == ''){
+        $opt.html(labelVal);
+      }
+    });
+    $j('form').each(function () {
+          $j(this).validate();
+          $j(this).data("validator").addCustomValidations(['firstName', 'lastName', 'phoneUS']);
+        });
+    });
+  </script> 
+</head>
+<body>
+<apex:form forceSSL="true">
+
+<div data-role="page">
+
+  <div data-role="header"><apex:image url="{!URLFOR($Resource.static, 'images/terafinalogo.png')}"  width="300" height="92"  style="padding-left:20%;"/>
+  </div><!-- /header -->
+
+  <div data-role="content">
+    <!--<form>-->
+    <div data-role="fieldcontain">      
+      <apex:inputField value="{!newApplication.First_Name__c}" html-placeholder="First Name" html-class="firstName"/>      
+    </div>
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.Last_Name__c}" html-placeholder="Last Name" html-class="lastName"/>
+    </div>
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.Street_Address_1__c}" html-placeholder="Street Address, No PO Boxes" />
+    </div>
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.Street_Address_2__c}" html-placeholder="Street Address 2"/>
+    </div>
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.City__c}" html-placeholder="City"/>
+    </div>
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.State__c}" html-placeholder="State"/>
+    </div>
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.Zip_Code__c}" html-placeholder="Zip Code"  html-class="zipcodeUS"/>
+    </div>
+
+    <!--<div data-role="fieldcontain">    
+      <label for="select-choice"></label>
+      <apex:selectList value="{!selected_housingStatus}" multiselect="false" size="1">        
+        <apex:selectOption itemValue="Housing Status" itemLabel="Housing Status"/>
+        <apex:selectOption itemValue="Own" itemLabel="Own"/>
+        <apex:selectOption itemValue="Rent" itemLabel="Rent"/> 
+        <apex:selectOption itemValue="Parents/Relatives" itemLabel="Parents/Relatives"/>          
+      </apex:selectList>              
+    </div>  
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.Monthly_Payment__c}" html-placeholder="Monthly Payment" html-class="currencyUS"/>
+    </div> -->   
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.Primary_Phone_Number__c}" html-class="phoneUS" html-placeholder="Phone Number" />      
+    </div>
+
+    <div data-role="fieldcontain">
+      <apex:inputField value="{!newApplication.Email_Address__c}" html-placeholder="Email Address" html-class="email"/>
+    </div>
+
+    <!--<div data-role="fieldcontain">      
+      <apex:inputText value="{!employer}" html-placeholder="Employer Name"/>
+    </div>      
+
+    <div data-role="fieldcontain">      
+      <apex:inputText value="{!occupation}" html-placeholder="Occupation" />
+    </div>
+
+    <div data-role="fieldcontain">      
+      <apex:inputText value="{!annualincome}" html-placeholder="Annual Income $" html-class="currencyUS"/>
+    </div>-->
+
+    <apex:outputpanel rendered="{!annie}">
+      <div data-role="fieldcontain">
+        <label for="select-choice"></label>
+        <apex:selectList value="{!selected_idType}" multiselect="false" size="1">        
+          <apex:selectOption itemValue="Identity Type" itemLabel="Identity Type"/>
+          <apex:selectOption itemValue="Driver's License" itemLabel="Driver's License"/>
+          <apex:selectOption itemValue="Passport" itemLabel="Passport"/> 
+          <apex:selectOption itemValue="State ID" itemLabel="State ID"/>          
+        </apex:selectList>        
+      </div>   
+
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!idnumber}" html-placeholder="Identification Number"/>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label for="select-choice"></label>
+        <apex:selectList value="{!selected_state_issued}" multiselect="false" size="1">        
+          <apex:selectOptions value="{!State_issued}"/>            
+        </apex:selectList>         
+      </div> 
+
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!expdate}" html-placeholder="Expiration Date (MM/DD/YYYY)" html-class="dateUS dob"/>
+      </div>
+
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!socialsecuritynumber}" html-placeholder="Social Security Number" html-class="ssn"/>
+      </div>
+
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!dateofbirth}" html-placeholder="Date of Birth (MM/DD/YYYY)" html-class="dateUS dob"/>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label for="select-choice"></label>
+        <apex:selectList value="{!selected_citizenship}" multiselect="false" size="1">        
+          <apex:selectOption itemValue="Citizenship" itemLabel="Citizenship"/>
+          <apex:selectOption itemValue="US Citizen" itemLabel="US Citizen"/>
+          <apex:selectOption itemValue="Resident Alien" itemLabel="Resident Alien"/> 
+          <apex:selectOption itemValue="Non Resident Alien" itemLabel="Non Resident Alien"/>          
+        </apex:selectList>         
+      </div>
+    </apex:outputPanel>
+         
+    <apex:outputpanel rendered="{!jimmy}">
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!vehiclemake}" html-placeholder="Vehicle Make"/>
+      </div>
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!vehiclemodel}" html-placeholder="Vehicle Model" />
+      </div>
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!vehiclesubmodel}" html-placeholder="Vehicle SubModel"/>
+      </div>
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!vehiclevin}" html-placeholder="VIN" />
+      </div>
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!vehiclemileage}" html-placeholder="Mileage" html-class="currencyUS"/>
+      </div>
+    </apex:outputpanel>
+
+    <apex:outputpanel rendered="{!annie}">
+      <div data-role="fieldcontain">
+        <label for="select-choice"></label>
+        <apex:selectList value="{!accType}" multiselect="false" size="1">        
+          <apex:selectOption itemValue="Select Account Type" itemLabel="Select Account Type"/>
+          <apex:selectOption itemValue="Checking" itemLabel="Checking"/>
+          <apex:selectOption itemValue="Savings" itemLabel="Savings"/>          
+        </apex:selectList>         
+      </div>
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!accNum}" html-placeholder="Account Number"/>
+      </div>      
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!routingNum}" html-placeholder="Routing Number"/>
+      </div>
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!DollarAmt}" html-placeholder="Dollar Amount" />
+      </div>      
+    </apex:outputpanel>
+
+    <apex:outputPanel rendered="{!jacob}">
+      <div data-role="fieldcontain">
+        <apex:inputText value="{!Creditlimit}" html-placeholder="Requested Credit Limit" html-class="currencyUS"/>
+      </div>
+    </apex:outputPanel>
+
+    <div class="form-group">
+      <div class="margintop row" style="margin-top:10px">
+        <div class="col-xs-2" style="margin-top:2px"><apex:inputcheckbox value="{!newApplication.Disclosure1__c}" styleclass="disclosure_100" /></div>
+        <div class="disclosure_text_mobile col-xs-10"> I have reviewed the <a href="http://dev3sand-dev3sand.cs22.force.com/servlet/servlet.FileDownload?file=00P17000000KNBG" >Disclosure 1</a></div>
+      </div> 
+   </div>
+    
+
+    <div class="row">
+      <div class="col-xs-12">
+        <apex:commandLink value="Submit" type="submit" styleClass="myButton" style="background: #1c6b94;border: none;" html-data-theme="a" action="{!createApplication}"/>
+      </div>
+    </div>
+    
+  </div><!-- /content -->
+
+</div><!-- /page -->
+
+</apex:form>
+<script>
+  $j(document).ready(function () {
+    var url = "{!URLFOR($Resource.DSP, 'dsp/')}call_preferences.json";
+    var call_pref = $j('.call-preferences').val();
+    $j.getJSON(url, function (prefs) {
+      if (prefs) {
+        $j.each(prefs, function (i) {
+          var option = $j("<option></option>");
+          option.val(prefs[i].preference_value);
+          option.text(prefs[i].preference_label);
+          $j("#select-choice-1").append(option);
+        });
+
+        if (call_pref !== '' && call_pref !== undefined) {
+          $j('#select-choice-1').val(call_pref);
+        }
+      }
+    });
+    $j('#select-choice-1').on('blur', function () {
+      $j('.call-preferences').val($j(this).val());
+    });
+    $j('.myButton').on('click', function () {
+      $j('.call-preferences').val($j('#select-choice-1').val());
+    });
+  });
+  $j('form').validate();//$j("form").data("validator").addCustomValidations(['ssn', 'identityNumber', 'date', 'dob']);
+  $j('form').data("validator").addCustomValidations(['ssn', 'identityNumber', 'dob', 'dateUS' , 'currencyUS']);
+</script>
+
+
+
+    
+    
+    
+</body>
+</html>
+</apex:page>

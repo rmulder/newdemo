@@ -1,0 +1,10 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" renderAs="pdf" >  
+    <apex:form > 
+     <header class="header">
+            <a href="#">
+              <img class="logo-image" src="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" width="600" height="200" style= "Padding-left : 8%"/>
+            </a>      
+    </header>
+    <h1 style= "Padding-left : 30%; color: cornflowerblue; " >Disclosure Placeholder</h1>
+    </apex:form>
+</apex:page>

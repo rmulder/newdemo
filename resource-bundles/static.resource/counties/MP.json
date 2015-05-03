@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Northern Islands",
+    "state_abbreviation": "MP",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Rota Municipality",
+    "state_abbreviation": "MP",
+    "fips_county_cd": "100"
+  },
+  {
+    "name": "Saipan Municipality",
+    "state_abbreviation": "MP",
+    "fips_county_cd": "110"
+  },
+  {
+    "name": "Tinian Municipality",
+    "state_abbreviation": "MP",
+    "fips_county_cd": "120"
+  }
+]

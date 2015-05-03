@@ -1,0 +1,1 @@
+Maximum_Amount__c,Minimum_Amount__c,Name500,1,24 Months500,1,Gold500,1,12 Months500,1,18 Months500,1,36 Months500,5,Platinum500,1,6 Months500,1,Silver500,1,60 Months500,1,Money Market500,1,Basic500,1,Jumbo500000,500,Dollar Validation Check1000000,500,Dollar Validation Cash

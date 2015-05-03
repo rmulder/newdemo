@@ -1,0 +1,477 @@
+[
+  {
+    "name": "Anderson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Bedford County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Bledsoe County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Blount County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bradley County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Campbell County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Cannon County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Carter County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Cheatham County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Chester County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Claiborne County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Cocke County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Coffee County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Crockett County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Davidson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Decatur County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "DeKalb County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Dickson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Dyer County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Fentress County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Gibson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Giles County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Grainger County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Grundy County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Hamblen County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Hardeman County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Hardin County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Hawkins County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Haywood County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Henderson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Hickman County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Houston County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Humphreys County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Lauderdale County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Lewis County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Loudon County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "McMinn County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "McNairy County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Macon County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Maury County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Meigs County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Moore County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Obion County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Overton County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Pickett County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Putnam County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Rhea County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Roane County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Robertson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Rutherford County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Sequatchie County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Sevier County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Smith County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Stewart County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Sullivan County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Sumner County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Tipton County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Trousdale County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Unicoi County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Van Buren County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Weakley County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "White County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Williamson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Wilson County",
+    "state_abbreviation": "TN",
+    "fips_county_cd": "189"
+  }
+]

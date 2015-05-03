@@ -1,0 +1,2834 @@
+<div id="formContainer">
+<!-- Primary Applicant Info -->
+<div id="appl_1" class="applicant">
+<h4 class="sectionHeader">&nbsp;<span class="btn pull-right">
+<div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo primaryBtn padding10 font144"  id="myButton">Save for Later</span>
+  </div></span></h4>
+<input type="hidden" name="AccountDetailsPageSubmitted" id="AccountDetailsPageSubmitted"
+       value="{{PageVars.AccountDetailsPageSubmitted}}"/>
+{{#if Application__c.type_of_business_checking__c}}
+<div class="formFields buscheckingInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_business_checking__c}} {{PageLabels.funding_info}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="acc_holder_name_bus_chk__c">Primary Account Holder Name</label>
+      <input type="text" name="full_name_pa__c" id="full_name_pa__c" class="col-xs-12 required"
+             value="{{Application__c.full_name_pa__c}}" disabled="true"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="funding_type_bus_chk__c">Funding Type<span class="required"> *</span></label>
+        <select name="funding_type_bus_chk__c" id="funding_type_bus_chk__c" class="col-xs-12 required fundingType"
+            data-value="{{About_Account__c.funding_type_bus_chk__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- Internal Accounts-->
+  <div class="internal hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="select_account_fi_bus_chk__c">Select Account <span class="required"> *</span></label>
+          <select name="select_account_fi_bus_chk__c" id="select_account_fi_bus_chk__c" class="col-xs-12"
+                  data-value="{{About_Account__c.select_account_fi_bus_chk__c}}">
+            <option value="">Select Account <span class="required"> *</span></option>
+            <option value="checking">Membership {{Application__c.product__c}} - 7116 - AvailBal $500.25</option>
+            <option value="savings">Membership Savings - 7115 - AvailBal $107.93</option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_internal_bus_chk__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_internal_bus_chk__c" id="dollar_amount_internal_bus_chk__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_internal_bus_chk__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <span class="fieldNote"></span>
+      </div>
+    </div>
+  </div>
+  <!-- Add External Accounts section -->
+  <div class="external hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="financial_institution_bus_chk__c">Bank Name/Financial Institution<span class="required"> *</span></label>
+        <input name="financial_institution_bus_chk__c" id="financial_institution_bus_chk__c" type="text"
+               class="col-xs-12 alphanumeric" value="{{About_Account__c.financial_institution_bus_chk__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate1">
+        <label for="routing_number_bus_chk__c">Routing Number<span class="required"> *</span></label>
+        <input name="routing_number_bus_chk__c" id="routing_number_bus_chk__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.routing_number_bus_chk__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="account_type_fi_bus_chk__c">Account Type <span class="required">*</span></label>
+          <select name="account_type_fi_bus_chk__c" id="account_type_fi_bus_chk__c" class="col-xs-12"
+                  data-value="{{About_Account__c.account_type_fi_bus_chk__c}}">
+            <option value="">Account Type <span class="required"> *</span></option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate2 col-xs-5">
+        <label for="bus_chk_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="bus_chk_account_number__c" id="bus_chk_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.bus_chk_account_number__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_external_bus_chk__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_external_bus_chk__c" id="dollar_amount_external_bus_chk__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_external_bus_chk__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_external_bus_chk__c"></div>
+    <div class="row fieldSet">
+      <div class="fieldItem external-disclosures row-fluid robotoBold borderStyle_disclosure blue-heading2 padding10 col-xs-12">
+        <div class="save_style"><input type="checkbox" name="disclosure_accountdetails_bus_chk__c" id="disclosure_accountdetails_bus_chk__c"
+               value="true" data-value="{{About_Account__c.disclosure_accountdetails_bus_chk__c}}" class="disclosure-check"></div>
+          {{#equal Application__c.current_channel__c 'Online' }}
+            <span class="span94percent paddingTop10">
+              {{PageLabels.funding_disc_online}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Branch' }}
+            <span class="span94percent paddingTop10">
+              {{PageLabels.funding_disc_branch}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Call Center' }}
+            <span class="span94percent paddingTop10">
+              {{PageLabels.funding_disc_call_center}}
+            </span>
+          {{/equal}}        
+      </div>
+    </div>
+    <!--<div class="row fieldSet">
+      <div class="external-disclosures external-disclosures-note font144">
+        NOTE: Terafina does not send prenotification to the receiving institution. By clicking on the checkbox,
+        you certify that the information you have given on this form is complete and accurate. Terafina will
+        not be liable for errors resulting from incorrect account information. Your request is pending until
+        reviewed by the Electronic Services Department.
+      </div>
+    </div>-->
+  </div>
+  <!-- check section for checking ends here-->
+<div class="check hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="busichk_check_routing_number__c">Routing Number<span class="required"> *</span></label>
+        <input name="busichk_check_routing_number__c" id="busichk_check_routing_number__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.busichk_check_routing_number__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate1 col-xs-5">
+        <label for="busichk_check_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="busichk_check_account_number__c" id="busichk_check_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.busichk_check_account_number__c}}"/>
+      </div>
+    </div>
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_busichk_check__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_busichk_check__c" id="dollar_amount_busichk_check__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_busichk_check__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_bus_chk_check__c"></div>
+    
+  </div>
+  <!-- check for checking ends here-->
+  <!-- check section for checking ends here-->
+<div class="cash hidden">
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_busichk_cash__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_busichk_cash__c" id="dollar_amount_busichk_cash__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_busichk_cash__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_bus_chk_cash__c"></div>
+    
+  </div>
+  <!-- cash for checking ends here-->
+</div>
+{{/if}}
+
+{{#if Application__c.type_of_business_savings__c}}
+<div class="formFields bussavingsInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_business_savings__c}} {{PageLabels.funding_info}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="acc_holder_name_chk__c">Primary Account Holder Name</label>
+      <input type="text" name="full_name_pa__c" id="full_name_pa__c" class="col-xs-12 required"
+             value="{{Application__c.full_name_pa__c}}" disabled="true"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="funding_type_bus_sav__c">Funding Type<span class="required"> *</span></label>
+        <select name="funding_type_bus_sav__c" id="funding_type_bus_sav__c" class="col-xs-12 required fundingType"
+                data-value="{{About_Account__c.funding_type_bus_sav__c}}">
+          <!--<option value="">Funding Type *</option>-->
+          <!--<option>Add External Accounts</option> &lt;!&ndash; Hard coded option value to skip validations &ndash;&gt;-->
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="internal hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="select_account_fi_bus_sav__c">Select Account <span class="required"> *</span></label>
+          <select name="select_account_fi_bus_sav__c" id="select_account_fi_bus_sav__c" class="col-xs-12"
+                  data-value="{{About_Account__c.select_account_fi_bus_sav__c}}">
+            <option value="">Select Account <span class="required"> *</span></option>
+            <option value="checking">Membership {{Application__c.product__c}} - 7116 - AvailBal $500.25</option>
+            <option value="savings">Membership Savings - 7115 - AvailBal $107.93</option>
+            <option>Checking</option>
+            <option>Savings</option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_internal_bus_sav__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_internal_bus_sav__c" id="dollar_amount_internal_bus_sav__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_internal_bus_sav__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <span class="fieldNote"></span>
+      </div>
+    </div>
+  </div>
+  <div class="external hidden">
+    <!--{{#if Application__c.type_of_business_checking__c}}
+    <div class="row fieldSet">
+      <div class="fieldItem">
+        <input type="checkbox" class="prefilling_input_fields" id="prefill_savings"/>
+        <span class="tipLink sectionTitle">{{PageVars.use_above}}</span>
+      </div>
+    </div>
+    {{/if}}-->
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 fill">
+        <label for="financial_institution_bus_sav__c">Bank Name/Financial Institution<span class="required"> *</span></label>
+        <input name="financial_institution_bus_sav__c" id="financial_institution_bus_sav__c" type="text"
+               class="col-xs-12 alphanumeric" value="{{About_Account__c.financial_institution_bus_sav__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem fill1 col-xs-5">
+        <label for="routing_number_bus_sav__c">Routing Number<span class="required"> *</span></label>
+        <input name="routing_number_bus_sav__c" id="routing_number_bus_sav__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.routing_number_bus_sav__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="account_type_fi_bus_sav__c">Account Type <span class="required">*</span></label>
+          <select name="account_type_fi_bus_sav__c" id="account_type_fi_bus_sav__c" class="col-xs-12"
+                  data-value="{{About_Account__c.account_type_fi_bus_sav__c}}">
+            <option value="">Account Type <span class="required"> *</span></option>
+            <!--<option>Checking</option>-->
+            <!--<option>Saving</option>-->
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem fill2 col-xs-5">
+        <label for="bus_sav_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="bus_sav_account_number__c" id="bus_sav_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.bus_sav_account_number__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_external_bus_sav__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_external_bus_sav__c" id="dollar_amount_external_bus_sav__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_external_bus_sav__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_external_bus_sav__c"></div>
+    <div class="row fieldSet">
+      <div class="fieldItem external-disclosures row-fluid robotoBold borderStyle_disclosure blue-heading2 padding10 col-xs-12">
+        <input type="checkbox" name="disclosure_accountdetails_bus_sav__c" id="disclosure_accountdetails_bus_sav__c"
+               value="true" data-value="{{About_Account__c.disclosure_accountdetails_bus_sav__c}}" class="disclosure-check chkboxMargin">
+          {{#equal Application__c.current_channel__c 'Online' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_online}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Branch' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_branch}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Call Center' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_call_center}}
+            </span>
+          {{/equal}}
+      </div>
+    </div>
+    <!--<div class="row fieldSet">
+      <div class="external-disclosures external-disclosures-note font144">
+        NOTE: Terafina does not send pre-notification to the receiving institution. By clicking on the checkbox,
+        you certify that the information you have given on this form is complete and accurate. Terafina will
+        not be liable for errors resulting from incorrect account information. Your request is pending until
+        reviewed by the Electronic Services Department.
+      </div>
+    </div>-->
+  </div>
+  <!-- check section for checking ends here-->
+<div class="check hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="busisav_check_routing_number__c">Routing Number<span class="required"> *</span></label>
+        <input name="busisav_check_routing_number__c" id="busisav_check_routing_number__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.busisav_check_routing_number__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate1 col-xs-5">
+        <label for="busisav_check_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="busisav_check_account_number__c" id="busisav_check_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.busisav_check_account_number__c}}"/>
+      </div>
+    </div>
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_busisav_check__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_busisav_check__c" id="dollar_amount_busisav_check__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_busisav_check__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_busisav_check__c"></div>
+    
+  </div>
+  <!-- check for checking ends here-->
+  <!-- check section for checking ends here-->
+<div class="cash hidden">
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_busisav_cash__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_busisav_cash__c" id="dollar_amount_busisav_cash__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_busisav_cash__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_bus_sav_cash__c"></div>
+    
+  </div>
+  <!-- cash for checking ends here-->
+</div>
+{{/if}}
+
+{{#if Application__c.type_of_business_cds__c}}
+<div class="formFields buscertInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_business_cds__c}} {{PageLabels.funding_info}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="acc_holder_name_chk__c">Primary Account Holder Name</label>
+      <input type="text" class="col-xs-12" value="{{Application__c.full_name_pa__c}}" disabled="true"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="funding_type_bus_cds__c">Funding Type<span class="required"> *</span></label>
+        <select name="funding_type_bus_cds__c" id="funding_type_bus_cds__c" class="col-xs-12 required fundingType"
+                data-value="{{About_Account__c.funding_type_bus_cds__c}}">
+          <option value="">Funding Type *</option>
+          <!--<option>Add External Accounts</option>-->
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="internal hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="select_account_fi_bus_cds__c">Select Account <span class="required"> *</span></label>
+          <select name="select_account_fi_bus_cds__c" id="select_account_fi_bus_cds__c" class="col-xs-12"
+                  data-value="{{About_Account__c.select_account_fi_bus_cds__c}}">
+            <option value="">Select Account <span class="required"> *</span></option>
+            <option value="checking">Membership {{Application__c.product__c}} - 7116 - AvailBal $500.25</option>
+            <option value="savings">Membership Savings - 7115 - AvailBal $107.93</option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_internal_bus_cert__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_internal_bus_cert__c" id="dollar_amount_internal_bus_cert__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_internal_bus_cert__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <span class="fieldNote"></span>
+      </div>
+    </div>
+  </div>
+  <div class="external hidden">
+    <!--{{#if Application__c.type_of_business_savings__c}}
+    <div class="row fieldSet">
+      <div class="fieldItem">
+        <input type="checkbox" class="prefilling_input_fields" id="prefill_certificates"/>
+        <span class="tipLink sectionTitle">{{PageVars.use_above}}</span>
+      </div>
+    </div>
+    {{else}}
+      {{#if Application__c.type_of_business_checking__c}}
+      <div class="row fieldSet">
+        <div class="fieldItem">
+          <input type="checkbox" class="prefilling_input_fields" id="prefill_certificates"/>
+          <span class="tipLink sectionTitle">{{PageVars.use_above}}</span>
+        </div>
+      </div>
+      {{/if}}
+    {{/if}}-->
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 fill">
+        <label for="financial_institution_bus_cds__c">Bank Name/Financial Institution<span class="required"> *</span></label>
+        <input name="financial_institution_bus_cds__c" id="financial_institution_bus_cds__c" type="text"
+               class="col-xs-12 alphanumeric" value="{{About_Account__c.financial_institution_bus_cds__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem fill1 col-xs-5">
+        <label for="routing_number_bus_cds__c">Routing Number<span class="required"> *</span></label>
+        <input name="routing_number_bus_cds__c" id="routing_number_bus_cds__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.routing_number_bus_cds__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="account_type_fi_bus_cds__c">Account Type <span class="required">*</span></label>
+          <select name="account_type_fi_bus_cds__c" id="account_type_fi_bus_cds__c" class="col-xs-12"
+                  data-value="{{About_Account__c.account_type_fi_bus_cds__c}}">
+            <option value="">Account Type <span class="required"> *</span></option>
+            <!--<option>Checking</option>-->
+            <!--<option>Saving</option>-->
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem fill2 col-xs-5">
+        <label for="bus_cds_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="bus_cds_account_number__c" id="bus_cds_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.bus_cds_account_number__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_external_bus_cds__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_external_bus_cds__c" id="dollar_amount_external_bus_cds__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_external_bus_cds__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_external_bus_cds__c"></div>
+    <div class="row fieldSet">
+      <div class="fieldItem external-disclosures row-fluid robotoBold borderStyle_disclosure blue-heading2 padding10 col-xs-12">
+        <input type="checkbox" name="disclosure_accountdetails_bus_cds__c" id="disclosure_accountdetails_bus_cds__c"
+               value="true" data-value="{{About_Account__c.disclosure_accountdetails_bus_cds__c}}" class="disclosure-check chkboxMargin">
+          {{#equal Application__c.current_channel__c 'Online' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_online}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Branch' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_branch}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Call Center' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_call_center}}
+            </span>
+          {{/equal}}
+      </div>
+    </div>
+    <!--<div class="row fieldSet">
+      <div class="external-disclosures external-disclosures-note font144">
+        NOTE: Terafina does not send prenotification to the receiving institution. By clicking on the checkbox,
+        you certify that the information you have given on this form is complete and accurate. Terafina will
+        not be liable for errors resulting from incorrect account information. Your request is pending until
+        reviewed by the Electronic Services Department.
+      </div>
+    </div>-->
+  </div>
+  <!-- check section for checking ends here-->
+<div class="check hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="busicds_check_routing_number__c">Routing Number<span class="required"> *</span></label>
+        <input name="busicds_check_routing_number__c" id="busicds_check_routing_number__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.busicds_check_routing_number__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate1 col-xs-5">
+        <label for="busicds_check_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="busicds_check_account_number__c" id="busicds_check_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.busicds_check_account_number__c}}"/>
+      </div>
+    </div>
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_busicds_check__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_busicds_check__c" id="dollar_amount_busicds_check__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_busicds_check__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_bus_cds_check__c"></div>
+    
+  </div>
+  <!-- check for checking ends here-->
+  <!-- check section for checking ends here-->
+<div class="cash hidden">
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_busicds_cash__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_busicds_cash__c" id="dollar_amount_busicds_cash__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_busicds_cash__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_bus_cds_cash__c"></div>
+    
+  </div>
+  <!-- cash for checking ends here-->
+</div>
+{{/if}}
+
+{{#if Application__c.type_of_checking__c}}
+<div class="formFields checkingInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_checking__c}} {{PageLabels.funding_info}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="acc_holder_name_chk__c">Primary Account Holder Name</label>
+      <input type="text" name="full_name_pa__c" id="full_name_pa__c" class="col-xs-12 required"
+             value="{{Application__c.full_name_pa__c}}" disabled="true"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="funding_type_chk__c">Funding Type<span class="required"> *</span></label>
+        <select name="funding_type_chk__c" id="funding_type_chk__c" class="col-xs-12 required fundingType"
+            data-value="{{About_Account__c.funding_type_chk__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="internal hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="select_account_fi_chk__c">Select Account <span class="required"> *</span></label>
+          <select name="select_account_fi_chk__c" id="select_account_fi_chk__c" class="col-xs-12"
+                  data-value="{{About_Account__c.select_account_fi_chk__c}}">
+            <option value="">Select Account <span class="required"> *</span></option>
+            <option value="checking">Membership {{Application__c.product__c}} - 7116 - AvailBal $500.25</option>
+            <option value="savings">Membership Savings - 7115 - AvailBal $107.93</option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="chk_funding_amount_from_internal_account__c">$ Amount<span class="required"> *</span></label>
+        <input name="chk_funding_amount_from_internal_account__c" id="chk_funding_amount_from_internal_account__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.chk_funding_amount_from_internal_account__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <span class="fieldNote"></span>
+      </div>
+    </div>
+  </div>
+  <!-- Add External Accounts section -->
+  <div class="external hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="financial_institution_chk__c">Bank Name/Financial Institution<span class="required"> *</span></label>
+        <input name="financial_institution_chk__c" id="financial_institution_chk__c" type="text"
+               class="col-xs-12 alphanumeric" value="{{About_Account__c.financial_institution_chk__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate1 col-xs-5">
+        <label for="routing_number_chk__c">Routing Number<span class="required"> *</span></label>
+        <input name="routing_number_chk__c" id="routing_number_chk__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.routing_number_chk__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="account_type_fi_chk__c">Account Type <span class="required">*</span></label>
+          <select name="account_type_fi_chk__c" id="account_type_fi_chk__c" class="col-xs-12"
+                  data-value="{{About_Account__c.account_type_fi_chk__c}}">
+            <option value="">Account Type <span class="required"> *</span></option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate2 col-xs-5">
+        <label for="chk_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="chk_account_number__c" id="chk_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.chk_account_number__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_external_chk__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_external_chk__c" id="dollar_amount_external_chk__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_external_chk__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_external_chk__c"></div>
+    <div class="row fieldSet">
+      <div class="fieldItem external-disclosures row-fluid robotoBold borderStyle_disclosure blue-heading2 padding10 col-xs-12">
+        <div class="save_style"><input type="checkbox" name="disclosure_accountdetails_chk__c" id="disclosure_accountdetails_chk__c"
+               value="true" data-value="{{About_Account__c.disclosure_accountdetails_chk__c}}" class="disclosure-check"></div>
+          {{#equal Application__c.current_channel__c 'Online' }}
+            <span class="span94percent paddingTop10">
+              {{PageLabels.funding_disc_online}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Branch' }}
+            <span class="span94percent paddingTop10">
+              {{PageLabels.funding_disc_branch}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Call Center' }}
+            <span class="span94percent paddingTop10">
+              {{PageLabels.funding_disc_call_center}}
+            </span>
+          {{/equal}}        
+      </div>
+    </div>
+    <!--<div class="row fieldSet">
+      <div class="external-disclosures external-disclosures-note font144">
+        NOTE: Terafina does not send prenotification to the receiving institution. By clicking on the checkbox,
+        you certify that the information you have given on this form is complete and accurate. Terafina will
+        not be liable for errors resulting from incorrect account information. Your request is pending until
+        reviewed by the Electronic Services Department.
+      </div>
+    </div>-->
+  </div>
+  <!-- Add External Accounts section for checking ends here-->
+  <!-- check section for checking ends here-->
+<div class="check hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="chk_check_routing_number__c">Routing Number<span class="required"> *</span></label>
+        <input name="chk_check_routing_number__c" id="chk_check_routing_number__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.chk_check_routing_number__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate1 col-xs-5">
+        <label for="chk_check_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="chk_check_account_number__c" id="chk_check_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.chk_check_account_number__c}}"/>
+      </div>
+    </div>
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_chk_check__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_chk_check__c" id="dollar_amount_chk_check__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_chk_check__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_chk_check__c"></div>
+    
+  </div>
+  <!-- check for checking ends here-->
+  <!-- check section for checking ends here-->
+<div class="cash hidden">
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_chk_cash__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_chk_cash__c" id="dollar_amount_chk_cash__c" type="text"
+               class="currencyUS col-xs-5" value="{{About_Account__c.dollar_amount_chk_cash__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_chk_cash__c"></div>
+    
+  </div>
+  <!-- cash for checking ends here-->
+</div>
+{{/if}}
+{{#if Application__c.type_of_savings__c}}
+<div class="formFields savingsInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_savings__c}} {{PageLabels.funding_info}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="acc_holder_name_chk__c">Primary Account Holder Name</label>
+      <input type="text" name="full_name_pa__c" id="full_name_pa__c" class="col-xs-12 required"
+             value="{{Application__c.full_name_pa__c}}" disabled="true"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="funding_type_sav__c">Funding Type<span class="required"> *</span></label>
+        <select name="funding_type_sav__c" id="funding_type_sav__c" class="col-xs-12 required fundingType"
+                data-value="{{About_Account__c.funding_type_sav__c}}">
+          <!--<option value="">Funding Type *</option>-->
+          <!--<option>Add External Accounts</option> &lt;!&ndash; Hard coded option value to skip validations &ndash;&gt;-->
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="internal hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="select_account_fi_sav__c">Select Account <span class="required"> *</span></label>
+          <select name="select_account_fi_sav__c" id="select_account_fi_sav__c" class="col-xs-12"
+                  data-value="{{About_Account__c.select_account_fi_sav__c}}">
+            <option value="">Select Account <span class="required"> *</span></option>
+            <option value="checking">Membership {{Application__c.product__c}} - 7116 - AvailBal $500.25</option>
+            <option value="savings">Membership Savings - 7115 - AvailBal $107.93</option>
+            <option>Checking</option>
+            <option>Savings</option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="sav_funding_amount_from_internal_account__c">$ Amount<span class="required"> *</span></label>
+        <input name="sav_funding_amount_from_internal_account__c" id="sav_funding_amount_from_internal_account__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.sav_funding_amount_from_internal_account__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <span class="fieldNote"></span>
+      </div>
+    </div>
+  </div>
+  <div class="external hidden">
+    {{#if Application__c.type_of_checking__c}}
+    <div class="row fieldSet sectionTitleContainer ">
+      <div class="fieldItem">
+        <input type="checkbox" class="prefilling_input_fields" id="prefill_savings"/>
+        <span class="tipLink sectionTitle">{{PageLabels.use_above}}</span>
+      </div>
+    </div>
+    {{/if}}
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 fill">
+        <label for="financial_institution_sav__c">Bank Name/Financial Institution<span class="required"> *</span></label>
+        <input name="financial_institution_sav__c" id="financial_institution_sav__c" type="text"
+               class="col-xs-12 alphanumeric" value="{{About_Account__c.financial_institution_sav__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem fill1 col-xs-5">
+        <label for="routing_number_sav__c">Routing Number<span class="required"> *</span></label>
+        <input name="routing_number_sav__c" id="routing_number_sav__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.routing_number_sav__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="account_type_fi_sav__c">Account Type <span class="required">*</span></label>
+          <select name="account_type_fi_sav__c" id="account_type_fi_sav__c" class="col-xs-12"
+                  data-value="{{About_Account__c.account_type_fi_sav__c}}">
+            <option value="">Account Type <span class="required"> *</span></option>
+            <!--<option>Checking</option>-->
+            <!--<option>Saving</option>-->
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem fill2 col-xs-5">
+        <label for="sav_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="sav_account_number__c" id="sav_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.sav_account_number__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_external_sav__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_external_sav__c" id="dollar_amount_external_sav__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_external_sav__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_external_sav__c"></div>
+    <div class="row fieldSet">
+      <div class="fieldItem external-disclosures row-fluid robotoBold borderStyle_disclosure blue-heading2 padding10 col-xs-12">
+        <input type="checkbox" name="disclosure_accountdetails_sav__c" id="disclosure_accountdetails_sav__c"
+               value="true" data-value="{{About_Account__c.disclosure_accountdetails_sav__c}}" class="disclosure-check chkboxMargin">
+          {{#equal Application__c.current_channel__c 'Online' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_online}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Branch' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_branch}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Call Center' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_call_center}}
+            </span>
+          {{/equal}}
+      </div>
+    </div>
+    <!--<div class="row fieldSet">
+      <div class="external-disclosures external-disclosures-note font144">
+        NOTE: Terafina does not send pre-notification to the receiving institution. By clicking on the checkbox,
+        you certify that the information you have given on this form is complete and accurate. Terafina will
+        not be liable for errors resulting from incorrect account information. Your request is pending until
+        reviewed by the Electronic Services Department.
+      </div>
+    </div>-->
+  </div>
+  <!-- check section for checking ends here-->
+<div class="check hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="sav_check_routing_number__c">Routing Number<span class="required"> *</span></label>
+        <input name="sav_check_routing_number__c" id="sav_check_routing_number__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.sav_check_routing_number__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate1 col-xs-5">
+        <label for="sav_check_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="sav_check_account_number__c" id="sav_check_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.sav_check_account_number__c}}"/>
+      </div>
+    </div>
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_sav_check__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_sav_check__c" id="dollar_amount_sav_check__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_sav_check__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_sav_check__c"></div>
+    
+  </div>
+  <!-- check for checking ends here-->
+  <!-- check section for checking ends here-->
+<div class="cash hidden">
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_sav_cash__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_sav_cash__c" id="dollar_amount_sav_cash__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_sav_cash__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_sav_cash__c"></div>
+    
+  </div>
+  <!-- cash for checking ends here-->
+</div>
+{{/if}}
+{{#if Application__c.type_of_certificates__c}}
+<div class="formFields certInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_certificates__c}} {{PageLabels.funding_info}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="acc_holder_name_chk__c">Primary Account Holder Name</label>
+      <input type="text" class="col-xs-12" value="{{Application__c.full_name_pa__c}}" disabled="true"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="funding_type_cert__c">Funding Type<span class="required"> *</span></label>
+        <select name="funding_type_cert__c" id="funding_type_cert__c" class="col-xs-12 required fundingType"
+                data-value="{{About_Account__c.funding_type_cert__c}}">
+          <option value="">Funding Type *</option>
+          <!--<option>Add External Accounts</option>-->
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="internal hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="select_account_fi_cert__c">Select Account <span class="required"> *</span></label>
+          <select name="select_account_fi_cert__c" id="select_account_fi_cert__c" class="col-xs-12"
+                  data-value="{{About_Account__c.select_account_fi_cert__c}}">
+            <option value="">Select Account <span class="required"> *</span></option>
+            <option value="checking">Membership {{Application__c.product__c}} - 7116 - AvailBal $500.25</option>
+            <option value="savings">Membership Savings - 7115 - AvailBal $107.93</option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="cert_funding_amt_from_internal_account__c">$ Amount<span class="required"> *</span></label>
+        <input name="cert_funding_amt_from_internal_account__c" id="cert_funding_amt_from_internal_account__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.cert_funding_amt_from_internal_account__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <span class="fieldNote"></span>
+      </div>
+    </div>
+  </div>
+  <div class="external hidden">
+    {{#if Application__c.type_of_savings__c}}
+    <div class="row fieldSet sectionTitleContainer">
+      <div class="fieldItem">
+        <input type="checkbox" class="prefilling_input_fields" id="prefill_certificates"/>
+        <span class="tipLink sectionTitle">{{PageLabels.use_above}}</span>
+      </div>
+    </div>
+    {{else}}
+      {{#if Application__c.type_of_checking__c}}
+      <div class="row fieldSet sectionTitleContainer">
+        <div class="fieldItem">
+          <input type="checkbox" class="prefilling_input_fields" id="prefill_certificates"/>
+          <span class="tipLink sectionTitle">{{PageLabels.use_above}}</span>
+        </div>
+      </div>
+      {{/if}}
+    {{/if}}
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 fill">
+        <label for="financial_institution_cert__c">Bank Name/Financial Institution<span class="required"> *</span></label>
+        <input name="financial_institution_cert__c" id="financial_institution_cert__c" type="text"
+               class="col-xs-12 alphanumeric" value="{{About_Account__c.financial_institution_cert__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5 fill1">
+        <label for="routing_number_cert__c">Routing Number<span class="required"> *</span></label>
+        <input name="routing_number_cert__c" id="routing_number_cert__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.routing_number_cert__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="account_type_fi_cert__c">Account Type <span class="required">*</span></label>
+          <select name="account_type_fi_cert__c" id="account_type_fi_cert__c" class="col-xs-12"
+                  data-value="{{About_Account__c.account_type_fi_cert__c}}">
+            <option value="">Account Type <span class="required"> *</span></option>
+            <!--<option>Checking</option>-->
+            <!--<option>Saving</option>-->
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5 fill2">
+        <label for="cert_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="cert_account_number__c" id="cert_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.cert_account_number__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_external_cert__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_external_cert__c" id="dollar_amount_external_cert__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_external_cert__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_external_cert__c"></div>
+    <div class="row fieldSet">
+      <div class="fieldItem external-disclosures row-fluid robotoBold borderStyle_disclosure blue-heading2 padding10 col-xs-12">
+        <input type="checkbox" name="disclosure_accountdetails_cert__c" id="disclosure_accountdetails_cert__c"
+               value="true" data-value="{{About_Account__c.disclosure_accountdetails_cert__c}}" class="disclosure-check chkboxMargin">
+          {{#equal Application__c.current_channel__c 'Online' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_online}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Branch' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_branch}}
+            </span>
+          {{/equal}}
+
+          {{#equal Application__c.current_channel__c 'Call Center' }}
+            <span class="span94percent paddingTop10" for="authorize">
+              {{PageLabels.funding_disc_call_center}}
+            </span>
+          {{/equal}}
+      </div>
+    </div>
+    <!--<div class="row fieldSet">
+      <div class="external-disclosures external-disclosures-note font144">
+        NOTE: Terafina does not send prenotification to the receiving institution. By clicking on the checkbox,
+        you certify that the information you have given on this form is complete and accurate. Terafina will
+        not be liable for errors resulting from incorrect account information. Your request is pending until
+        reviewed by the Electronic Services Department.
+      </div>
+    </div>-->
+  </div>
+  <!-- check section for checking ends here-->
+<div class="check hidden">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5 pate">
+        <label for="cert_check_routing_number__c">Routing Number<span class="required"> *</span></label>
+        <input name="cert_check_routing_number__c" id="cert_check_routing_number__c" type="text"
+               class="col-xs-12 routingNumber" value="{{About_Account__c.cert_check_routing_number__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem pate1 col-xs-5">
+        <label for="cert_check_account_number__c">Account Number<span class="required"> *</span></label>
+        <input type="text" name="cert_check_account_number__c" id="cert_check_account_number__c" class="col-xs-12 accountNumber"
+               value="{{About_Account__c.cert_check_account_number__c}}"/>
+      </div>
+    </div>
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_cert_check__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_cert_check__c" id="dollar_amount_cert_check__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_cert_check__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_cert_check__c"></div>
+    
+  </div>
+  <!-- check for checking ends here-->
+  <!-- check section for checking ends here-->
+<div class="cash hidden">
+    
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="dollar_amount_cert_cash__c">$ Amount<span class="required"> *</span></label>
+        <input name="dollar_amount_cert_cash__c" id="dollar_amount_cert_cash__c" type="text"
+               class="currencyUS col-xs-12" value="{{About_Account__c.dollar_amount_cert_cash__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+        <!-- <span class="fieldNote">(Max up to $500)</span> -->
+      </div>
+    </div>
+    <div class="row validation-errors hidden" id="error_dollar_amount_cert_cash__c"></div>
+    
+  </div>
+  <!-- cash for checking ends here-->
+</div>
+{{/if}}
+{{#if Application__c.type_of_vehicle_loans__c}}
+<div class="formFields loanInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_vehicle_loans__c}} {{PageLabels.info}}</h4>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="requested_loan_amount_vehicleloans__c">Requested Loan Amount <span class="required"> *</span></label>
+      <input type="text" name="requested_loan_amount_vehicleloans__c" id="requested_loan_amount_vehicleloans__c"
+          class="col-xs-12 currencyUS required" value="{{About_Account__c.requested_loan_amount_vehicleloans__c}}"
+          data-select="term_vehicleloans__c"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="term_vehicleloans__c">Select Term<span class="required"> *</span></label>
+        <select name="term_vehicleloans__c" id="term_vehicleloans__c" class="col-xs-12 required"
+                data-value="{{About_Account__c.term_vehicleloans__c}}">
+          <option value="">Select Term<span class="required"> *</span></option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row validation-errors hidden" id="error_requested_loan_amount_vehicleloans__c"></div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="purpose_vehicleloan__c">Select Purpose <span class="required"> *</span></label>
+        <select name="purpose_vehicleloan__c" id="purpose_vehicleloan__c" class="col-xs-12 loanPurpose required"
+                data-value="{{About_Account__c.purpose_vehicleloan__c}}">
+          <option value="">Select Purpose <span class="required"> *</span></option>
+          <option>Car</option>
+          <option>House</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5 other_loan_purpose hidden">
+      <label for="otherpurpose_vehicleloans__c">Other Purpose<span class="required"> *</span></label>
+      <input type="text" name="otherpurpose_vehicleloans__c" id="otherpurpose_vehicleloans__c" class="col-xs-12"
+             value="{{About_Account__c.otherpurpose_vehicleloans__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper debt_consolidation_purpose hidden col-xs-5">
+      <label for="debt_consolidation_vehicle_loan__c">Debt Consolidation Purpose<span class="required"> *</span></label>
+      <input type="text" name="debt_consolidation_vehicle_loan__c" id="debt_consolidation_vehicle_loan__c"
+             class="col-xs-12 required" value="{{About_Account__c.debt_consolidation_vehicle_loan__c}}"/>
+    </div>
+  </div>
+</div>
+
+{{#if Application__c.type_of_vehicle_loans__c}}
+{{#notequal Application__c.current_channel__c 'Online' }}
+<div class="formFields vehiclePaymentMethod sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_vehicle_loans__c}} {{PageLabels.payment_method}}</h4>
+  <div id="autoPaymentMethod">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="vl_payment_method__c">Payment Method</label>
+          <select name="vl_payment_method__c" id="vl_payment_method__c" class="col-xs-12 appl_1_vlpaymentmethod"
+                  data-value="{{About_Account__c.vl_payment_method__c}}">
+            <option value="">Select Payment Method</option>
+            <option value="ACH Transfer">ACH Transfer</option>
+            <option value="Cash Or Check">Cash Or Check</option>
+            <option value="Coupon">Coupon</option>
+            <option value="NoBillOrCoupon">No Bill/Coupon</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="VL_ACHtransfer hidden">
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="VL_ACHtransfer hidden">
+            <label for="vl_account_holder_name__c">Account Holder Name</label>
+            <input type="text" name="vl_account_holder_name__c" id="vl_account_holder_name__c" class="col-xs-12 required" value="{{About_Account__c.vl_account_holder_name__c}}" disabled="true"/>          
+          </div>
+        </div>
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="styled-select">
+            <label for="vl_account_type__c">Account Type <span class="required">*</span></label>
+            <select name="vl_account_type__c" id="vl_account_type__c" class="col-xs-12 required" data-value="{{About_Account__c.vl_account_type__c}}">
+              <option value="">Account Type <span class="required"> *</span></option>
+              <option value="Checking>"> Checking </option>
+              <option value="Savings>"> Savings </option>              
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5 fill2">
+          <label for="vl_account_number__c">Account Number<span class="required"> *</span></label>
+          <input type="text" name="vl_account_number__c" id="vl_account_number__c" class="col-xs-12 accountNumber required" value="{{About_Account__c.vl_account_number__c}}"/>
+        </div>
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="vl_routing_number__c">Routing Number<span class="required"> *</span></label>
+          <input name="vl_routing_number__c" id="vl_routing_number__c" type="text" class="col-xs-12 routingNumber required" value="{{About_Account__c.vl_routing_number__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/notequal}} 
+{{/if}}
+
+   
+
+
+{{#if DisplayedFields.vin__c}}
+<div class="formFields vehicleCollateralInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_vehicle_loans__c}} Collateral</h4>
+  <div id="autoCollateral">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="vehicleyear__c">Select Vehicle Year</label>
+          <select name="vehicleyear__c" id="vehicleyear__c" class="col-xs-12 appl_1_vehicleYear required"
+                  data-value="{{About_Account__c.vehicleyear__c}}">
+
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="vehiclemake__c">Select Vehicle Make</label>
+          <select name="vehiclemake__c" id="vehiclemake__c" class="col-xs-12 appl_1_vehicleMake required"
+                  data-value="{{About_Account__c.vehiclemake__c}}">
+            <option value="">Select Make</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="vehiclemodel__c">Select Vehicle Model</label>
+          <select name="vehiclemodel__c" id="vehiclemodel__c" class="col-xs-12 appl_1_vehicleModel required"
+                  data-value="{{About_Account__c.vehiclemodel__c}}">
+            <option value="">Select Model</option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="vehicle_sub_model__c">Select Vehicle SubModel</label>
+          <select name="vehicle_sub_model__c" id="vehicle_sub_model__c" class="col-xs-12 appl_1_vehicleSubModel required"
+                  data-value="{{About_Account__c.vehicle_sub_model__c}}">
+            <option value="">Select SubModel</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="vin__c">Vehicle Identification Number</label>
+        <input type="text" name="vin__c" id="vin__c" class="col-xs-12" value="{{About_Account__c.vin__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="vehiclemileage__c">Approximate Mileage</label>
+        <input type="text" name="vehiclemileage__c" id="vehiclemileage__c" class="col-xs-12"
+               value="{{About_Account__c.vehiclemileage__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/if}}
+<!-- {{#if DisplayedFields.non_auto_vehicle_model__c}} -->
+<div class="formFields nonAutoCollateralInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_vehicle_loans__c}} Collateral</h4>
+  <div id="nonAutoCollateral">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="non_auto_vehicle_year__c">Year</label>
+        <input type="text" name="non_auto_vehicle_year__c" id="non_auto_vehicle_year__c" class="col-xs-12 positive"
+               value="{{About_Account__c.non_auto_vehicle_year__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="non_auto_vehicle_make__c">Make</label>
+        <input type="text" name="non_auto_vehicle_make__c" id="non_auto_vehicle_make__c" class="col-xs-12"
+               value="{{About_Account__c.non_auto_vehicle_make__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="non_auto_vehicle_model__c">Model</label>
+        <input type="text" name="non_auto_vehicle_model__c" id="non_auto_vehicle_model__c" class="col-xs-12"
+               value="{{About_Account__c.non_auto_vehicle_model__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="non_auto_vehicle_sub_model__c">Select Vehicle SubModel</label>
+        <input type="text" name="non_auto_vehicle_sub_model__c" id="non_auto_vehicle_sub_model__c" class="col-xs-12"
+               value="{{About_Account__c.non_auto_vehicle_sub_model__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="non_auto_vehicle_vin__c">Vehicle Identification Number</label>
+        <input type="text" name="non_auto_vehicle_vin__c" id="non_auto_vehicle_vin__c" class="col-xs-12"
+               value="{{About_Account__c.non_auto_vehicle_vin__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+      </div>
+    </div>
+    {{#if DisplayedFields.non_auto_vehicle_mileage__c}}
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="non_auto_vehicle_mileage__c">Approximate Mileage</label>
+        <input type="text" name="non_auto_vehicle_mileage__c" id="non_auto_vehicle_mileage__c" class="col-xs-12"
+               value="{{About_Account__c.non_auto_vehicle_mileage__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem">
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>
+<!-- {{/if}} -->
+{{#if Application__c.type_of_personal_loans__c}}
+  <div class="formFields loanInfo sectionTitleContainer">
+    <h4 class="sectionTitle">{{Application__c.type_of_personal_loans__c}} {{PageLabels.info}}</h4>
+    <div class="row fieldSet">
+  {{#if DisplayedFields.requested_loan_amount_personalloans__c}}
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="requested_loan_amount_personalloans__c">Requested Personal Loan Amount <span class="required"> *</span></label>
+        <input type="text" name="requested_loan_amount_personalloans__c" id="requested_loan_amount_personalloans__c"
+               class="col-xs-12 currencyUS required" value="{{About_Account__c.requested_loan_amount_personalloans__c}}"
+               data-select="term_personalloans__c"/>
+      </div>
+  {{/if}}
+  {{#if DisplayedFields.requested_credit_limit_personalloans__c}}
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="requested_credit_limit_personalloans__c">Requested Credit Limit Amount <span class="required"> *</span></label>
+        <input type="text" name="requested_credit_limit_personalloans__c" id="requested_credit_limit_personalloans__c"
+               class="col-xs-12 currencyUS required" value="{{About_Account__c.requested_credit_limit_personalloans__c}}"/>
+      </div>
+  {{/if}}
+  {{#if DisplayedFields.term_personalloans__c}}
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="term_personalloans__c">Select Term<span class="required"> *</span></label>
+          <select name="term_personalloans__c" id="term_personalloans__c" class="col-xs-12 required"
+                  data-value="{{About_Account__c.term_personalloans__c}}">
+            <option value="">Select Term<span class="required"> *</span></option>
+            <option>12 Months</option>
+            <option>24 Months</option>
+            <option>36 Months</option>
+          </select>
+        </div>
+      </div>
+  {{/if}}
+    </div>
+    <div class="row validation-errors hidden" id="error_requested_loan_amount_personalloans__c"></div>
+    <div class="row validation-errors hidden" id="error_requested_credit_limit_personalloans__c"></div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="purpose_personalloans__c">Select Purpose <span class="required"> *</span></label>
+          <select name="purpose_personalloans__c" id="purpose_personalloans__c" class="col-xs-12 loanPurpose loanDecl required"
+                  data-value="{{About_Account__c.purpose_personalloans__c}}">
+            <option value="">Select Purpose <span class="required"> *</span></option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="other_loan_purpose hidden">
+          <label for="otherpurpose_personalloans__c">Other Purpose<span class="required"> *</span></label>
+          <input type="text" name="otherpurpose_personalloans__c" id="otherpurpose_personalloans__c" class="col-xs-12"
+                 value="{{About_Account__c.otherpurpose_personalloans__c}}"/>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="debt_consolidation_purpose hidden">
+          <label for="debt_consolidation_personal_loan__c">Debt Consolidation Purpose<span class="required"> *</span></label>
+          <input type="text" name="debt_consolidation_personal_loan__c" id="debt_consolidation_personal_loan__c"
+                 class="col-xs-12 required" value="{{About_Account__c.debt_consolidation_personal_loan__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}
+{{#if Application__c.type_of_business_loans__c}}
+  <div class="formFields loanInfo sectionTitleContainer">
+    <h4 class="sectionTitle">{{Application__c.type_of_business_loans__c}} {{PageLabels.info}}</h4>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="requested_loan_amount_businessloans__c">Requested Business Loan Amount <span class="required"> *</span></label>
+        <input type="text" name="requested_loan_amount_businessloans__c" id="requested_loan_amount_businessloans__c"
+               class="col-xs-12 currencyUS required" value="{{About_Account__c.requested_loan_amount_businessloans__c}}"
+               data-select="term_businessloans__c"/>
+      </div>
+  {{#if DisplayedFields.term_businessloans__c}}
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="term_businessloans__c">Select Term<span class="required"> *</span></label>
+          <select name="term_businessloans__c" id="term_businessloans__c" class="col-xs-12 required"
+                  data-value="{{About_Account__c.term_businessloans__c}}">
+            <option value="">Select Term<span class="required"> *</span></option>
+            <option>12 Months</option>
+            <option>24 Months</option>
+            <option>36 Months</option>
+          </select>
+        </div>
+      </div>
+  {{/if}}
+    </div>
+    <div class="row validation-errors hidden" id="error_requested_loan_amount_businessloans__c"></div>
+    <!--<div class="row validation-errors hidden" id="error_requested_credit_limit_personalloans__c"></div>-->
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="purpose_businessloans__c">Select Purpose <span class="required"> *</span></label>
+          <select name="purpose_businessloans__c" id="purpose_businessloans__c" class="col-xs-12 loanPurpose loanDecl required"
+                  data-value="{{About_Account__c.purpose_businessloans__c}}">
+            <option value="">Select Purpose <span class="required"> *</span></option>
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="other_loan_purpose hidden">
+          <label for="otherpurpose_businessloans__c">Other Purpose<span class="required"> *</span></label>
+          <input type="text" name="otherpurpose_businessloans__c" id="otherpurpose_businessloans__c" class="col-xs-12"
+                 value="{{About_Account__c.otherpurpose_businessloans__c}}"/>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="debt_consolidation_purpose hidden">
+          <label for="debt_consolidation_business_loan__c">Debt Consolidation Purpose<span class="required"> *</span></label>
+          <input type="text" name="debt_consolidation_business_loan__c" id="debt_consolidation_business_loan__c"
+                 class="col-xs-12 required" value="{{About_Account__c.debt_consolidation_business_loan__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+{{#if Application__c.type_of_personal_loans__c}}
+{{#notequal Application__c.current_channel__c 'Online' }}
+<div class="formFields PersonalLoansPaymentMethod sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_personal_loans__c}} {{PageLabels.payment_method}}</h4>
+  <div id="PLPaymentMethod">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="pl_payment_method__c">Payment Method</label>
+          <select name="pl_payment_method__c" id="pl_payment_method__c" class="col-xs-12 appl_1_plpaymentmethod"
+                  data-value="{{About_Account__c.pl_payment_method__c}}">
+            <option value="">Select Payment Method</option>
+            <option value="ACH Transfer">ACH Transfer</option>
+            <option value="Cash Or Check">Cash Or Check</option>
+            <option value="Coupon">Coupon</option>
+            <option value="NoBillOrCoupon">No Bill/Coupon</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="PL_ACHtransfer hidden">
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="pl_account_holder_name__c">Account Holder Name</label>
+          <input type="text" name="pl_account_holder_name__c" id="pl_account_holder_name__c" class="col-xs-12 required" value="{{About_Account__c.pl_account_holder_name__c}}" disabled="true"/>          
+        </div>
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="styled-select">
+            <label for="pl_account_type__c">Account Type <span class="required">*</span></label>
+            <select name="pl_account_type__c" id="pl_account_type__c" class="col-xs-12 required" data-value="{{About_Account__c.pl_account_type__c}}">
+              <option value="">Account Type<span class="required"> *</span></option>
+              <option value="Checking>"> Checking </option>
+              <option value="Savings>"> Savings </option>              
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5 fill2">
+          <label for="pl_account_number__c">Account Number<span class="required"> *</span></label>
+          <input type="text" name="pl_account_number__c" id="pl_account_number__c" class="col-xs-12 accountNumber required" value="{{About_Account__c.pl_account_number__c}}"/>
+        </div>
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="pl_routing_number__c">Routing Number<span class="required"> *</span></label>
+          <input name="pl_routing_number__c" id="pl_routing_number__c" type="text" class="col-xs-12 routingNumber required" value="{{About_Account__c.pl_routing_number__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/notequal}}
+{{/if}}
+
+
+{{#if DisplayedFields.certificate_product_description__c}}
+<div class="formFields certCollateralInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{PageLabels.certificate_collateral}}</h4>
+  <div id="certCollateral">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="certificate_product_description__c">Certificate Product Description</label>
+        <input type="text" name="certificate_product_description__c" id="certificate_product_description__c"
+               class="col-xs-12" value="{{About_Account__c.certificate_product_description__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem  col-xs-5">
+        <label for="certificate_account_number__c">Certificate Account Number</label>
+        <input type="text" name="certificate_account_number__c" id="certificate_account_number__c" class="col-xs-12"
+               value="{{About_Account__c.certificate_account_number__c}}"/>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{#if DisplayedFields.stock_symbols__c}}
+<div class="formFields sectionTitleContainer" id="stockInfo">
+  <h4 class="sectionTitle">{{PageLabels.stock_collateral}}</h4>
+
+
+
+
+  <table id="stock-info" cell-padding="0" cell-spacing="0">
+    <thead>
+    <tr>
+      <th>Stock Symbol</th>
+      <th>No. of Shares</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <input type="text" name="stock_symbol_1__c" value="{{About_Account__c.stock_symbol_1__c}}"/>
+      </td>
+      <td>
+        <input type="text" name="numofshares_1__c" value="{{About_Account__c.numofshares_1__c}}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="stock_symbol_2__c" value="{{About_Account__c.stock_symbol_2__c}}"/>
+      </td>
+      <td>
+        <input type="text" name="numofshares_2__c" value="{{About_Account__c.numofshares_2__c}}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="stock_symbol_3__c" value="{{About_Account__c.stock_symbol_3__c}}"/>
+      </td>
+      <td>
+        <input type="text" name="numofshares_3__c" value="{{About_Account__c.numofshares_3__c}}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <input type="text" name="stock_symbol_4__c" value="{{About_Account__c.stock_symbol_4__c}}"/>
+      </td>
+      <td>
+        <input type="text" name="numofshares_4__c" value="{{About_Account__c.numofshares_4__c}}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="stock_symbol_5__c" value="{{About_Account__c.stock_symbol_5__c}}"/>
+      </td>
+      <td>
+        <input type="text" name="numofshares_5__c" value="{{About_Account__c.numofshares_5__c}}"/>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+{{/if}}
+{{#if DisplayedFields.shares_product_description__c}}
+<div class="formFields sharescollateralInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{PageLabels.shares_collateral}}</h4>
+  <div id="sharesCollateral">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="shares_product_description__c">Shares Product Description</label>
+        <input type="text" name="shares_product_description__c" id="shares_product_description__c"
+               class="col-xs-12" value="{{About_Account__c.shares_product_description__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="certificate_account_number__c">Shares Account Number</label>
+        <input type="text" name="shares_account_number__c" id="shares_account_number__c" class="col-xs-12"
+               value="{{About_Account__c.shares_account_number__c}}"/>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+{{#if Application__c.type_of_credit_cards__c}}
+<div class="formFields creditInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_credit_cards__c}} {{PageLabels.info}}</h4>
+  {{#if DisplayedFields.requested_credit_limit_ccards__c}}
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="requested_credit_limit_ccards__c">Requested Credit Limit <span class="required"> *</span></label>
+      <input type="text" name="requested_credit_limit_ccards__c" id="requested_credit_limit_ccards__c"
+             class="col-xs-12 currencyUS required" value="{{About_Account__c.requested_credit_limit_ccards__c}}"/>
+    </div>
+  </div>
+  {{/if}}
+  <div class="row validation-errors hidden" id="error_requested_credit_limit_ccards__c"></div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="purpose_ccards__c">Select Purpose <span class="required"> *</span></label>
+        <select name="purpose_ccards__c" id="purpose_ccards__c" class="col-xs-12 creditPurpose required"
+                data-value="{{About_Account__c.purpose_ccards__c}}">
+          <option value="">Select Purpose <span class="required"> *</span></option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="other_credit_purpose hidden">
+        <label for="otherpurpose_ccards__c">Other Purpose<span class="required"> *</span></label>
+        <input type="text" name="otherpurpose_ccards__c" id="otherpurpose_ccards__c" class="col-xs-12"
+               value="{{About_Account__c.otherpurpose_ccards__c}}"/>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="debt_consolidation_purpose hidden">
+        <label for="debt_consolidation_credit_card__c">Debt Consolidation Purpose<span class="required"> *</span></label>
+        <input type="text" name="debt_consolidation_credit_card__c" id="debt_consolidation_credit_card__c"
+               class="col-xs-12 required" value="{{About_Account__c.debt_consolidation_credit_card__c}}"/>
+      </div>
+    </div>
+  </div>
+  </div>
+{{/if}}
+
+{{#if Application__c.type_of_credit_cards__c}}
+{{#notequal Application__c.current_channel__c 'Online' }}
+<div class="formFields CCPaymentMethod sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_credit_cards__c}} {{PageLabels.payment_method}}</h4>
+  <div id="CCPaymentMethod">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <div class="styled-select">
+          <label for="cc_payment_method__c">Payment Method</label>
+          <select name="cc_payment_method__c" id="cc_payment_method__c" class="col-xs-12 appl_1_ccpaymentmethod"
+                  data-value="{{About_Account__c.cc_payment_method__c}}">
+            <option value="">Select Payment Method</option>
+            <option value="ACH Transfer">ACH Transfer</option>
+            <option value="Cash Or Check">Cash Or Check</option>
+            <option value="Coupon">Coupon</option>
+            <option value="NoBillOrCoupon">No Bill/Coupon</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="CC_ACHtransfer hidden">
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="cc_account_holder_name__c">Account Holder Name</label>
+          <input type="text" name="cc_account_holder_name__c" id="cc_account_holder_name__c" class="col-xs-12 required" value="{{About_Account__c.cc_account_holder_name__c}}" disabled="true"/> 
+        </div>         
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="styled-select">
+            <label for="cc_account_type__c">Account Type <span class="required">*</span></label>
+            <select name="cc_account_type__c" id="cc_account_type__c" class="col-xs-12 required" data-value="{{About_Account__c.cc_account_type}}">
+              <option value="">Account Type <span class="required"> *</span></option>
+              <option value="Checking>"> Checking </option>
+              <option value="Savings>"> Savings </option>              
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5 fill2">
+          <label for="cc_account_number__c">Account Number<span class="required"> *</span></label>
+          <input type="text" name="cc_account_number__c" id="cc_account_number__c" class="col-xs-12 accountNumber required" value="{{About_Account__c.cc_account_number__c}}"/>
+        </div>
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="cc_routing_number__c">Routing Number<span class="required"> *</span></label>
+          <input name="cc_routing_number__c" id="cc_routing_number__c" type="text" class="col-xs-12 routingNumber required" value="{{About_Account__c.cc_routing_number__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/notequal}}
+{{/if}}
+
+
+{{#if Application__c.type_of_business_credit_cards__c}}
+<div class="formFields buscreditInfo sectionTitleContainer">
+  <h4 class="sectionTitle">{{Application__c.type_of_business_credit_cards__c}} {{PageLabels.information}}</h4>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="requested_credit_limit_bus_ccards__c">Requested Credit Limit <span class="required"> *</span></label>
+      <input type="text" name="requested_credit_limit_bus_ccards__c" id="requested_credit_limit_bus_ccards__c"
+             class="col-xs-12 currencyUS required" value="{{About_Account__c.requested_credit_limit_bus_ccards__c}}"/>
+    </div>
+  </div>
+  <div class="row validation-errors hidden" id="error_requested_credit_limit_bus_ccards__c"></div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="purpose_bus_ccards__c">Select Purpose <span class="required"> *</span></label>
+        <select name="purpose_bus_ccards__c" id="purpose_bus_ccards__c" class="col-xs-12 buscreditPurpose required"
+                data-value="{{About_Account__c.purpose_bus_ccards__c}}">
+          <option value="">Select Purpose <span class="required"> *</span></option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="other_bus_credit_purpose hidden">
+        <label for="otherpurpose_bus_ccards__c">Other Purpose<span class="required"> *</span></label>
+        <input type="text" name="otherpurpose_bus_ccards__c" id="otherpurpose_bus_ccards__c" class="col-xs-12"
+               value="{{About_Account__c.otherpurpose_bus_ccards__c}}"/>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="debt_consolidation_bus_purpose hidden">
+        <label for="debt_consolidation_bus_credit_card__c">Debt Consolidation Purpose<span class="required"> *</span></label>
+        <input type="text" name="debt_consolidation_bus_credit_card__c" id="debt_consolidation_bus_credit_card__c"
+               class="col-xs-12 required" value="{{About_Account__c.debt_consolidation_bus_credit_card__c}}"/>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+{{#if DisplayedFields.displayentityinstallment}}
+    <!-- Entity installment loans -->
+    <h4 class="sectionTitle formFields">{{PageLabels.entity_installment_loans_credits}}</h4>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0 text-center">
+        <h4 class="sectionTitle">Description</h4>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Type</h4>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Monthly Payment</h4>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Balance Owned</h4>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_desc_1__c" id="sb_lc_desc_1__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_desc_1__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_type_1__c" id="sb_lc_type_1__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_type_1__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_monthy_payment_1__c" id="sb_lc_monthy_payment_1__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_monthy_payment_1__c}}"/>
+      </div>
+        <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_balance_owned_1__c" id="sb_lc_balance_owned_1__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_balance_owned_1__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_desc_2__c" id="sb_lc_desc_2__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_desc_2__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_type_2__c" id="sb_lc_type_2__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_type_2__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_monthy_payment_2__c" id="sb_lc_monthy_payment_2__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_monthy_payment_2__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_balance_owned_2__c" id="sb_lc_balance_owned_2__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_balance_owned_2__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_desc_3__c" id="sb_lc_desc_3__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_desc_3__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_type_3__c" id="sb_lc_type_3__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_type_3__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_monthy_payment_3__c" id="sb_lc_monthy_payment_3__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_monthy_payment_3__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_balance_owned_3__c" id="sb_lc_balance_owned_3__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_balance_owned_3__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_desc_4__c" id="sb_lc_desc_4__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_desc_4__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_type_4__c" id="sb_lc_type_4__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_type_4__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_monthy_payment_4__c" id="sb_lc_monthy_payment_4__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_monthy_payment_4__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_balance_owned_4__c" id="sb_lc_balance_owned_4__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_balance_owned_4__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_desc_5__c" id="sb_lc_desc_5__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_desc_5__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_type_5__c" id="sb_lc_type_5__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_type_5__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_monthy_payment_5__c" id="sb_lc_monthy_payment_5__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_monthy_payment_5__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_balance_owned_5__c" id="sb_lc_balance_owned_5__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_balance_owned_5__c}}"/>
+      </div>
+    </div>
+
+  <!-- end of entity installment loan -->
+
+  <!-- Entity Cash -->
+    <h4 class="sectionTitle formFields sectionTitleContainer">{{PageLabels.entity_cash}}</h4>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0 text-center">
+        <h4 class="sectionTitle">Name of Financial Institution</h4>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Account Type</h4>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Account Number</h4>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Approximate Balance</h4>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_fin_inst_name_1__c" id="sb_lc_fin_inst_name_1__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_fin_inst_name_1__c }}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_account_type_1__c" id="sb_lc_account_type_1__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_type_1__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_account_number_1__c" id="sb_lc_account_number_1__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_number_1__c}}"/>
+      </div>
+        <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_approx_Bal_1__c" id="sb_lc_approx_Bal_1__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_approx_Bal_1__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_fin_inst_name_2__c" id="sb_lc_fin_inst_name_2__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_fin_inst_name_2__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_account_type_2__c" id="sb_lc_account_type_2__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_type_2__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_account_number_2__c" id="sb_lc_account_number_2__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_number_2__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_approx_Bal_2__c" id="sb_lc_approx_Bal_2__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_approx_Bal_2__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_fin_inst_name_3__c" id="sb_lc_fin_inst_name_3__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_fin_inst_name_3__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_account_type_3__c" id="sb_lc_account_type_3__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_type_3__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_account_number_3__c" id="sb_lc_account_number_3__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_number_3__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_approx_Bal_3__c" id="sb_lc_approx_Bal_3__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_approx_Bal_3__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_fin_inst_name_4__c" id="sb_lc_fin_inst_name_4__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_fin_inst_name_4__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_account_type_4__c" id="sb_lc_account_type_4__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_type_4__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_account_number_4__c" id="sb_lc_account_number_4__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_number_4__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_approx_Bal_4__c" id="sb_lc_approx_Bal_4__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_approx_Bal_4__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-5 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_fin_inst_name_5__c" id="sb_lc_fin_inst_name_5__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_fin_inst_name_5__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_account_type_5__c" id="sb_lc_account_type_5__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_type_5__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_account_number_5__c" id="sb_lc_account_number_5__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_account_number_5__c}}"/>
+      </div>
+      <div class="col-xs-2 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_approx_Bal_5__c" id="sb_lc_approx_Bal_5__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_approx_Bal_5__c}}"/>
+      </div>
+    </div>
+  <!-- end Entity cash -->
+  <!-- Stock Collateral --> 
+    <h4 class="sectionTitle formFields">{{PageLabels.stock_collateral}}</h4>
+    <div class="row  formFields">
+      <div class="col-xs-6 fieldset js-float-label-wrapper paddingrht0 text-center">
+        <h4 class="sectionTitle">Description</h4>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Market Value</h4>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4 text-center">
+        <h4 class="sectionTitle">Shares/Bonds</h4>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-6 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_sc_desc_1__c" id="sb_lc_sc_desc_1__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_sc_desc_1__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_market_value_1__c" id="sb_lc_market_value_1__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_market_value_1__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_shares_bond_1__c" id="sb_lc_shares_bond_1__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_shares_bond_1__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-6 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_sc_desc_2__c" id="sb_lc_sc_desc_2__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_sc_desc_2__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_market_value_2__c" id="sb_lc_market_value_2__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_market_value_2__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_shares_bond_2__c" id="sb_lc_shares_bond_2__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_shares_bond_2__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-6 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_sc_desc_3__c" id="sb_lc_sc_desc_3__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_sc_desc_3__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_market_value_3__c" id="sb_lc_market_value_3__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_market_value_3__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_shares_bond_3__c" id="sb_lc_shares_bond_3__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_shares_bond_3__c}}"/>
+      </div>
+    </div>
+      <div class="row  formFields">
+      <div class="col-xs-6 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_sc_desc_4__c" id="sb_lc_sc_desc_4__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_sc_desc_4__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_market_value_4__c" id="sb_lc_market_value_4__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_market_value_4__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_shares_bond_4__c" id="sb_lc_shares_bond_4__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_shares_bond_4__c}}"/>
+      </div>
+    </div>
+    <div class="row  formFields">
+      <div class="col-xs-6 fieldset js-float-label-wrapper paddingrht0">
+        <input type="text" name="sb_lc_sc_desc_5__c" id="sb_lc_sc_desc_5__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_sc_desc_5__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+        <input type="text" name="sb_lc_market_value_5__c" id="sb_lc_market_value_5__c" class="col-xs-12 currencyUS"
+               value="{{About_Account__c.sb_lc_market_value_5__c}}"/>
+      </div>
+      <div class="col-xs-3 fieldset js-float-label-wrapper paddingrht0 paddinglft4">
+      <input type="text" name="sb_lc_shares_bond_5__c" id="sb_lc_shares_bond_5__c" class="col-xs-12"
+               value="{{About_Account__c.sb_lc_shares_bond_5__c}}"/>
+      </div>
+    </div>
+    <!-- End of stock collateral -->
+  {{/if}}
+  
+  {{#if DisplayedFields.displayapplicationaddendum}}
+    <!-- Application Addendum Entity-->
+    <h4 class="sectionTitle formFields">Additional Business Information</h4>
+    <div class="row formFields marginLeft5 colortera">Please Provide the Following Information</div>
+    <div class="row marginTop15 formFields">
+     <!--  <div class="col-xs-6">1. Description of the Business/Entity</div> -->
+     <div class="col-xs-6 js-float-label-wrapper fieldItem declarationText">{{PageLabels.addendum_1}}
+     </div>
+    </div>
+    <div class="row marginTop15 formFields">
+      <div class="col-xs-12 fieldset">
+        <textarea class="form-control js-float-label-wrapper" rows="3" name="busaa_1__c">{{About_Account__c.busaa_1__c}}</textarea>
+      </div>
+    </div>
+    <div class="row marginTop15 formFields">
+        <div class="col-xs-6 fieldset js-float-label-wrapper">{{PageLabels.addendum_2}}</div>
+        <div class="col-xs-6 fieldset js-float-label-wrapper"><input type="text" name="busaa_country__c" id="busaa_country__c" class="col-xs-12 required"
+               value="{{About_Account__c.busaa_country__c}}"/></div>
+    </div>
+    <div class="row marginTop15 formFields">
+        <div class="col-xs-6 fieldset js-float-label-wrapper">{{PageLabels.addendum_3}}</div>
+        <div class="col-xs-6 fieldset js-float-label-wrapper"><input type="text" name="busaa_state__c" id="busaa_state__c" class="col-xs-12 required"
+               value="{{About_Account__c.busaa_state__c}}"/></div>
+    </div>
+    <div class="row marginTop15 formFields">
+       <div class="col-xs-6 js-float-label-wrapper fieldItem declarationText">{{PageLabels.addendum_4}}
+        </div>
+    </div>
+    <div class="row marginTop15 formFields">
+      <div class="col-xs-12 fieldset">
+        <textarea class="form-control js-float-label-wrapper" rows="3" name="busaa_2__c">{{About_Account__c.busaa_2__c}}</textarea>
+      </div>
+    </div>
+    <div class="formFields" id="appl_1_busaa_3" data-value="{{About_Account__c.busaa_3__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_5}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_3__c" id="appl_1_busaa3_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa3_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_3__c" id="appl_1_busaa3_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa3_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div id="busaa_3_div" class="js-float-label-wrapper hide col-xs-6">
+          <label for="busaa_3">Please provide an explanation<span class="required"> *</span></label>
+          <textarea cols="" rows="3" name="busaa_3a__c" id="busaa_3" class="col-xs-12">{{About_Account__c.busaa_3a__c}}</textarea>
+        </div>
+      </div>
+    </div>
+    <div class="formFields" id="appl_1_busaa_4" data-value="{{About_Account__c.busaa_4__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_6}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_4__c" id="appl_1_busaa4_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa4_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_4__c" id="appl_1_busaa4_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa4_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div id="busaa_4_div" class="js-float-label-wrapper hide col-xs-6">
+          <label for="busaa_4">Please provide an explanation<span class="required"> *</span></label>
+          <textarea cols="" rows="3" name="busaa_4a__c" id="busaa_4" class="col-xs-12">{{About_Account__c.busaa_4a__c}}</textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row marginTop15 formFields">
+       <div class="col-xs-6 js-float-label-wrapper fieldItem declarationText">{{PageLabels.addendum_7}}
+        </div>
+    </div>
+    <div class="row marginTop15 formFields">
+      <div class="col-xs-12 fieldset">
+        <textarea class="form-control js-float-label-wrapper" rows="3" name="busaa_5__c">{{About_Account__c.busaa_5__c}}</textarea>
+      </div>
+    </div>
+    <div class="row marginTop15 formFields">
+      <div class="col-xs-12">{{PageLabels.addendum_8}}</div>
+    </div>
+
+    <div class="formFields" id="appl_1_busaa_6a" data-value="{{About_Account__c.busaa_6a__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_8a}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_6a__c" id="appl_1_busaa6a_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa6a_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_6a__c" id="appl_1_busaa61_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa61_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+    </div>
+    <div class="formFields" id="appl_1_busaa_6b" data-value="{{About_Account__c.busaa_6b__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_8b}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_6b__c" id="appl_1_busaa6b_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa6b_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_6b__c" id="appl_1_busaa6b_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa6b_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+    </div>
+    <div class="formFields" id="appl_1_busaa_6c" data-value="{{About_Account__c.busaa_6c__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_8c}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_6c__c" id="appl_1_busaa6c_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa6c_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_6c__c" id="appl_1_busaa6c_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa6c_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="formFields" id="appl_1_busaa_7" data-value="{{About_Account__c.busaa_7__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_9}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_7__c" id="appl_1_busaa7_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa7_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_7__c" id="appl_1_busaa7_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa7_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+    </div>
+    <div class="formFields" id="appl_1_busaa_8" data-value="{{About_Account__c.busaa_8__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_10}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_8__c" id="appl_1_busaa8_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa8_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_8__c" id="appl_1_busaa8_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa8_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+    </div>
+    <div class="formFields" id="appl_1_busaa_9" data-value="{{About_Account__c.busaa_9__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_11}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_9__c" id="appl_1_busaa9_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa9_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_9__c" id="appl_1_busaa9_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa9_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+    </div>
+    <div class="formFields" id="appl_1_busaa_10" data-value="{{About_Account__c.busaa_10__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.addendum_12}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="busaa_10__c" id="appl_1_busaa10_0" value="true" autocomplete="off" />
+            <label for="appl_1_busaa10_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="busaa_10__c" id="appl_1_busaa10_1" value="false" autocomplete="off" />
+            <label for="appl_1_busaa10_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div id="busaa_10a_div" class="js-float-label-wrapper hide col-xs-6">
+          <label for="busaa_10a">Please provide an explanation<span class="required"> *</span></label>
+          <textarea cols="" rows="3" name="busaa_10a__c" id="busaa_10a" class="col-xs-12">{{About_Account__c.busaa_10a__c}}</textarea>
+        </div>
+      </div>
+    </div>
+  <!-- end of addendum entity -->
+{{/if}}
+
+{{#if DisplayedFields.branch_location_or_branches__c}}
+<div class="formFields sectionTitleContainer" id="investmentConsultationInfo">
+  <h4 class="sectionTitle">{{PageLabels.investment_consultation}}</h4>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <input type="hidden" name="city_branch__c" value="{{About_Account__c.city_branch__c}}" class="investment_consultation_state" />
+        <input type="hidden" name="state_branch__c" value="{{About_Account__c.state_branch__c}}" class="investment_consultation_city" />
+        <label for="appl_1_branchLocation">Branch Location<span class="required"> *</span></label>
+        <select id="appl_1_branchLocation" class="col-xs-12 ic_branch_location">
+          <option value="">Branch Location *</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="area_of_interest__c">Area of Interest</label>
+        <select id="area_of_interest__c" class="col-xs-12" name="area_of_interest__c"
+                data-value="{{About_Account__c.area_of_interest__c}}">
+          <option value="">Area of Interest</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem">
+    </div>
+  </div>
+</div>
+{{/if}}
+{{#equal PageVars.MortgageInterestSection 'true'}}
+<div class="formFields sectionTitleContainer" id="mortgageInterestInfo">
+  <h4 class="sectionTitle">{{PageLabels.mortgage_interest}}</h4>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="what_type_of_loan_are_you_applying_for__c">What type of Home Loan you are applying for?</label>
+        <select name="what_type_of_loan_are_you_applying_for__c" id="what_type_of_loan_are_you_applying_for__c"
+                class="col-xs-12" data-value="{{About_Account__c.what_type_of_loan_are_you_applying_for__c}}">
+          <option value="">What type of Home Loan you are applying for?</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem">
+    </div>
+  </div>
+</div>
+{{/equal}}
+
+</div>
+<!-- Primary Applicant Info -->
+{{#if DisplayedFields.other_information_section_acc_details_primeapp}}
+<div id="appl_1_info" class="applicant">
+  <h4 class="sectionHeader">{{PageLabels.other_information}} - {{Application__c.first_name__c}} {{Application__c.last_name__c}}</h4>
+
+  <div class="formFields" id="appl_1_decl1" data-value="{{About_Account__c.oiau_q1_pa__c}}">
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-8">{{PageLabels.other_information_1}}</div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q1_pa__c" id="appl_1_decl1_0" value="true" autocomplete="off" />
+          <label for="appl_1_decl1_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q1_pa__c" id="appl_1_decl1_1" value="false" autocomplete="off" />
+          <label for="appl_1_decl1_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc1_1_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc1_1">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q1_explanation_pa__c" id="desc1_1" class="col-xs-12">{{About_Account__c.oiau_q1_explanation_pa__c}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="formFields" id="appl_1_decl2" data-value="{{About_Account__c.oiau_q2_pa__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_2}}</div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q2_pa__c" id="appl_1_decl2_0" value="true" autocomplete="off" />
+          <label for="appl_1_decl2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q2_pa__c" id="appl_1_decl2_1" value="false" autocomplete="off" />
+          <label for="appl_1_decl2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc1_2_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc1_2">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q2_explanation_pa__c" id="desc1_2" class="col-xs-12">{{About_Account__c.oiau_q2_explanation_pa__c}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="formFields marginBtm20" id="appl_1_decl3" data-value="{{About_Account__c.oiau_q3_pa__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_3}}</div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q3_pa__c" id="appl_1_decl3_0" value="true" autocomplete="off" />
+          <label for="appl_1_decl3_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q3_pa__c" id="appl_1_decl3_1" value="false" autocomplete="off" />
+          <label for="appl_1_decl3_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc1_3_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc1_3">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q3_explanation_pa__c" id="desc1_3" class="col-xs-12">{{About_Account__c.oiau_q3_explanation_pa__c}}</textarea>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+{{/if}}
+
+  <div id="appl_1_HMDA" class="applicant appl_1_HMDA hidden">
+    <h4 class="sectionHeader">{{PageLabels.hmda_information}} - {{Application__c.first_name__c}} {{Application__c.last_name__c}}</h4>
+
+    <div class="formFields sectionTitleContainer">
+    <h4 class="sectionTitle">{{PageLabels.other_information_text_declarations}}</h4>
+
+    <div id="appl_1_Hamda" class="hamda">
+      <div class="hamdaFields">
+      <label for="hmda_info_pa__c" class="hamdaLabel">{{PageLabels.i_do_not_wish_to_furnish_this_information}}</label>
+      <input name="hmda_info_pa__c" type="checkbox" value="true" id="hmda_info_pa__c" class="appl_1_hamdaNoDecl"
+             data-value="{{About_Account__c.hmda_info_pa__c}}"/>
+    </div>
+    </div>
+    <div id="appl_1_hamdaEthnicity" class="hamda">
+    <div class="js-float-label-wrapper hamdaFieldsInline col-xs-5">
+      <div class="styled-select">
+        <label for="hmda_ethinicity_pa__c">Select Ethnicity<span class="required"> *</span></label>
+        <select id="hmda_ethinicity_pa__c" class="col-xs-12 appl_1_ethnicity" 
+                data-value="{{About_Account__c.hmda_ethinicity_pa__c}}" name="hmda_ethinicity_pa__c">
+          <option value="">Select Ethnicity<span class="required"> *</span></option>
+          <option value="Hispanic or Latino">Hispanic or Latino</option>
+          <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper hamdaFieldsInline col-xs-5">
+      <div class="styled-select">
+        <label for="hmda_sex_pa__c">Sex<span class="required"> *</span></label>
+        <select id="hmda_sex_pa__c" class="col-xs-12 appl_1_Sex" data-value="{{About_Account__c.hmda_sex_pa__c}}"
+            name="hmda_sex_pa__c">
+          <option value="">Sex<span class="required"> *</span></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+  </div>
+    <div id="appl_1_hamdaRace" class="hamda" data-value="{{About_Account__c.hmda_race_pa__c}}">
+    <div>
+      <h4 class="sectionTitle">{{PageLabels.race_check_all_that_apply}}</h4>
+    </div>
+    <table class="hamdaFields">
+      <tbody><tr><td>
+        <input name="appl_1_AmerIndianAlaskaNat" type="checkbox" value="American_Indian_or_Alaska_Native"
+               id="appl_1_AmerIndianAlaskaNat" class="appl_1_race"/>
+        <label for="appl_1_AmerIndianAlaskaNat">American Indian or Alaska Native</label>
+      </td></tr></tbody>
+    </table>
+    <table class="hamdaFields">
+      <tbody><tr>
+        <td>
+          <input name="appl_1_Asian" type="checkbox" class="appl_1_race" value="Asian" id="appl_1_Asian" />
+          <label for="appl_1_Asian" class="hamdaLabel">Asian</label>
+        </td>
+      </tr></tbody>
+    </table>
+    <div class="hamdaFields">
+      <label for="appl_1_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+      <input name="appl_1_BlackAfricanAmerican" class="appl_1_race" type="checkbox" value="Black_or_African_American"
+             id="appl_1_BlackAfricanAmerican" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_1_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+        Highlander</label>
+      <input name="appl_1_NatHawaiianOtherPacIslander" type="checkbox" class="appl_1_race"
+             value="Native_Hawaiian_or_Other_Pacific_Highlander" id="appl_1_NatHawaiianOtherPacIslander" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_1_White" class="hamdaLabel">White</label>
+      <input name="appl_1_White" type="checkbox" class="appl_1_race" value="White" id="appl_1_White" />
+    </div>
+
+    </div>
+   </div>
+  </div>
+
+<!-- Secondary Applicant Info -->
+{{#if Application__c.first_name_j__c}}
+<div id="appl_2_info" class="applicant">
+  <h4 class="sectionHeader">{{PageLabels.other_information}} - {{Application__c.first_name_j__c}} {{Application__c.last_name_j__c}}</h4>
+
+  <div class="formFields" id="appl_2_decl1" data-value="{{About_Account__c.oiau_q1_j1__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_1}}
+      </div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q1_j1__c" id="appl_2_decl1_0" value="true" autocomplete="off" />
+          <label for="appl_2_decl1_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q1_j1__c" id="appl_2_decl1_1" value="false" autocomplete="off" />
+          <label for="appl_2_decl1_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc2_1_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc2_1">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q1_explanation_j1__c" id="desc2_1" class="col-xs-12">{{About_Account__c.oiau_q1_explanation_j1__c}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="formFields" id="appl_2_decl2" data-value="{{About_Account__c.oiau_q2_j1__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_2}}</div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q2_j1__c" id="appl_2_decl2_0" value="true" autocomplete="off" />
+          <label for="appl_2_decl2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q2_j1__c" id="appl_2_decl2_1" value="false" autocomplete="off" />
+          <label for="appl_2_decl2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc2_2_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc2_2">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q2_explanation_j1__c" id="desc2_2" class="col-xs-12">{{About_Account__c.oiau_q2_explanation_j1__c}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="formFields marginBtm20" id="appl_2_decl3" data-value="{{About_Account__c.oiau_q3_j1__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_3}}
+      </div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q3_j1__c" id="appl_2_decl3_0" value="true" autocomplete="off" />
+          <label for="appl_2_decl3_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q3_j1__c" id="appl_2_decl3_1" value="false" autocomplete="off" />
+          <label for="appl_2_decl3_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc2_3_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc2_3">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q3_explanation_j1__c" id="desc2_3" class="col-xs-12">{{About_Account__c.oiau_q3_explanation_j1__c}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--HMDA Decleration -->
+<div id="appl_2_HMDA" class="applicant appl_2_HMDA hidden">
+    <h4 class="sectionHeader">{{PageLabels.hmda_information}} - {{Application__c.first_name_j__c}} {{Application__c.last_name_j__c}}</h4>
+
+  <div class="formFields">
+    <h4 class="sectionTitle">{{PageLabels.other_information_text_declarations}}</h4>
+
+  <div id="appl_2_Hamda" class="hamda">
+    <div class="hamdaFields">
+      <label for="hmda_info_j1__c" class="hamdaLabel">{{PageLabels.i_do_not_wish_to_furnish_this_information}}</label>
+      <input name="hmda_info_j1__c" type="checkbox" value="true" id="hmda_info_j1__c" class="appl_2_hamdaNoDecl"
+             data-value="{{About_Account__c.hmda_info_j1__c}}"/>
+    </div>
+  </div>
+  <div id="appl_2_hamdaEthnicity" class="hamda">
+    <div class="js-float-label-wrapper hamdaFieldsInline">
+    <div class="styled-select">
+        <label for="hmda_ethinicity_j1__c">Select Ethnicity<span class="required"> *</span></label>
+        <select id="hmda_ethinicity_j1__c" class="col-xs-12 appl_2_ethnicity"
+              data-value="{{About_Account__c.hmda_ethinicity_j1__c}}" name="hmda_ethinicity_j1__c">
+        <option value="">Select Ethnicity<span class="required"> *</span></option>
+        <option value="Hispanic or Latino">Hispanic or Latino</option>
+        <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+      </select>
+    </div>
+
+    </div>
+    <div class="js-float-label-wrapper hamdaFieldsInline col-xs-5">
+      <div class="styled-select">
+          <label for="hmda_sex_j1__c">Sex<span class="required"> *</span></label>
+          <select id="hmda_sex_j1__c" class="col-xs-12 appl_2_Sex" data-value="{{About_Account__c.hmda_sex_j1__c}}"
+            name="hmda_sex_j1__c">
+          <option value="">Sex<span class="required"> *</span></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div id="appl_2_hamdaRace" class="hamda" data-value="{{About_Account__c.hmda_race_j1__c}}">
+    <div>
+      <h4 class="sectionTitle">{{PageLabels.race_check_all_that_apply}}</h4>
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_2_AmerIndianAlaskaNat" class="hamdaLabel">American Indian or Alaska Native</label>
+      <input name="appl_2_AmerIndianAlaskaNat" type="checkbox" class="appl_2_race" value="American_Indian_or_Alaska_Native"
+             id="appl_2_AmerIndianAlaskaNat" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_2_Asian" class="hamdaLabel">Asian</label>
+      <input name="appl_2_Asian" type="checkbox" class="appl_2_race" value="Asian" id="appl_2_Asian" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_2_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+      <input name="appl_2_BlackAfricanAmerican" type="checkbox" class="appl_2_race" value="Black_or_African_American"
+             id="appl_2_BlackAfricanAmerican" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_2_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+        Highlander</label>
+      <input name="appl_2_NatHawaiianOtherPacIslander" type="checkbox"
+             value="Native_Hawaiian_or_Other_Pacific_Highlander" class="appl_2_race" id="appl_2_NatHawaiianOtherPacIslander" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_2_White" class="hamdaLabel">White</label>
+      <input name="appl_2_White" type="checkbox" value="White" class="appl_2_race" id="appl_2_White" />
+    </div>
+
+    </div>
+   </div>
+  </div> 
+  {{/if}}
+
+  <!-- 3rd Applicant Info -->
+{{#if Application__c.first_name_j2__c}}
+  <div id="appl_3" class="applicant">
+    <h4 class="sectionHeader">{{PageLabels.other_information}} - {{Application__c.first_name_j2__c}} {{Application__c.last_name_j2__c}}</h4>
+
+    <div class="formFields" id="appl_3_decl1" data-value="{{About_Account__c.oiau_q1_j2__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.other_information_1}}
+        </div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="oiau_q1_j2__c" id="appl_3_decl1_0" value="true" autocomplete="off" />
+            <label for="appl_3_decl1_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="oiau_q1_j2__c" id="appl_3_decl1_1" value="false" autocomplete="off" />
+            <label for="appl_3_decl1_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div id="desc3_1_div" class="js-float-label-wrapper hide col-xs-6">
+          <label for="desc3_1">Please provide an explanation<span class="required"> *</span></label>
+          <textarea cols="" rows="3" name="oiau_q1_explanation_j2__c" id="desc3_1" class="col-xs-12">{{About_Account__c.oiau_q1_explanation_j2__c}}</textarea>
+        </div>
+      </div>
+    </div>
+    <div class="formFields" id="appl_3_decl2" data-value="{{About_Account__c.oiau_q2_j2__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.other_information_2}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="oiau_q2_j2__c" id="appl_3_decl2_0" value="true" autocomplete="off" />
+            <label for="appl_3_decl2_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="oiau_q2_j2__c" id="appl_3_decl2_1" value="false" autocomplete="off" />
+            <label for="appl_3_decl2_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div id="desc3_2_div" class="js-float-label-wrapper hide col-xs-6">
+          <label for="desc3_2">Please provide an explanation<span class="required"> *</span></label>
+          <textarea cols="" rows="3" name="oiau_q2_explanation_j2__c" id="desc3_2" class="col-xs-12">{{About_Account__c.oiau_q2_explanation_j2__c}}</textarea>
+        </div>
+      </div>
+    </div>
+    <div class="formFields marginBtm20" id="appl_3_decl3" data-value="{{About_Account__c.oiau_q3_j2__c}}">
+      <div class="row fieldSet">
+        <div class="fieldItem col-xs-8">{{PageLabels.other_information_3}}
+        </div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <table class="radioTableLabel pull-right"><tr><td>
+            <input type="radio" name="oiau_q3_j2__c" id="appl_3_decl3_0" value="true" autocomplete="off" />
+            <label for="appl_3_decl3_0"> Yes</label>
+          </td><td>
+            <input type="radio" name="oiau_q3_j2__c" id="appl_3_decl3_1" value="false" autocomplete="off" />
+            <label for="appl_3_decl3_1"> No</label>
+          </td></tr></table>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div id="desc3_3_div" class="js-float-label-wrapper hide col-xs-6">
+          <label for="desc3_3">Please provide an explanation<span class="required"> *</span></label>
+          <textarea cols="" rows="3" name="oiau_q3_explanation_j2__c" id="desc3_3" class="col-xs-12">{{About_Account__c.oiau_q3_explanation_j2__c}}</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+ <!--HMDA Decleration-->
+<div id="appl_3_HMDA" class="applicant appl_3_HMDA hidden">
+    <h4 class="sectionHeader">{{PageLabels.hmda_information}} - {{Application__c.first_name_j2__c}} {{Application__c.last_name_j2__c}}</h4>
+
+  <div class="formFields">
+    <h4 class="sectionTitle">{{PageLabels.other_information_text_declarations}}</h4>
+
+  <div id="appl_3_Hamda" class="hamda">
+    <div class="hamdaFields">
+      <label for="hmda_info_j2__c" class="hamdaLabel">{{PageLabels.i_do_not_wish_to_furnish_this_information}}</label>
+      <input name="hmda_info_j2__c" type="checkbox" value="true" id="hmda_info_j2__c" class="appl_3_hamdaNoDecl"
+             data-value="{{About_Account__c.hmda_info_j2__c}}"/>
+    </div>
+  </div>
+  <div id="appl_3_hamdaEthnicity" class="hamda">
+    <div class="js-float-label-wrapper hamdaFieldsInline col-xs-5">
+      <div class="styled-select">
+        <label for="hmda_ethinicity_j2__c">Select Ethnicity<span class="required"> *</span></label>
+        <select id="hmda_ethinicity_j2__c" class="col-xs-12 appl_3_ethnicity" 
+                data-value="{{About_Account__c.hmda_ethinicity_j2__c}}" name="hmda_ethinicity_j2__c">
+          <option value="">Select Ethnicity<span class="required"> *</span></option>
+          <option value="Hispanic or Latino">Hispanic or Latino</option>
+          <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper hamdaFieldsInline col-xs-5">
+      <div class="styled-select">
+        <label for="hmda_sex_j2__c">Sex<span class="required"> *</span></label>
+        <select id="hmda_sex_j2__c" class="col-xs-12 appl_3_Sex" data-value="{{About_Account__c.hmda_sex_j2__c}}"
+            name="hmda_sex_j2__c">
+          <option value="">Sex<span class="required"> *</span></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div id="appl_3_hamdaRace" class="hamda" data-value="{{About_Account__c.hmda_race_j2__c}}">
+    <div>
+      <h4 class="sectionTitle">{{PageLabels.race_check_all_that_apply}}</h4>
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_3_AmerIndianAlaskaNat" class="hamdaLabel">American Indian or Alaska Native</label>
+      <input name="appl_3_AmerIndianAlaskaNat" type="checkbox" class="appl_3_race" value="American_Indian_or_Alaska_Native"
+             id="appl_3_AmerIndianAlaskaNat" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_3_Asian" class="hamdaLabel">Asian</label>
+      <input name="appl_3_Asian" type="checkbox" class="appl_3_race" value="Asian" id="appl_3_Asian" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_3_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+      <input name="appl_3_BlackAfricanAmerican" type="checkbox" class="appl_3_race" value="Black_or_African_American"
+             id="appl_3_BlackAfricanAmerican" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_3_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+        Highlander</label>
+      <input name="appl_3_NatHawaiianOtherPacIslander" type="checkbox"
+             value="Native_Hawaiian_or_Other_Pacific_Highlander" class="appl_3_race" id="appl_3_NatHawaiianOtherPacIslander" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_3_White" class="hamdaLabel">White</label>
+      <input name="appl_3_White" type="checkbox" value="White" class="appl_3_race" id="appl_3_White" />
+    </div>
+
+    </div>
+   </div>
+  </div> 
+  {{/if}}
+  
+  
+
+<!-- 4th Applicant Info -->
+{{#if Application__c.first_name_j3__c}}
+<div id="appl_4" class="applicant">
+  <h4 class="sectionHeader">{{PageLabels.other_information}} - {{Application__c.first_name_j3__c}} {{Application__c.last_name_j3__c}}</h4>
+
+  <div class="formFields" id="appl_4_decl1" data-value="{{About_Account__c.oiau_q1_j3__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_1}}
+      </div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q1_j3__c" id="appl_4_decl1_0" value="true" autocomplete="off" />
+          <label for="appl_4_decl1_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q1_j3__c" id="appl_4_decl1_1" value="false" autocomplete="off" />
+          <label for="appl_4_decl1_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc4_1_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc4_1">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q1_explanation_j3__c" id="desc4_1" class="col-xs-12">{{About_Account__c.oiau_q1_explanation_j3__c}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="formFields" id="appl_4_decl2" data-value="{{About_Account__c.oiau_q2_j3__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_2}}</div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q2_j3__c" id="appl_4_decl2_0" value="true" autocomplete="off" />
+          <label for="appl_4_decl2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q2_j3__c" id="appl_4_decl2_1" value="false" autocomplete="off" />
+          <label for="appl_4_decl2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc4_2_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc4_2">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q2_explanation_j3__c" id="desc4_2" class="col-xs-12">{{About_Account__c.oiau_q2_explanation_j3__c}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="formFields marginBtm20" id="appl_4_decl3" data-value="{{About_Account__c.oiau_q3_j3__c}}">
+    <div class="row fieldSet">
+      <div class="fieldItem col-xs-8">{{PageLabels.other_information_3}}
+      </div>
+      <div class="fieldItem col-xs-3 col-xs-offset-1">
+        <table class="radioTableLabel pull-right"><tr><td>
+          <input type="radio" name="oiau_q3_j3__c" id="appl_4_decl3_0" value="true" autocomplete="off" />
+          <label for="appl_4_decl3_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="oiau_q3_j3__c" id="appl_4_decl3_1" value="false" autocomplete="off" />
+          <label for="appl_4_decl3_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div id="desc4_3_div" class="js-float-label-wrapper hide col-xs-6">
+        <label for="desc4_3">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="3" name="oiau_q3_explanation_j3__c" id="desc4_3" class="col-xs-12">{{About_Account__c.oiau_q3_explanation_j3__c}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- HMDA Decleration -->
+
+ <div id="appl_4_HMDA" class="applicant appl_4_HMDA hidden">
+    <h4 class="sectionHeader">{{PageLabels.hmda_information}} - {{Application__c.first_name_j3__c}} {{Application__c.last_name_j3__c}}</h4>
+
+  <div class="formFields">
+    <h4 class="sectionTitle">{{PageLabels.other_information_text_declarations}}</h4>
+  <div id="appl_4_Hamda" class="hamda">
+    <div class="hamdaFields">
+      <label for="hmda_info_j3__c" class="hamdaLabel">{{PageLabels.i_do_not_wish_to_furnish_this_information}}</label>
+      <input name="hmda_info_j3__c" type="checkbox" value="true" id="hmda_info_j3__c" class="appl_4_hamdaNoDecl"
+             data-value="{{About_Account__c.hmda_info_j3__c}}"/>
+    </div>
+  </div>
+  <div id="appl_4_hamdaEthnicity" class="js-float-label-wrapper hamda">
+    <div class="js-float-label-wrapper hamdaFieldsInline col-xs-5">
+      <div class="styled-select">
+        <label for="hmda_ethinicity_j3__c">Select Ethnicity<span class="required"> *</span></label>
+        <select id="hmda_ethinicity_j3__c" class="col-xs-12 appl_4_ethnicity" 
+                data-value="{{About_Account__c.hmda_ethinicity_j3__c}}" name="hmda_ethinicity_j3__c">
+          <option value="">Select Ethnicity<span class="required"> *</span></option>
+          <option value="Hispanic or Latino">Hispanic or Latino</option>
+          <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper hamdaFieldsInline col-xs-5">
+    <div class="styled-select">
+      <label for="hmda_sex_j3__c">Sex<span class="required"> *</span></label>
+      <select id="hmda_sex_j3__c" class="col-xs-12 appl_4_Sex" data-value="{{About_Account__c.hmda_sex_j3__c}}"
+          name="hmda_sex_j3__c">
+        <option value="">Sex<span class="required"> *</span></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+    </div>
+  </div>
+  <div id="appl_4_hamdaRace" class="hamda" data-value="{{About_Account__c.hmda_race_j3__c}}">
+    <div>
+      <h4 class="sectionTitle">{{PageLabels.race_check_all_that_apply}}</h4>
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_4_AmerIndianAlaskaNat" class="hamdaLabel">American Indian or Alaska Native</label>
+      <input name="appl_4_AmerIndianAlaskaNat" type="checkbox" class="appl_4_race" value="American_Indian_or_Alaska_Native"
+             id="appl_4_AmerIndianAlaskaNat" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_4_Asian" class="hamdaLabel">Asian</label>
+      <input name="appl_4_Asian" type="checkbox" value="Asian" id="appl_4_Asian" class="appl_4_race"/>
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_4_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+      <input name="appl_4_BlackAfricanAmerican" type="checkbox" value="Black_or_African_American"
+             id="appl_4_BlackAfricanAmerican" class="appl_4_race"/>
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_4_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+        Highlander</label>
+      <input name="appl_4_NatHawaiianOtherPacIslander" type="checkbox"
+             value="Native_Hawaiian_or_Other_Pacific_Highlander" class="appl_4_race" id="appl_4_NatHawaiianOtherPacIslander" />
+    </div>
+    <div class="hamdaFields">
+      <label for="appl_4_White" class="hamdaLabel">White</label>
+      <input name="appl_4_White" type="checkbox" value="White" id="appl_4_White" class="appl_4_race"/>
+    </div>
+
+    </div>
+   </div>
+  </div> 
+{{/if}}
+
+
+</div>
+
+<!-- <div id="actionPanel">
+  <button type="submit" class="myButton floatRt primaryBtn margin0 font144">{{PageLabels.next_button}}</button>
+ 
+  <a href="#identity" id="account-details-previous" class="button_font tabFocus">
+    <span class="myButton secondaryBtn floatLft marginRht20 cancel font144">{{PageLabels.previous_button}}</span>
+  </a>
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus">
+    <span class="demo primaryBtn padding10 font144" id="myButton">Save For later</span>
+  </div>
+</div> -->
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+  <li class="listRow sub-product" id="sub_product__c">{{Application__c.sub_product__c}}</li>
+  {{#if Application__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow">{{Application__c.primary_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.second_offer__c}}
+  <li id="cs2_list" class="listRow">{{Application__c.second_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.third_offer__c}}
+  <li id="cs3_list" class="listRow">{{Application__c.third_offer__c}}</li>
+  {{/if}}
+</script>

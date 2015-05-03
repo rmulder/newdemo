@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/json</contentType>
+    <description>Compressed .json file(for collateral Data) loaded as a Static resource used while running test class as it cannot handle bulk data.</description>
+</StaticResource>

@@ -1,0 +1,131 @@
+<!-- Modal -->
+<div id="saveForLaterModal" data-backdrop="static" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="saveForLaterModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header btn-inverse">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="chooseCardModalLabel"></h3>
+      </div>
+      
+      <div class="modal-body" id="SaveForLaterApplication">
+        <div id="save-application">
+          <div class="head_title marginBtm20 saveHeading">
+            {{PageLabels.saveforlater_appointment}}
+          </div>
+          <div class="server-errors hidden"></div>
+           <div class="savemodal-text">
+              <p class="bodyTextBold marginTop">
+                {{PageLabels.saveforlater_appointment_header}}
+                <div class="hidden"><input type="checkbox" class="saveforlater" value="true" id="save_for_later__c" name="save_for_later__c" data-value="{{Application__c.save_for_later__c}}"></div>
+              </p>
+              <p class="bodyTextBold marginTop">
+                {{PageLabels.saveforlater_appointment_cancel}}
+              </p>
+           </div>
+          <form id="save-application-form">
+            <div class="row fieldSet">
+              <div class="js-float-label-wrapper fieldItem col-xs-7">
+                <label for="last_name__c">Last Name <span class="required"> *</span></label>
+                <input type="text" class="col-xs-12 lastName required" name="last_name__c" id="last_name__c" value="{{Application__c.last_name__c}}">
+              </div>
+            </div>
+            <div class="row fieldSet">
+              <div class="js-float-label-wrapper fieldItem col-xs-7">
+                <label for="email_address__c">Email <span class="required"> *</span></label>
+                <input type="email" class="col-xs-12 email required emailValidate" name="email_address__c" id="email_address__c" value="{{Application__c.email_address__c}}">
+              </div>
+            </div>
+            <div class="row fieldSet">
+              <div class="js-float-label-wrapper fieldItem col-xs-7">
+                <label for="date_of_birth__c">Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+                <input type="text" id="date_of_birth__c" name="date_of_birth__c"
+                       class="col-xs-12 datepicker3 dob date dateUS required" value="{{Identity_Information__c.date_of_birth__c}}"/>
+              </div>
+            </div>
+            <div class="row fieldSet">
+              <div class="js-float-label-wrapper fieldItem col-xs-7">
+                <label for="ssn_prime__c">Social Security Number<span class="required"> *</span></label>
+                <input name="ssn_prime__c" id="ssn_prime__c" type="text" class="col-xs-12 ssn required"
+                       value="{{Identity_Information__c.ssn_prime__c}}"/>
+              </div>
+            </div>
+          </form>
+          <div class="alert-text">{{PageLabels.saveforlater_appointment_msg1}}</div>
+          <div>
+            <div class="bodyText"><span class="bodyTextBold"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="application-saved">
+          <div class="head_title marginBtm20 saved-heading">
+            {{PageLabels.saveforlater_appointment_msg2}}
+          </div>
+          <p class="bodyTextBold marginTop">
+            {{PageLabels.saveforlater_appointment_msg3}}
+          </p>
+          <p class="bodyTextBold marginTop">
+            {{PageLabels.saveforlater_appointment_msg4}}
+          </p>
+          <p class="bodyTextBold marginTop">
+            {{PageLabels.saveforlater_appointment_msg5}}
+          </p>
+          <ul style="margin: 20px 0 0 40px;">
+            <li style="list-style-type: disc;padding-bottom: 10px;">{{PageLabels.saveforlater_appointment_bulleting1}}</li>
+            <li style="list-style-type: disc;padding-bottom: 10px;">{{PageLabels.saveforlater_appointment_bulleting2}}</li>
+            <li style="list-style-type: disc;padding-bottom: 10px;">{{PageLabels.saveforlater_appointment_bulleting3}}</li>
+            <li style="list-style-type: disc;padding-bottom: 10px;">{{PageLabels.saveforlater_appointment_bulleting4}}</li>
+          </ul>
+        </div>
+        <div id="app-saved">
+          <div class="head_title marginBtm20 saved-app">
+            {{PageLabels.saveforlater_appointment_msg2}}
+          </div>
+          <p class="bodyTextBold marginTop">
+            {{PageLabels.saveforlater_appointment_msg6}}
+          </p>
+        </div>
+        <div id="cancel-prompt">
+          <div class="head_title">
+            {{PageLabels.saveforlater_appointment_msg7}}
+          </div>
+          <p class="bodyTextBold marginTop">
+            {{PageLabels.saveforlater_appointment_msg8}}
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="modal-footer" id="save">
+          <div style="padding: 10px 20px 0 0;float:right;" class="cancel_style">
+            <a class="greenText modal-footer-a cancel" data-dismiss="modal" aria-hidden="true" >{{PageLabels.cancel_button}}</a>
+          </div>
+          <div class="flt_right save-button">
+           <button id="save_p" class="modal-footer-button myButton save_style primaryBtn save">{{PageLabels.save_button}}</button>
+          </div>
+        </div>
+        <div class="modal-footer" id="saved">
+          <div><a class="greenText come-back-later" data-href="http://www.terafinainc.com/">{{PageLabel.come_back_later_button}}</a></div>
+          <button class="myButton floatRt primaryBtn saved" data-dismiss="modal" aria-hidden="true">{{PageLabels.continue_button}}</button>
+        </div>
+        <div class="modal-footer" id="SavedContinue">
+          <div><a class="greenText come-back-later" data-href="http://www.terafinainc.com/">{{PageLabel.come_back_later_button}}</a></div>
+          <button class="myButton floatRt primaryBtn SavedContinue" data-dismiss="modal" aria-hidden="true" >{{PageLabels.continue_button}}</button>
+        </div>
+        <div class="modal-footer" id="cancel">
+          <div><a class="greenText no-continue" >{{PageLabels.no_continue_button}}</a></div>
+          <button class="myButton floatRt primaryBtn render" data-dismiss="modal" aria-hidden="true" onclick="refresh();">{{PageLabels.yes_cancel_button}}</button>
+        </div>
+      </div>
+
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</div>
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>

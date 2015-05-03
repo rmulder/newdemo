@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Allegheny County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Armstrong County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Beaver County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Bedford County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Berks County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Blair County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Bradford County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bucks County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Cambria County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Cameron County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Carbon County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Centre County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Chester County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Clarion County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Clearfield County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Columbia County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Dauphin County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Delaware County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Elk County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Erie County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Forest County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Fulton County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Huntingdon County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Indiana County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Juniata County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Lackawanna County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Lancaster County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Lebanon County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Lehigh County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Luzerne County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Lycoming County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "McKean County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Mifflin County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Montour County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Northampton County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Northumberland County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Philadelphia County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Potter County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Schuylkill County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Snyder County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Somerset County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Sullivan County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Susquehanna County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Tioga County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Venango County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Westmoreland County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Wyoming County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "York County",
+    "state_abbreviation": "PA",
+    "fips_county_cd": "133"
+  }
+]

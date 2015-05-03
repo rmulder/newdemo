@@ -1,0 +1,322 @@
+[
+  {
+    "name": "Acadia Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Allen Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Ascension Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Assumption Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Avoyelles Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Beauregard Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Bienville Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Bossier Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Caddo Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Calcasieu Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Caldwell Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Cameron Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Catahoula Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Claiborne Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Concordia Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "De Soto Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "East Baton Rouge Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "East Carroll Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "East Feliciana Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Evangeline Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Franklin Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Grant Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Iberia Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Iberville Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Jackson Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Jefferson Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Jefferson Davis Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Lafayette Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Lafourche Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "La Salle Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Lincoln Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Livingston Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Madison Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Morehouse Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Natchitoches Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Orleans Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Ouachita Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Plaquemines Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Pointe Coupee Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Rapides Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Red River Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Richland Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Sabine Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "St. Bernard Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "St. Charles Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "St. Helena Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "St. James Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "St. John the Baptist Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "St. Landry Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "St. Martin Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "St. Mary Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "St. Tammany Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Tangipahoa Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Tensas Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Terrebonne Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Union Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Vermilion Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Vernon Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Washington Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Webster Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "West Baton Rouge Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "West Carroll Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "West Feliciana Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Winn Parish",
+    "state_abbreviation": "LA",
+    "fips_county_cd": "127"
+  }
+]

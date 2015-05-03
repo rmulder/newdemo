@@ -1,0 +1,8 @@
+<apex:component >
+   <apex:attribute name="height" type="String" description="TODO: Describe me"/>
+   <apex:attribute name="width" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="value" type="String" description="TODO: Describe me"/>
+    <object data="/servlet/servlet.FileDownload—file={!value}" type="application/pdf" width="{!width}" height="{!height}">
+		<embed src="/servlet/servlet.FileDownload–file={!value}" width="{!width}" height="{!height}"/>
+	</object>
+</apex:component>

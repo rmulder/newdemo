@@ -1,0 +1,12 @@
+<apex:page controller="ShowAttachmentsController" showHeader="false" sidebar="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!attachmentList}" var="att">
+                    <apex:column headerValue="Name">
+                       <apex:commandLink action="/servlet/servlet.FileDownload?file={!att.Id}">{!att.Name}</apex:commandLink>               
+                    </apex:column>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

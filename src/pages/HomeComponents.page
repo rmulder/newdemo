@@ -1,0 +1,11 @@
+<apex:page >
+    <apex:form >
+        <apex:PageBlock title="DSP Application">
+            <apex:pageBlockButtons title="DSP Application" location="Top">
+                <apex:CommandButton value="Offline Application" onclick="window.open('/apex/StartApplication')"/>
+                <apex:CommandButton value="Online Application" onclick="window.open('https://terafina-newdemo.secure.force.com/OnlinePage')"/>
+                <!--<apex:CommandButton value="Online Application" onclick="window.open('/apex/OnlinePage')"/>-->
+            </apex:pageBlockButtons>  
+        </apex:PageBlock>
+    </apex:form>
+</apex:page>

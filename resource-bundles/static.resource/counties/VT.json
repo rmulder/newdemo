@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Addison County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Bennington County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Caledonia County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Chittenden County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Essex County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Grand Isle County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Lamoille County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Orange County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Orleans County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Rutland County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Windham County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Windsor County",
+    "state_abbreviation": "VT",
+    "fips_county_cd": "027"
+  }
+]

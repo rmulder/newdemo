@@ -1,0 +1,95 @@
+<apex:page standardController="Promotion__c" extensions="JSRemotingFileUploadController" id="page">
+ 
+  <script type="text/javascript">
+    var maxStringSize = 6000000;    //Maximum String size is 6,000,000 characters
+    var maxFileSize = 4350000;      //After Base64 Encoding, this is the max file size
+    var chunkSize = 950000;         //Maximum Javascript Remoting message size is 1,000,000 characters
+    var attachment;
+    var attachmentName;
+    var fileSize;
+    var positionIndex;
+    var doneUploading;
+    var attachmentNumber = 2;
+    alert('promo id:' + '{!Promotion__c.Id}');
+   
+//Method to prepare a file to be attached to the Promotion bound to the page by the standardController
+    function uploadFile() {
+      var file = document.getElementById('attachmentFile').files[0];
+      console.log(file);
+      if(file != undefined) {
+        if(file.size <= maxFileSize) {
+          attachmentName = file.name;
+          var fileReader = new FileReader();
+          fileReader.onloadend = function(e) {
+            attachment = window.btoa(this.result);  //Base 64 encode the file before sending it
+            positionIndex=0;
+            fileSize = attachment.length;
+            console.log("Total Attachment Length: " + fileSize);
+            doneUploading = false;
+            if(fileSize < maxStringSize) {
+              uploadAttachment(null);
+            } else {
+              alert("Base 64 Encoded file is too large.  Maximum size is " + maxStringSize + " your file is " + fileSize + ".");
+            }
+             
+          }
+          fileReader.onerror = function(e) {
+            alert("There was an error reading the file.  Please try again.");
+          }
+          fileReader.onabort = function(e) {
+            alert("There was an error reading the file.  Please try again.");
+          }
+         
+          fileReader.readAsBinaryString(file);  //Read the body of the file
+         
+        } else {
+          alert("File must be under 4.3 MB in size.  Your file is too large.  Please try again.");
+        }
+      } else {
+        alert("You must choose a file before trying to upload it");
+      }
+    }
+     
+//Method to send a file to be attached to the Account bound to the page by the standardController
+//Sends parameters: Promotion__c Id, Attachment (body), Attachment Name, and the Id of the Attachment if it exists to the controller   
+    function uploadAttachment(fileId) {
+      var attachmentBody = "";
+      if(fileSize <= positionIndex + chunkSize) {
+        attachmentBody = attachment.substring(positionIndex);
+        doneUploading = true;
+      } else {
+        attachmentBody = attachment.substring(positionIndex, positionIndex + chunkSize);
+      }
+      console.log("Uploading " + attachmentBody.length + " chars of " + fileSize);
+      JSRemotingFileUploadController.doUploadAttachment(
+      '{!Promotion__c.Id}', attachmentNumber, attachmentBody, attachmentName, fileId, 
+        function(result, event) {
+          console.log(result);
+          if(event.type === 'exception') {
+            console.log("exception");
+            console.log(event);
+          } else if(event.status) {
+            if(result.substring(0,3) == '00P') {
+              if(doneUploading == true) {
+                window.open("/{!Promotion__c.Id}", "_blank");
+                window.location.reload();
+              } else {
+                positionIndex += chunkSize;
+                uploadAttachment(result);
+              }
+            }
+          } else {
+            console.log(event.message);
+          }
+        },
+        {buffer: true, escape: true, timeout: 120000}
+      );
+    }
+  </script>
+ 
+  <h2>Javascript Remoting File Upload Example </h2>
+  <br /> <br />
+ 
+  <input type="file" id="attachmentFile"/> <br />
+  <button onclick="uploadFile()">Upload File</button>
+</apex:page>

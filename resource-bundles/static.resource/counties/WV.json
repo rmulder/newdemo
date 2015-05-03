@@ -1,0 +1,277 @@
+[
+  {
+    "name": "Barbour County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Berkeley County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Braxton County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Brooke County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Cabell County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Doddridge County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Gilmer County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Greenbrier County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Hampshire County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Hardy County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Kanawha County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Lewis County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "McDowell County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Mason County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Mineral County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Mingo County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Monongalia County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Nicholas County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Ohio County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Pendleton County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Pleasants County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Pocahontas County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Preston County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Putnam County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Raleigh County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Ritchie County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Roane County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Summers County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Taylor County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Tucker County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Tyler County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Upshur County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Webster County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Wetzel County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Wirt County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Wood County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Wyoming County",
+    "state_abbreviation": "WV",
+    "fips_county_cd": "109"
+  }
+]

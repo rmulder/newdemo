@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Ada County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Adams County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Bannock County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Bear Lake County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Benewah County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bingham County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Blaine County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Boise County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bonner County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Bonneville County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Boundary County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Butte County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Camas County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Canyon County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Caribou County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Cassia County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Clearwater County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Custer County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Elmore County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Fremont County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Gem County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Gooding County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Idaho County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Jerome County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Kootenai County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Latah County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Lemhi County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Lewis County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Minidoka County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Nez Perce County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Oneida County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Owyhee County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Payette County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Power County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Shoshone County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Teton County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Twin Falls County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Valley County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "ID",
+    "fips_county_cd": "087"
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Alamance County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Alexander County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Alleghany County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Anson County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Ashe County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Avery County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Beaufort County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Bertie County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bladen County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Brunswick County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Buncombe County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Burke County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Cabarrus County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Caldwell County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Camden County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Carteret County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Caswell County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Catawba County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Chatham County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Chowan County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Cleveland County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Columbus County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Craven County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Currituck County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Dare County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Davidson County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Davie County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Duplin County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Durham County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Edgecombe County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Forsyth County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Gaston County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Gates County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Graham County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Granville County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Guilford County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Halifax County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Harnett County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Haywood County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Henderson County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Hertford County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Hoke County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Hyde County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Iredell County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Johnston County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Jones County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Lenoir County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "McDowell County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Macon County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Martin County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Mecklenburg County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Mitchell County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Moore County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Nash County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "New Hanover County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Northampton County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Onslow County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Orange County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Pamlico County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Pasquotank County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Pender County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Perquimans County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Person County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Pitt County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Richmond County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Robeson County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Rockingham County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Rowan County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Rutherford County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Sampson County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Scotland County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Stanly County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Stokes County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Surry County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Swain County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Transylvania County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Tyrrell County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Vance County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Wake County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Watauga County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "Wilkes County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Wilson County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Yadkin County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "Yancey County",
+    "state_abbreviation": "NC",
+    "fips_county_cd": "199"
+  }
+]

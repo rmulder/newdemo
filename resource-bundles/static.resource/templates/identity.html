@@ -1,0 +1,427 @@
+<div id="formContainer" class="minHeightStyle">
+<!-- Primary Applicant Info -->
+<div id="primary" class="applicant">
+<h4 class="sectionHeader">{{Application__c.first_name__c}}&nbsp;{{Application__c.last_name__c}} : {{PageLabels.identity_details}}<span class="btn pull-right">
+<div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo primaryBtn padding10 font144"  id="myButton">Save for Later</span>
+  </div></span></h4>
+
+<div class="formFields borderRadius60" id="nameAdd1">
+  <div class="row fieldSet">
+    <!-- Identity type starts -->
+    <div class="member_head" data-value="{{Identity_Information__c.id_type__c}}">
+      <div class="row fieldSet" >
+        <div class="fieldItem member_title_identity_test font-bold font15">{{PageLabels.identity_type}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <label class="radioLabel" for="identityType1License">Driver's License</label>
+          <input name="id_type__c" id="identityType1License" type="radio" value="Drivers License" class="required"/>
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType1StateID">State ID</label>
+          <input name="id_type__c" id="identityType1StateID" type="radio" value="State ID" />
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType1StateID">Passport</label>
+          <input name="id_type__c" id="identityType1Passport" type="radio" value="Passport" />
+        </div>
+      </div>
+      <!-- Identity type ends here -->
+    </div>
+    <div class="identity_details font-bold font15">{{PageLabels.identity_details}}</div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="identity_number_primary__c">Identification Number<span class="required"> *</span></label>
+      <input name="identity_number_primary__c" id="identity_number_primary__c" type="text"
+             class="col-xs-12 required identityNumber" value="{{Identity_Information__c.identity_number_primary__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+     <div class="styled-select">
+      <label for="state_issued__c">State Issued<span class="required"> *</span></label>
+      <select id="state_issued__c" name="state_issued__c" class="col-xs-12 required"
+              data-value="{{Identity_Information__c.state_issued__c}}">
+        
+      </select>
+     </div>
+    </div>
+
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="issue_date__c">Issue Date (MM/DD/YYYY)<span class="required"> </span></label>
+      <input type="text" id="issue_date__c" name="issue_date__c"
+             class="col-xs-12 datepicker date dateUS pastDate recentYear" value="{{Identity_Information__c.issue_date__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="expiry_date__c">Expiration Date (MM/DD/YYYY)<span class="required"> *</span></label>
+      <input id="expiry_date__c" name="expiry_date__c" type="text"
+             class="col-xs-12 datepicker2 required date dateUS futureDate" value="{{Identity_Information__c.expiry_date__c}}"/>
+    </div>
+  </div>
+</div>
+
+<div class="formFields borderRadius06">
+<div class="row fieldSet marginTop0">
+  <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <label for="ssn_prime__c">Social Security Number<span class="required"> *</span></label>
+    <input name="ssn_prime__c" id="ssn_prime__c" type="text" class="col-xs-12 ssn required"
+           value="{{Identity_Information__c.ssn_prime__c}}"/>
+  </div>
+  <div class="col-xs-1">
+     <span><img data-toggle="popover" data-placement="right" data-content="
+    Your social security number is used to verify your identity and/or obtain credit history. We will never share this information without your permission.
+      " data-original-title="" title=""src="{{config.custom_resources_url}}images/help.png" alt="Help Icon" class="help-icon"></span>
+  </div>
+  <div class="js-float-label-wrapper fieldItem col-xs-4">
+    <label for="date_of_birth__c">Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+    <input type="text" id="date_of_birth__c" name="date_of_birth__c"
+           class="col-xs-12 datepicker3 dob dateUS required" value="{{Identity_Information__c.date_of_birth__c}}"/>
+  </div>
+</div>
+<div class="row fieldSet" id="appl_1_citizenInfo">
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+  <div class="styled-select">
+    <label for="citizenship__c">Select Citizenship<span class="required"> *</span></label>
+    <select id="citizenship__c" name="citizenship__c" class="col-xs-12 required citizenship-type"
+            data-value="{{Identity_Information__c.citizenship__c}}">
+      <option value="">Select Citizenship <span class="required"> *</span></option>
+      <option value="US Citizen">US Citizen</option>
+      <option value="Resident Alien">Resident Alien</option>
+      <option value="Non-Resident Alien">Non-Resident Alien</option>
+    </select>
+  </div>
+</div>
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+  <div class="styled-select">
+    <label for="country_of_citizenship__c">Country of Citizenship<span class="required"> *</span></label>
+    <select id="country_of_citizenship__c" name="country_of_citizenship__c" class="col-xs-12 required"
+            data-value="{{Identity_Information__c.country_of_citizenship__c}}">
+    
+    </select>
+  </div>
+</div>
+<div class="col-xs-2 country_of_citizenship_help">
+     <img data-toggle="popover" data-placement="top" data-content="
+    U.S citizen or other U.S. person
+      For Federal tax purposes, you are considered a U.S. person if you are:
+      • An individual who is a U.S. citizen or U.S residential alien
+      • A partnership, corporation, company or association created or organized in the United States or under the laws of the United States
+      • An estate (other than a foreign estate), or
+      • A domestic trust (as defined in Regulations section 301.7707-7)
+      " data-original-title="" title=""src="{{config.custom_resources_url}}images/help.png" alt="Help Icon" class="help-icon">
+</div>
+</div>
+</div>
+
+
+</div>
+<!-- Secondary Applicant Info -->
+{{#equal Application__c.first_joint_applicant__c 'true'}}
+<div id="secondary" class="applicant">
+<h4 class="sectionHeader">{{Application__c.first_name_j__c}}&nbsp;{{Application__c.last_name_j__c}} : {{PageLabels.identity_details}}</h4>
+
+<div class="formFields borderRadius60" id="nameAdd2">
+  <div class="row fieldSet">
+    <div class="member_head" data-value="{{Identity_Information__c.id_type_j1__c}}">
+      <div class="row fieldSet" >
+        <div class="fieldItem member_title_identity_test font-bold font15">{{PageLabels.identity_type}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <label class="radioLabel" for="identityType2License">Driver's License</label>
+          <input name="id_type_j1__c" id="identityType2License" type="radio" value="Drivers License" class="required"/>
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType2StateID">State ID</label>
+          <input name="id_type_j1__c" id="identityType2StateID" type="radio" value="State ID" />
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType2Passport">Passport</label>
+          <input name="id_type_j1__c" id="identityType2Passport" type="radio" value="Passport" />
+        </div>
+      </div>
+    </div>
+    <div class="identity_details font-bold font15">{{PageLabels.identity_details}}</div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="identity_number_j1__c">Identification Number<span class="required"> *</span></label>
+      <input name="identity_number_j1__c" id="identity_number_j1__c" type="text"
+             class="col-xs-12 required identityNumber" value="{{Identity_Information__c.identity_number_j1__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+        <div class="styled-select">
+          <label for="state_issued_j1__c">State Issued<span class="required"> *</span></label>
+          <select id="state_issued_j1__c" name="state_issued_j1__c" class="col-xs-12 required"
+                  data-value="{{Identity_Information__c.state_issued_j1__c}}">
+            
+          </select>
+        </div>
+    </div>
+
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="issue_date_j1__c">Issue Date (MM/DD/YYYY)</label>
+      <input type="text" id="issue_date_j1__c" name="issue_date_j1__c"
+             class="col-xs-12 datepicker21 date dateUS pastDate" value="{{Identity_Information__c.issue_date_j1__c}}" />
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="expiry_date_j1__c">Expiration Date (MM/DD/YYYY)<span class="required"> *</span></label>
+      <input id="expiry_date_j1__c" name="expiry_date_j1__c" type="text" value="{{Identity_Information__c.expiry_date_j1__c}}"
+             class="col-xs-12 datepicker22 required date dateUS futureDate"/>
+    </div>
+  </div>
+</div>
+<div class="formFields borderRadius06">
+<div class="row fieldSet marginTop0">
+  <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <label for="ssn_j1__c">Social Security Number<span class="required"> *</span></label>
+    <input name="ssn_j1__c" id="ssn_j1__c" type="text" class="col-xs-12 ssn required"
+           value="{{Identity_Information__c.ssn_j1__c}}"/>
+  </div>
+  <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <label for="date_of_birth_j1__c">Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+    <input type="text" id="date_of_birth_j1__c" name="date_of_birth_j1__c" class="col-xs-12 datepicker23 dob required"
+           value="{{Identity_Information__c.date_of_birth_j1__c}}"/>
+  </div>
+</div>
+<div class="row fieldSet" id="appl_2_citizenInfo">
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <div class="styled-select">
+        <label for="citizenship_j1__c">Select Citizenship<span class="required"> *</span></label>
+        <select id="citizenship_j1__c" name="citizenship_j1__c" class="col-xs-12 required citizenship-type"
+              data-value="{{Identity_Information__c.citizenship_j1__c}}">
+
+        </select>
+    </div>
+</div>
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <div class="styled-select">
+        <label for="country_of_citizenship_j1__c">Country of Citizenship<span class="required"> *</span></label>
+        <select id="country_of_citizenship_j1__c" name="country_of_citizenship_j1__c" class="col-xs-12 required"
+                data-value="{{Identity_Information__c.country_of_citizenship_j1__c}}">
+
+        </select>
+    </div>
+</div>
+</div>
+</div>
+
+
+</div>
+{{/equal}}
+<!--third applicant info -->
+{{#equal Application__c.second_joint_applicant__c 'true'}}
+<div id="third" class="applicant">
+<h4 class="sectionHeader">{{Application__c.first_name_j2__c}}&nbsp;{{Application__c.last_name_j2__c}} : {{PageLabels.identity_details}}</h4>
+
+<div class="formFields borderRadius60" id="nameAdd3">
+  <div class="row fieldSet">
+    <div class="member_head" data-value="{{Identity_Information__c.id_type_j2__c}}">
+      <div class="row fieldSet" >
+        <div class="fieldItem member_title_identity_test font-bold font15">{{PageLabels.identity_type}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <label class="radioLabel" for="identityType3License">Driver's License</label>
+          <input name="id_type_j2__c" id="identityType3License" type="radio" value="Drivers License" class="required"/>
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType3StateID">State ID</label>
+          <input name="id_type_j2__c" id="identityType3StateID" type="radio" value="State ID" />
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType3Passport">Passport</label>
+          <input name="id_type_j2__c" id="identityType3Passport" type="radio" value="Passport" />
+        </div>
+      </div>
+    </div>
+    <div class="identity_details font-bold font15">{{PageLabels.identity_details}}</div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="identity_number_j2__c">Identification Number<span class="required"> *</span></label>
+      <input name="identity_number_j2__c" id="identity_number_j2__c" type="text"
+             class="col-xs-12 required identityNumber" value="{{Identity_Information__c.identity_number_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+        <div class="styled-select">
+          <label for="state_issued_j2__c">State Issued<span class="required"> *</span></label>
+          <select id="state_issued_j2__c" name="state_issued_j2__c" class="col-xs-12 required"
+                  data-value="{{Identity_Information__c.state_issued_j2__c}}">
+            
+          </select>
+        </div>
+    </div>
+
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="issue_date_j2__c">Issue Date (MM/DD/YYYY)</label>
+      <input type="text" id="issue_date_j2__c" name="issue_date_j2__c" value="{{Identity_Information__c.issue_date_j2__c}}"
+             class="col-xs-12 datepicker31 date dateUS pastDate" />
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="expiry_date_j2__c">Expiration Date (MM/DD/YYYY)<span class="required"> *</span></label>
+      <input id="expiry_date_j2__c" name="expiry_date_j2__c" type="text" value="{{Identity_Information__c.expiry_date_j2__c}}"
+             class="col-xs-12 datepicker32 required date dateUS futureDate" />
+    </div>
+  </div>
+</div>
+
+<div class="formFields borderRadius06" id="">
+<div class="row fieldSet marginTop0">
+  <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <label for="ssn_j2__c">Social Security Number<span class="required"> *</span></label>
+    <input name="ssn_j2__c" id="ssn_j2__c" type="text" class="col-xs-12 ssn required"
+           value="{{Identity_Information__c.ssn_j2__c}}"/>
+  </div>
+  <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <label for="date_of_birth_j2__c">Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+    <input type="text" id="date_of_birth_j2__c" name="date_of_birth_j2__c" class="col-xs-12 datepicker33 dob required"
+           value="{{Identity_Information__c.date_of_birth_j2__c}}"/>
+  </div>
+</div>
+<div class="row fieldSet" id="appl_3_citizenInfo">
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <div class="styled-select">
+      <label for="citizenship_j2__c">Select Citizenship<span class="required"> *</span></label>
+      <select id="citizenship_j2__c" name="citizenship_j2__c" class="col-xs-12 required citizenship-type"
+              data-value="{{Identity_Information__c.citizenship_j2__c}}">
+
+      </select>
+    </div>
+</div>
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <div class="styled-select">
+    <label for="country_of_citizenship_j2__c">Country of Citizenship<span class="required"> *</span></label>
+    <select id="country_of_citizenship_j2__c" name="country_of_citizenship_j2__c" class="col-xs-12 required"
+            data-value="{{Identity_Information__c.country_of_citizenship_j2__c}}">
+
+    </select>
+    </div>
+</div>
+</div>
+</div>
+
+
+</div>
+{{/equal}}
+<!--fourth applicant info -->
+{{#equal Application__c.third_joint_applicant__c 'true'}}
+<div id="fourth" class="applicant">
+<h4 class="sectionHeader">{{Application__c.first_name_j3__c}}&nbsp;{{Application__c.last_name_j3__c}} : {{PageLabels.identity_details}}</h4>
+
+<div class="formFields borderRadius60" id="nameAdd4">
+  <div class="row fieldSet">
+    <div class="member_head" data-value="{{Identity_Information__c.id_type_j3__c}}">
+      <div class="row fieldSet" >
+        <div class="fieldItem member_title_identity_test font-bold font15">{{PageLabels.identity_type}}</div>
+        <div class="fieldItem col-xs-3 col-xs-offset-1">
+          <label class="radioLabel" for="identityType4License">Driver's License</label>
+          <input name="id_type_j3__c" id="identityType4License" type="radio" value="Drivers License" class="required"/>
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType4StateID">State ID</label>
+          <input name="id_type_j3__c" id="identityType4StateID" type="radio" value="State ID" />
+        </div>
+        <div class="fieldItem col-xs-2">
+          <label class="radioLabel" for="identityType4StateID">Passport</label>
+          <input name="id_type_j3__c" id="identityType4Passport" type="radio" value="Passport" />
+        </div>
+      </div>
+    </div>
+    <div class="identity_details font-bold font15">{{PageLabels.identity_details}}</div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="identity_number_j3__c">Identification Number<span class="required"> *</span></label>
+      <input name="identity_number_j3__c" id="identity_number_j3__c" type="text"
+             class="col-xs-12 required identityNumber" value="{{Identity_Information__c.identity_number_j3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+        <div class="styled-select">
+          <label for="state_issued_j3__c">State Issued<span class="required"> *</span></label>
+          <select id="state_issued_j3__c" name="state_issued_j3__c" class="col-xs-12 required"
+                  data-value="{{Identity_Information__c.state_issued_j3__c}}">
+            
+          </select>
+        </div>
+    </div>
+
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+      <label for="issue_date_j3__c">Issue Date (MM/DD/YYYY)</label>
+      <input type="text" id="issue_date_j3__c" name="issue_date_j3__c" value="{{Identity_Information__c.issue_date_j3__c}}"
+             class="col-xs-12 datepicker41 date dateUS pastDate" />
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1" >
+      <label for="expiry_date_j3__c">Expiration Date (MM/DD/YYYY)<span class="required"> *</span></label>
+      <input id="expiry_date_j3__c" name="expiry_date_j3__c" type="text" value="{{Identity_Information__c.expiry_date_j3__c}}"
+             class="col-xs-12 datepicker42 required date dateUS futureDate" />
+    </div>
+  </div>
+</div>
+<div class="formFields borderRadius06">
+<div class="row fieldSet marginTop0">
+  <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <label for="ssn_j3__c">Social Security Number<span class="required"> *</span></label>
+    <input name="ssn_j3__c" id="ssn_j3__c" type="text" class="col-xs-12 ssn required"
+           value="{{Identity_Information__c.ssn_j3__c}}"/>
+  </div>
+  <div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <label for="date_of_birth_j3__c">Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+    <input type="text" id="date_of_birth_j3__c" name="date_of_birth_j3__c"
+           class="col-xs-12 datepicker43 date dob" value="{{Identity_Information__c.date_of_birth_j3__c}}"/>
+  </div>
+</div>
+<div class="row fieldSet" id="appl_4_citizenInfo">
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <div class="styled-select">
+      <label for="citizenship_j3__c">Select Citizenship<span class="required"> *</span></label>
+      <select id="citizenship_j3__c" name="citizenship_j3__c" class="col-xs-12 required citizenship-type"
+              data-value="{{Identity_Information__c.citizenship_j3__c}}">
+        <option value="">Select Citizenship <span class="required"> *</span></option>
+        <option value="us_citizen">US Citizen</option>
+        <option value="resident_alien">Resident Alien</option>
+        <option value="non_resident_alien">Non-Resident Alien</option>
+      </select>
+    </div>
+</div>
+<div class="js-float-label-wrapper fieldItem col-xs-4 col-xs-offset-1">
+    <div class="styled-select">
+    <label for="country_of_citizenship_j3__c">Country of Citizenship<span class="required"> *</span></label>
+    <select id="country_of_citizenship_j3__c" name="country_of_citizenship_j3__c" class="col-xs-12 required"
+            data-value="{{Identity_Information__c.country_of_citizenship_j3__c}}">
+
+    </select>
+    </div>
+</div>
+</div>
+</div>
+
+
+</div>
+<!--end of fourth applicant info -->
+{{/equal}}
+</div>
+
+<!-- <div id="actionPanel">
+  <button type="submit" class="margin0 myButton floatRt primaryBtn font144">{{PageLabels.next_button}}</button>
+
+  <a href="#employment" id="identity-previous" class="button_font"><span class="myButton secondaryBtn floatLft marginRht20 cancel font144">{{PageLabels.previous_button}}</span></a>
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo primaryBtn padding10 font144"  id="myButton">Save For later</span>
+  </div>
+</div> -->
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+  {{#if Application__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow">{{Application__c.primary_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.second_offer__c}}
+  <li id="cs2_list" class="listRow">{{Application__c.second_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.third_offer__c}}
+  <li id="cs3_list" class="listRow">{{Application__c.third_offer__c}}</li>
+  {{/if}}
+</script>

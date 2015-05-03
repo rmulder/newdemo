@@ -1,0 +1,182 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" StandardController="Application__c" extensions="AppStatusController" cache="false" applyHtmlTag="false">
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: https://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta https-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  
+  <title>Digital Sales Platform</title>
+  <apex:stylesheet value="{!URLFOR($Resource.static, 'css/jquery.FloatLabel.css')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.static, 'css/bootstrap.css')}"/> 
+  <apex:stylesheet value="{!URLFOR($Resource.static, 'css/dsp.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/dsp/modernizr.js')}"/>
+  <style>
+  </style>
+  <script type="text/javascript">
+    $j(document).ready(function () {
+      var custom_options = {
+        translation: {
+          '9': {pattern: /\d/},
+          '0': {pattern: /\d/, optional: true},
+          '#': {pattern: /\d/, recursive: true},
+          '*': {pattern: /[a-zA-Z0-9]/},
+          'S': {pattern: /[a-zA-Z]/}
+        }
+      };
+
+      $j(".appl_1_ssn").mask('9999', custom_options);
+      $j(".date-mask").mask('99/99/9999', custom_options);
+      //$j("label").inFieldLabels();
+      $j("input").attr("autocomplete", "off");
+      
+
+      /*
+      $j('.addBtn>button.primaryBtn').on('click', function () {
+        var el = $j('#financialAssets').find('.hidden').first();
+        $j(el).removeClass('hidden');
+        if ($j(el).attr('id') === 'financialAsset6') {
+          $j(this).addClass('hidden');
+        }
+        return false;
+      });
+      */
+      $j('input[name=addressType]').on('change', function () {
+        if ($j(this).val() === 'unknown') {
+          $j('#addressInfo').addClass('hidden');
+        } else {
+          $j('#addressInfo').removeClass('hidden');
+          if ($j(this).val() === 'current') {
+            // populate fields from about you page...
+          }
+        }
+      });
+
+      $j('form').validate();
+      //console.log('form:', $j("form"));
+      $j("form").data("validator")
+          .addCustomValidations(['lastName','email']);
+
+    });
+  </script>
+
+</head>
+
+<body id="status-application">
+<!--<form method="post" accept-charset="utf-8">-->
+<apex:form forceSSL="true">
+<div class="container-fluid">
+<div class="container">
+  <div class="row clearfix">
+    <header class="header col-md-12 column">
+       <div class="row clearfix">
+         <div class="col-md-8 column">
+          <a href="#">
+            <img class="logo-image" src="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" width="300" height="98"/>
+          </a>
+         </div> 
+           <div class="col-md-8 column tablet-links">
+           </div>
+        </div>   
+      <hr class="move-left" />
+    </header><!-- end .header -->
+  </div>
+</div>
+<div class="container">
+  <div class="col-xs-12">
+  <div id="formContainer" class="minHeightStyle">
+  <!-- Primary Applicant Info -->
+  <div id="appl_1" class="applicant">
+  <h4 class="sectionHeaderThankyou">Application Status </h4> 
+
+  <div class="formFields" id="appl_1_loanDetails">
+
+    <div id="addressInfo">
+      <div>
+        <p style="font-size: 13px;margin-top: 25px;"><span style="color:indianred;">*</span>= Required Field</p>
+        <p style="font-size: 13px;margin-top: 10px;margin-bottom: 25px;">
+          Please complete or confirm the following information to get the status of your application.Then click submit.
+        </p>
+       </div>
+      <div class="fieldSet row">
+        <div class="fieldItem js-float-label-wrapper col-xs-4">
+          <label for="appl_1_lastName" >Last Name<span class="required"> *</span></label>
+          <!-- <apex:outputLabel for="appl_1_lastName" styleClass="inlineLabel">Last Name<span class="required"> *</span></apex:outputLabel> -->
+          <apex:inputText value="{!lastname}" id="appl_1_lastName" styleClass="col-xs-12 lastName required validName"/>
+        </div>
+      </div>
+      <div class="fieldSet row">
+        <div class="fieldItem js-float-label-wrapper col-xs-4">
+          <label for="datepicker3" >Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+
+          <apex:inputText value="{!dob}" id="datepicker3" styleclass="col-xs-12 datepicker1 dob dateUS required date-mask" />
+        </div>
+      </div>
+      <div class="fieldSet row">
+        <div class="fieldItem marginRht20 js-float-label-wrapper col-xs-4">
+          <label for="appl_1_ssn" >Last 4 digits of SSN<span class="required"> *</span></label>
+
+          <apex:inputText value="{!ssn}" id="appl_1_ssn" styleClass="col-xs-12 required appl_1_ssn" />
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  </div>
+  <div id="actionPanel">
+    <apex:commandButton action="{!StatusRet}" value="Submit" styleClass="myButton floatRt primaryBtn" id="myButton" style="height:40px;"/>
+  </div>
+  </div>
+</div>
+<div class="grid_5">
+  <!-- Need Help -->
+<apex:pageMessages id="error"></apex:pageMessages>
+  <!-- You are applying for -->
+
+</div>
+
+
+<!-- content_wrap -->
+<div class="content">
+
+  <!-- end .content -->
+</div>
+<div class="clear"></div>
+<c:Footer ></c:Footer>
+<!-- end .container -->
+</div>
+</apex:form>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="{!URLFOR($Resource.DSP, 'dsp/js/selectivizr.js')}"></script>
+  <script type="text/javascript" src="{!URLFOR($Resource.DSP, 'dsp/js/css3-mediaqueries.js')}"></script>
+  <![endif]-->
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/underscore/underscore-min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modalmanager.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modal.js')}"/>
+
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.validate.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.validate.additional-methods.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.mask.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/dsp/autocomplete.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/dsp/dsp.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.FloatLabel.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/dsp/dsp-common.js')}"/>
+  <script type="text/javascript">
+  $j(document).ready(function() {
+    $j('.js-float-label-wrapper').FloatLabel();
+  });
+  </script>
+</body>
+</html>
+<apex:outputPanel id="script">
+<c:Inlinefield ></c:Inlinefield>  
+</apex:outputPanel>  
+</apex:page>

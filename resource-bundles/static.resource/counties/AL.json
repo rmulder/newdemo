@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Autauga County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Baldwin County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Barbour County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Bibb County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Blount County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bullock County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Chambers County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Chilton County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Choctaw County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Clarke County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Cleburne County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Coffee County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Colbert County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Conecuh County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Coosa County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Covington County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Crenshaw County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Cullman County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Dale County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Dallas County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "DeKalb County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Elmore County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Escambia County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Etowah County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Geneva County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Hale County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Houston County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Lamar County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Lauderdale County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Limestone County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Lowndes County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Macon County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Marengo County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Mobile County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Pickens County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Russell County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "St. Clair County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Sumter County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Talladega County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Tallapoosa County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Tuscaloosa County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Walker County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Wilcox County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Winston County",
+    "state_abbreviation": "AL",
+    "fips_county_cd": "133"
+  }
+]

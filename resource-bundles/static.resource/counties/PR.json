@@ -1,0 +1,382 @@
+[
+  {
+    "name": "Adjuntas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Aguada Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Aguadilla Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Aguas Buenas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Aibonito Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Anasco Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Arecibo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Arroyo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Barceloneta Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Barranquitas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Bayamon Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Cabo Rojo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Caguas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Camuy Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Canovanas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Carolina Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Catano Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Cayey Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Ceiba Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Cidra Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Coamo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Comerio Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Corozal Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Culebra Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Dorado Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Fajardo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Florida Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "054"
+  },
+  {
+    "name": "Guanica Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Guayama Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Guayanilla Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Guaynabo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Gurabo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Hatillo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Hormigueros Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Isabela Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Jayuya Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Juana Diaz Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Juncos Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Lajas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Lares Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Las Marias Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Las Piedras Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Loiza Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Luquillo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Manati Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Maricao Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Maunabo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Mayaguez Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Moca Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Morovis Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Naguabo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Naranjito Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Orocovis Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Patillas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Penuelas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Ponce Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Quebradillas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Rincon Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Rio Grande Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Sabana Grande Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Salinas Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "San German Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "San Juan Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "San Lorenzo Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "San Sebastian Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Santa Isabel Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Toa Alta Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Toa Baja Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Trujillo Alto Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Utuado Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Vega Alta Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Vega Baja Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Vieques Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Villalba Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Yabucoa Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Yauco Municipio",
+    "state_abbreviation": "PR",
+    "fips_county_cd": "153"
+  }
+]

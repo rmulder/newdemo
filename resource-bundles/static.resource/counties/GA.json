@@ -1,0 +1,797 @@
+[
+  {
+    "name": "Appling County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Atkinson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Bacon County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Baker County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Baldwin County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Banks County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Barrow County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Bartow County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Ben Hill County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Berrien County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Bibb County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Bleckley County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Brantley County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Brooks County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Bryan County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Bulloch County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Burke County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Butts County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Camden County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Candler County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Catoosa County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Charlton County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Chatham County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Chattahoochee County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Chattooga County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Clarke County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Clayton County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Clinch County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Cobb County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Coffee County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Colquitt County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Columbia County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Cook County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Coweta County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Crisp County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Dade County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Dawson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Decatur County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "DeKalb County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Dodge County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Dooly County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Dougherty County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Early County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Echols County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Effingham County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Elbert County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Emanuel County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Evans County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Fannin County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Floyd County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Forsyth County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Fulton County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Gilmer County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Glascock County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Glynn County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Gordon County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Grady County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Gwinnett County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Habersham County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Hall County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Haralson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Harris County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Hart County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Heard County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Houston County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Irwin County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Jeff Davis County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Jenkins County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Jones County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Lamar County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Lanier County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Laurens County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Liberty County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Long County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Lowndes County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Lumpkin County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "McDuffie County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "McIntosh County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "Macon County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "Meriwether County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "199"
+  },
+  {
+    "name": "Miller County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "201"
+  },
+  {
+    "name": "Mitchell County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "205"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "207"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "209"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "211"
+  },
+  {
+    "name": "Murray County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "213"
+  },
+  {
+    "name": "Muscogee County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "215"
+  },
+  {
+    "name": "Newton County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "217"
+  },
+  {
+    "name": "Oconee County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "219"
+  },
+  {
+    "name": "Oglethorpe County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "221"
+  },
+  {
+    "name": "Paulding County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "223"
+  },
+  {
+    "name": "Peach County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "225"
+  },
+  {
+    "name": "Pickens County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "227"
+  },
+  {
+    "name": "Pierce County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "229"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "231"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "233"
+  },
+  {
+    "name": "Pulaski County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "235"
+  },
+  {
+    "name": "Putnam County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "237"
+  },
+  {
+    "name": "Quitman County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "239"
+  },
+  {
+    "name": "Rabun County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "241"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "243"
+  },
+  {
+    "name": "Richmond County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "245"
+  },
+  {
+    "name": "Rockdale County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "247"
+  },
+  {
+    "name": "Schley County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "249"
+  },
+  {
+    "name": "Screven County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "251"
+  },
+  {
+    "name": "Seminole County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "253"
+  },
+  {
+    "name": "Spalding County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "255"
+  },
+  {
+    "name": "Stephens County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "257"
+  },
+  {
+    "name": "Stewart County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "259"
+  },
+  {
+    "name": "Sumter County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "261"
+  },
+  {
+    "name": "Talbot County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "263"
+  },
+  {
+    "name": "Taliaferro County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "265"
+  },
+  {
+    "name": "Tattnall County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "267"
+  },
+  {
+    "name": "Taylor County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "269"
+  },
+  {
+    "name": "Telfair County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "271"
+  },
+  {
+    "name": "Terrell County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "273"
+  },
+  {
+    "name": "Thomas County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "275"
+  },
+  {
+    "name": "Tift County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "277"
+  },
+  {
+    "name": "Toombs County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "279"
+  },
+  {
+    "name": "Towns County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "281"
+  },
+  {
+    "name": "Treutlen County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "283"
+  },
+  {
+    "name": "Troup County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "285"
+  },
+  {
+    "name": "Turner County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "287"
+  },
+  {
+    "name": "Twiggs County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "289"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "291"
+  },
+  {
+    "name": "Upson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "293"
+  },
+  {
+    "name": "Walker County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "295"
+  },
+  {
+    "name": "Walton County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "297"
+  },
+  {
+    "name": "Ware County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "299"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "301"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "303"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "305"
+  },
+  {
+    "name": "Webster County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "307"
+  },
+  {
+    "name": "Wheeler County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "309"
+  },
+  {
+    "name": "White County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "311"
+  },
+  {
+    "name": "Whitfield County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "313"
+  },
+  {
+    "name": "Wilcox County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "315"
+  },
+  {
+    "name": "Wilkes County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "317"
+  },
+  {
+    "name": "Wilkinson County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "319"
+  },
+  {
+    "name": "Worth County",
+    "state_abbreviation": "GA",
+    "fips_county_cd": "321"
+  }
+]

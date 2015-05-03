@@ -1,0 +1,16 @@
+[
+  {
+    "APPLICATION_CODE__C":"static",
+    "THEME__C":"static",
+    "IS_PRODUCTION_ENV__C":false,
+    "IP_LOOKUP_URL__C":"http://freegeoip.net/xml/",
+    "IP_FIELD_LATITUDE__C":"Latitude",
+    "IP_FIELD_LONGITUDE__C":"Longitude",
+    "IP_FIELD_CITY__C":"City",
+    "IP_FIELD_STATE__C":"RegionCode",
+    "IP_LOOKUP_DATA_TYPE__C":"XML",
+    "ENABLE_IP_LOOKUP__C":true,
+    "POPUP_SECONDS__C":120.0,
+    "TIMEOUT_SECONDS__C":1000.0
+  }
+]

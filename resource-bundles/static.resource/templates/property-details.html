@@ -1,0 +1,322 @@
+<div id="formContainer">
+  <input type="hidden" value="{{Application__c.street_address_1__c}}"  class="current_address1" />
+  <input type="hidden" value="{{Application__c.street_address_2__c}}" class="current_address2" />
+  <input type="hidden" value="{{Application__c.city__c}}" class="current_city" />
+  <input type="hidden" value="{{Application__c.state__c}}" class="current_state" />
+  <input type="hidden" value="{{Application__c.county__c}}" class="current_county" />
+  <input type="hidden" value="{{Application__c.zip_code__c}}" class="current_zipcode" />
+  <input type="hidden" value="{{About_Account__c.street_address_1_aboutaccount__c}}" class="new_address1" />
+  <input type="hidden" value="{{About_Account__c.street_address_2_aboutaccount__c}}" class="new_address2" />
+  <input type="hidden" value="{{About_Account__c.city_aboutaccount__c}}" class="new_city" />
+  <input type="hidden" value="{{About_Account__c.state_aboutaccount__c}}" class="new_state" />
+  <input type="hidden" value="{{About_Account__c.county_aboutaccount__c}}" class="new_county" />
+  <input type="hidden" value="{{About_Account__c.zip_code_account__c}}" class="new_zipcode"/>
+  <input type="hidden" value="{{About_Account__c.he_street_address_1__c}}" class="he_address1" />
+  <input type="hidden" value="{{About_Account__c.he_street_address_2__c}}" class="he_address2" />
+  <input type="hidden" value="{{About_Account__c.he_city__c}}" class="he_city" />
+  <input type="hidden" value="{{About_Account__c.he_state__c}}" class="he_state" />
+  <input type="hidden" value="{{About_Account__c.he_county_c__c}}" class="he_county" />
+  <input type="hidden" value="{{About_Account__c.he_zip_code__c}}" class="he_zipcode"/>
+  <!-- Primary Applicant Info -->
+  <div id="appl_1" class="applicant">
+    <h4 class="sectionHeader">&nbsp;
+      <span class="btn pull-right">
+        <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+          <span class="demo primaryBtn padding10 font144"  id="myButton">Save for Later</span>
+        </div>
+      </span>
+    </h4>
+
+    <div class="formFields sectionTitleContainer" id="appl_1_loanDetails">
+      {{#if DisplayedFields.display_mrt_fields}}
+      <h4 class="sectionTitle">Home Loan-{{PageLabels.property_location}}</h4>
+      <!-- Check boxes for addresses -->
+      <div class="row fieldSet" data-value="{{About_Account__c.options__c}}">
+        <div class="fieldItem col-xs-4 col-lg-3">
+          <label class="radioLabel" for="addressType1">Unknown address</label>
+          <input name="options__c" id="addressType1" type="radio" value="Unknown Address" class="addressType" />
+        </div>
+        <div class="fieldItem col-xs-3">
+          <label class="radioLabel" for="addressType2">New address</label>
+          <input name="options__c" id="addressType2" type="radio" value="New Address" class="addressType" />
+        </div>
+        <div class="fieldItem col-xs-3">
+          <label for="addressType3" class="radioLabel">Current address</label>
+          <input name="options__c" id="addressType3" type="radio" value="Current Address" class="addressType3 addressType" />
+        </div>
+      </div>
+      <!-- Check boxes for addresses end here -->
+      <div id="addressInfo">
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-12">
+            <label for="street_address_1_aboutaccount__c" class="address1_label">Street Address, No PO Boxes<span
+                class="required"> *</span></label>
+            <input name="street_address_1_aboutaccount__c" id="street_address_1_aboutaccount__c" type="text"
+                   class="col-xs-12 address1 required" value="{{About_Account__c.street_address_1_aboutaccount__c}}"/>
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-12">
+            <label for="street_address_2_aboutaccount__c" class="address2_label">Street Address 2</label>
+            <input name="street_address_2_aboutaccount__c" id="street_address_2_aboutaccount__c" type="text" class="col-xs-12 address2"
+                   value="{{About_Account__c.street_address_2_aboutaccount__c}}"/>
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-5">
+            <label for="city_aboutaccount__c" class="city_label">City<span class="required"> *</span></label>
+            <input name="city_aboutaccount__c" id="city_aboutaccount__c" type="text" class="col-xs-12 city alpha required"
+                   value="{{About_Account__c.city_aboutaccount__c}}" name="city_aboutaccount__c"/>
+          </div>
+          <div class="js-float-label-wrapper fieldItem col-xs-3">
+            <div class="styled-select">
+              <label for="state_aboutaccount__c" class="address2_label">State <span class="required"> *</span></label>
+              <select id="state_aboutaccount__c" name="state_aboutaccount__c"
+                      class="appl_1_state col-xs-12 required state"
+                      data-value="{{About_Account__c.state_aboutaccount__c}}">
+              </select>
+            </div>
+          </div>
+          <div class="js-float-label-wrapper fieldItem col-xs-4">
+            <label for="zip_code_account__c" class="zipcode_label">ZIP Code<span class="required"> *</span></label>
+            <input name="zip_code_account__c" id="zip_code_account__c" type="text" maxlength="5"
+                   class="col-xs-12 zipcode required" value="{{About_Account__c.zip_code_account__c}}"/>
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-5">
+            <div class="styled-select">
+              <label for="county_aboutaccount__c" class="address2_label">County <span class="required"> *</span></label>
+              <select id="county_aboutaccount__c" class="col-xs-12 appl_1_citizenCounty county required"
+                      data-value="{{About_Account__c.county_aboutaccount__c}}" name="county_aboutaccount__c">
+                <option value="">County<span class="required"> *</span></option>
+              </select>
+            </div>
+          </div>
+          <div class="js-float-label-wrapper fieldItem col-xs-3">
+            <label for="year_built__c">Year Built</label>
+            <input name="year_built__c" id="year_built__c" type="text" maxlength="5"
+                   class="col-xs-12 digit year" value="{{About_Account__c.year_built__c}}"/>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+      {{#if DisplayedFields.display_he_fields}}
+      <h4 class="sectionTitle">Home Equity-{{PageLabels.he_property_location}}</h4>
+      <!-- Check boxes for addresses -->
+      <div class="row fieldSet radioGroup" data-value="{{About_Account__c.property_current_residence__c}}">
+        <div class="floatLft marginTop1">Is the subject property your current residence ?<span class="radioLabel"></span></div>
+        <div class="fieldItem col-md-2 col-xs-offset-1 col-xs-2">
+          <label class="radioLabel" for="heAddressType1">No</label>
+          <input name="property_current_residence__c" id="heAddressType1" type="radio" value="No" class="heAddressType" />
+        </div>
+        <div class="fieldItem col-md-2 col-xs-2">
+          <label class="radioLabel" for="heAddressType2">Yes</label>
+          <input name="property_current_residence__c" id="heAddressType2" type="radio" value="Yes" class="heAddressType2 heAddressType" />
+        </div>
+      </div>
+      <div id="heAddressInfo">
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-12">
+            <label for="appl_1_he_address1" class="eaddress1_label">Street Address, No PO Boxes<span
+              class="required"> *</span></label>
+            <input name="he_street_address_1__c" id="appl_1_he_address1" type="text"
+                   class="col-xs-12 eaddress1 required" value="{{About_Account__c.he_street_address_1__c}}"/>
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-12">
+            <label for="he_street_address_2__c" class="eaddress2_label">Street Address 2</label>
+            <input name="he_street_address_2__c" id="he_street_address_2__c" type="text" class="col-xs-12 eaddress2"
+                   value="{{About_Account__c.he_street_address_2__c}}"/>
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-5">
+            <label for="he_city__c" class="ecity_label">City<span class="required"> *</span></label>
+            <input name="he_city__c" id="he_city__c" type="text" class="col-xs-12 ecity alpha required"
+                   value="{{About_Account__c.he_city__c}}" name="he_city__c"/>
+          </div>
+          <div class="js-float-label-wrapper fieldItem col-xs-3">
+            <div class="styled-select">
+              <label for="he_state__c" class="address2_label">State <span class="required"> *</span></label>
+              <select id="he_state__c" name="he_state__c"
+                      class="col-xs-12 appl_1_he_state required estate"
+                      data-value="{{About_Account__c.he_state__c}}">
+              </select>
+            </div>
+          </div>
+          <div class="js-float-label-wrapper fieldItem col-xs-4">
+            <label for="he_zip_code__c" class="ezipcode_label">ZIP Code<span class="required"> *</span></label>
+            <input name="he_zip_code__c" id="he_zip_code__c" type="text" maxlength="5"
+                   class="col-xs-12 ezipcode required" value="{{About_Account__c.he_zip_code__c}}"/>
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem col-xs-5">
+            <div class="styled-select">
+              <label for="he_county_c__c" class="address2_label">County <span class="required"> *</span></label>
+              <select id="he_county_c__c" class="col-xs-12 appl_1_heCounty ecounty required"
+                      data-value="{{About_Account__c.he_county_c__c}}" name="he_county_c__c">
+                <option value="">County<span class="required"> *</span></option>
+              </select>
+            </div>
+          </div>
+          <div class="js-float-label-wrapper fieldItem col-xs-3">
+            <label for="he_year__c">Year Built</label>
+            <input name="he_year__c" id="he_year__c" type="text" maxlength="5"
+                   class="col-xs-12 digit year" value="{{About_Account__c.he_year__c}}"/>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+
+    <!-- property details -->
+    {{#if DisplayedFields.display_mrt_fields}}
+    <div class="formFields sectionTitleContainer" id="prevAddDuration">
+      <h4 class="sectionTitle">{{PageLabels.home_loan}}-{{PageLabels.property_details}}</h4>
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="styled-select">
+            <label for="property_type__c" class="address2_label">Property Type <span class="required"> *</span></label>
+            <select id="property_type__c" class="col-xs-12 required" data-value="{{About_Account__c.property_type__c}}"
+                    name="property_type__c">
+            </select>
+          </div>
+        </div>
+        <div class="js-float-label-wrapper fieldItem col-xs-3">
+          <div class="styled-select">
+            <label for="number_of_units__c" class="address2_label">No. of units <span class="required"> *</span></label>
+            <select id="number_of_units__c" class="col-xs-12 required" data-value="{{About_Account__c.number_of_units__c}}"
+                    name="number_of_units__c">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="styled-select">
+            <label for="occupancy__c" class="address2_label">Occupancy <span class="required"> *</span></label>
+            <select id="occupancy__c" class="col-xs-12 required" data-value="{{About_Account__c.occupancy__c}}"
+                    name="occupancy__c">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row fieldSet hidden">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="estimated_gross_rental_income__c">Est. Gross Rental Income</label>
+          <input name="estimated_gross_rental_income__c" id="estimated_gross_rental_income__c" type="text"
+                 class="col-xs-12 number" value="{{About_Account__c.estimated_gross_rental_income__c}}"/>
+        </div>
+          <div class="col-xs-5 paddingTop10">
+              <span class="fieldNote">&nbsp;&nbsp;<span
+              class="required"> *</span> Required for investment/Rental Properties</span>
+          </div>
+                </div>
+      <div class="row fieldSet hidden">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="hoa_dues__c">HOA Dues</label>
+          <input name="hoa_dues__c" id="hoa_dues__c" type="text" class="col-xs-12 number"
+                 value="{{About_Account__c.hoa_dues__c}}"/>
+        </div>
+          <div class="col-xs-5 paddingTop10">
+          <span class="fieldNote">&nbsp;&nbsp;<span class="required"> *</span> Required for condos</span>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.display_he_fields}}
+    <div class="formFields sectionTitleContainer" id="prevAddDuration">
+      <h4 class="sectionTitle">{{PageLabels.home_equity}}-{{PageLabels.he_property_details}}</h4>
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="styled-select">
+            <label for="he_property_type__c" class="address2_label">Property Type <span class="required"> *</span></label>
+            <select id="he_property_type__c" class="col-xs-12 required" data-value="{{About_Account__c.he_property_type__c}}"
+                    name="he_property_type__c">
+            </select>
+          </div>
+        </div>
+        <div class="js-float-label-wrapper fieldItem col-xs-3">
+          <div class="styled-select">
+            <label for="he_no_of_units__c" class="address2_label">No. of units <span class="required"> *</span></label>
+            <select id="he_no_of_units__c" class="col-xs-12 required" data-value="{{About_Account__c.he_no_of_units__c}}"
+                    name="he_no_of_units__c">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row fieldSet">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <div class="styled-select">
+            <label for="he_occupancy__c" class="address2_label">Occupancy <span class="required"> *</span></label>
+            <select id="he_occupancy__c" class="col-xs-12 required" data-value="{{About_Account__c.he_occupancy__c}}"
+                    name="he_occupancy__c">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row fieldSet hidden">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="he_estimated_gross_rental_income__c">Est. Gross Rental Income</label>
+          <input name="he_estimated_gross_rental_income__c" id="he_estimated_gross_rental_income__c" type="text"
+                 class="col-xs-12 number" value="{{About_Account__c.he_estimated_gross_rental_income__c}}"/>
+        </div>
+        <div class="col-xs-5 paddingTop10">
+          <span class="fieldNote">&nbsp;&nbsp;<span
+              class="required"> *</span> Required for investment/Rental Properties</span>
+        </div>
+      </div>
+      <div class="row fieldSet hidden">
+        <div class="js-float-label-wrapper fieldItem col-xs-5">
+          <label for="he_hoa_dues__c">HOA Dues</label>
+          <input name="he_hoa_dues__c" id="he_hoa_dues__c" type="text" class="col-xs-12 number"
+                 value="{{About_Account__c.he_hoa_dues__c}}"/>
+        </div>
+        <div class="col-xs-5 paddingTop10">
+          <span class="fieldNote">&nbsp;&nbsp;<span class="required"> *</span> Required for condos</span>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    <!-- property details snd here -->
+  </div>
+</div>
+
+<!-- <div id="actionPanel">
+  <button type="submit" class="myButton floatRt primaryBtn margin0 font144">{{PageLabels.next_button}}</button>
+
+  <a href="#purchase-details" id="property-details-previous" class="button_font tabFocus"><span class="myButton secondaryBtn floatLft marginRht20 cancel font144">{{PageLabels.previous_button}}</span></a>
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo primaryBtn padding10 font144"  id="myButton">Save For later</span>
+  </div>
+</div> -->
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+
+<script id="he-section1" type="text/x-handlebars-template">
+</script>
+
+<script id="he-section2" type="text/x-handlebars-template">
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+  {{#if Application__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow">{{Application__c.primary_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.second_offer__c}}
+  <li id="cs2_list" class="listRow">{{Application__c.second_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.third_offer__c}}
+  <li id="cs3_list" class="listRow">{{Application__c.third_offer__c}}</li>
+  {{/if}}
+</script>

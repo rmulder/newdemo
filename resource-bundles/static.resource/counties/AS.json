@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Eastern District",
+    "state_abbreviation": "AS",
+    "fips_county_cd": "010"
+  },
+  {
+    "name": "Manu'a District",
+    "state_abbreviation": "AS",
+    "fips_county_cd": "020"
+  },
+  {
+    "name": "Western District",
+    "state_abbreviation": "AS",
+    "fips_county_cd": "050"
+  }
+]

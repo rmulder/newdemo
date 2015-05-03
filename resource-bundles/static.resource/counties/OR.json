@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Baker County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Clackamas County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Clatsop County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Columbia County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Coos County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Crook County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Curry County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Deschutes County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Gilliam County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Harney County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Hood River County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Josephine County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Klamath County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Lane County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Linn County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Malheur County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Morrow County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Multnomah County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Sherman County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Tillamook County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Umatilla County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Wallowa County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Wasco County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Wheeler County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Yamhill County",
+    "state_abbreviation": "OR",
+    "fips_county_cd": "071"
+  }
+]

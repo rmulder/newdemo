@@ -1,0 +1,417 @@
+[
+  {
+    "name": "Alcona County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Alger County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Allegan County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Alpena County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Antrim County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Arenac County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Baraga County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Barry County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bay County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Benzie County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Berrien County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Branch County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Charlevoix County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Cheboygan County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Chippewa County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Clare County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Delta County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Dickinson County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Eaton County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Emmet County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Genesee County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Gladwin County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Gogebic County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Grand Traverse County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Gratiot County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Hillsdale County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Houghton County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Huron County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Ingham County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Ionia County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Iosco County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Iron County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Isabella County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Kalamazoo County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Kalkaska County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Kent County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Keweenaw County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Lapeer County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Leelanau County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Lenawee County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Livingston County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Luce County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Mackinac County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Macomb County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Manistee County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Marquette County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Mason County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Mecosta County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Menominee County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Midland County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Missaukee County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Montcalm County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Montmorency County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Muskegon County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Newaygo County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Oakland County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Oceana County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Ogemaw County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Ontonagon County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Osceola County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Oscoda County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Otsego County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Ottawa County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Presque Isle County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Roscommon County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Saginaw County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "St. Clair County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "St. Joseph County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Sanilac County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Schoolcraft County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Shiawassee County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Tuscola County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Van Buren County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Washtenaw County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Wexford County",
+    "state_abbreviation": "MI",
+    "fips_county_cd": "165"
+  }
+]

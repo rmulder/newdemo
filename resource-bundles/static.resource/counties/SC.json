@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Abbeville County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Aiken County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Allendale County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Anderson County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Bamberg County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Barnwell County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Beaufort County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Berkeley County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Charleston County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Chester County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Chesterfield County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Clarendon County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Colleton County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Darlington County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Dillon County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Dorchester County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Edgefield County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Fairfield County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Florence County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Georgetown County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Greenville County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Greenwood County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Hampton County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Horry County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Kershaw County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Lancaster County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Laurens County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Lexington County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "McCormick County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Marlboro County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Newberry County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Oconee County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Orangeburg County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Pickens County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Richland County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Saluda County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Spartanburg County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Sumter County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Williamsburg County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "York County",
+    "state_abbreviation": "SC",
+    "fips_county_cd": "091"
+  }
+]

@@ -1,0 +1,91 @@
+<apex:component controller="timeoutController">
+
+  <apex:attribute name="session" description="The session Id"
+                  type="String" required="required" assignTo="{!sessionToken}"/>
+  <apex:attribute name="seconds" description="Number of seconds before opening popup"
+                  type="Integer" required="required" assignTo="{!secondsToCount}"/>
+  <apex:attribute name="popSeconds" description="Number of seconds to display in popup before logout"
+          type="Integer" required="required" assignTo="{!secondsToCountPopup}"/>
+  <apex:attribute name="applicationId" description="Application__c Id"
+          type="String" required="required" assignTo="{!appId}"/>
+
+  <apex:stylesheet value="{!URLFOR($Resource.static, 'css/dsp.css')}"/>
+
+
+
+<style>
+#secondsLeft {font-weight: bold;}
+</style>
+
+<!-- Modal -->
+<div id="timeoutModal" data-backdrop="static" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="timeoutModal" style="border: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header btn-inverse timeOutHeader">
+        <h4 class="modal-title text-color">Inactivity Timeout</h4>
+      </div>
+        <div class="modal-body message">
+          This application expires in <span id="secondsLeft"></span> Would you like to continue?
+        </div>
+        <div class="modal-footer timeOutFooter">
+          <button type="button" id="continueWorking" class="btn primaryBtn button-style timeoutBtn tabFocus">Continue</button>
+        </div>
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</div>
+
+<!--
+<div class="modal hide fade" id="timeoutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-color">Inactivity Timeout</h4>
+        </div>
+        <div class="modal-body message">
+          This application expires in <span id="secondsLeft"></span> Would you like to continue?
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="continueWorking" class="btn btn-primary button-style timeoutBtn">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+<!--   loadJS(DSP.resources_url + 'js/selectivizr.js'); -->
+
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap.min.js')}"/>
+<!--
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modalmanager.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modal.js')}"/>
+  -->
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/moment/moment.js')}"/>
+  
+  <apex:includeScript value="{!URLFOR($Resource.timeout)}"/>
+
+<script>
+  jQuery('document').ready(function() {
+    if (typeof DSP === 'undefined') {
+      DSP = {}; //This should NEVER happen!!
+    }
+
+    if (typeof TF4SF === 'undefined') {
+      DSP.timeoutController = timeoutController;
+    } else {
+      DSP.timeoutController = TF4SF__timeoutController;
+    }
+
+    var refreshFunction = function() {
+      DSP.timeoutController.extendExpiration('{!sessionToken}', '{!appId}', function(result,event) {
+        if (event.status) {
+          console.log('refresh token result', result);
+        } else {
+          alert('problem contacting server' + ' ' + event.message + ' ' + event.where);
+        }
+      });
+    };
+
+    dspTimeout('{!sessionToken}',{!secondsToCount},{!secondsToCountPopup},refreshFunction, jQuery, moment, '{!appId}');
+  });
+</script>
+</apex:component>

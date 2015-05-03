@@ -1,0 +1,147 @@
+[
+  {
+    "name": "Beaver County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Box Elder County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Cache County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Carbon County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Daggett County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Davis County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Duchesne County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Emery County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Garfield County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Grand County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Iron County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Juab County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Kane County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Millard County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Piute County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Rich County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Salt Lake County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "San Juan County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Sanpete County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Sevier County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Summit County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Tooele County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Uintah County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Utah County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Wasatch County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Weber County",
+    "state_abbreviation": "UT",
+    "fips_county_cd": "057"
+  }
+]

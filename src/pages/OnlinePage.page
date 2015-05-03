@@ -1,0 +1,227 @@
+<apex:page docType="html-5.0" standardStylesheets="false" cache="false" applyHtmlTag="false" id="page" showHeader="false" sidebar="false" controller="OnlinePageController">
+<html>
+<head>
+ 
+  <meta https-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>-->
+  <apex:stylesheet value="{!URLFOR($Resource.Accordian, 'Accordian/css/jquery-ui.css')}"/>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <apex:stylesheet value="{!URLFOR($Resource.DSP, 'dsp/css/dsp.css')}"/>
+  <title>Digital Sales Platform</title>
+  <style>
+  /* IE has layout issues when sorting (see #5413) */
+  .group { zoom: 1 }
+  
+  .grid{
+  		
+        width: 900px;
+    	margin: 0 auto;
+    	
+  }
+  .marginTp75{
+  		margin-top: 75px;
+  }
+  .back{
+  	background-color: #1c6b94;
+		color: white;
+  }
+  </style>
+
+  <script>
+  $j = jQuery.noConflict();
+  $j(function() {
+    $j( "#accordion" )
+      .accordion({
+      	heightStyle: "content",
+        header: "> div > h3"
+      })
+      
+
+      .sortable({
+        axis: "y",
+        handle: "h3",
+        stop: function( event, ui ) {
+          // IE doesn't register the blur when sorting
+          // so trigger focusout handlers to remove .ui-state-focus
+          ui.item.children( "h3" ).triggerHandler( "focusout" );
+        }
+
+      });
+  });
+  </script>
+</head>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NKTS24"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKTS24');</script>
+<!-- End Google Tag Manager -->
+<body>
+<header class="header grid">
+    <a href="#">
+      <img class="logo" width="150" height="46"/>
+    </a>
+    <hr/>
+  </header><!-- end .header -->
+<apex:form >
+<div id="accordion" class="grid">
+	<div class="group">
+	  <h3>Checking</h3>
+	  	<div>
+		    <ul>
+			    <li><apex:commandLink action="{!CheckingSilver}">Checking - Silver</apex:commandLink></li>
+				<li><apex:commandLink action="{!CheckingGold}">Checking - Gold</apex:commandLink></li>
+		    </ul>
+  		</div>
+  	  </div>
+  	<div class="group">  
+	  <h3>Savings</h3>
+	  <div>
+	    <ul>
+		    <li><apex:commandLink action="{!SavingsSilver}">Savings - Silver</apex:commandLink></li>
+			<li><apex:commandLink action="{!SavingsGold}">Savings - Gold</apex:commandLink></li>
+			<li><apex:commandLink action="{!SavingsPlatinum}">Savings - Platinum</apex:commandLink></li>
+	    </ul>
+	  </div>
+  	</div>
+  	<div class="group">
+		  <h3>Certificates</h3>
+		  <div>
+		    <ul>
+			    <li><apex:commandLink action="{!Certificates6Months}">Certificates - 6 Months</apex:commandLink></li>
+				<li><apex:commandLink action="{!Certificates12Months}">Certificates - 12 Months</apex:commandLink></li>
+				<li><apex:commandLink action="{!Certificates18Months}">Certificates - 18 Months</apex:commandLink></li>
+				<li><apex:commandLink action="{!Certificates24Months}">Certificates - 24 Months</apex:commandLink></li>
+				<li><apex:commandLink action="{!Certificates36Months}">Certificates - 36 Months</apex:commandLink></li>
+				<li><apex:commandLink action="{!Certificates60Months}">Certificates - 60 Months</apex:commandLink></li>
+		    </ul>
+		  </div>
+	</div>	  
+	<div class="group">	  
+		  <h3>Credit Cards</h3>
+		  <div>
+		    <ul>
+			    <li><apex:commandLink action="{!CreditCardsSilverIncrease}">Credit Cards - Silver - Increase</apex:commandLink></li>
+				<li><apex:commandLink action="{!CreditCardsSilverAdvantagePointsRewards}">Credit Cards - Advantage Points Rewards</apex:commandLink></li>
+				<li><apex:commandLink action="{!CreditCardsSilverAdvantagePointsRewardsIncrease}">Credit Cards - Advantage Points Rewards - Increase</apex:commandLink></li>
+				<li><apex:commandLink action="{!CreditCardsAdvantage}">Credit Cards - Advantage</apex:commandLink></li>
+				<li><apex:commandLink action="{!CreditCardsSilver}">Credit Cards - Silver</apex:commandLink></li>
+				<li><apex:commandLink action="{!CreditCardsAdvantageSecured}">Credit Cards - Advantage Secured</apex:commandLink></li>
+				<li><apex:commandLink action="{!CreditCardsAdvantageSecuredIncrease}">Credit Cards - Advantage Secured Increase</apex:commandLink></li>
+				<li><apex:commandLink action="{!CreditCardsPlatinum}">Credit Cards - Platinum</apex:commandLink></li>
+		    </ul>
+		  </div>
+	</div>
+	<div class="group">	  
+		  <h3>Home Loan</h3>
+		  <div>
+		    <ul>
+			    <li><apex:commandLink action="{!HomeLoanFixedRateMortgages}">Home Loan - Fixed Rate Mortgages</apex:commandLink></li>
+				<li><apex:commandLink action="{!HomeLoanFixedRateJumboMortgages}">Home Loan - Fixed Rate Jumbo Mortgages</apex:commandLink></li>
+				<li><apex:commandLink action="{!HomeLoanAdjustableRateMortgages}">Home Loan - Adjustable Rate Mortgages</apex:commandLink></li>
+				<li><apex:commandLink action="{!HomeLoanAdjustableRateJumboMortgages}">Home Loan - Adjustable Rate Jumbo Mortgages</apex:commandLink></li>
+		    </ul>
+		  </div>
+	</div>
+	<div class="group">	  
+		  <h3>Home Equity</h3>
+		  <div>
+		    <ul>
+			    <li><apex:commandLink action="{!HomeEquityFixedRateHomeEquity}">Home Equity - Fixed Rate Home Equity</apex:commandLink></li>
+				<li><apex:commandLink action="{!HomeEquityAdjustableRateHomeEquity}">Home Equity - Adjustable Rate Home Equity</apex:commandLink></li>
+				<li><apex:commandLink action="{!HomeEquityFlexityLineofCredit}">Home Equity - Flexity Line of Credit</apex:commandLink></li>
+			</ul>
+		  </div>
+	</div>
+	<div class="group">	  
+		  <h3>Personal Loans</h3>
+		  <div>
+		    <ul>
+		    	<li><apex:commandLink action="{!PersonalLoansFixedRate}">Personal Loans - Fixed Rate</apex:commandLink></li>
+				<li><apex:commandLink action="{!PersonalLoansPersonalLineofCredit}">Personal Loans - Personal Line of Credit</apex:commandLink></li>
+				<li><apex:commandLink action="{!PersonalLoansStockSecuredLoan}">Personal Loans - Stock Secured Loan</apex:commandLink></li>
+				<li><apex:commandLink action="{!PersonalLoansCertificateSecuredLoan}">Personal Loans - Certificate Secured Loan</apex:commandLink></li>
+				<li><apex:commandLink action="{!PersonalLoansSavingsSecuredLoan}">Personal Loans - Savings Secured Loan</apex:commandLink></li>
+			</ul>
+		  </div>
+	</div>
+	<div class="group">	  
+		  <h3>Vehicle Loans</h3>
+		  <div>
+		    <ul>
+		    	<li><apex:commandLink action="{!VehicleLoansNewAutoLoan}">Vehicle Loans - New Auto Loan</apex:commandLink></li>
+				<li><apex:commandLink action="{!VehicleLoansUsedAutoLoan}">Vehicle Loans - Used Auto Loan</apex:commandLink></li>
+				<li><apex:commandLink action="{!VehicleLoansBoatLoan}">Vehicle Loans - Boat Loan</apex:commandLink></li>
+				<li><apex:commandLink action="{!VehicleLoansRVLoan}">Vehicle Loans - RV Loan</apex:commandLink></li>
+				<li><apex:commandLink action="{!VehicleLoansMotorcycleLoan}">Vehicle Loans - Motorcycle Loan</apex:commandLink></li>
+			</ul>
+		  </div>
+	</div>
+	<div class="group">
+	  <h3>Business Checking</h3>
+	  	<div>
+		    <ul>
+			    <li><apex:commandLink action="{!BusiCheckingSilver}">Business Checking - Silver</apex:commandLink></li>
+				<li><apex:commandLink action="{!BusiCheckingPlatinum}">Business Checking - Platinum</apex:commandLink></li>
+		    </ul>
+  		</div>
+  	  </div>
+  	<div class="group">  
+	  <h3>Business Savings</h3>
+	  <div>
+	    <ul>
+		    <li><apex:commandLink action="{!BusiSavingsSilver}">Business Savings - Silver</apex:commandLink></li>
+			<li><apex:commandLink action="{!BusiSavingsPlatinum}">Business Savings - Platinum</apex:commandLink></li>
+			<li><apex:commandLink action="{!BusiSavingsMoneyMarket}">Business Savings - Money Market</apex:commandLink></li>
+	    </ul>
+	  </div>
+  	</div>
+  	<div class="group">
+	  <h3>Business CDs</h3>
+	  	<div>
+		    <ul>
+			    <li><apex:commandLink action="{!BusiCDsBasic}">Business CDs - Basic</apex:commandLink></li>
+				<li><apex:commandLink action="{!BusiCDsJumbo}">Business CDs - Jumbo</apex:commandLink></li>
+		    </ul>
+  		</div>
+  	  </div>
+  	<div class="group">  
+	  <h3>Business Credit Cards</h3>
+	  <div>
+	    <ul>
+		    <li><apex:commandLink action="{!BusiCCPlatinum}">Business Credit Cards - Platinum</apex:commandLink></li>
+			<li><apex:commandLink action="{!BusiCCSapphire}">Business Credit Cards - Sapphire</apex:commandLink></li>
+	    </ul>
+	  </div>
+  	</div>
+  	<div class="group">  
+	  <h3>Business Loans</h3>
+	  <div>
+	    <ul>
+		    <li><apex:commandLink action="{!BusiLoansAdvantage}">Business Loans - Advantage</apex:commandLink></li>
+			<li><apex:commandLink action="{!BusiLoansTerm}">Business Loans - Term</apex:commandLink></li>
+			<li><apex:commandLink action="{!BusiLoansSBA}">Business Loans - SBA</apex:commandLink></li>
+			<li><apex:commandLink action="{!BusiLoansLOC}">Business Loans - Line of Credit</apex:commandLink></li>
+	    </ul>
+	  </div>
+  	</div>	  
+<!-- content_wrap -->
+<div class="content">
+
+  <!-- end .content -->
+</div>
+<div class="clear"></div>
+<c:Footer ></c:Footer>
+<!-- end .container -->
+</div>
+</apex:form>
+</body>
+</html>  
+</apex:page>

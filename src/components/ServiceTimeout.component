@@ -1,0 +1,66 @@
+<apex:component controller="ServiceTimeoutController">
+
+  <apex:attribute name="session" description="The session Id"
+                  type="String" required="required" assignTo="{!sessionToken}"/>
+  <apex:attribute name="seconds" description="Number of seconds before opening popup"
+                  type="Integer" required="required" assignTo="{!secondsToCount}"/>
+  <apex:attribute name="popSeconds" description="Number of seconds to display in popup before logout"
+          type="Integer" required="required" assignTo="{!secondsToCountPopup}"/>
+  <apex:attribute name="serviceID" description="Service__c Id"
+          type="String" required="required" assignTo="{!servId}"/>
+
+<style>
+#secondsLeft {font-weight: bold;}
+</style>
+
+<!-- Modal -->
+<div id="timeoutModal" data-backdrop="static" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="timeoutModal" style="border: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header btn-inverse timeOutHeader">
+        <h4 class="modal-title text-color">Inactivity Timeout</h4>
+      </div>
+        <div class="modal-body message">
+          This Service Application expires in <span id="secondsLeft"></span> Would you like to continue?
+        </div>
+        <div class="modal-footer timeOutFooter">
+          <button type="button" id="continueWorking" class="btn primaryBtn button-style timeoutBtn tabFocus">Continue</button>
+        </div>
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</div>
+
+  <!--<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>-->
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/moment/moment.js')}"/>
+  
+  <apex:includeScript value="{!URLFOR($Resource.servicesTimeout)}"/>
+
+<script>
+  jQuery('document').ready(function() {
+    //console.log(jQuery('#timeoutModal'));
+    //jQuery('#timeoutModal').modal({'keyboard': true, 'backdrop': true});
+    if (typeof SVC === 'undefined') {
+      SVC = {}; //This should NEVER happen!!
+    }
+
+    if (typeof TF4SF === 'undefined') {
+      SVC.timeoutController = ServiceTimeoutController;
+    } else {
+      SVC.timeoutController = TF4SF__ServiceTimeoutController;
+    }
+
+    var refreshFunction = function() {
+      SVC.timeoutController.extendExpiration('{!sessionToken}', '{!servId}', function(result,event) {
+        if (event.status) {
+          console.log('refresh token result', result);
+        } else {
+          alert('problem contacting server' + ' ' + event.message + ' ' + event.where);
+        }
+      });
+    };
+
+    svcTimeout('{!sessionToken}',{!secondsToCount},{!secondsToCountPopup},refreshFunction, jQuery, moment, '{!servId}');
+  });
+</script>
+</apex:component>

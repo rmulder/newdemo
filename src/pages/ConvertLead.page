@@ -1,0 +1,5 @@
+<apex:page standardController="Lead" extensions="Convertleadcon" action="{!convertLeadToOpp}">
+ 
+<apex:pageMessages />
+ 
+</apex:page>

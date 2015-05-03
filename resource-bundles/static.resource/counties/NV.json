@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Churchill County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Elko County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Esmeralda County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Eureka County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Humboldt County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Lander County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Lyon County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Mineral County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Nye County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Pershing County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Storey County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Washoe County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "White Pine County",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Carson City",
+    "state_abbreviation": "NV",
+    "fips_county_cd": "510"
+  }
+]

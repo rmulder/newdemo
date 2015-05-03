@@ -1,0 +1,31 @@
+<apex:page controller="JSRemotingBasicsController" id="page">
+ 
+  <script type="text/javascript">
+//Method to get static text from the controller
+//Sends no parameters to the controller method  
+    function getText() {
+      var text = "";
+      JSRemotingBasicsController.doGetText(
+        function(result, event) {
+          if(event.type === 'exception') {
+            console.log("exception");
+            console.log(event);
+          } else if (event.status) {
+            text = result;
+            document.getElementById('textResponseSpan').innerHTML = text;
+            document.getElementById('{!$Component.page.textResponseApexOutputText}').innerHTML = text;
+          } else {
+            console.log(event.message);
+          }
+        }
+      );
+    }
+  </script>
+ 
+  <h2>Simple Javascript Remoting Examples </h2> <br/> <br/>
+ 
+  <button onclick="getText()">Get Static Text</button> <br/>
+  <span id="textResponseSpan"></span> <br/>
+  <apex:outputText id="textResponseApexOutputText"></apex:outputText>
+     
+</apex:page>

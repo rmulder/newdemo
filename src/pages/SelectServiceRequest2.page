@@ -1,0 +1,150 @@
+<apex:page Controller="SelectServiceRequestController" showHeader="false" sidebar="false" action="{!generateServiceApp}">
+
+<!-- <apex:stylesheet value="{!URLFOR($Resource.static, 'css/bootstrap.css')}"/> -->
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.mask.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modal.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modalmanager.js')}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<apex:form id="fullForm">
+<center>
+    <apex:image value="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" height="25%" width="25%"/>
+</center>
+
+    <apex:pageBlock >
+      <apex:pageBlockSection title="One-N-Done" id="sup">
+        <apex:repeat value="{!serviceWrapperClassList}" var="servType">
+          <!-- <apex:inputCheckbox value="{!servType.serviceChoice}" title="{!servType.serviceName}" label="{!servType.serviceName}"> -->
+          <apex:commandButton onclick="getSName('{!servType.serviceName}','{!servType.shortDesc}','fal');" html-data-toggle="modal" html-data-target="#myModal" value="{!servType.serviceName}" action="{!selectRequest}" reRender="amd" styleClass="btn btn-primary btn-md col-md-5 col-xs-offset-1">
+            <!-- <apex:actionSupport event="onclick" action="{!selectRequest}" reRender="amd"> -->
+              <apex:param name="decision" value="{!servType.serviceChoice}" assignTo="{!choiceParam}"/>
+              <apex:param name="selServRequest" value="{!servType.serviceName}"/>
+            <!-- </apex:actionSupport> -->
+          </apex:commandButton>
+          <!-- </apex:inputCheckbox> -->
+        </apex:repeat>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <apex:pageBlock id="stexm">
+      <apex:pageBlockSection title="Search Text">
+
+ <!--        <apex:pageBlockSectionItem >
+            <apex:actionRegion >
+            <apex:outputLabel value="Product "></apex:outputLabel>
+              <apex:selectList id="x" value="{!productResult}"
+                     size="1" required="true">
+              <apex:selectOptions value="{!product}"/>
+              <apex:actionSupport event="onclick" reRender="y"/>
+            </apex:selectList>
+            </apex:actionRegion>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+        <apex:actionRegion >
+            <apex:outputLabel value="Sub-Product "></apex:outputLabel>
+            <apex:selectList size="1" required="true" id="y" value="{!SubProductResult}">
+              <apex:selectOptions value="{!SubProduct}"/>
+              <!-- <apex:actionSupport event="onmouseout" reRender="b"/> -->
+            <!--</apex:selectList>
+        </apex:actionRegion>    
+        </apex:pageBlockSectionItem> -->
+       
+        <apex:pageMessages ></apex:pageMessages><br></br>
+        <apex:inputText label="How can we help you?" value="{!searchText}" size="100"/>
+        <apex:commandButton value="Help me with Servicing" action="{!searchRequest}" reRender="stex,fullForm"/>
+        <apex:outputPanel rendered="{!dispServiceResult}" id="stext">
+          <apex:pageBlockSectionItem > Here is the list of Services you might be interested in:</apex:pageBlockSectionItem> 
+          <br></br>
+            <apex:repeat value="{!filteredServiceList}" var="filterService">
+                <apex:commandButton onclick="getSName('{!filterService.name}','{!filterService.Short_Description__c}','tru');" html-data-toggle="modal" html-data-target="#myModal" value="{!filterService.name}" action="{!startfilteredServiceRequest}" reRender="stex">&nbsp;&nbsp;
+                <apex:param name="fsr" value="{!filterService.name}" />
+              </apex:commandButton>  
+            </apex:repeat>
+        </apex:outputPanel>    
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <center><h4 class="modal-title" id="myModalLabel"><span class="servName"></span></h4></center>
+
+                </div>
+
+                <div class="modal-body hidden prBody">
+                <apex:pageBlock id="stex">
+                  <apex:pageBlockSection >
+                  <!-- <apex:pageBlockSectionItem > -->
+                      <!-- <apex:actionRegion > -->
+                      <apex:outputLabel value="Product "></apex:outputLabel>
+                        <apex:selectList id="x" value="{!productResult}"
+                               size="1" required="true">
+                        <apex:selectOptions value="{!product}"/>
+                        <apex:actionSupport event="onchange" reRender="y"/>
+                      </apex:selectList>
+                      <!-- </apex:actionRegion> -->
+                  <!-- </apex:pageBlockSectionItem> -->
+                  <!-- <apex:pageBlockSectionItem ></apex:pageBlockSectionItem> -->
+                  <!-- <apex:pageBlockSectionItem > -->
+                  <!-- <apex:actionRegion > -->
+                      <apex:outputLabel value="Sub-Product "></apex:outputLabel>
+                      <apex:selectList size="1" required="true" id="y" value="{!SubProductResult}">
+                        <apex:selectOptions value="{!SubProduct}"/>
+                        <!-- <apex:actionSupport event="onmouseout" reRender="b"/> -->
+                      </apex:selectList>
+                  <!-- </apex:actionRegion> -->    
+                  <!-- </apex:pageBlockSectionItem> -->
+                  </apex:pageBlockSection>
+                </apex:pageBlock>
+                </div>
+                <div class="modal-body">
+                    <p><b>Short Description</b></p>
+                    <span class="shortDesc"></span>
+                </div>
+
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal" style="height:30px;width:130px;">Go Back to Service</button> -->
+                    <!-- <button type="button" class="btn btn-primary">Save For Later</button> -->
+                    <!-- <apex:commandButton value="Save For Later" styleClass="btn btn-primary" action="{!saveForLater}" style="height:30px;width:100px;"> 
+                    </apex:commandButton> -->  
+                    <center><apex:commandButton value="START SERVICE REQUEST" action="{!startServiceReq}" /></center> 
+                </div>
+            </div>
+        </div>
+    </div>
+  
+<!-- <center><apex:commandButton value="START SERVICE REQUEST" action="{!startServiceReq}" /></center> -->
+</apex:form> 
+<script type="text/javascript" src="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"></script>
+<script>
+
+
+$j = jQuery.noConflict();
+$j(document).ready(function() {
+  //console.log(SelectServiceRequestController);
+  $j('input[type=button]').on('click', '.pbBody', function() {
+    console.log(this);
+  });
+});  
+
+function getSName(serviceName,shortD,flag){
+  console.log('the value is '+shortD);
+  $j('.servName').html(serviceName);
+  $j('.shortDesc').html(shortD);
+  if(flag === 'fal'){
+    $j('.prBody').addClass('hidden');
+  } else{
+    $j('.prBody').removeClass('hidden');
+  }
+
+}
+</script>
+</apex:page>

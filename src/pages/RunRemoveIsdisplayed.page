@@ -1,0 +1,15 @@
+<apex:page controller="RunRemoveIsdisplayedController">
+
+   <apex:form >
+      <Center>
+      <br />
+      <br />
+      <br />
+      <br />
+      <apex:commandButton value="Run" title="Run" action="{!Run}" style="font-size:12pt;font-weight:bold" />
+      <br />
+      <br />
+      <apex:OutputLabel title="Info" value="Click on the above button to update IsDisplayed and IsRequired for uneccesary products" style="font-size:13pt"/>
+      </Center>
+   </apex:form>
+</apex:page>

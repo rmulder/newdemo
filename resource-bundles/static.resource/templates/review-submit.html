@@ -1,0 +1,2692 @@
+<div id="formContainer">
+  <!-- Primary Applicant Info -->
+  {{#if Application__c.full_name_pa__c}}
+  <div id="primary" class="applicant">
+    <h4 class="sectionHeader">Review information - {{Application__c.full_name_pa__c}}
+      <div class="pull-right col-xs-1 col-print-button">
+        <a class="tooltip-print print-position print-button pull-right" href="#"><img src="{{config.custom_resources_url}}images/print.png" alt="Print" height="25" width="25" />
+          <span class="custom help">
+            Print
+          </span>
+        </a>
+      </div>
+      <div class="btn pull-right save-for-later col-xs-3 col-sm-3">
+        <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus pull-right"  data-toggle="modal">
+          <span class="demo primaryBtn padding10 font144"  id="myButton">Save for Later</span>
+        </div>
+      </div>
+    </h4>
+    <div class="formFields">
+      <!-- Personal -->
+      {{#if DisplayedFields.personalinfosmallbusiness}}
+          <div id="reviewSmallBusisnessPrimaryApplicant">
+            <div class="reviewSection">
+              <div class="editSection" id="EditField1"><a href="#personal-info" class="editLink">Edit</a></div>
+              Business Information
+            </div>            
+              <div class="reviewRow">
+                <div class="name">Business Legal Name</div>
+                <div class="value">{{Application__c.business_legal_name__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Business Type</div>
+                <div class="value">{{Application__c.business_type__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Street Address 1</div>
+                <div class="value">{{Application__c.business_street_address_1__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Street Address 2</div>
+                <div class="value">{{Application__c.business_street_address_1__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Street Address 2</div>
+                <div class="value">{{Application__c.business_street_address_2__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">City</div>
+                <div class="value">{{Application__c.business_city__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">State</div>
+                <div class="value">{{Application__c.business_state__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Zip-Code</div>
+                <div class="value">{{Application__c.business_zip_code__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Business TIN/EIN</div>
+                <div class="value">{{Application__c.business_ein_tin__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Business Registration State</div>
+                <div class="value">{{Application__c.business_registration_state__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">NAICS Code</div>
+                <div class="value">{{Application__c.naics_code__c}}</div>
+              </div>
+              <div class="reviewRow">
+                <div class="name">Nature Of Business</div>
+                <div class="value">{{Application__c.nature_of_business__c}}</div>
+              </div>
+          </div>
+      {{/if}}
+      <div id="reviewPersonalPrimaryApplicant">
+        <div class="reviewSection">
+          <div class="editSection" id="EditField1"><a href="#personal-info" class="editLink">Edit</a></div>
+          {{PageLabels.personal_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">First Name</div>
+          <div class="value">{{Application__c.first_name__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Middle Name</div>
+          <div class="value">{{Application__c.middle_name__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Last Name</div>
+          <div class="value">{{Application__c.last_name__c}}</div>
+        </div>
+        {{#if DisplayedFields.street_address_1__c}}
+        <div class="reviewRow">
+          <div class="name">Street Address 1</div>
+          <div class="value">{{Application__c.street_address_1__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.street_address_2__c}}
+        {{#if Application__c.street_address_2__c}}
+        <div class="reviewRow">
+          <div class="name">Street Address 2</div>
+          <div class="value">{{Application__c.street_address_2__c}}</div>
+        </div>
+        {{/if}}
+        {{/if}}
+        {{#if DisplayedFields.city__c}}
+        <div class="reviewRow">
+          <div class="name">City</div>
+          <div class="value">{{Application__c.city__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.state__c}}
+        <div class="reviewRow">
+          <div class="name">State</div>
+          <div class="value">{{Application__c.state__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.zip_code__c}}
+        <div class="reviewRow">
+          <div class="name">ZIP Code</div>
+          <div class="value">{{Application__c.zip_code__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.housing_status__c}}
+        <div class="reviewRow">
+          <div class="name">Housing Status</div>
+          <div class="value">{{Application__c.housing_status__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.monthly_payment__c}}
+        <div class="reviewRow">
+          <div class="name">Monthly Payment</div>
+          <div class="value">{{Application__c.monthly_payment__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.time_at_current_address__c}}
+        <div class="reviewRow">
+          <div class="name">Current Address Duration</div>
+          <div class="value">{{Application__c.years__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Application__c.months__c}}&nbsp;Month(s)</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.marital_status__c}}
+        <div class="reviewRow">
+          <div class="name">Marital Status</div>
+          <div class="value">{{Application__c.marital_status__c}}</div>
+        </div>
+        {{/if}}
+      {{#if DisplayFields.displayStreetAddress1PrevPrimary}}
+        <!-- Previous Address -->
+        {{#if DisplayedFields.street_address_1_prev__c}}
+        <div class="reviewRow">
+          <div class="name">Street Address 1</div>
+          <div class="value">{{Application__c.street_address_1_prev__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.street_address_2_prev__c}}
+        <div class="reviewRow">
+          <div class="name">Street Address 2</div>
+          <div class="value">{{Application__c.street_address_2_prev__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.city_prev__c}}
+        <div class="reviewRow">
+          <div class="name">City</div>
+          <div class="value">{{Application__c.city_prev__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.state_prev__c}}
+        <div class="reviewRow">
+          <div class="name">State</div>
+          <div class="value">{{Application__c.state_prev__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.zip_code_prev__c}}
+        <div class="reviewRow">
+          <div class="name">ZIP Code</div>
+          <div class="value">{{Application__c.zip_code_prev__c}}</div>
+        </div>
+        {{/if}}
+      {{/if}}
+
+        <!-- Contact Information -->
+        {{#if DisplayedFields.primary_phone_number__c}}
+        <div class="reviewRow">
+          <div class="name">Primary Phone</div>
+          <div class="value">{{Application__c.primary_phone_number__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.secondary_phone_number__c}}
+        <div class="reviewRow">
+          <div class="name">Work Phone</div>
+          <div class="value">{{Application__c.secondary_phone_number__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.email_address__c}}
+        <div class="reviewRow">
+          <div class="name">E-mail Address</div>
+          <div class="value">{{Application__c.email_address__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      <!-- Employment  Employment_Information_Review_Submit_Section -->
+      <div id="reviewEmploymentPrimaryApplicant">
+        <div class="reviewSection">
+          <div class="editSection" id="EditField2"><a href="#employment" class="editLink">Edit</a></div>
+          {{PageLabels.employment_information_review_submit_section}}
+        </div>
+        {{#if DisplayedFields.employment_status__c}}
+        <div class="reviewRow">
+          <div class="name">Employment Status</div>
+          <div class="value">{{Employment_Information__c.employment_status__c}}</div>
+        </div>
+        {{/if}}
+      {{#if DisplayFields.employerPrimary}}
+        {{#if DisplayedFields.employer__c}}
+        <div class="reviewRow">
+          <div class="name">Employer</div>
+          <div class="value">{{Employment_Information__c.employer__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.occupationprimary}}
+        <div class="reviewRow">
+          <div class="name">Occupation</div>
+          <div class="value">{{Employment_Information__c.occupation__c}}</div>
+        </div>
+        {{/if}}
+      {{/if}}
+        {{#if DisplayedFields.prioroccupationprimary}}
+        <div class="reviewRow">
+          <div class="name">Prior Occupation</div>
+          <div class="value">{{Employment_Information__c.prior_occupation__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.time_employed__c}}
+        <div class="reviewRow">
+          <div class="name">Time Employed</div>
+          <div class="value">{{Employment_Information__c.years_emp__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Employment_Information__c.months_emp__c}}&nbsp;Month(s)</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.annual_income__c}}
+        <div class="reviewRow">
+          <div class="name">Annual Income $</div>
+          <div class="value">{{formatCurrency Employment_Information__c.annual_income__c}}</div>
+        </div>
+        {{/if}}
+        <!-- Other Income -->
+        {{#if DisplayedFields.other_income__c}}
+        {{#if Employment_Information__c.other_income__c}}
+        <div class="reviewRow">
+          <div class="name">Other Income Type 1</div>
+          <div class="value">{{Employment_Information__c.other_income_picklist__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Other Income 1 $</div>
+          <div class="value">{{formatCurrency Employment_Information__c.other_income__c}}</div>
+        </div>
+        {{/if}}
+        {{/if}}
+        {{#if DisplayFields.dispOtherIncome2}}
+        <div class="reviewRow">
+          <div class="name">Other Income Type 2</div>
+          <div class="value">{{Employment_Information__c.other_income_picklist2__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Other Income 2 $</div>
+          <div class="value">{{formatCurrency Employment_Information__c.other_income2__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispOtherIncome3}}
+        <div class="reviewRow">
+          <div class="name">Other Income Type 3</div>
+          <div class="value">{{Employment_Information__c.other_income_picklist3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Other Income 3 $</div>
+          <div class="value">{{formatCurrency Employment_Information__c.other_income3__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispOtherIncome4}}
+        <div class="reviewRow">
+          <div class="name">Other Income Type 4</div>
+          <div class="value">{{Employment_Information__c.other_income_picklist4__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Other Income 4 $</div>
+          <div class="value">{{formatCurrency Employment_Information__c.other_income4__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispOtherIncome5}}
+        <div class="reviewRow">
+          <div class="name">Other Income Type 5</div>
+          <div class="value">{{Employment_Information__c.other_income_picklist5__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Other Income 5 $</div>
+          <div class="value">{{formatCurrency Employment_Information__c.other_income5__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      <!-- Previous Employment -->
+      {{#if DisplayFields.dispPrevEmplyerPrim}}
+      <div id="reviewPreviousEmploymentPrimaryApplicant">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#employment" class="editLink">Edit</a></div>
+          Previous Employer
+        </div>
+        {{#if DisplayedFields.employer_p__c}}
+        <div class="reviewRow">
+          <div class="name">Employer Name</div>
+          <div class="value">{{Employment_Information__c.employer_p__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.occupation_p__c}}
+        <div class="reviewRow">
+          <div class="name">Occupation</div>
+          <div class="value">{{Employment_Information__c.occupation_p__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.do_you_like_to_become_a_member_p__c}}
+        <div class="reviewRow">
+          <div class="name">Do you like to become a member?</div>
+          <div class="value">{{Employment_Information__c.do_you_like_to_become_a_member_p__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+      <!-- Identity Identity_Review_Submit_Section -->
+      <div id="reviewIdentityPrimaryApplicant">
+        <div class="reviewSection">
+          <div class="editSection" id="EditField3"><a href="#identity" class="editLink">Edit</a></div>
+          {{PageLabels.identity_review_submit_section}}
+        </div>
+        {{#if DisplayedFields.id_type__c}}
+        <div class="reviewRow">
+          <div class="name">{{PageLabels.identity_type}}</div>
+          <div class="value">{{Identity_Information__c.id_type__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.id_number__c}}
+        <div class="reviewRow">
+          <div class="name">License / ID #</div>
+          <div class="value">{{Identity_Information__c.identity_number_primary__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.state_issued__c}}
+        <div class="reviewRow">
+          <div class="name">State Issued</div>
+          <div class="value">{{Identity_Information__c.state_issued__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.issue_date__c}}
+        <div class="reviewRow">
+          <div class="name">Issue Date</div>
+          <div class="value">{{Identity_Information__c.issue_date__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.expiry_date__c}}
+        <div class="reviewRow">
+          <div class="name">Expiration Date</div>
+          <div class="value">{{Identity_Information__c.expiry_date__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.social_security_number__c}}
+        <div class="reviewRow">
+          <div class="name">Social Security Number</div>
+          <div class="value">{{Identity_Information__c.ssn_prime__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.date_of_birth__c}}
+        <div class="reviewRow">
+          <div class="name">Date of Birth</div>
+          <div class="value">{{Identity_Information__c.date_of_birth__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.citizenship__c}}
+        <div class="reviewRow">
+          <div class="name">Citizenship</div>
+          <div class="value">{{Identity_Information__c.citizenship__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.countryOfCitizenshipPrimary}}
+        {{#if Identity_Information__c.country_of_citizenship__c}}
+        <div class="reviewRow">
+          <div class="name">Country Of Citizenship</div>
+          <div class="value">{{Identity_Information__c.country_of_citizenship__c}}</div>
+        </div>
+        {{/if}}
+        {{/if}}
+      </div>
+    </div><!-- end formFields -->
+  </div>
+  {{/if}}
+
+  {{#equal Application__c.first_joint_applicant__c 'true'}}
+  <!-- 1st Joint Applicant Info -->
+  <div id="firstjoint" class="applicant">
+    <h4 class="sectionHeader">Review information  - &nbsp; {{Application__c.fullname_j__c}}</h4>
+
+    <div class="formFields">
+    <!-- Personal -->
+    <div id="reviewPersonal1stJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+        {{PageLabels.personal_information_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">First Name</div>
+        <div class="value">{{Application__c.first_name_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Middle Name</div>
+        <div class="value">{{Application__c.middle_name_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Last Name</div>
+        <div class="value">{{Application__c.last_name_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 1</div>
+        <div class="value">{{Application__c.street_address_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 2</div>
+        <div class="value">{{Application__c.street_address_2_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">City</div>
+        <div class="value">{{Application__c.city_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">State</div>
+        <div class="value">{{Application__c.state_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">ZIP Code</div>
+        <div class="value">{{Application__c.zip_code_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Housing Status</div>
+        <div class="value">{{Application__c.housing_status_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Monthly Payment</div>
+        <div class="value">{{formatCurrency Application__c.monthly_payment_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Current Address Duration</div>
+        <div class="value">{{Application__c.years_j__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Application__c.months_j__c}}&nbsp;Month(s)</div>
+      </div>
+      {{#if DisplayedFields.marital_status__c}}
+      <div class="reviewRow">
+        <div class="name">Marital Status</div>
+        <div class="value">{{Application__c.marital_status_j__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayedFields.relationship_to_primary_applicant_j1__c}}
+      <div class="reviewRow">
+        <div class="name">Relationship - Primary Applicant</div>
+        <div class="value">{{Application__c.relationship_to_primary_applicant_j1__c}}</div>
+      </div>
+      {{/if}}
+    </div>
+
+    {{#if DisplayFields.displayStreetAddress1Prevjoint1}}
+    <!-- Previous Address 1st Joint Applicant -->
+    <div id="reviewPreviousAddress1stJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+        Previous Address
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 1</div>
+        <div class="value">{{Application__c.street_address_1_jp__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 2</div>
+        <div class="value">{{Application__c.street_address_2_jp__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">City</div>
+        <div class="value">{{Application__c.city_jp__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">State</div>
+        <div class="value">{{Application__c.state_jp__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">ZIP Code</div>
+        <div class="value">{{Application__c.zip_code_jp__c}}</div>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Contact Information 1St Joint Applicant -->
+    <div id="contactInformation1stJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+        {{PageLabels.contact_information_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">Primary Phone</div>
+        <div class="value">{{Application__c.primary_phone_number_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Work Phone</div>
+        <div class="value">{{Application__c.secondary_phone_number_j__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">E-mail Address</div>
+        <div class="value">{{Application__c.email_address_j__c}}</div>
+      </div>
+    </div>
+
+    <!-- Employment -->
+    <div id="reviewEmployment1stJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#employment" class="editLink">Edit</a></div>
+        {{PageLabels.employment_information_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employment Status</div>
+        <div class="value">{{Employment_Information__c.employment_status_j1__c}}</div>
+      </div>
+      {{#if DisplayFields.dispEmployernOccupation1joint}}
+      <div class="reviewRow">
+        <div class="name">Employer Name</div>
+        <div class="value">{{Employment_Information__c.employer_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Occupation</div>
+        <div class="value">{{Employment_Information__c.occupation_j1__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayFields.priorOccupationFirstjoint}}
+      <div class="reviewRow">
+        <div class="name">Prior Occupation</div>
+        <div class="value">{{Employment_Information__c.prior_occupation_j1__c}}</div>
+      </div>
+      {{/if}}
+      <div class="reviewRow">
+        <div class="name">Time Employed</div>
+        <div class="value">{{Employment_Information__c.years_empj1__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Employment_Information__c.months_empj1__c}}&nbsp;Month(s)</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Annual Income $</div>
+        <div class="value">{{formatCurrency Employment_Information__c.annual_income_j1__c}}</div>
+      </div>
+    </div>
+
+    <!-- Other Income -->
+    {{#if DisplayFields.otherIncome1Joint1}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 1</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist1_j1__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 1 $ </div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income_j__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome2Joint1}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 2</div>
+      <div class="value">{{Application__c.other_income_picklist2_j1__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 2 $ </div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income2_j__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome3Joint1}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 3</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist3_j1__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 3 $ </div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income3_j__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome4Joint1}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 4</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist4_j1__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 4 $ </div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income4_j__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome5Joint1}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 5</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist5_j1__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 5 $ </div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income5_j__c}}</div>
+    </div>
+    {{/if}}
+
+    {{#if DisplayFields.dispPrevEmplyerJ1}}
+    <!-- Previous Employer 1st Joint Applicant -->
+    <div id="reviewPrevEmployer1stJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#employment" class="editLink">Edit</a></div>
+        Previous Employer Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employer Name</div>
+        <div class="value">{{Employment_Information__c.employer_jp__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Occupation</div>
+        <div class="value">{{Employment_Information__c.occupation_jp__c}}</div>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Identity -->
+    <div id="reviewIdentity1stJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#identity" class="editLink">Edit</a></div>
+        {{PageLabels.identity_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">{{PageLabels.identity_type}}</div>
+        <div class="value">{{Identity_Information__c.id_type_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">License / ID #</div>
+        <div class="value">{{Identity_Information__c.identity_number_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">State Issued</div>
+        <div class="value">{{Identity_Information__c.state_issued_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Issue Date</div>
+        <div class="value">{{Identity_Information__c.issue_date_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Expiration Date</div>
+        <div class="value">{{Application__c.expiry_date_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Social Security Number</div>
+        <div class="value">{{Identity_Information__c.ssn_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Date of Birth</div>
+        <div class="value">{{Identity_Information__c.date_of_birth_j1__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Citizenship</div>
+        <div class="value">{{Identity_Information__c.citizenship_j1__c}}</div>
+      </div>
+      {{#if DisplayFields.countryOfCitizenshipFirstJoint}}
+      <div class="reviewRow">
+        <div class="name">Country Of Citizenship</div>
+        <div class="value">{{Identity_Information__c.country_of_citizenship_j1__c}}</div>
+      </div>
+      {{/if}}
+    </div>
+    </div>
+  </div>
+  {{/equal}}
+
+  {{#equal Application__c.second_joint_applicant__c 'true'}}
+  <!-- 2nd Joint Applicant Info -->
+  <div id="secondjoint" class="applicant">
+    <h4 class="sectionHeader">Review information - &nbsp; {{Application__c.fullname_j2__c}}</h4>
+
+    <div class="formFields">
+    <!-- Personal -->
+    <div id="reviewPersonal2ndJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+        {{PageLabels.personal_information_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">First Name</div>
+        <div class="value">{{Application__c.first_name_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Middle Name</div>
+        <div class="value">{{Application__c.middle_name_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Last Name</div>
+        <div class="value">{{Application__c.last_name_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 1</div>
+        <div class="value">{{Application__c.street_address_1_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 2</div>
+        <div class="value">{{Application__c.street_address_2_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">City</div>
+        <div class="value">{{Application__c.city_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">State</div>
+        <div class="value">{{Application__c.state_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">ZIP Code</div>
+        <div class="value">{{Application__c.zip_code_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Housing Status</div>
+        <div class="value">{{Application__c.housing_status_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Monthly Payment</div>
+        <div class="value">{{formatCurrency Application__c.monthly_payment_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Current Address Duration</div>
+        <div class="value">
+          {{Application__c.years_j2__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Application__c.months_j2__c}}&nbsp;Month(s)
+        </div>
+      </div>
+      {{#if DisplayedFields.marital_status__c}}
+      <div class="reviewRow">
+        <div class="name">Marital Status</div>
+        <div class="value">{{Application__c.marital_status_j2__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayedFields.relationship_to_primary_applicant_j2__c}}
+      <div class="reviewRow">
+        <div class="name">Relationship - Primary Applicant</div>
+        <div class="value">{{Application__c.relationship_to_primary_applicant_j2__c}}</div>
+      </div>
+      {{/if}}
+    </div>
+
+    {{#if DisplayFields.displayStreetAddress1Prevjoint2}}
+    <!-- Previous Address 2nd Joint Applicant -->
+    <div id="reviewPreviousAddress2ndJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+        Previous Address
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 1</div>
+        <div class="value">{{Application__c.street_address_1_jp2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 2</div>
+        <div class="value">{{Application__c.street_address_2_jp2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">City</div>
+        <div class="value">{{Application__c.city_jp2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">State</div>
+        <div class="value">{{Application__c.state_jp2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">ZIP Code</div>
+        <div class="value">{{Application__c.zip_code_jp2__c}}</div>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Contact Information 2nd Joint Applicant -->
+    <div id="contactInformation2ndJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+        {{PageLabels.contact_information_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">Primary Phone</div>
+        <div class="value">{{Application__c.primary_phone_number_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Work Phone</div>
+        <div class="value">{{Application__c.secondary_phone_number_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">E-mail Address</div>
+        <div class="value">{{Application__c.email_address_j2__c}}</div>
+      </div>
+    </div>
+
+    <!-- Employment -->
+    <div id="reviewEmployment2ndJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#employment" class="editLink">Edit</a></div>
+        {{PageLabels.employment_information_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employment Status</div>
+        <div class="value">{{Employment_Information__c.employment_status_j2__c}}</div>
+      </div>
+      {{#if DisplayFields.dispEmployernOccupation2joint}}
+      <div class="reviewRow">
+        <div class="name">Employer Name</div>
+        <div class="value">{{Employment_Information__c.employer_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Occupation</div>
+        <div class="value">{{Employment_Information__c.occupation_j2__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayFields.priorOccupationSecondjoint}}
+      <div class="reviewRow">
+        <div class="name">Prior Occupation</div>
+        <div class="value">{{Employment_Information__c.prior_occupation_j2__c}}</div>
+      </div>
+      {{/if}}
+      <div class="reviewRow">
+        <div class="name">Time Employed</div>
+        <div class="value">{{Employment_Information__c.years_empj2__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Employment_Information__c.months_empj2__c}}&nbsp;Month(s)</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Annual Income $</div>
+        <div class="value">{{formatCurrency Employment_Information__c.annual_income_j2__c}}</div>
+      </div>
+    </div>
+
+    <!-- Other Income -->
+    {{#if DisplayFields.otherIncome1Joint2}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 1</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist1_j2__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 1 $</div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income_j2__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome2Joint2}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 2</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist2_j2__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 2 $</div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income2_j2__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome3Joint2}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 3</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist3_j2__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 3 $</div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income3_j2__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome4Joint2}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 4</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist4_j2__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 4 $</div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income4_j2__c}}</div>
+    </div>
+    {{/if}}
+    {{#if DisplayFields.otherIncome5Joint2}}
+    <div class="reviewRow">
+      <div class="name">Other Income Type 5</div>
+      <div class="value">{{Employment_Information__c.other_income_picklist5_j2__c}}</div>
+    </div>
+    <div class="reviewRow">
+      <div class="name">Other Income 5 $</div>
+      <div class="value">{{formatCurrency Employment_Information__c.other_income5_j2__c}}</div>
+    </div>
+    {{/if}}
+
+    {{#if DisplayFields.dispPrevEmplyerJ2}}
+    <!-- Previous Employer 2nd Joint Applicant -->
+    <div id="reviewPrevEmployer2ndJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#employment" class="editLink">Edit</a></div>
+        Previous Employer Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employer Name</div>
+        <div class="value">{{Employment_Information__c.employer_jp2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Occupation</div>
+        <div class="value">{{Employment_Information__c.occupation_jp2__c}}</div>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Identity 2nd Joint Applicant -->
+    <div id="reviewIdentity2ndJointApplicant">
+      <div class="reviewSection">
+        <div class="editSection"><a href="#identity" class="editLink">Edit</a></div>
+        {{PageLabels.identity_review_submit_section}}
+      </div>
+      <div class="reviewRow">
+        <div class="name">{{PageLabels.identity_type}}</div>
+        <div class="value">{{Identity_Information__c.id_type_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">License / ID #</div>
+        <div class="value">{{Identity_Information__c.identity_number_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">State Issued</div>
+        <div class="value">{{Identity_Information__c.state_issued_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Issue Date</div>
+        <div class="value">{{Identity_Information__c.issue_date_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Expiration Date</div>
+        <div class="value">{{Identity_Information__c.expiry_date_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Social Security Number</div>
+        <div class="value">{{Identity_Information__c.ssn_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Date of Birth</div>
+        <div class="value">{{Identity_Information__c.date_of_birth_j2__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Citizenship</div>
+        <div class="value">{{Identity_Information__c.citizenship_j2__c}}</div>
+      </div>
+      {{#if DisplayFields.countryOfCitizenshipSecondJoint}}
+      <div class="reviewRow">
+        <div class="name">Country Of Citizenship</div>
+        <div class="value">{{Identity_Information__c.country_of_citizenship_j2__c}}</div>
+      </div>
+      {{/if}}
+    </div>
+    </div>
+  </div>
+  {{/equal}}
+
+
+  {{#equal Application__c.third_joint_applicant__c 'true'}}
+  <!-- 3rd Joint Applicant Info -->
+  <div id="thirdjoint" class="applicant">
+    <h4 class="sectionHeader">Review information  - &nbsp; {{Application__c.fullname_j3__c}}</h4>
+
+    <div class="formFields">
+      <!-- Personal -->
+      <div id="reviewPersonal3rdJointApplicant">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+          {{PageLabels.personal_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">First Name</div>
+          <div class="value">{{Application__c.first_name_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Middle Name</div>
+          <div class="value">{{Application__c.middle_name_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Last Name</div>
+          <div class="value">{{Application__c.last_name_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Street Address 1</div>
+          <div class="value">{{Application__c.street_address_1_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Street Address 2</div>
+          <div class="value">{{Application__c.street_address_2_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">City</div>
+          <div class="value">{{Application__c.city_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">State</div>
+          <div class="value">{{Application__c.state_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">ZIP Code</div>
+          <div class="value">{{Application__c.zip_code_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Housing Status</div>
+          <div class="value">{{Application__c.housing_status_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Monthly Payment</div>
+          <div class="value">{{formatCurrency Application__c.monthly_payment_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Current Address Duration</div>
+          <div class="value">
+            {{Application__c.years_j3__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Application__c.months_j3__c}}&nbsp;Month(s)
+          </div>
+        </div>
+        {{#if DisplayedFields.marital_status__c}}
+        <div class="reviewRow">
+          <div class="name">Marital Status</div>
+          <div class="value">{{Application__c.marital_status_j3__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.relationship_to_primary_applicant_j3__c}}
+        <div class="reviewRow">
+          <div class="name">Relationship - Primary Applicant</div>
+          <div class="value">{{Application__c.relationship_to_primary_applicant_j3__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+
+      {{#if DisplayFields.displayStreetAddress1Prevjoint3}}
+      <!-- Previous Address 3rd Joint Applicant -->
+      <div id="reviewPreviousAddress3rdJointApplicant">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+          Previous Address
+        </div>
+        <div class="reviewRow">
+          <div class="name">Street Address 1</div>
+          <div class="value">{{Application__c.street_address_1_jp3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Street Address 2</div>
+          <div class="value">{{Application__c.street_address_2_jp3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">City</div>
+          <div class="value">{{Application__c.city_jp3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">State</div>
+          <div class="value">{{Application__c.state_jp3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">ZIP Code</div>
+          <div class="value">{{Application__c.zip_code_jp3__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      <!-- Contact Information 3rd Joint Applicant -->
+      <div id="contactInformation3rdJointApplicant">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#personal-info" class="editLink">Edit</a></div>
+          {{PageLabels.contact_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Primary Phone</div>
+          <div class="value">{{Application__c.primary_phone_number_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Work Phone</div>
+          <div class="value">{{Application__c.secondary_phone_number_jp3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">E-mail Address</div>
+          <div class="value">{{Application__c.email_address_j3__c}}</div>
+        </div>
+      </div>
+
+      <!-- Employment 3rd Joint Applicant -->
+      <div id="reviewEmployment3rdJointApplicant">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#employment" class="editLink">Edit</a></div>
+          {{PageLabels.employment_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Employment Status</div>
+          <div class="value">{{Employment_Information__c.employment_status_j3__c}}</div>
+        </div>
+        {{#if DisplayFields.dispEmployernOccupation3joint}}
+        <div class="reviewRow">
+          <div class="name">Employer Name</div>
+          <div class="value">{{Employment_Information__c.employer_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Occupation</div>
+          <div class="value">{{Employment_Information__c.occupation_j3__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.priorOccupationThirdjoint}}
+        <div class="reviewRow">
+          <div class="name">Prior Occupation</div>
+          <div class="value">{{Employment_Information__c.prior_occupation_j3__c}}</div>
+        </div>
+        {{/if}}
+        <div class="reviewRow">
+          <div class="name">Time Employed</div>
+          <div class="value">{{Employment_Information__c.years_empj3__c}}&nbsp;Year(s)&nbsp;&nbsp;{{Employment_Information__c.months_empj3__c}}&nbsp;Month(s)</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Annual Income $</div>
+          <div class="value">{{formatCurrency Employment_Information__c.annual_income_j3__c}}</div>
+        </div>
+      </div>
+
+      <!-- Other Income -->
+      {{#if DisplayFields.otherIncome1Joint3}}
+      <div class="reviewRow">
+        <div class="name">Other Income Type 1</div>
+        <div class="value">{{Employment_Information__c.other_income_picklist1_j3__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Other Income 1 $</div>
+        <div class="value">{{formatCurrency Employment_Information__c.other_income_j3__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayFields.otherIncome2Joint3}}
+      <div class="reviewRow">
+        <div class="name">Other Income Type 2</div>
+        <div class="value">{{Employment_Information__c.other_income_picklist2_j3__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Other Income 2 $</div>
+        <div class="value">{{formatCurrency Employment_Information__c.other_income2_j3__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayFields.otherIncome3Joint3}}
+      <div class="reviewRow">
+        <div class="name">Other Income Type 3</div>
+        <div class="value">{{Employment_Information__c.other_income_picklist3_j3__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Other Income 3 $</div>
+        <div class="value">{{formatCurrency Employment_Information__c.other_income3_j3__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayFields.otherIncome4Joint3}}
+      <div class="reviewRow">
+        <div class="name">Other Income Type 4</div>
+        <div class="value">{{Employment_Information__c.other_income_picklist4_j3__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Other Income 4 $</div>
+        <div class="value">{{formatCurrency Employment_Information__c.other_income4_j3__c}}</div>
+      </div>
+      {{/if}}
+      {{#if DisplayFields.otherIncome5Joint3}}
+      <div class="reviewRow">
+        <div class="name">Other Income Type 5</div>
+        <div class="value">{{Employment_Information__c.other_income_picklist5_j3__c}}</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Other Income 5 $</div>
+        <div class="value">{{formatCurrency Employment_Information__c.other_income5_j3__c}}</div>
+      </div>
+      {{/if}}
+
+      {{#if DisplayFields.dispPrevEmplyerJ3}}
+      <!-- Previous Employer 3rd Joint Applicant -->
+      <div id="reviewPrevEmployer3rdJointApplicant">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#employment" class="editLink">Edit</a></div>
+          Previous Employer Information
+        </div>
+        <div class="reviewRow">
+          <div class="name">Employer Name</div>
+          <div class="value">{{Employment_Information__c.employer_jp3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Occupation</div>
+          <div class="value">{{Employment_Information__c.occupation_jp3__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      <!-- Identity 3rd Joint Applicant -->
+      <div id="reviewIdentity3rdJointApplicant">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#identity" class="editLink">Edit</a></div>
+          {{PageLabels.identity_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">{{PageLabels.identity_type}}</div>
+          <div class="value">{{Identity_Information__c.id_type_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">License / ID #</div>
+          <div class="value">{{Identity_Information__c.identity_number_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">State Issued</div>
+          <div class="value">{{Identity_Information__c.state_issued_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Issue Date</div>
+          <div class="value">{{Identity_Information__c.issue_date_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Expiration Date</div>
+          <div class="value">{{Identity_Information__c.expiry_date_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Social Security Number</div>
+          <div class="value">{{Identity_Information__c.ssn_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Date of Birth</div>
+          <div class="value">{{Identity_Information__c.date_of_birth_j3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Citizenship</div>
+          <div class="value">{{Identity_Information__c.citizenship_j3__c}}</div>
+        </div>
+        {{#if DisplayFields.countryOfCitizenshipThirdJoint}}
+        <div class="reviewRow">
+          <div class="name">Country Of Citizenship</div>
+          <div class="value">{{Identity_Information__c.country_of_citizenship_j3__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  {{/equal}}
+
+  <div id="accountInformation" class="applicant">
+    <h4 class="sectionHeader">{{PageLabels.account_information_review_submit_section}}</h4>
+
+    <div class="formFields">
+      {{#if DisplayedFields.account_holder_name_chk__c}}
+      <!-- Account Information for Checking Account -->
+      <div id="reviewAccount_Information_for_Checking_Account">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          {{Application__c.product__c}} {{PageLabels.account_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Holders Name</div>
+          <div class="value">{{Application__c.full_name_pa__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{About_Account__c.funding_type_chk__c}}</div>
+        </div>
+        {{#equal About_Account__c.funding_type_chk__c 'Internal Accounts' }}
+        {{#if DisplayedFields.select_account_fi_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Selected Account</div>
+          <div class="value">{{DisplayFields.dispselectedchkacc}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.chk_funding_amount_from_internal_account__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.chk_funding_amount_from_internal_account__c}}</div>
+        </div>
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_chk__c 'Add External Accounts' }}
+        {{#if DisplayedFields.financial_institution_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Financial Institution</div>
+          <div class="value">{{About_Account__c.financial_institution_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_type_fi_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Account Type</div>
+          <div class="value">{{About_Account__c.account_type_fi_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.routing_number_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.routing_number_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.chk_account_number__c}}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.chk_account_number__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.dollar_amount_fi_chk__c}}
+        {{#if DisplayFields.dispDollarChkInternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispDollarChkExternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_external_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_chk__c 'Check' }}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.chk_check_routing_number__c}}</div>
+        </div>
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_chk__c 'Check' }}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.chk_check_account_number__c}}</div>
+        </div>
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_chk__c 'Check' }}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_chk_check__c}}</div>
+        </div>
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_chk__c 'Cash' }}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_chk_cash__c}}</div>
+        </div>
+        {{/equal}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.dispsmallbusinesschecking}}
+      <!-- Account Information for SMALL BUSINESS Checking Account -->
+      <div id="reviewAccount_Information_for_Small_Business_Checking_Account">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          {{Application__c.product__c}} {{PageLabels.account_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Holders Name</div>
+          <div class="value">{{Application__c.full_name_pa__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{About_Account__c.funding_type_bus_chk__c}}</div>
+        </div>
+        {{#equal About_Account__c.funding_type_bus_chk__c 'Internal Accounts' }}
+        {{#if DisplayedFields.select_account_fi_bus_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Selected Account</div>
+          <div class="value">{{DisplayFields.dispselectedbuschkacc}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.dollar_amount_internal_bus_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_bus_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_bus_chk__c 'Add External Accounts' }}
+        {{#if DisplayedFields.financial_institution_bus_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Financial Institution</div>
+          <div class="value">{{About_Account__c.financial_institution_bus_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_type_fi_bus_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Account Type</div>
+          <div class="value">{{About_Account__c.account_type_fi_bus_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.routing_number_bus_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.routing_number_bus_chk__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.bus_chk_account_number__c}}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.bus_chk_account_number__c}}</div>
+        </div>
+        {{/if}}
+        
+        {{#if DisplayedFields.dollar_amount_external_bus_chk__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_external_bus_chk__c}}</div>
+        </div>
+        {{/if}}
+  
+        {{/equal}}
+
+        {{#equal About_Account__c.funding_type_bus_chk__c 'Check' }}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.busichk_check_routing_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.busichk_check_account_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_busichk_check__c}}</div>
+        </div>
+        {{/equal}}
+
+        {{#equal About_Account__c.funding_type_bus_chk__c 'Cash' }}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_busichk_cash__c}}</div>
+        </div>
+        {{/equal}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.account_holder_name_sav__c}}
+      <!-- Account Information for Savings Account -->
+      <div id="reviewAccount_Information_for_Savings_Account">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Savings {{PageLabels.account_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Holders Name</div>
+          <div class="value">{{Application__c.full_name_pa__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{About_Account__c.funding_type_sav__c}}</div>
+        </div>
+        {{#equal About_Account__c.funding_type_sav__c 'Internal Accounts' }}
+        {{#if DisplayedFields.select_account_fi_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Selected Account</div>
+          <div class="value">{{DisplayFields.dispselectedsavacc}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.sav_funding_amount_from_internal_account__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.sav_funding_amount_from_internal_account__c}}</div>
+        </div>
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_sav__c 'Add External Accounts' }}
+        {{#if DisplayedFields.financial_institution_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Financial Institution</div>
+          <div class="value">{{About_Account__c.financial_institution_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_type_fi_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Account Type</div>
+          <div class="value">{{About_Account__c.account_type_fi_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.routing_number_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.routing_number_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.sav_account_number__c}}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.sav_account_number__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.dollar_amount_fi_sav__c}}
+        {{#if DisplayFields.dispDollarSavInternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispDollarSavExternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_external_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_sav__c 'Check' }}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.sav_check_routing_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.sav_check_account_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_sav_check__c}}</div>
+        </div>
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_sav__c 'Cash' }}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_sav_cash__c}}</div>
+        </div>
+        {{/equal}}        
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.dispsmallbusinesssaving}}
+      <!-- Account Information for Small Business Savings Account -->
+      <div id="reviewAccount_Information_for_Small_Business_Savings_Account">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Business Savings {{PageLabels.account_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Holders Name</div>
+          <div class="value">{{Application__c.full_name_pa__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{About_Account__c.funding_type_bus_sav__c}}</div>
+        </div>
+        {{#equal About_Account__c.funding_type_bus_sav__c 'Internal Accounts' }}
+        {{#if DisplayedFields.select_account_fi_bus_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Selected Account</div>
+          <div class="value">{{DisplayFields.dispselectedbussavacc}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.dollar_amount_internal_bus_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_bus_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_bus_sav__c 'Add External Accounts' }}
+        {{#if DisplayedFields.financial_institution_bus_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Financial Institution</div>
+          <div class="value">{{About_Account__c.financial_institution_bus_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_type_fi_bus_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Account Type</div>
+          <div class="value">{{About_Account__c.account_type_fi_bus_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.routing_number_bus_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.routing_number_bus_sav__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.bus_sav_account_number__c}}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.bus_sav_account_number__c}}</div>
+        </div>
+        {{/if}}
+        <!--{{#if DisplayedFields.dollar_amount_fi_sav__c}}
+        {{#if DisplayFields.dispDollarSavInternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_sav__c}}</div>
+        </div>
+        {{/if}}-->
+        {{#if DisplayedFields.dollar_amount_external_bus_sav__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_external_bus_sav__c}}</div>
+        </div>
+        {{/if}}
+        <!--{{/if}}-->
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_bus_sav__c 'Check' }} 
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.busisav_check_routing_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.busisav_check_account_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_busisav_check__c}}</div>
+        </div>
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_bus_sav__c 'Cash' }} 
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_busisav_cash__c}}</div>
+        </div>
+        {{/equal}}
+      </div>
+      {{/if}}      
+
+      {{#if DisplayedFields.account_holder_name_cert__c}}
+      <!-- Account Information for Certificates -->
+      <div id="reviewAccount_Information_for_Certificates">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Certificate {{PageLabels.account_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Holders Name</div>
+          <div class="value">{{Application__c.full_name_pa__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{About_Account__c.funding_type_cert__c}}</div>
+        </div>
+        {{#equal About_Account__c.funding_type_cert__c 'Internal Accounts' }}
+        {{#if DisplayedFields.select_account_fi_cert__c}}
+        <div class="reviewRow">
+          <div class="name">Selected Account</div>
+          <div class="value">{{DisplayFields.dispselectedcertacc}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.cert_funding_amt_from_internal_account__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.cert_funding_amt_from_internal_account__c}}</div>
+        </div>
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_cert__c 'Add External Accounts' }}
+        {{#if DisplayedFields.financial_institution_cert__c}}
+        <div class="reviewRow">
+          <div class="name">Financial Institution</div>
+          <div class="value">{{About_Account__c.financial_institution_cert__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_type_fi_cert__c}}
+        <div class="reviewRow">
+          <div class="name">Account Type</div>
+          <div class="value">{{About_Account__c.account_type_fi_cert__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.routing_number_cert__c}}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.routing_number_cert__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.cert_account_number__c}}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.cert_account_number__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.dollar_amount_fi_cert__c}}
+        {{#if DisplayFields.dispDollarCertInternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_cert__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispDollarCertExternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_external_cert__c}}</div>
+        </div>
+        {{/if}}
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_cert__c 'Check' }}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.cert_check_routing_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.cert_aheck_account_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_cert_check__c}}</div>
+        </div>
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_cert__c 'Cash' }}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_cert_cash__c}}</div>
+        </div>
+        {{/equal}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.dispsmallbusinesscds}}
+      <!-- Account Information for Small Business Certificates -->
+      <div id="reviewAccount_Information_for_Small_Business_Certificates">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Business Certificate {{PageLabels.account_information_review_submit_section}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Holders Name</div>
+          <div class="value">{{Application__c.full_name_pa__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{About_Account__c.funding_type_bus_cds__c}}</div>
+        </div>
+        {{#equal About_Account__c.funding_type_bus_cds__c 'Internal Accounts' }}
+        {{#if DisplayedFields.select_account_fi_bus_cds__c}}
+        <div class="reviewRow">
+          <div class="name">Selected Account</div>
+          <div class="value">{{DisplayFields.dispselectedbuscertacc}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.dollar_amount_internal_bus_cert__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_bus_cert__c}}</div>
+        </div>
+        {{/if}}
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_bus_cds__c 'Add External Accounts' }}
+        {{#if DisplayedFields.financial_institution_bus_cds__c}}
+        <div class="reviewRow">
+          <div class="name">Financial Institution</div>
+          <div class="value">{{About_Account__c.financial_institution_bus_cds__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_type_fi_bus_cds__c}}
+        <div class="reviewRow">
+          <div class="name">Account Type</div>
+          <div class="value">{{About_Account__c.account_type_fi_bus_cds__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.routing_number_bus_cds__c}}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.routing_number_bus_cds__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.bus_cds_account_number__c}}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.bus_cds_account_number__c}}</div>
+        </div>
+        {{/if}}
+        <!--{{#if DisplayedFields.dollar_amount_fi_cert__c}}
+        {{#if DisplayFields.dispDollarCertInternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_cert__c}}</div>
+        </div>
+        {{/if}}-->
+        {{#if DisplayedFields.dollar_amount_external_bus_cds__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_external_bus_cds__c}}</div>
+        </div>
+        {{/if}}
+        <!--{{/if}}-->
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_bus_cds__c 'Check' }}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.busicds_check_routing_number__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.busicds_check_account_number__c}}</div>
+        </div>
+       <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_busicds_check__c}}</div>
+        </div>
+        {{/equal}}
+        {{#equal About_Account__c.funding_type_bus_cds__c 'Cash' }}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_busicds_cash__c}}</div>
+        </div>
+        {{/equal}}
+
+      </div>
+      {{/if}}      
+
+      {{#if DisplayedFields.requested_Loan_amount_vehicleloans__c}}
+      <!-- Account Information for Vehicle Loans -->
+      <div id="reviewAccount_Information_for_Vehicle_Loans">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Vehicle Loan Information
+        </div>
+        <div class="reviewRow">
+          <div class="name">Requested Loan Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.requested_loan_amount_vehicleloans__c}}</div>
+        </div>
+        {{#if DisplayedFields.term_vehicleloans__c}}
+        <div class="reviewRow">
+          <div class="name">Term</div>
+          <div class="value">{{About_Account__c.term_vehicleloans__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.purpose_vehicleloan__c}}
+        <div class="reviewRow">
+          <div class="name">Purpose</div>
+          <div class="value">{{About_Account__c.purpose_vehicleloan__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.requested_credit_limit_ccards__c}}
+      <!-- Account Information for Credit Cards -->
+      <div id="reviewAccount_Information_for_Credit_Cards">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Credit Card Information
+        </div>
+        <div class="reviewRow">
+          <div class="name">Requested Credit Limit $</div>
+          <div class="value">{{formatCurrency About_Account__c.requested_credit_limit_ccards__c}}</div>
+        </div>
+        {{#if About_Account__c.funding_type_ccards__c}}
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{About_Account__c.funding_type_ccards__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.purpose_ccards__c}}
+        <div class="reviewRow">
+          <div class="name">Purpose</div>
+          <div class="value">{{About_Account__c.purpose_ccards__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.dispsmallbusinesscreditcards}}
+        <!-- Account Information for Small Business Credit Cards -->
+        <div id="reviewAccount_Information_for_Credit_Cards">
+          <div class="reviewSection">
+            <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+            Business Credit Card Information
+          </div>
+          <div class="reviewRow">
+            <div class="name">Requested Credit Limit $</div>
+            <div class="value">{{formatCurrency About_Account__c.requested_credit_limit_bus_ccards__c}}</div>
+          </div>
+          <!--{{#if About_Account__c.funding_type_ccards__c}}
+          <div class="reviewRow">
+            <div class="name">Funding Type</div>
+            <div class="value">{{About_Account__c.funding_type_ccards__c}}</div>
+          </div>
+          {{/if}}-->
+          {{#if DisplayedFields.purpose_bus_ccards__c}}
+          <div class="reviewRow">
+            <div class="name">Purpose</div>
+            <div class="value">{{About_Account__c.purpose_bus_ccards__c}}</div>
+          </div>
+          {{/if}}
+        </div>
+      {{/if}}      
+
+      {{#if DisplayedFields.branch_location_or_branches__c}}
+      <!-- Investment Consultation -->
+      <div id="reviewInvestment_Consultation">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Investment Consultation
+        </div>
+        <div class="reviewRow">
+          <div class="name">City</div>
+          <div class="value">{{About_Account__c.city_branch__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">State</div>
+          <div class="value">{{About_Account__c.state_branch__c}}</div>
+        </div>
+        {{#if DisplayedFields.area_of_interest__c}}
+        <div class="reviewRow">
+          <div class="name">Area Of Interest</div>
+          <div class="value">{{About_Account__c.area_of_interest__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.purpose_personalloans__c}}
+      <!-- Account Information for Personal Loans -->
+      <div id="reviewAccount_Information_for_Personal_Loans">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Personal Loan Information
+        </div>
+        {{#if DisplayedFields.requested_loan_amount_personalloans__c}}
+        <div class="reviewRow">
+          <div class="name">Requested Personal Loan Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.requested_loan_amount_personalloans__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.requested_credit_limit_personalloans__c}}
+        <div class="reviewRow">
+          <div class="name">Requested Credit Limit $</div>
+          <div class="value">{{About_Account__c.requested_credit_limit_personalloans__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.term_personalloans__c}}
+        <div class="reviewRow">
+          <div class="name">Term</div>
+          <div class="value">{{About_Account__c.term_personalloans__c}}</div>
+        </div>
+        {{/if}}
+        <div class="reviewRow">
+          <div class="name">Purpose</div>
+          <div class="value">{{About_Account__c.purpose_personalloans__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.dispsmallbusinessloans}}
+      <!-- Account Information for Small Business Loans -->
+      <div id="reviewAccount_Information_for_Small_Business_Loans">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Business Loan Information
+        </div>
+        {{#if DisplayedFields.requested_loan_amount_businessloans__c}}
+        <div class="reviewRow">
+          <div class="name">Requested Personal Loan Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.requested_loan_amount_businessloans__c}}</div>
+        </div>
+        {{/if}}
+        <!--{{#if DisplayedFields.requested_credit_limit_personalloans__c}}
+        <div class="reviewRow">
+          <div class="name">Requested Credit Limit $</div>
+          <div class="value">{{About_Account__c.requested_credit_limit_personalloans__c}}</div>
+        </div>
+        {{/if}}-->
+        {{#if DisplayedFields.term_businessloans__c}}
+        <div class="reviewRow">
+          <div class="name">Term</div>
+          <div class="value">{{About_Account__c.term_businessloans__c}}</div>
+        </div>
+        {{/if}}
+        <div class="reviewRow">
+          <div class="name">Purpose</div>
+          <div class="value">{{About_Account__c.purpose_businessloans__c}}</div>
+        </div>
+      </div>
+      {{/if}}      
+
+      {{#if DisplayedFields.account_holder_name_ccard__c}}
+      <!-- Funding Information for Credit Cards -->
+      <div id="reviewFunding_Information_for_Credit_Cards">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Funding Information for Credit Cards
+        </div>
+        <div class="reviewRow">
+          <div class="name">Account Holders Name</div>
+          <div class="value">{{Application__c.full_name_pa__c}}</div>
+        </div>
+        <!--
+        <div class="reviewRow">
+          <div class="name">Funding Type</div>
+          <div class="value">{{Application__c.funding_type_ccards__c}}</div>
+        </div>
+        -->
+        {{#if DisplayedFields.financial_institution_ccard__c}}
+        <div class="reviewRow">
+          <div class="name">Financial Institution</div>
+          <div class="value">{{About_Account__c.financial_institution_ccard__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_type_fi_cCards__c}}
+        <div class="reviewRow">
+          <div class="name">Account Type</div>
+          <div class="value">{{About_Account__c.account_type_fi_ccards__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.routing_number_ccards__c}}
+        <div class="reviewRow">
+          <div class="name">Routing Number</div>
+          <div class="value">{{About_Account__c.routing_number_ccards__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.account_number_fi_ccards__c}}
+        <div class="reviewRow">
+          <div class="name">Account Number</div>
+          <div class="value">{{About_Account__c.account_number_fi_ccards__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.dollar_amount_fi_ccards__c}}
+        {{#if DisplayFields.dispDollarCcardsInternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_internal_ccards__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispDollarCcardsExternal}}
+        <div class="reviewRow">
+          <div class="name">Funding Amount $</div>
+          <div class="value">{{formatCurrency About_Account__c.dollar_amount_external_ccards__c}}</div>
+        </div>
+        {{/if}}
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.auto_loan_section_rs}}
+      <!-- Collateral Information for Vehicle Loans -->
+      
+      <div id="reviewCollateral_Information_for_Vehicle_Loans">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Collateral Information for Vehicle Loans
+        </div>
+        {{#if DisplayedFields.vehicleyear__c}}
+        <div class="reviewRow">
+          <div class="name">Year</div>
+          <div class="value">{{About_Account__c.vehicleyear__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.vehiclemake__c}}
+        <div class="reviewRow">
+          <div class="name">Make</div>
+          <div class="value">{{About_Account__c.vehiclemake__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.vehiclemodel__c}}
+        <div class="reviewRow">
+          <div class="name">Model</div>
+          <div class="value">{{About_Account__c.vehiclemodel__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.vehicle_sub_model__c}}
+        <div class="reviewRow">
+          <div class="name">Sub-Model</div>
+          <div class="value">{{About_Account__c.vehicle_sub_model__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.vin__c}}
+        <div class="reviewRow">
+          <div class="name">Vehicle Identification Number</div>
+          <div class="value">{{About_Account__c.vin__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.vehiclemileage__c}}
+        <div class="reviewRow">
+          <div class="name">Mileage</div>
+          <div class="value">{{About_Account__c.vehiclemileage__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.account_type_fi_peronalloan__c}}
+      <!-- Collateral Information for Personal Loans -->
+      <div id="reviewCollateral_Information_for_Personal_Loans">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#account-details" class="editLink">Edit</a></div>
+          Collateral Information for Personal Loans
+        </div>
+        {{#if About_Account__c.stock_symbol_1__c}}
+        <div class="reviewRow">
+          <div class="name">Stock Symbol</div>
+          <div class="value">{{About_Account__c.stock_symbol_1__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">No. Of Shares</div>
+          <div class="value">{{About_Account__c.numofshares_1__c}}</div>
+        </div>
+        {{/if}}
+        {{#if About_Account__c.stock_symbol_2__c}}
+        <div class="reviewRow">
+          <div class="name">Stock Symbol</div>
+          <div class="value">{{About_Account__c.stock_symbol_2__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">No. Of Shares</div>
+          <div class="value">{{About_Account__c.numofshares_2__c}}</div>
+        </div>
+        {{/if}}
+        {{#if About_Account__c.stock_symbol_3__c}}
+        <div class="reviewRow">
+          <div class="name">Stock Symbol</div>
+          <div class="value">{{About_Account__c.stock_symbol_3__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">No. Of Shares</div>
+          <div class="value">{{About_Account__c.numofshares_3__c}}</div>
+        </div>
+        {{/if}}
+        {{#if About_Account__c.stock_symbol_4__c}}
+        <div class="reviewRow">
+          <div class="name">Stock Symbol</div>
+          <div class="value">{{About_Account__c.stock_symbol_4__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">No. Of Shares</div>
+          <div class="value">{{About_Account__c.numofshares_4__c}}</div>
+        </div>
+        {{/if}}
+        {{#if About_Account__c.stock_symbol_5__c}}
+        <div class="reviewRow">
+          <div class="name">Stock Symbol</div>
+          <div class="value">{{About_Account__c.stock_symbol_5__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">No. Of Shares</div>
+          <div class="value">{{About_Account__c.numofshares_5__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.certificate_account_number__c}}
+        <div class="reviewRow">
+          <div class="name">Certificate Account Number</div>
+          <div class="value">{{About_Account__c.certificate_account_number__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayedFields.certificate_product_description__c}}
+        <div class="reviewRow">
+          <div class="name">Certificate Product Descriptiom</div>
+          <div class="value">{{About_Account__c.certificate_product_description__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.mortgage_applied_for__c}}
+      <!-- Mortgage Loan Terms -->
+      <div id="reviewMortgage_Loan_Terms">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#purchase-details" class="editLink">Edit</a></div>
+          Mortgage Loan Terms
+        </div>
+        <div class="reviewRow">
+          <div class="name">Mortgage Type</div>
+          <div class="value">{{About_Account__c.mortgage_applied_for__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Purpose</div>
+          <div class="value">{{About_Account__c.purpose_of_loan__c}}</div>
+        </div>
+        {{#if DisplayFields.dispHLPurposePurchase}}
+        <div class="reviewRow">
+          <div class="name">Purchase Price $ </div>
+          <div class="value">{{formatCurrency About_Account__c.purchase_p__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Down Payment $ </div>
+          <div class="value">{{formatCurrency About_Account__c.down_payment__c}}</div>
+        </div>   
+        <div class="reviewRow">
+          <div class="name">Loan Amount $ </div>
+          <div class="value">{{formatCurrency About_Account__c.total_loan_amount__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispHLPurposeRefi}}
+        <div class="reviewRow">
+            <div class="name">Requested Loan Amount $ </div>
+            <div class="value">{{formatCurrency About_Account__c.HL_Requested_Loan_Amount__c}}</div>
+        </div>
+        <div class="reviewRow">
+            <div class="name">Estimated Home Value $ </div>
+            <div class="value">{{formatCurrency About_Account__c.MRT_Estimated_Home_Value__c}}</div>
+        </div>
+        <div class="reviewRow">
+            <div class="name">Balance of Existing Mortgage $ </div>
+            <div class="value">{{formatCurrency About_Account__c.MRT_Balance_of_Existing_Mortgage__c}}</div>
+        </div>
+        {{/if}}
+        <div class="reviewRow">
+          <div class="name">Monthly Taxes $ </div>
+          <div class="value">{{formatCurrency About_Account__c.monthly__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Monthly Insurance $ </div>
+          <div class="value">{{formatCurrency About_Account__c.monthly_insurance__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      <!-- Mortgage Product Selection -->
+      {{#if DisplayedFields.mortgage_applied_for__c}}
+      <div id="reviewProduct_Selection">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#purchase-details" class="editLink">Edit</a></div>
+          {{PageLabels.product_selection}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Program Description</div>
+          <div class="value">{{About_Account__c.program_description_2__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Discount Point / Buy down</div>
+          <div class="value">{{About_Account__c.discount_pt_buy_down_2__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.mortgage_applied_for__c}}
+      <!-- Property Details -->
+      <div id="reviewProperty_Details">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#property-details" class="editLink">Edit</a></div>
+          {{PageLabels.property_details}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">{{PageLabels.property_location}}</div>
+          <div class="value">{{About_Account__c.options__c}}</div>
+        </div>
+        {{#if DisplayFields.dispProperty}}
+        <div class="reviewRow">
+          <div class="name">Street Address 1</div>
+          <div class="value">{{About_Account__c.street_address_1_aboutaccount__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Street Address 2</div>
+          <div class="value">{{About_Account__c.street_address_2_aboutaccount__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">City</div>
+          <div class="value">{{About_Account__c.city_aboutaccount__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">State</div>
+          <div class="value">{{About_Account__c.state_aboutaccount__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">ZIP Code</div>
+          <div class="value">{{About_Account__c.zip_code_account__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">County</div>
+          <div class="value">{{About_Account__c.county_aboutaccount__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Year Built</div>
+          <div class="value">{{About_Account__c.year_built__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.mortgage_applied_for__c}}
+      <!-- Property Information -->
+      <div id="reviewProperty_Information">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#property-details" class="editLink">Edit</a></div>
+          Property Information
+        </div>
+        <div class="reviewRow">
+          <div class="name">Property Type</div>
+          <div class="value">{{About_Account__c.property_type__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Number of Units</div>
+          <div class="value">{{About_Account__c.number_of_units__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Occupancy</div>
+          <div class="value">{{About_Account__c.occupancy__c}}</div>
+        </div>
+        {{#if DisplayFields.dispEstGrossRentalIncome}}
+        <div class="reviewRow">
+          <div class="name">Estimated Gross Rental Income</div>
+          <div class="value">{{formatCurrency About_Account__c.estimated_gross_rental_income__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispHOA}}
+        <div class="reviewRow">
+          <div class="name">HOA Dues</div>
+          <div class="value">{{formatCurrency About_Account__c.hoa_dues__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.display_he_fields}}
+      <!-- Home Equity Terms -->
+      <div id="reviewMortgage_Loan_Terms">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#purchase-details" class="editLink">Edit</a></div>
+          Home Equity Terms
+        </div>
+        <div class="reviewRow">
+          <div class="name">Mortgage Type</div>
+          <div class="value">{{About_Account__c.he_type_of_mortgage__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Purpose</div>
+          <div class="value">{{About_Account__c.he_purpose__c}}</div>
+        </div>
+        {{#equal About_Account__c.he_purpose__c 'Purchase' }}
+        <div class="reviewRow">
+          <div class="name">Purchase Price $ </div>
+          <div class="value">{{formatCurrency About_Account__c.he_purchase_price__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Down Payment $ </div>
+          <div class="value">{{formatCurrency About_Account__c.he_down_payment__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Loan Amount $ </div>
+          <div class="value">{{formatCurrency About_Account__c.he_total_loan_amount__c}}</div>
+        </div>
+        {{/equal}} 
+        {{#equal About_Account__c.he_purpose__c 'Home Equity' }}
+          <div class="reviewRow">
+            <div class="name">Requested Loan Amount $ </div>
+            <div class="value">{{formatCurrency About_Account__c.he_requested_loan_amount__c}}</div>
+          </div>
+          <div class="reviewRow">
+            <div class="name">Estimated Home Value $ </div>
+            <div class="value">{{formatCurrency About_Account__c.he_estimated_home_value__c}}</div>
+          </div>
+          <div class="reviewRow">
+            <div class="name">Balance of Existing Mortgage $ </div>
+            <div class="value">{{formatCurrency About_Account__c.he_balance_of_existing_mortgage__c}}</div>
+          </div>
+         {{/equal}} 
+        <div class="reviewRow">
+          <div class="name">Monthly Taxes $ </div>
+          <div class="value">{{formatCurrency About_Account__c.he_monthly_taxes__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Monthly Insurance $ </div>
+          <div class="value">{{formatCurrency About_Account__c.he_monthly_insurance__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      <!-- Home Equity Product Selection -->
+      {{#if DisplayedFields.display_he_fields}}
+      <div id="reviewProduct_Selection">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#purchase-details" class="editLink">Edit</a></div>
+          Home Equity {{PageLabels.product_selection}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">Program Description</div>
+          <div class="value">{{About_Account__c.he_program_description__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.display_he_fields}}
+      <!-- Property Details -->
+      <div id="reviewProperty_Details">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#property-details" class="editLink">Edit</a></div>
+          Home Equity {{PageLabels.property_details}}
+        </div>
+        <div class="reviewRow">
+          <div class="name">{{PageLabels.property_location}}</div>
+          <div class="value">{{About_Account__c.property_current_residence__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Street Address 1</div>
+          <div class="value">{{About_Account__c.he_street_address_1__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Street Address 2</div>
+          <div class="value">{{About_Account__c.he_street_address_2__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">City</div>
+          <div class="value">{{About_Account__c.he_city__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">State</div>
+          <div class="value">{{About_Account__c.he_state__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">ZIP Code</div>
+          <div class="value">{{About_Account__c.he_zip_code__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">County</div>
+          <div class="value">{{About_Account__c.he_county_c__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Year Built</div>
+          <div class="value">{{About_Account__c.he_year__c}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if DisplayedFields.display_he_fields}}
+      <!-- Property Information -->
+      <div id="reviewProperty_Information">
+        <div class="reviewSection">
+          <div class="editSection"><a href="#property-details" class="editLink">Edit</a></div>
+          Home Equity Property Information
+        </div>
+        <div class="reviewRow">
+          <div class="name">Property Type</div>
+          <div class="value">{{About_Account__c.he_property_type__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Number of Units</div>
+          <div class="value">{{About_Account__c.he_no_of_units__c}}</div>
+        </div>
+        <div class="reviewRow">
+          <div class="name">Occupancy</div>
+          <div class="value">{{About_Account__c.he_occupancy__c}}</div>
+        </div>
+        {{#if DisplayFields.dispHEEstGrossRentalIncome}}
+        <div class="reviewRow">
+          <div class="name">Estimated Gross Rental Income</div>
+          <div class="value">{{formatCurrency About_Account__c.he_estimated_gross_rental_income__c}}</div>
+        </div>
+        {{/if}}
+        {{#if DisplayFields.dispHEHOA}}
+        <div class="reviewRow">
+          <div class="name">HOA Dues</div>
+          <div class="value">{{formatCurrency About_Account__c.he_hoa_dues__c}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+
+  <div id="DisclosuresPrimary" class="applicant">
+    <h4 class="sectionHeader">
+      {{#equal Application__c.current_channel__c 'Online'}} {{PageLabels.disclosures_heading_online}} {{/equal}}
+      {{#equal Application__c.current_channel__c 'Branch'}} {{PageLabels.disclosures_heading_branch}} {{/equal}}
+      {{#equal Application__c.current_channel__c 'Call Center'}} {{PageLabels.disclosures_heading_cc}} {{/equal}}
+
+      {{#if Application_Configuration__c.docusign_package_installed__c}}
+        {{#equal Application__c.current_channel__c 'Branch' }}
+          <span><button type="button" data-toggle="modal" class="myButton floatRt primaryBtn marginRht20 docusign">{{PageLabels.e_sign_button}}</button></span>
+        {{/equal}}
+      {{/if}}
+    </h4>
+    <div class="formFields" id="revSubmitBlock">
+    {{#equal Application__c.current_channel__c 'Online' }}
+      <div class="alert-text">You must open the disclosures to enable the check box. </div>
+    {{/equal}}
+
+    {{#if DisplayedFields.disclosure1__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure1__c" class="disclosure_1" data-value="{{Application__c.disclosure1__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure1}} <a data-href="{{PageVars.discUrl1}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_1">{{PageLabels.disclosure1_hyperlink_name}}</a>{{PageLabels.text_after_disclosure1}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure1__c" class="disclosure_100" data-value="{{Application__c.disclosure1__c}}"></div>
+        <div class="disclosure_text"><a data-href="{{PageVars.discUrl1}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_1">{{PageLabels.disclosure1_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure2__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure2__c" class="disclosure_2" data-value="{{Application__c.disclosure2__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure2}} <a data-href="{{PageVars.discUrl2}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_2"> {{PageLabels.disclosure2_hyperlink_name}}</a>{{PageLabels.text_after_disclosure2}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure2__c" class="disclosure_200" data-value="{{Application__c.disclosure2__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl2}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_2"> {{PageLabels.disclosure2_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure13__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+          <div class="floatLft"><input type="checkbox" value="true" name="disclosure13__c" class="disclosure_11" data-value="{{Application__c.disclosure13__c}}"></div>
+          <div class="disclosure_text"> {{PageLabels.text_before_disclosure13}} <a data-href="{{PageVars.discUrl13}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_11"> {{PageLabels.disclosure13_hyperlink_name}}</a>{{PageLabels.text_after_disclosure13}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+          <div class="floatLft"><input type="checkbox" value="true" name="disclosure13__c" class="disclosure_1100" data-value="{{Application__c.disclosure13__c}}"></div>
+          <div class="disclosure_text"> <a data-href="{{PageVars.discUrl13}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_11"> {{PageLabels.disclosure13_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+      </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure3__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure3__c" class="disclosure_3" data-value="{{Application__c.disclosure3__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure3}} <a data-href="{{PageVars.discUrl3}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_3">{{PageLabels.disclosure3_hyperlink_name}}</a>{{PageLabels.text_after_disclosure3}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure3__c" class="disclosure_300" data-value="{{Application__c.disclosure3__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl3}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_3">{{PageLabels.disclosure3_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure4__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure4__c" class="disclosure_4" data-value="{{Application__c.disclosure4__c}}"></div>
+        <div class="disclosure_text">{{PageLabels.text_before_disclosure4}} <a data-href="{{PageVars.discUrl4}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_4">{{PageLabels.disclosure4_hyperlink_name}}</a>{{PageLabels.text_after_disclosure4}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure4__c" class="disclosure_400" data-value="{{Application__c.disclosure4__c}}"></div>
+        <div class="disclosure_text"><a data-href="{{PageVars.discUrl4}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_4">{{PageLabels.disclosure4_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure5__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure5__c" class="disclosure_5" data-value="{{Application__c.disclosure5__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure5}} <a data-href="{{PageVars.discUrl5}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_5">{{PageLabels.disclosure5_hyperlink_name}}</a>{{PageLabels.text_after_disclosure5}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure5__c" class="disclosure_500" data-value="{{Application__c.disclosure5__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl5}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_5">{{PageLabels.disclosure5_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure6__c}}
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="margintop">
+          <div class="floatLft"><input type="checkbox" value="true" name="disclosure6__c" class="disclosure_6" data-value="{{Application__c.disclosure6__c}}"></div>
+          <div class="disclosure_text">{{PageLabels.text_before_disclosure6}}</div>
+      </div>
+      {{/equal}}
+    {{/if}}
+    {{#if DisplayedFields.disclosure7__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure7__c" class="disclosure_7" data-value="{{Application__c.disclosure7__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure7}} <a data-href="{{PageVars.discUrl7}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_7">{{PageLabels.disclosure7_hyperlink_name}}</a>{{PageLabels.text_after_disclosure7}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure7__c" class="disclosure_700" data-value="{{Application__c.disclosure7__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl7}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_7">{{PageLabels.disclosure7_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure8__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure8__c" class="disclosure_8" data-value="{{Application__c.disclosure8__c}}"></div>
+        <div class="disclosure_text">{{PageLabels.text_before_disclosure8}} <a data-href="{{PageVars.discUrl8}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_8">{{PageLabels.disclosure8_hyperlink_name}}</a>{{PageLabels.text_after_disclosure8}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure8__c" class="disclosure_800" data-value="{{Application__c.disclosure8__c}}"></div>
+        <div class="disclosure_text"><a data-href="{{PageVars.discUrl8}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_8">{{PageLabels.disclosure8_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure9__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure9__c" class="disclosure_9" data-value="{{Application__c.disclosure9__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure9}} <a data-href="{{PageVars.discUrl9}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_9">{{PageLabels.disclosure9_hyperlink_name}}</a>{{PageLabels.text_after_disclosure9}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure9__c" class="disclosure_900" data-value="{{Application__c.disclosure9__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl9}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_9">{{PageLabels.disclosure9_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure10__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure10__c" class="disclosure_10" data-value="{{Application__c.disclosure10__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure10}} <a data-href="{{PageVars.discUrl10}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_10">{{PageLabels.disclosure10_hyperlink_name}} </a>{{PageLabels.text_after_disclosure10}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure10__c" class="disclosure_1000" data-value="{{Application__c.disclosure10__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl10}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_10">{{PageLabels.disclosure10_hyperlink_name}} </a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure11__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure11__c" class="disclosure_11" data-value="{{Application__c.disclosure11__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure11}} <a data-href="{{PageVars.discUrl11}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_11">{{PageLabels.disclosure11_hyperlink_name}} </a>{{PageLabels.text_after_disclosure11}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure11__c" class="disclosure_1100" data-value="{{Application__c.disclosure11__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl11}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_11">{{PageLabels.disclosure11_hyperlink_name}} </a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+    {{#if DisplayedFields.disclosure12__c}}
+      <div class="margintop">
+      {{#equal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure12__c" class="disclosure_12" data-value="{{Application__c.disclosure12__c}}"></div>
+        <div class="disclosure_text"> {{PageLabels.text_before_disclosure12}} <a data-href="{{PageVars.discUrl12}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_10"> {{PageLabels.disclosure12_hyperlink_name}} </a>{{PageLabels.text_after_disclosure12}}</div>
+      {{/equal}}
+      {{#notequal Application__c.current_channel__c 'Online' }}
+        <div class="floatLft"><input type="checkbox" value="true" name="disclosure12__c" class="disclosure_1200" data-value="{{Application__c.disclosure12__c}}"></div>
+        <div class="disclosure_text"> <a data-href="{{PageVars.discUrl12}}" data-toggle="modal" data-target="#disclosureModal" class="enable_check_12">{{PageLabels.disclosure12_hyperlink_name}}</a>.</div>
+      {{/notequal}}
+    </div>
+    {{/if}}
+   </div>
+</div>
+</div> <!-- end formContainer -->
+
+<!-- DSP  Disclosures content -->
+
+
+<div id="actionPanel">
+  <!-- Button trigger modal -->
+
+  <div id="display-submit-modal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="head_title"><span class="application_style">Application&nbsp;submitted</span></h3>
+        </div>
+        <div class="modal-body">
+          {{#equal Application__c.current_channel__c 'Call Center'}}
+            <p class="bodyTextBold marginTop marginBottom marginBtm20">
+              {{PageLabels.e_sign_button_modal_window_text_callcenter}}
+            </p>
+          {{/equal}}
+          <p class="bodyTextBold">
+              {{PageLabels.submit_button_modal_window_text}}
+              <span id="display-loading-image" class="ui-icon-loading" style="width: 50px; height: 50px; margin: -12px 0; float: right;"></span>
+          </p>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="modal modal-wide fade docuSign-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="head_title"><span class="application_style">{{PageLabels.e_sign_button}}</span></h3>
+          </div>
+          <div class="modal-body">
+            <p class="bodyTextBold marginTop marginBottom marginBtm20 result hidden">
+              {{PageLabels.e_sign_button_modal_window_text}}<span id="display-loading-image" class="ui-icon-loading" style="width: 50px; height: 50px; margin: -12px 0; float: right;"></span>
+            </p>
+            <p class="bodyTextBold marginTop marginBottom marginBtm20 success hidden">
+              <iframe id="docusign-frame" width="100%" height="100%" frameborder="0" class="docusign-frame"></iframe>
+            </p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary close_b" data-dismiss="modal" aria-hidden="true">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclosure Modal -->
+  <div class="modal modal-medium fade" id="disclosureModal" tabindex="-1" role="dialog" aria-labelledby="disclosureModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h3 class="modal-title" id="disclosureModalLabel"></h3>
+        </div>
+        <div class="modal-body">
+          <p class="bodyTextBold marginTop marginBottom marginBtm20 disclosure-content">
+            <iframe id="disclosure-frame" width="100%" height="100%" frameborder="0">
+              <!-- initial content -->
+              <span id="display-loading-image" class="ui-icon-loading" style="width: 50px; height: 50px; float: right;"></span>
+            </iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">I do not accept</button>
+          <button type="button" class="btn btn-primary" value="" data-dismiss="modal">I accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+  {{#if Application__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow">{{Application__c.primary_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.second_offer__c}}
+  <li id="cs2_list" class="listRow">{{Application__c.second_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.third_offer__c}}
+  <li id="cs3_list" class="listRow">{{Application__c.third_offer__c}}</li>
+  {{/if}}
+</script>

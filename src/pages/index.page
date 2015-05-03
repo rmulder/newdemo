@@ -1,0 +1,275 @@
+<apex:page docType="html-5.0" standardStylesheets="false" controller="Index" showHeader="false" id="PageId" cache="false" applyHtmlTag="false">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8"/>
+  <link rel="alternate" href="//{!hostUrl}/{!path}/mobileShortForm?Product={!product}&SubProduct={!subproduct}&id={!id}" id="phone" media="only screen and (touch-enabled: 1) and (max-device-width: 640px)"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+
+  <!-- <link href="{!URLFOR($Resource[$Setup.Application_Configuration__c.Theme__c], 'css/jquery.FloatLabel.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource[$Setup.Application_Configuration__c.Theme__c], 'css/bootstrap.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource[$Setup.Application_Configuration__c.Theme__c], 'css/bootstrap-theme.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource[$Setup.Application_Configuration__c.Theme__c], 'css/bootstrap-datetimepicker.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource[$Setup.Application_Configuration__c.Theme__c], 'css/autocomplete.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource[$Setup.Application_Configuration__c.Theme__c], 'css/dsp.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource[$Setup.Application_Configuration__c.Theme__c], 'css/jquery.datetimepicker.css')}" rel="stylesheet" /> -->
+
+  <link href="{!URLFOR(Theme, 'css/jquery.FloatLabel.css')}" rel="stylesheet" />
+  <link href="{!URLFOR(Theme, 'css/bootstrap.css')}" rel="stylesheet" />
+  <link href="{!URLFOR(Theme, 'css/bootstrap-theme.css')}" rel="stylesheet" />
+  <link href="{!URLFOR(Theme, 'css/bootstrap-datetimepicker.css')}" rel="stylesheet" />
+  <link href="{!URLFOR(Theme, 'css/autocomplete.css')}" rel="stylesheet" />
+  <link href="{!URLFOR(Theme, 'css/dsp.css')}" rel="stylesheet" />
+  <link href="{!URLFOR(Theme, 'css/jquery.datetimepicker.css')}" rel="stylesheet" />
+  
+  <!--<link href="{!URLFOR($document.StaticResource_Theme, 'css/jquery.FloatLabel.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($document.StaticResource_Theme, 'css/bootstrap.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($document.StaticResource_Theme, 'css/bootstrap-theme.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($document.StaticResource_Theme, 'css/bootstrap-datetimepicker.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($document.StaticResource_Theme, 'css/autocomplete.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($document.StaticResource_Theme, 'css/dsp.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($document.StaticResource_Theme, 'css/jquery.datetimepicker.css')}" rel="stylesheet" />-->
+
+  <script src="{!URLFOR(ApplicationCode, 'js/libs/dsp/device.js')}"></script>
+
+  <!-- Fix for scrolling on iOS prior to iOS 6 -->
+  <style type="text/css">
+    .scrollable > * {
+      -webkit-transform: translateZ(0px);
+    }
+  </style>
+  <!--[if lt IE 9]>
+  <script>
+    if (typeof String.prototype.trim !== 'function') {
+      String.prototype.trim = function() {
+        return this.replace(/^\s+|\s+$/g, '');
+      }
+    }
+  </script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="{!URLFOR(Theme, 'images/ico/favicon.ico')}" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{!URLFOR(Theme, 'images/ico/apple-touch-icon-144-precomposed.png')}" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{!URLFOR(Theme, 'images/ico/apple-touch-icon-114-precomposed.png')}" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{!URLFOR(Theme, 'images/ico/apple-touch-icon-72-precomposed.png')}" />
+  <link rel="apple-touch-icon-precomposed" href="{!URLFOR(Theme, 'images/ico/apple-touch-icon-57-precomposed.png')}" />
+</head>
+<body>
+<script type="text/javascript">
+  var dataLayer = [];
+  var tmp = document.location.search.substring(1), args = [], i, arg,
+    DSP = {
+      resources_url: "{!URLFOR(ApplicationCode, '/')}", 
+      custom_resources_url: "{!URLFOR(Theme, '/')}", 
+      first: false, 
+      currentPage: '',
+      iframe: false,
+      frame: "{!frame}",
+      location: "{!location}",
+      models: {
+        Application__c: {
+          current_channel__c: "{!channel}",
+          support_phone_number__c: "{!support_phone_number}",
+          product__c: "{!product}",
+          sub_product__c: "{!subproduct}"
+        }
+      }
+    };
+//    DSP = {resources_url: "{!URLFOR($Resource.static, '/')}", bust: "bust=" + (new Date()).getTime(), first: false, currentPage: ''};
+
+  if (tmp !== '') {
+    args = tmp.split('&');
+  }
+  //console.log(args);
+  for (i = 0; i < args.length; i++) {
+    arg = unescape(args[i]);
+    if (arg.indexOf('=') == -1) {
+      DSP[arg] = true;
+    } else {
+      kvp = arg.split('=');
+      DSP[kvp[0].trim()] = kvp[1].trim();
+    }
+  }
+
+  if (typeof TF4SF === 'undefined') {
+    //window["TF4SF"] = {};
+    DSP.controller = Index;
+    DSP.namespace = DSP.namespace || '';
+  } else {
+    DSP.namespace = DSP.namespace || 'TF4SF__';
+    DSP.controller = TF4SF.Index;
+  }
+
+  if (DSP.id) {
+    if (window.location.href.indexOf('app-retrieval') !== -1) {
+      window.location.href = "/{!path}/" + DSP.namespace + "index#app-retrieval";
+    }
+  }
+
+  DSP.id = "{!id}";
+  DSP.ut = "{!ut}";
+  DSP.referer = "{!referer}";
+  if (DSP.referer !== '') {
+    window.location.href = DSP.referer;
+  }
+  DSP.orgname = "{!orgName}";
+  DSP.debug = DSP.debug || true; //set to false for production!
+  DSP.fields = DSP.fields || false;
+  DSP.enable_google_analytics = "{!enable_google_analytics}";
+  DSP.google_tag_id_terafina = "{!google_tag_id_terafina}";
+  DSP.google_tag_id_client = "{!google_tag_id_client}";
+  DSP.preload = false;
+
+  //console.log(DSP);
+  //alert(DSP.id);
+  if (!DSP.frame) {
+    try {
+      if (window.self != window.top) {
+        DSP.iframe = true;
+      }
+    } catch (e) {
+      console.log('error:', e);
+      DSP.iframe = true;
+    }
+  } else {
+    if (DSP.frame === "1") {
+      DSP.iframe = true;
+    }
+  }
+  if (Storage !== "undefined") {
+    //clear out local storage if first coming to the 'Index' page
+    localStorage.clear();
+  }
+</script>
+<!-- Google Tag Manager -->
+<!--Terafina: GTM-NKTS24 -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id={!google_tag_id_terafina}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{!google_tag_id_terafina}');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<!-- Client: GTM-?????? -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id={!google_tag_id_client}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{!google_tag_id_client}');</script>
+<!-- End Google Tag Manager -->
+
+<div class="image-loader hidden"><img src="{!URLFOR(Theme, 'images/loading-image-blue.gif')}" alt="loading" class="loading" width="30" height="30"/></div>
+<div class="container-fluid"><img src="{!URLFOR(Theme, 'images/loading-image-blue.gif')}" alt="loading" class="loading"/></div>
+<!-- RequireJS
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="{!URLFOR(ApplicationCode, 'js/libs/dsp/modernizr.js')}"></script>
+  <script type="text/javascript" src="{!URLFOR(ApplicationCode, 'js/libs/jquery/jquery.min.js')}"></script>
+  <script type="text/javascript" src="{!URLFOR(ApplicationCode, 'js/libs/jquery/placeholder_polyfill.jquery.js')}"></script>
+  <script type="text/javascript" src="{!URLFOR(ApplicationCode, 'js/libs/selectivizr/selectivizr.js')}"></script>
+  <script type="text/javascript" src="{!URLFOR(ApplicationCode, 'js/libs/dsp/css3-mediaqueries.js')}"></script>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!--<script src="{!URLFOR($Resource.app_fields)}" type="text/javascript"></script>-->
+<script src="{!appFieldsUrl}" type="text/javascript"></script>
+<!--<script src="https://c.cs22.content.force.com/servlet/servlet.FileDownload?file=015170000009k3t" type="text/javascript"></script>-->
+<!--<script src="{!$Setup.Application_Configuration__c.app_fields_staticresource__c}" type="text/javascript"></script>-->
+<!--<script src="{!URLFOR($Resource[$Setup.Application_Configuration__c.app_fields_staticresource__c])}" type="text/javascript"></script>-->
+<script>{!appResourceJSON}</script>
+
+<script data-main="{!URLFOR(ApplicationCode, 'js/main')}" src="{!URLFOR(ApplicationCode, 'js/libs/require/require.js')}"></script>
+<c:timeout session="1234567" seconds="{!$Setup.Application_Configuration__c.Timeout_Seconds__c}" popSeconds="{!$Setup.Application_Configuration__c.Popup_Seconds__c}" applicationId="{!id}"/>
+<!--
+<c:timeout session="1234567" seconds="15" popSeconds="100" applicationId="{!id}"/>
+-->
+<script type="text/javascript">
+/*
+  Index.getCountiesByState('CA', function(result, event) {
+    console.log('event:', event, 'result:', result);
+  });
+*/
+</script>
+<!-- <button id="updateData" type="button" class="btn btn-success">Field Logic Test</button>
+<button id="getPageFields" type="button" class="btn btn-success">Get Page Fields</button> -->
+<script src="{!URLFOR(ApplicationCode, 'js/libs/jquery/jquery.min.js')}"></script>
+<script src="{!URLFOR($Resource.static, 'js/libs/dsp/dsp-common.js')}"></script>
+<script src="{!URLFOR(ApplicationCode, 'js/libs/underscore/underscore-min.js')}"></script>
+<!--        
+    <script>
+      var jq = jQuery.noConflict();
+      jq(document).ready(function() {
+        jq('#updateData').on('click', function() {
+          var $form = jQuery('form'), formData = {};
+          console.log('currentPage:' + DSP.currentPage);
+          if ($('body').attr('id') === 'review-submit') {
+            $form.find('.name').each(function() {
+              var field = $(this).text().replace(/ /g, '_'), lower, obj, str; 
+              field += '__c'; 
+              lower = field.toLowerCase();
+              formData[lower] = ''; 
+            });
+          } else {
+            formData = $form.serializeObject();
+          }
+          console.log('form:',  $form, 'formData:', formData);
+          Index.updateData(formData, DSP.currentPage, function(results, event) {
+            console.log('event:', event);
+            if (event.status) {
+              if (results === null) {
+                /* We did not get a valid response back from the server; assume the id or ut is invalid. */
+                alert('Null response from server');
+                return false;
+              } else {
+                console.log('results:', results);
+                console.log('fieldList:', JSON.parse(_.unescape(results['fieldList'])));
+                console.log('modifiedFieldList:', JSON.parse(_.unescape(results['modifiedFieldList'])));
+              }
+            } else {
+              alert('Error contacting server: ' + event.message);
+              console.log(event);
+            }
+            $("body").css("cursor", "default");
+          });
+        });
+
+        jq('#getPageFields').on('click', function() {
+          console.log('currentPage:' + DSP.currentPage);
+          Index.getPageFields(DSP.models.Application__c.product__c, DSP.models.Application__c.sub_product__c, DSP.currentPage, function(results, event) {
+            console.log('event:', event);
+            if (event.status) {
+              if (results === null) {
+                /* We did not get a valid response back from the server; assume the id or ut is invalid. */
+                alert('Null response from server');
+                return false;
+              } else {
+                console.log('results:', results);
+              }
+            } else {
+              alert('Error contacting server: ' + event.message);
+              console.log(event);
+            }
+            $("body").css("cursor", "default");
+          });
+        });
+      });
+    </script>
+-->
+</body>
+</html>        
+</apex:page>

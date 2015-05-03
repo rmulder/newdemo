@@ -1,0 +1,322 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Alamosa County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Arapahoe County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Archuleta County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Baca County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bent County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Boulder County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Broomfield City and County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "014"
+  },
+  {
+    "name": "Chaffee County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Cheyenne County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Clear Creek County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Conejos County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Costilla County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Crowley County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Custer County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Delta County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Denver County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Dolores County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Eagle County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Elbert County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "El Paso County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Fremont County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Garfield County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Gilpin County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Grand County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Gunnison County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Hinsdale County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Huerfano County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Kiowa County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Kit Carson County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "La Plata County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Larimer County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Las Animas County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Mesa County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Mineral County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Moffat County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Montezuma County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Montrose County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Otero County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Ouray County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Park County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Phillips County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Pitkin County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Prowers County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Pueblo County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Rio Blanco County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Rio Grande County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Routt County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Saguache County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "San Juan County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "San Miguel County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Sedgwick County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Summit County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Teller County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Weld County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Yuma County",
+    "state_abbreviation": "CO",
+    "fips_county_cd": "125"
+  }
+]

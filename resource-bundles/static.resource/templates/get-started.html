@@ -1,0 +1,144 @@
+
+<div class="row-fluid loginForm col-xs-12 col-md-12 border-form loginFormHeight">
+  <div class="col-xs-12" id="get-started-header">
+  <div class="row">
+    <div class="col-xs-4 col-sm-5 col-md-4 col-lg-3 padding_style">
+      <h4 class="blue-heading sectionTitle"> &nbsp;&nbsp;{{PageLabels.get_started_heading__c}}</h4>
+    </div>
+    <div class="col-xs-4 col-sm-3 col-md-4 col-lg-offset-1 col-lg-3">
+      <h4 class=" blue-heading sectionTitle pull-right">{{PageLabels.get_started_member_details__c}}</h4>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 paddingTopEM">
+      <input type="radio" name="mem" value="yes" checked="">
+      <span class="bodyText">Yes</span>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 paddingTopEM">
+      <input type="radio" name="mem" value="no">
+      <span class="bodyText">No</span>
+    </div>
+  </div>
+</div>
+  <div class="col-xs-5 column">
+    <div class="content">
+      <h4 class="sectionTitle">{{PageLabels.get_started_requirements_heading__c}}</h4>
+      <ul>
+        <li class="bodyText">{{PageLabels.get_started_requirement_value_1__c}}</li>
+        <li class="bodyText">{{PageLabels.get_started_requirement_value_2__c}}</li>
+      </ul>
+
+      <h4 class="sectionTitle">{{PageLabels.get_started_requirement_docs__c}}</h4>
+      <ul>
+        <li class="bodyText">{{PageLabels.get_started_requirement_docs_value_1__c}}</li>
+        <li class="bodyText">{{PageLabels.get_started_requirement_docs_value_2__c}} <br/>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-xs-7 column">
+    <div id="apDiv1" class="row">
+      <div class="login-fields">
+        <form action="" method="post" class="form-horizontal" id="login-form">
+          <h4 class="sectionTitle">{{PageLabels.get_started_member_value__c}}</h4>
+          <div class="row fieldSet">
+            <div class="js-float-label-wrapper fieldItem col-xs-9 padding_style">
+              <label for="login__c">Username <span class="required"> *</span></label>
+              <input type="text" class="col-xs-12 required " name="login__c" id="login__c" value="{{Contact.login__c}}" required>
+            </div>
+          </div>
+          <div class="row fieldSet">
+            <div class="js-float-label-wrapper fieldItem col-xs-9 padding_style">
+              <label for="password__c">Password <span class="required"> *</span></label>
+              <input type="password" class="col-xs-12 required" name="password__c" id="password__c"
+                     value="{{Contact.password__c}}">
+            </div>
+          </div>
+           <div class="row fieldSet">
+            <div class="col-xs-5 pull-right hidden">
+              <button id="signIn" type="submit" class="btn primaryBtn myButton sign-in">Sign In</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="input-fields col-xs-9 hidden">
+
+        <h4 class="sectionTitle">{{PageLabels.get_started_nonmember_value_1__c}}</h4>
+        <h4 class="sectionTitle">{{PageLabels.get_started_nonmember_value_2__c}}</h4>
+
+        <div class="form-group">
+        </div>
+        
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem">
+            <label for="first_name__c">First Given Name <span class="required"> *</span></label>
+            <input type="text" class="col-xs-12 firstName required" name="first_name__c" id="first_name__c"
+                   value="{{Application__c.first_name__c}}">
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem">
+            <label for="last_name__c">Last Given Name <span class="required"> *</span></label>
+            <input type="text" class="col-xs-12 lastName required" name="last_name__c" id="last_name__c"
+                   value="{{Application__c.last_name__c}}">
+          </div>
+        </div>
+
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem">
+            <label for="primary_phone_number__c">Phone Number <span class="required"> *</span></label>
+            <input type="tel" class="col-xs-12 phoneUS required" name="primary_phone_number__c"
+                   id="primary_phone_number__c" value="{{Application__c.primary_phone_number__c}}">
+          </div>
+        </div>
+        <div class="row fieldSet">
+          <div class="js-float-label-wrapper fieldItem">
+            <label for="email_address__c">Email <span class="required"> *</span></label>
+            <input type="email" class="col-xs-12 email required" name="email_address__c" id="email_address__c"
+                   value="{{Application__c.email_address__c}}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade wrongLogin-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="head_title red_heading"><span class="application_style">Invalid Username or password</span></h3>
+      </div>
+      <div class="modal-body marginTop5">
+        <p class="bodyTextBold marginTop5 margin_left_neg15">
+          You have entered an invalid username or password. Please try again <br/>Thank you.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn primaryBtn myButton" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script id="action-panel" type="text/x-handlebars-template">
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-xs-1 col-xs-1_5"></div>
+      <div class="col-xs-9 column disclosure_text paddingStyle borderStyle_disclosure blue-heading2">
+        {{#equal Application__c.current_channel__c 'Online' }}
+        {{PageLabels.patriot_act_disc_online}}
+        {{/equal}}
+        {{#equal Application__c.current_channel__c 'Branch' }}
+        {{PageLabels.patriot_act_disc_branch}}
+        {{/equal}}
+        {{#equal Application__c.current_channel__c 'Call Center' }}
+        {{PageLabels.patriot_act_disc_call_center}}
+        {{/equal}}
+      </div>
+      <div class="col-xs-1 col-xs-1_5"></div>
+    </div>
+    <div class="clear"></div>
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+<script id="disclosures" type="text/x-handlebars-template">
+</script>

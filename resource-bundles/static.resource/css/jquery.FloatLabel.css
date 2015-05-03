@@ -1,0 +1,75 @@
+.js-float-label-wrapper {
+  position: relative;
+}
+
+.js-float-label-wrapper label {
+  position: absolute;
+/*
+  top: 0.5em;
+  left: 0.5em;
+*/
+  top: -1.5em;
+  left: 0.3em;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.js-float-label-wrapper.focused label,
+.js-float-label-wrapper.populated label {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.js-float-label-wrapper-select.focused label,
+.js-float-label-wrapper-select.populated label {
+  opacity: 0 !important;
+  filter: alpha(opacity=0) !important;
+}
+
+.js-float-label-wrapper.focused input,
+.js-float-label-wrapper.populated input,
+.js-float-label-wrapper.focused select,
+.js-float-label-wrapper.populated select,
+.js-float-label-wrapper.focused textarea,
+.js-float-label-wrapper.populated textarea {
+  /*padding-top: 0;    */
+  color: #000000;
+  border: 1px solid #575757;
+}
+
+.js-float-label-wrapper input,
+.js-float-label-wrapper textarea,
+.js-float-label-wrapper label {
+  -webkit-transition:0.2s ease-in-out;
+}
+
+.js-float-label-wrapper label {
+  font-size: 0.70em;
+}
+
+.js-float-label-wrapper textarea {
+  margin-top: 5px;
+  color: #666666;
+  font-size: 18px;
+}
+
+.js-float-label-wrapper select {
+  color: #666666;
+  font-size: 18px;
+}
+
+.js-float-label-wrapper input {
+  color: #666666;
+  font-size: 18px;
+  min-height: 42px;
+  margin-top: 5px;
+  border-radius: 0.188em;
+}
+
+.js-float-label-wrapper input:focus,
+.js-float-label-wrapper select:focus,
+.js-float-label-wrapper textarea:focus {
+  border-color: #575757;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(87,87,87,0.6);
+}

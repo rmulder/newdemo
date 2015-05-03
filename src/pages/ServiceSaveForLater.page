@@ -1,0 +1,11 @@
+<apex:page showHeader="false" sidebar="false">
+<apex:form >
+<center>
+    <apex:image value="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" height="25%" width="25%"/>
+</center>
+    <center>
+        <apex:pageBlock title="SAVE FOR LATER" >
+        </apex:pageBlock>
+    </center>    
+</apex:form>    
+</apex:page>

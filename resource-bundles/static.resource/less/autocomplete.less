@@ -1,0 +1,50 @@
+// Core variables and mixins
+@import "variables.less";
+
+/* Source of Autocomplete.css: */
+.aListCon {
+  /* Used to wrap and hide <datalist> elements */
+  display : none;
+}
+.aWrapper {
+  /* Attaches to DOM nearby input element, holds the absolutely positioned list container */
+  position : relative;
+  display : inline-block;
+  *display : inline;
+  zoom : 1;
+  width : 0px;
+  height : 0px;
+  vertical-align : top;
+  overflow : visible;
+}
+.aCon {
+  /* List container */
+  position : absolute;
+  z-index : 999999;
+  top : 0;
+  left : 0;
+  display : block;
+}
+.aList {
+  /* List of autocomplete choices */
+  display : block;
+  margin : 0px;
+  padding : 0px;
+  border : 1px solid @autocompleteAlistBorder;
+  background-color : @autocompleteAlistBackgroundColor;
+  color : @autocompleteAlistColor;
+  list-style-type : none;
+  cursor : default;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-family: @fontFamilyStack;
+}
+.aLim {
+  /* List item choice */
+  display : block;
+  padding : 3px 6px 2px 6px;
+  line-height : 1.2em;
+  white-space : nowrap;
+  font-size: 12px;
+  font-family:@fontFamilyStack;
+}

@@ -1,0 +1,853 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" id="PageId" cache="false" applyHtmlTag="false">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="text/html" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>DSP - Promotions</title>
+  <link href="{!URLFOR($Resource.Admintool, 'bootstrap/css/bootstrap.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource.Admintool, 'bootstrap/css/dashboard.css')}" rel="stylesheet" />
+  
+  <!--<style>
+    a:hover {
+      text-decoration: none;
+    }
+    .row-spacing {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .btn-toolbar .btn {
+      color: #333333;
+      background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+      background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+      background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+      border: 1px solid #cccccc;
+      border-bottom-color: #b3b3b3;
+    }    
+    input[type="file"] {
+      display: inline;
+    }
+  </style>-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<apex:form >
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="" href="#">
+                <apex:image url="{!URLFOR($Resource.Admintool, 'bootstrap/images/terafinalogo_1.png')}" styleClass="logo"/>
+                <!--<img class="logo" src="bootstrap/images/terafinalogo_1.png"/>-->
+            </a>
+        </div>
+        <!-- <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right" data-listidx="0">
+                <li class="cursor-pointer"><a href="#">Dashboard</a>
+                </li>
+                <li class="cursor-pointer"><a href="#">Settings</a>
+                </li>
+                <li class="cursor-pointer"><a href="#">Profile</a>
+                </li>
+                <li class="cursor-pointer"><a href="#">Help</a>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search..."/>
+            </form>
+        </div>-->
+    </div> 
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-8 col-md-12">
+<div id="content">
+<ul id="tabs" class="nav nav-tabs tabs" data-tabs="tabs">
+    <li class="active cursor-pointer"><a href="#getstarted" data-toggle="tab">Get Started</a>
+    </li>
+    <li class="cursor-pointer"><a href="#crosssell" data-toggle="tab">Crosssell</a>
+    </li>
+    <li class="cursor-pointer"><a class="tab-pane" data-toggle="dropdown">
+        About You <span class="caret"></span>
+    </a>
+        <ul class="dropdown-menu">
+            <li class="marginlft13" data-target="#personalinfo" data-toggle="tab">Personal Info</li>
+            <li class="marginlft13" data-target="#employmentinfo" data-toggle="tab">Employment Info</li>
+            <li class="marginlft13" data-target="#identityinfo" data-toggle="tab">Identity Info</li>
+
+        </ul>
+    </li>
+    <li class="cursor-pointer"><a class="tab-pane" data-toggle="dropdown">
+        About Account <span class="caret"></span>
+    </a>
+        <ul class="dropdown-menu">
+            <li class="marginlft13" data-target="#accountdetails" data-toggle="tab">Account Details</li>
+            <li class="marginlft13" data-target="#purchasedetails" data-toggle="tab">Purchase Details</li>
+            <li class="marginlft13" data-target="#propertydetails" data-toggle="tab">Property Details</li>
+            <li class="marginlft13" data-target="#appdeclaration" data-toggle="tab">App Declaration</li>
+        </ul>
+    </li>
+    <li style="cursor: pointer;"><a href="#reviewsubmit" data-toggle="tab">Review Submit</a>
+    </li>
+</ul>
+<div id="my-tab-content" class="tab-content">
+<div class="tab-pane active" id="getstarted">
+    <div class="row">
+        <div class="col-md-5 pull-left available-fields">
+            <h3>Available Fields</h3>
+            <ul class="list1">
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">First Name</button>
+                </li>
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Last Name</button>
+                </li>
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Phone no</button>
+                </li>
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Email</button>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-5 mrgnrht43 pull-right">
+            <h3>Fields to Display</h3>
+        </div>
+        <div class="col-md-5 pull-right mrgnrht30 required-fields">
+            <h3>Required Fields</h3>
+            <ul class="list2">
+            </ul>
+        </div>
+        <div class="col-md-5 pull-right mrgnrht30 optional-fields">
+            <h3>Optional Fields</h3>
+            <ul class="list2">
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <button class="btn pull-right">Apply</button>
+    </div>
+ 
+</div>
+<div class="tab-pane" id="crosssell">
+    <div class="row">
+        <div class="col-md-5 pull-left available-fields">
+            <h3>Available Fields</h3>
+            <ul class="list1">
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Savings</button>
+                </li>
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Certificates</button>
+                </li>
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Cards</button>
+                </li>
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Loans</button>
+                </li>
+                <li class="page-field cursor-pointer">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Mortgage</button>
+                </li>
+            </ul>
+        </div>
+    <div class="col-md-5 mrgnrht43 pull-right">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2" data-listidx="3">
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2" data-listidx="3">
+        </ul>
+    </div>
+    </div>
+    <div class="col-md-12">
+       <button class="btn pull-right">Apply</button>
+    </div>
+</div>
+<div class="tab-pane" id="personalinfo">
+    <div class="col-md-5 pull-left available-fields">
+        <h4 class="blue-heading">Personal Information</h4>
+
+        <h3>Available Fields</h3>
+        <ul class="list1">
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Business Name</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Business Type</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Address 1</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Address 2</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">City</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">State</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Zip Code</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Business EIN/TIN</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Bussiness Reg. State</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">NAICS Code</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Nature of Business</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">First Name</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Middle Name</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Last Name</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Suffix</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Address 1</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Address 2</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">City</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">State</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Zip Code</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Housing Status</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Monthly Payment</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Years</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Months</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Home Phone</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Work Phone</button>
+            </li>
+            <li class="page-field" style="cursor: pointer;">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Email</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht43 pull-right">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2" data-listidx="5">
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2" data-listidx="5">
+        </ul>
+    </div>
+    <div class="col-md-12">
+        <button class="btn pull-right mrgnrht13">Apply</button>
+    </div>
+</div>
+<div class="tab-pane" id="employmentinfo">
+    <div class="col-md-5 pull-left available-fields">
+        <h4 class="blue-heading">Employment Information</h4>
+
+        <h3>Available Fields</h3>
+        <ul class="list1">
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Employment Status</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Employer Name</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Time-Years</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Time-Months</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Annual Income</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Other Income</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Income Amount</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht43 pull-right">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-12">
+       <button class="btn pull-right mrgnrht13">Apply</button>
+    </div>
+</div>
+<div class="tab-pane" id="identityinfo">
+    <div class="col-md-5 pull-left available-fields">
+        <h4 class="blue-heading">Identity Information</h4>
+
+        <h3>Available Fields</h3>
+        <ul class="list1">
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Identity Type</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Id No</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Issuing State</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Issue Date</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Expiration Date</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">SSN</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Date Of Birth</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Citizenship</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Citizenship Country</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht43 pull-right">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+   <div class="col-md-12">
+     <button class="btn pull-right mrgnrht13">Apply</button>
+   </div>
+</div>
+<div class="tab-pane" id="accountdetails">
+    <div class="col-md-5 pull-left available-fields">
+        <h4 class="blue-heading">Account Details</h4>
+
+        <h3>Available Fields</h3>
+        <ul class="list1">
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Applicant Name</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Funding Type</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Bank Name</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Routing No</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Account Type</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Account No</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Amount</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Consent</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Req Credit Limit</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Purpose</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Purpose Description</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Branch Location</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Area of Interest</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Outstanding Judgement</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Income Decline</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Co-signer</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht43 pull-right">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 pull-right mrgnrht30 required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-5 pull-right mrgnrht30 optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-12">
+      <button class="btn pull-right mrgnrht13">Apply</button>
+    </div>
+</div>
+<div class="tab-pane" id="purchasedetails">
+    <div class="col-md-5 pull-left available-fields">
+        <h4 class="blue-heading">Purchase Details</h4>
+
+        <h3>Available Fields</h3>
+        <ul class="list1">
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Mortgage Type</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Purpose</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Req Loan Amount</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Home Value</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Mortgage Balance</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Purchase Price</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Down Payment</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Loan Amount</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Other Purpose</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Monthly Taxes</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Monthly Insurance</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Program Description</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Discount Point</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Institution Name 1</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Asset Type 1</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Balance 1</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Institution Name 2</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Asset Type 2</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Balance 2</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Institution Name 3</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Asset Type 3</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Balance 3</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Institution Name 4</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Asset Type 4</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Balance 4</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Institution Name 5</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Asset Type 5</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Balance 5</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Institution Name 6</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Asset Type 6</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Balance 6</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht43 pull-right">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 pull-right mrgnrht30 required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-5 pull-right mrgnrht30 optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+  <div class="col-md-12">
+    <button class="btn pull-right mrgnrht13">Apply</button>
+  </div>
+</div>
+<div class="tab-pane" id="propertydetails">
+    <div class="col-md-5 pull-left available-fields">
+        <h4 class="blue-heading">Property Details</h4>
+
+        <h3>Available Fields</h3>
+        <ul class="list1">
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Address Type</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Address 1</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Address 2</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">City</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">State</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Zip Code</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">County</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Built Year</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Property Type</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">No of Units</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Occupancy</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 pull-right mrgnrht43">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 pull-right mrgnrht30 required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-5 pull-right mrgnrht30 optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+  <div class="col-md-12">
+    <button class="btn pull-right mrgnrht13">Apply</button>
+  </div>
+</div>
+<div class="tab-pane" id="appdeclaration">
+    <div class="col-md-5 pull-left available-fields">
+        <h4 class="blue-heading">Application Declaration</h4>
+
+        <h3>Available Fields</h3>
+        <ul class="list1">
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Outstanding Judgements</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Bankrupt</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Property Foreclosure</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Party to lawsuit</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Loan obligation</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Delinquent</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Child Support</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Borrowed Down Payment</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Endorser</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Citizen</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Permanent Resident</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Non-Resident Alien</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Primary Residence</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Ownership Interest</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Ethinicity</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Sex</button>
+            </li>
+            <li class="page-field cursor-pointer">
+                <button type="button" class="btn input-fields" href="#" draggable="true">Race</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht43 pull-right">
+        <h3>Fields to Display</h3>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right required-fields">
+        <h3>Required Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+    <div class="col-md-5 mrgnrht30 pull-right optional-fields">
+        <h3>Optional Fields</h3>
+        <ul class="list2">
+        </ul>
+    </div>
+   <div class="col-md-12">
+     <button class="btn pull-right mrgnrht13">Apply</button>
+   </div>
+</div>
+<div class="tab-pane" id="reviewsubmit">
+    <div class="row">
+        <div class="col-md-5 pull-left available-fields">
+            <h3>Available Fields</h3>
+            <ul class="list1">
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Business Name</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Business Type</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Address 1</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Address 2</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">City</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">State</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Zip Code</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Business EIN/TIN</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Business Reg State</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">NAICS Code</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Nature of Business</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">First Name</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Middle Name</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Last Name</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Employment Status</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Annual Income</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Account Holders Name
+                    </button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Funding Type</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Requested Loan Amount
+                    </button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Term</button>
+                </li>
+                <li class="page-field" style="cursor: pointer;">
+                    <button type="button" class="btn input-fields" href="#" draggable="true">Purpose</button>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-5 mrgnrht43 pull-right">
+            <h3>Fields to Display</h3>
+        </div>
+        <div class="col-md-5 mrgnrht30 pull-right required-fields">
+            <h3>Required Fields</h3>
+            <ul class="list2">
+            </ul>
+        </div>
+        <div class="col-md-5 pull-right mrgnrht30 optional-fields">
+            <h3>Optional Fields</h3>
+            <ul class="list2">
+            </ul>
+        </div>
+     <div class="col-md-12">
+        <button class="btn btn-success pull-right mrgnrht13">Apply</button>
+     </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input name="list1SortOrder" type="hidden"/>
+
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dragsort-0.5.1.min.js"></script> -->
+
+<br/>
+
+<!-- save sort order here which can be retrieved on server on postback -->
+<input name="list1SortOrder" type="hidden"/>
+
+<div style="clear:both;"></div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="js/jquery-1.10.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>-->
+<script src="{!URLFOR($Resource.Admintool, 'js/jquery-1.10.2.min.js')}"></script>
+<script src="{!URLFOR($Resource.Admintool, 'bootstrap/js/bootstrap.min.js')}"></script>
+<script src="{!URLFOR($Resource.Admintool, 'js/jquery.min.js')}"></script>
+<script src="{!URLFOR($Resource.Admintool, 'js/jquery.dragsort-0.5.1.min.js')}"></script>
+<script type="text/javascript">
+ 	$j = jQuery.noConflict();  
+ 	$j("ul").filter('.nav li').dragsort();
+    /*$j(document).ready(function ($) {
+        $j('.tabs').tab();
+    });*/
+    $j(".list1, .list2").dragsort({ dragSelector: "li", dragBetween: true, dragEnd: saveOrder, placeHolderTemplate: "<li class='placeHolder'><div></div></li>" });
+    
+    function saveOrder() {
+        var data = $j(".list1 li").map(function () {
+            return $j(this).children().html();
+        }).get();
+        $j("input[name=list1SortOrder]").val(data.join("|"));
+    }
+    ;
+</script>
+
+</apex:form>
+</body>	
+</html>
+</apex:page>

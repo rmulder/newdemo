@@ -1,0 +1,232 @@
+<div class="confirmGreen">
+  <div>
+    <h4 class="greenText"> {{PageVars.ConfirmText}}:-&nbsp;&nbsp; {{Application__c.email_address__c}}</h4>
+    <br/>
+
+    {{#if Application__c.sub_product__c}}
+    <li class="bodyTextBold_bullet">{{Application__c.sub_product__c}} {{PageVars.displayRate}} </li>
+    {{/if}}
+    {{#if Application__c.primary_offer__c}}
+    <li class="bodyTextBold_bullet">{{Application__c.primary_offer__c}}</li>
+    {{/if}}
+    {{#if Application__c.second_offer__c}}
+    <li class="bodyTextBold_bullet">{{Application__c.second_offer__c}}</li>
+    {{/if}}
+    {{#if Application__c.third_offer__c}}
+    <li class="bodyTextBold_bullet">{{Application__c.third_offer__c}}</li>
+    {{/if}}
+    <br/>
+
+<!--
+    <h4 class="greenText">Your application has been approved and account created for:</h4>
+    <br>
+    <li class="bodyTextBold"><span>{{Application__c.sub_product__c}}</span></li>
+    <ul><li class="bodyTextBold"><strong>&nbsp;&nbsp;&nbsp;Your Application Number: 1234567890</strong></li></ul>
+    <br/>
+    <span class="bodyText"> &nbsp;&nbsp;An confirmation e-mail detailing the next steps has been sent to <a href="mailto:{{Application__c.email_address__c}}">{{Application__c.email_address__c}}</a></span><br>
+    <br/>
+-->
+  </div>
+</div>
+<br>
+<!-- Additional Options -->
+<h2 class="bodyTextBold">{{PageLabels.confirmation_additional_services_header}}</h2>
+<div id="formContainer">
+  <input type="hidden" class="selected_card_design" value="{{Application__c.card_design__c}}"/>
+  <div style="padding-left:10px">
+    {{#if DisplayedFields.visa_cashplus_check_card__c}}
+    <input type="checkbox" name="visa_cashplus_check_card__c" value="true" data-value="{{Application__c.visa_cashplus_check_card__c}}"/>
+    <span class="bodyTextBold">{{PageLabels.confirmation_visacashcard_header}}</span>
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_visacashcard}}</p>
+<!--    <p class="bodyTextSmall">&nbsp;&nbsp;Once the account is funded, each account owner will be mailed a Visa CashPlus Check Card.</p>   -->
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.atm_card__c}}
+    <input type="checkbox" name="atm_card__c" value="true" data-value="{{Application__c.atm_card__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_atmcard_header}}</span>
+<!--    <p class="bodyTextSmall">&nbsp;&nbsp;Once the account is funded, each account owner will be mailed an ATM Card.</p>   -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_atmcard}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.card_design__c}}
+    <div>
+      <p class="bodyTextBold"> &nbsp;{{PageLabels.confirmation_carddesigntitle}}</p>
+      <div class="row">
+        <!-- Button to trigger modal -->
+        <div class="span1 pull-left">
+          <img src="{{config.custom_resources_url}}images/visa1.png" height="49" alt="Choose card design"/>&nbsp;
+        </div>
+        <div class="span3">
+          <a href="#chooseCardModal" data-toggle="modal">{{PageLabels.confirmation_carddesign_header}}</a>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div id="chooseCardModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h3 id="chooseCardModalLabel">{{PageLabels.confirmation_carddesigncc}}</h3>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-4 column">
+                  <h4 class="sectionTitle">{{PageLabels.confirmation_selected_card_design}}</h4><br>
+                  <div id='imagedest'>
+                    <img src='{{config.custom_resources_url}}images/carddesign1.jpg'>
+                  </div>
+                  <br>
+                  <br>
+                </div>
+                <div class="col-md-8 column">
+                  <div id="row">
+                    <h4 class="sectionTitle">
+                      <p>{{PageLabels.confirmation_carddesign_header}}</p>
+                    </h4>
+                    <fieldset class="form-inline col-md-6 column">
+                      <input type="radio" name="cardSelected" value="1" id="firstCardId" checked="checked" />
+                      <img src='{{config.custom_resources_url}}images/card_thumb1.jpg'>
+                    </fieldset>
+                    <fieldset class="form-inline col-md-6 column">
+                      <input type="radio" name="cardSelected" value="2" id="secondCardId"/>
+                      <img src='{{config.custom_resources_url}}images/card_thumb2.jpg'>
+                    </fieldset>
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="bodyText"><span class="bodyTextBold">{{PageLabels.confirmation_note}}</span> {{PageLabels.confirmation_carddesign_text}}
+                </div>
+              </div>
+            <div class="modal-footer">
+              <button class="myButton floatRt primaryBtn">Save</button>
+              <!--
+                        <apex:actionFunction name="saveCardValue" action="{!saveCardApplication}" reRender="divop">
+                          <apex:param name="selectedCard" value=""/>
+                        </apex:actionFunction>
+              -->
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </div>
+    </div>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.overdraft_protection__c}}
+    <input type="checkbox" name="overdraft_protection__c" value="true" data-value="{{Application__c.overdraft_protection__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_overdraftprotection_header}}</span>
+    <!--<p class="bodyTextSmall">&nbsp;&nbsp;Overdraft Protection boiler plate text goes here.</p>  -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_overdraftprotection}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.check_order__c}}
+    <input type="checkbox" name="check_order__c" value="true" data-value="{{Application__c.check_order__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_checkorder_header}}</span>
+<!--
+    <p class="bodyTextSmall">&nbsp;&nbsp;Your first order of &lt;50&gt; standard checks will be mailed once the
+      account is funded.
+    </p>
+-->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_checkorder}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.bill_pay__c}}
+    <input type="checkbox" name="bill_pay__c" value="true" data-value="{{Application__c.bill_pay__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_billpay_header}}</span>
+<!--
+    <p class="bodyTextSmall">&nbsp;&nbsp;Make payments online to virtually any company or person in the
+      United States with Bill Pay.
+    </p>
+-->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_billpay}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.online_banking_enrollment__c}}
+    <input type="checkbox" name="online_banking_enrollment__c" value="true" data-value="{{Application__c.online_banking_enrollment__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_onlinebanking_header}}</span>
+<!--
+    <p class="bodyTextSmall">&nbsp;&nbsp;Yes, I would like to sign up for free and secure online banking.
+      Check balances, view statements, transfer fund and more - virtually anytime, anywhere, and with
+      just one username and password.</p>
+      -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_onlinebanking}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.edeposit__c}}
+    <input type="checkbox" name="edeposit__c" value="true" data-value="{{Application__c.edeposit__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_edeposits_header}}</span>
+    <!--<p class="bodyTextSmall">&nbsp;&nbsp;eDeposit boilerplate text goes here...</p>  -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_edeposits}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.e_statements__c}}
+    <input type="checkbox" name="e_statements__c" value="true" data-value="{{Application__c.e_statements__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_estatements_header}}</span>
+    <!-- <p class="bodyTextSmall">&nbsp;&nbsp;E-Statements boilerplate text goes here...</p> -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_estatements}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.gap_insurance__c}}
+    <input type="checkbox" name="gap_insurance__c" value="true" data-value="{{Application__c.gap_insurance__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_gapinsurance_header}}</span>
+    <!--<p class="bodyTextSmall">&nbsp;&nbsp;Gap Insurance boilerplate text goes here...</p> -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_gapinsurance}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.debt_safe_protection__c}}
+    <input type="checkbox" name="debt_safe_protection__c" value="true" data-value="{{Application__c.debt_safe_protection__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_debtsafeprotection_header}}</span>
+    <!--<p class="bodyTextSmall">&nbsp;&nbsp;Debt Safe Protection boilerplate text goes here...</p> -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_debtsafeprotection}}</p>
+    <br/>
+    {{/if}}
+
+    {{#if DisplayedFields.mechanical_break_down_protection__c}}
+    <input type="checkbox" name="mechanical_break_down_protection__c"
+           value="true" data-value="{{Application__c.mechanical_break_down_protection__c}}" />
+    <span class="bodyTextBold">{{PageLabels.confirmation_mechanicalbreakdown_header}}</span>
+    <!--<p class="bodyTextSmall">&nbsp;&nbsp;Mechanical Break down Protection boilerplate text goes here...</p>  -->
+    <p class="bodyTextSmall">&nbsp;&nbsp;{{PageLabels.confirmation_mechanicalbreakdown}}</p>
+    <br/>
+    {{/if}}
+
+  </div>
+</div>
+
+<div id="actionPanel">
+<!--   <button type="submit" class="margin0 myButton floatRt primaryBtn font144">Finish</button>
+ --></div>
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+  {{#if Application__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow">{{Application__c.primary_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.second_offer__c}}
+  <li id="cs2_list" class="listRow">{{Application__c.second_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.third_offer__c}}
+  <li id="cs3_list" class="listRow">{{Application__c.third_offer__c}}</li>
+  {{/if}}
+</script>

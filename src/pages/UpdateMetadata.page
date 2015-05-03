@@ -1,0 +1,8 @@
+<apex:page showHeader="true" sidebar="true" standardController="Field_Logic_New__c" recordSetVar="fieldlogicnews" extensions="MetadataUpdate" action="{!Meta}">
+<script>
+window.document.onload = new function(e)
+{
+    alert("Metadata has been updated");
+}  
+</script>
+</apex:page>

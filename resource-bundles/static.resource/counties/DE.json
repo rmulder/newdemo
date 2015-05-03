@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Kent County",
+    "state_abbreviation": "DE",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "New Castle County",
+    "state_abbreviation": "DE",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Sussex County",
+    "state_abbreviation": "DE",
+    "fips_county_cd": "005"
+  }
+]

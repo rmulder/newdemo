@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Androscoggin County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Aroostook County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Kennebec County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Oxford County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Penobscot County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Piscataquis County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Sagadahoc County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Somerset County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Waldo County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "York County",
+    "state_abbreviation": "ME",
+    "fips_county_cd": "031"
+  }
+]

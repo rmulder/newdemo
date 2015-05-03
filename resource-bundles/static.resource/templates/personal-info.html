@@ -1,0 +1,1074 @@
+<div id="formContainer">
+<!-- Primary Applicant Info-->
+{{#if DisplayedFields.personalinfosmallbusiness}}
+  <!-- Primary Applicant Small Business -->
+  <div id="bus_appl_1" class="applicant">
+  <h4 class="sectionHeader"><span class="first_name__c">{{Application__c.first_name__c}}</span>&nbsp;<span class="last_name__c">{{Application__c.last_name__c}}</span>: {{PageLabels.small_business_information}}</h4>
+
+  <div class="formFields sectionTitleContainer" id="bus_appl_1_nameAdd">
+    <h4 class="sectionTitle">{{PageLabels.Business}} {{PageLabels.name_and_address}}</h4>
+
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="business_legal_name__c">Business Legal Name<span class="required"> *</span></label>
+        <input type="text" name="business_legal_name__c" id="business_legal_name__c"
+           class="col-xs-12 businessName required validName" value="{{Application__c.business_legal_name__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <div class="styled-select">
+          <label for="business_type__c">Business Type<span class="required"> *</span></label>
+          <select id="business_type__c" name="business_type__c" class="col-xs-12 businessType required"
+                  data-value="{{Application__c.business_type__c}}">
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-12">
+        <label for="business_street_address_1__c">Street Address, No PO Boxes<span class="required"> *</span></label>
+        <input name="business_street_address_1__c" id="business_street_address_1__c" type="text"
+           class="col-xs-12 appl_1_businessaddress1 required validAddress" value="{{Application__c.business_street_address_1__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-12">
+        <label for="business_street_address_2__c">Street Address 2</label>
+        <input name="business_street_address_2__c" id="business_street_address_2__c" type="text"
+           class="col-xs-12 appl_1_businessaddress2" value="{{Application__c.business_street_address_2__c}}"/>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="business_city__c">City<span class="required"> *</span></label>
+        <input name="business_city__c" id="business_city__c" type="text" class="col-xs-12 appl_1_businesscity required alpha"
+           value="{{Application__c.business_city__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <div class="styled-select">
+          <label for="business_state__c">State<span class="required"> *</span></label>
+          <select id="business_state__c" name="business_state__c" class="col-xs-12 appl_1_businessstate required"
+                  data-value="{{Application__c.business_state__c}}">
+          </select>
+        </div>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-3">
+        <label for="business_zip_code__c">ZIP Code<span class="required"> *</span></label>
+        <input name="business_zip_code__c" id="business_zip_code__c" type="text" maxlength="5"
+           class="col-xs-12 appl_1_businesszipcode required zipcodeUS" value="{{Application__c.business_zip_code__c}}"/>
+      </div>
+    </div>
+  </div>
+  <div class="formFields sectionTitleContainer" id="additionalBusinessInfo_1">
+    <!--<h4 class="sectionTitle">{{PageLabels.Contact_Information}}</h4>-->
+    <h4 class="sectionTitle">{{PageLabels.additional_business_information}}</h4>
+
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="business_ein_tin__c">Business EIN/TIN<span class="required"> *</span></label>
+        <input type="text" name="business_ein_tin__c" id="business_ein_tin__c"
+           class="col-xs-12 required taxid" value="{{Application__c.business_ein_tin__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <div class="styled-select">
+          <label for="business_registration_state__c">Business Registration State<span class="required"> *</span></label>
+          <select id="business_registration_state__c" name="business_registration_state__c" class="col-xs-12 appl_1_businessRegistrationState required"
+                  data-value="{{Application__c.business_registration_state__c}}">
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row fieldSet">
+      <div class="js-float-label-wrapper fieldItem col-xs-5">
+        <label for="naics_code__c">NAICS Code<span class="required"> *</span></label>
+        <input name="naics_code__c" id="naics_code__c" type="text" class="col-xs-12"
+           value="{{Application__c.naics_code__c}}"/>
+      </div>
+      <div class="js-float-label-wrapper fieldItem col-xs-4">
+        <div class="styled-select">
+          <label for="nature_of_business__c">Nature of Business<span class="required"> *</span></label>
+          <select id="nature_of_business__c" name="nature_of_business__c" class="col-xs-12 appl_1_natureOfBusiness required"
+                  data-value="{{Application__c.nature_of_business__c}}">
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+<div id="appl_1" class="applicant">
+<h4 class="sectionHeader">{{Application__c.first_name__c}}&nbsp;{{Application__c.last_name__c}}: {{PageLabels.personal_information}} <span class="btn pull-right">
+<div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo primaryBtn padding10 font144"  id="myButton">Save for Later</span>
+  </div></span></h4>
+
+<div class="formFields sectionTitleContainer" id="appl_1_nameAdd">
+  <div class="row fieldSet marginTop10">
+   <div class="js-float-label-wrapper fieldItem col-xs-4">
+    <h4 class="sectionTitle">{{PageLabels.name_and_address}}</h4>
+   </div>
+   <div class="js-float-label-wrapper fieldItem promo col-xs-2">
+      <label for="promo_code__c">Promo Code</label>
+      <input type="text" name="promo_code__c" id="promo_code__c"
+             class="col-xs-12 alphanumericwithasterisk" value="{{Application__c.promo_code__c}}"/>
+    </div>
+  </div>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="first_name__c">First Name<span class="required"> *</span></label>
+      <input type="text" name="first_name__c" id="first_name__c"
+             class="firstName col-xs-12 required validName" value="{{Application__c.first_name__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="middle_name__c">Middle Name</label>
+      <input name="middle_name__c" type="text" id="middle_name__c" class="col-xs-12 validName"
+             value="{{Application__c.middle_name__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="last_name__c">Last Name<span class="required"> *</span></label>
+      <input type="text" name="last_name__c" id="last_name__c"
+             class="lastName col-xs-12 required validName" value="{{Application__c.last_name__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <div class="styled-select">
+        <label for="suffix__c">Suffix</label>
+        <select id="suffix__c" name="suffix__c" class="col-xs-12" data-value="{{Application__c.suffix__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_1__c">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="street_address_1__c" id="street_address_1__c" type="text"
+             class="col-xs-12 appl_1_address1 required validAddress" value="{{Application__c.street_address_1__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2__c">Street Address 2</label>
+      <input name="street_address_2__c" id="street_address_2__c" type="text"
+             class="col-xs-12 appl_1_address2" value="{{Application__c.street_address_2__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city__c">City<span class="required"> *</span></label>
+      <input name="city__c" id="city__c" type="text" class="col-xs-12 appl_1_city required alpha"
+             value="{{Application__c.city__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select">
+        <label for="state__c">State<span class="required"> *</span></label>
+        <select id="state__c" name="state__c" class="col-xs-12 appl_1_state required"
+                data-value="{{Application__c.state__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code__c">ZIP Code<span class="required"> *</span></label>
+      <input name="zip_code__c" id="zip_code__c" type="text" maxlength="5"
+             class="col-xs-12 appl_1_zipcode required zipcodeUS" value="{{Application__c.zip_code__c}}"/>
+    </div>
+  </div> 
+  <div class="row fieldSet sectionTitleContainer">
+    <div class="fieldItem col-xs-3">
+      <h4 class="sectionTitle marginBtm15">{{PageLabels.housing_status__c}}</h4>
+
+      <div class="js-float-label-wrapper">
+        <div class="styled-select">
+          <label for="housing_status__c">Select<span class="required"> *</span></label>
+          <select id="housing_status__c" name="housing_status__c" class="col-xs-12 required"
+                  data-value="{{Application__c.housing_status__c}}">
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="fieldItem col-xs-7">
+      <h4 class="sectionTitle">{{PageLabels.monthly_payment__c}}</h4>
+
+      <div class="row fieldSet marginTop10">
+        <div class="js-float-label-wrapper fieldItem col-xs-6">
+          <label for="monthly_payment__c">$<span class="required"> *</span></label>
+          <input style="display:block;float:left;" name="monthly_payment__c" type="text" class="col-xs-12 required currencyUS"
+                 id="monthly_payment__c" maxlength="12" value="{{Application__c.monthly_payment__c}}"/>
+          <!-- <span style="display:block" data-toggle="popover" data-placement="right" data-content="The total amount of your monthly payment, either to the lender of your home loan if you are a home owner, or to the owner of your rented property." data-original-title="" title=""><img src="{{config.custom_resources_url}}images/help.png" alt="Help Icon" height="32" width="32"></span> -->
+          
+        </div>
+        <div class="col-xs-6">
+              <img class="help-icon" alt="Help Icon" src="{{config.custom_resources_url}}images/help.png"  data-toggle="popover" data-placement="right" data-title="The total amount of your monthly payment, either to the lender of your home loan if you are a home owner, or to the owner of your rented property." >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields sectionTitleContainer" id="prevAddDuration_1">
+  <h4 class="sectionTitle paddingTop10">{{PageLabels.how_long_have_you_lived_at_this_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="years__c">Years<span class="required"> *</span></label>
+      <input id="years__c" type="text" class="col-xs-12 required durationYears" name="years__c" maxlength="2"
+             value="{{Application__c.years__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="months__c">Months<span class="required"> *</span></label>
+      <input name="months__c" type="text" class="col-xs-12 required durationMonths" id="months__c" maxlength="2"
+             value="{{Application__c.months__c}}"/>
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide previousAddress sectionTitleContainer" id="appl_1_previousAdd">
+  <h4 class="sectionTitle">{{PageLabels.personalinfo_previous_address}}<span data-toggle="popover" data-placement="top" data-content="Please enter previous address information if you have stayed lesser than 1 year at your current address." data-original-title="" title=""><img src="{{config.custom_resources_url}}images/help.png" class="help-icon previous_address" alt="Help Icon"></span></h4> 
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_1_prev__c"
+             class="street-address-1">Street Address 1<span class="required"> *</span></label>
+      <input id="street_address_1_prev__c" class="appl_1_prevAdd1_c col-xs-12 validAddress" type="text"
+             name="street_address_1_prev__c" value="{{Application__c.street_address_1_prev__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2_prev__c" class="street-address-2">Street Address 2</label>
+      <input id="street_address_2_prev__c" class="appl_1_prevAdd2_c col-xs-12" type="text"
+             name="street_address_2_prev__c" value="{{Application__c.street_address_2_prev__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city_prev__c" class="city-optional">City<span class="required"> *</span></label>
+      <input name="city_prev__c" id="city_prev__c" class="col-xs-12 appl_1_prevCity alpha" type="text"
+             value="{{Application__c.city_prev__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select">
+        <label for="state_prev__c">State<span class="required"> *</span></label>
+        <select id="state_prev__c" name="state_prev__c" class="state_prev__c col-xs-12"
+                data-value="{{Application__c.state_prev__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code_prev__c">ZIP Code<span class="required"> *</span></label>
+      <input name="zip_code_prev__c" id="zip_code_prev__c" class="col-xs-12 zip_code_prev__c zipcodeUS" type="text"
+             maxlength="5" value="{{Application__c.zip_code_prev__c}}"/>
+    </div>
+  </div>
+</div>
+{{#if DisplayedFields.marital_status__c}}
+<div class="formFields sectionTitleContainer" id="maritalStatus_1">
+  <h4 class="sectionTitle paddingTop10">{{PageLabels.marital_status__c}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <div class="styled-select styled-select-marital">
+        <label for="marital_status__c">Select<span class="required"> *</span></label>
+        <select id="marital_status__c" name="marital_status__c" class="col-xs-12 required"
+                data-value="{{Application__c.marital_status__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+<div class="formFields sectionTitleContainer" id="contactInfo_1">
+  <h4 class="sectionTitle paddingTop10">{{PageLabels.contact_information}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="primary_phone_number__c">Day Phone<span class="required"> *</span></label>
+      <input type="text" name="primary_phone_number__c" id="primary_phone_number__c"
+             class="col-xs-12 required phoneUS" value="{{Application__c.primary_phone_number__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="secondary_phone_number__c">Work Phone<span class="required"> *</span></label>
+      <input name="secondary_phone_number__c" type="text" id="secondary_phone_number__c"
+             class="col-xs-12 required phoneUS" value="{{Application__c.secondary_phone_number__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="email_address__c">E-mail Address<span class="required"> *</span></label>
+      <input style="float:left;display:block;" name="email_address__c" id="email_address__c" type="text" class="col-xs-10 required email"
+             value="{{Application__c.email_address__c}}"/>
+      <div class="col-xs-1 email-help" data-toggle="popover" data-placement="top" data-content="We need your valid email address so we can send you information about the status of your application.
+We may also need to contact you during the application review process to verify the information you provided. 
+Please note: For your protection we will not ask you to provide any information by email. This email address will never be disclosed to third parties." data-original-title="" title=""><img src="{{config.custom_resources_url}}images/help.png" class="help-icon" alt="Help Icon"></div>
+    </div>
+  </div>
+
+  <div class="disclosure_text paddingStyle borderStyle_disclosure blue-heading2 marginTop20">
+    <p>
+    <h3 class="marginTop5 robotoBold" style="margin-left: 12px">
+    {{#equal Application__c.current_channel__c 'Online' }}
+      {{PageLabels.contact_policy_disc_online}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Branch' }}
+      {{PageLabels.contact_policy_disc_branch}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Call Center' }}
+      {{PageLabels.contact_policy_disc_call_center}}
+    {{/equal}}</h3></p>
+  </div>
+  <!-- <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    <p>
+    <h3 class="font-style marginTop5">{{PageLabels.Personal_Info_Email_Contact_Policy_Heading}}</h3></p>
+  </div> -->
+
+</div>
+
+</div>
+<!-- secondary applicant info -->
+<!-- Add applicant Section -->
+<div id="addApplicantLink_1" class="addApplicant">
+  <hr class="dotted">
+  <span>
+    <button type="button" class="primaryBtn margin0 tabFocus add_link_1 myButton border-form">Add an Applicant</button>
+    <input type="checkbox" class="add_link_1_checkbox hidden" name="first_joint_applicant__c" value="true"
+        data-value="{{Application__c.first_joint_applicant__c}}"/>
+  </span>
+</div>
+
+<div id="appl_2" class="applicant hide">
+<h4 class="sectionHeader">
+  <span class="pull-right remove btn"><button type="button" class="remove_link_2 primaryBtn margin0 tabFocus myButton border-form">Remove applicant</button></span>
+  Applicant 2: {{PageLabels.personal_information}}
+</h4>
+<div class="formFields sectionTitleContainer" id="appl_2_nameAdd">
+  <h4 class="sectionTitle">{{PageLabels.name_and_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="first_name_j__c" class="appl_2_firstName_label">First Name<span
+          class="required"> *</span></label>
+      <input type="text" name="first_name_j__c" id="first_name_j__c"
+             class="firstName col-xs-12 appl_2_firstName validName"
+             value="{{Application__c.first_name_j__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="middle_name_j__c">Middle Name</label>
+      <input name="middle_name_j__c" type="text" id="middle_name_j__c"
+             class="col-xs-12 appl_2_middleName validName" value="{{Application__c.middle_name_j__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="last_name_j__c">Last Name<span class="required"> *</span></label>
+      <input type="text" name="last_name_j__c" id="last_name_j__c"
+             class="col-xs-12 lastName appl_2_lastName validName"
+             value="{{Application__c.last_name_j__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <div class="styled-select">
+        <label for="suffix_j__c">Suffix</label>
+        <select id="suffix_j__c" name="suffix_j__c" class="col-xs-12 appl_2_suffix"
+                data-value="{{Application__c.suffix_j__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="fieldItem col-xs-12">
+      <input type="checkbox" class="copy_prime_address_2">
+      <span class="tipLink sectionTitle">{{PageLabels.use_as_above__c}}</span>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_j__c" class="appl_2_address1_label"
+             id="address_label_2">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="street_address_j__c" id="street_address_j__c" type="text"
+             class="col-xs-12 appl_2_address1 validAddress" value="{{Application__c.street_address_j__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2_j__c" class="appl_2_address2_label" id="address_label_21">Street Address 2</label>
+      <input name="street_address_2_j__c" id="street_address_2_j__c" type="text" class="col-xs-12 appl_2_address2"
+             value="{{Application__c.street_address_2_j__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city_j__c" class="appl_2_city_label" id="city_label_2">City<span class="required"> *</span></label>
+      <input name="city_j__c" id="city_j__c" type="text" class="col-xs-12 appl_2_city alpha"
+             value="{{Application__c.city_j__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select styled-select-state">
+        <label for="state_j__c" >State<span class="required"> *</span></label>
+        <select id="state_j__c" name="state_j__c" class="col-xs-12 appl_2_state"
+                data-value="{{Application__c.state_j__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code_j__c" class="appl_2_zipcode_label" id="zipcode_label_2">ZIP Code<span
+          class="required"> *</span></label>
+      <input name="zip_code_j__c" id="zip_code_j__c" type="text" class="col-xs-12 appl_2_zipcode zipcodeUS" maxlength="5"
+             value="{{Application__c.zip_code_j__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet sectionTitleContainer">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <h4 class="sectionTitle marginBtm15">{{PageLabels.housing_status__c}}</h4>
+
+      <div class="styled-select styled-select-housing">
+        <label for="housing_status_j__c">Select<span class="required"> *</span></label>
+        <select id="housing_status_j__c" name="housing_status_j__c" class="col-xs-12 appl_2_housingStatus"
+                data-value="{{Application__c.housing_status_j__c}}">
+          <option value="">Select *</option>
+          <option value="Own">Own</option>
+          <option value="Rent">Rent</option>
+          <option value="Other">Other</option>
+          <option value="Parents">Parents/Relative</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem col-xs-3">
+      <h4 class="sectionTitle">{{PageLabels.monthly_payment__c}}</h4>
+
+      <div class="row fieldSet marginTop10">
+        <div class="js-float-label-wrapper fieldItem">
+          <label for="monthly_payment_j__c">$<span class="required"> *</span></label>
+          <input name="monthly_payment_j__c" type="text" class="col-xs-12 appl_2_monthlyPayment currencyUS"
+                 id="monthly_payment_j__c" maxlength="12" value="{{Application__c.monthly_payment_j__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields sectionTitleContainer" id="prevAddDuration_2">
+  <h4 class="sectionTitle">{{PageLabels.how_long_have_you_lived_at_this_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="years_j__c">Years<span class="required"> *</span></label>
+      <input id="years_j__c" type="text" class="col-xs-12 appl_2_addYears durationYears" name="years_j__c"
+             maxlength="2" value="{{Application__c.years_j__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="months_j__c">Months<span class="required"> *</span></label>
+      <input name="months_j__c" type="text" class="col-xs-12 appl_2_addMonths durationMonths"
+             id="months_j__c" maxlength="2" value="{{Application__c.months_j__c}}"/>
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide previousAddress sectionTitleContainer" id="appl_2_previousAdd">
+  <h4 class="sectionTitle">{{PageLabels.personalinfo_previous_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_1_jp__c">Street Address 1<span class="required"> *</span></label>
+      <input id="street_address_1_jp__c" type="text" class="col-xs-12 appl_2_prevAdd1 validAddress"
+             name="street_address_1_jp__c" value="{{Application__c.street_address_1_jp__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2_jp__c">Street Address 2</label>
+      <input id="street_address_2_jp__c" type="text" class="col-xs-12 appl_2_prevAdd2" name="street_address_2_jp__c"
+             value="{{Application__c.street_address_2_jp__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city_jp__c">City<span class="required"> *</span></label>
+      <input name="city_jp__c" id="city_jp__c" type="text" class="col-xs-12 appl_2_prevCity alpha"
+             value="{{Application__c.city_jp__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select">
+        <label for="state_jp__c">State<span class="required"> *</span></label>
+        <select id="state_jp__c" name="state_jp__c" class="col-xs-12 appl_2_prevState"
+                data-value="{{Application__c.state_jp__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code_jp__c">ZIP Code<span class="required"> *</span></label>
+      <input name="zip_code_jp__c" id="zip_code_jp__c" class="col-xs-12 appl_2_prevZIPCode zipcodeUS" type="text"
+             maxlength="5" value="{{Application__c.zip_code_jp__c}}"/>
+    </div>
+  </div>
+</div>
+{{#if DisplayedFields.marital_status__c}}
+<div class="formFields sectionTitleContainer" id="maritalStatus_2">
+  <h4 class="sectionTitle">{{PageLabels.marital_status__c}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <div class="styled-select">
+        <label for="marital_status_j__c">Select<span class="required"> *</span></label>
+        <select id="marital_status_j__c" name="marital_status_j__c" class="col-xs-12 appl_2_maritalStatus"
+                data-value="{{Application__c.marital_status_j__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+<div class="formFields sectionTitleContainer" id="relationshipToPrimary_2">
+  <h4 class="sectionTitle">{{PageLabels.relationship_to_primary_applicant}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select">
+        <label for="relationship_to_primary_applicant_j1__c">Select<span class="required"> *</span></label>
+        <select id="relationship_to_primary_applicant_j1__c" name="relationship_to_primary_applicant_j1__c"
+                class="appl_2_relationshipToPrimary col-xs-12"
+                data-value="{{Application__c.relationship_to_primary_applicant_j1__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields sectionTitleContainer" id="contactInfo_2">
+  <h4 class="sectionTitle">{{PageLabels.contact_information}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="primary_phone_number_j__c">Day Phone<span class="required"> *</span></label>
+      <input name="primary_phone_number_j__c" id="primary_phone_number_j__c" type="text"
+             class="col-xs-12 phoneUS appl_2_dayPhone" value="{{Application__c.primary_phone_number_j__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="secondary_phone_number_j__c">Work Phone<span class="required"> *</span></label>
+      <input name="secondary_phone_number_j__c" type="text" id="secondary_phone_number_j__c"
+             class="col-xs-12 phoneUS appl_2_eveningPhone" value="{{Application__c.secondary_phone_number_j__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="email_address_j__c">E-mail Address<span class="required"> *</span></label>
+      <input name="email_address_j__c" id="email_address_j__c" type="text" class="col-xs-12 appl_2_email required email"
+             value="{{Application__c.email_address_j__c}}"/>
+    </div>
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure blue-heading2 marginTop20">
+    <p>
+    <h3 class="marginTop5 robotoBold" style="margin-left:12px">{{#equal Application__c.current_channel__c 'Online' }}
+      {{PageLabels.contact_policy_disc_online}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Branch' }}
+      {{PageLabels.contact_policy_disc_branch}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Call Center' }}
+      {{PageLabels.contact_policy_disc_call_center}}
+    {{/equal}}</h3></p><br/>
+  </div>
+  <!-- <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    <p>
+    <h3 class="font-style marginTop5">{{PageLabels.Personal_Info_Email_Contact_Policy_Heading}}{{PageLabels.Personal_Info_Email_Contact_policy}}</h3></p>
+  </div> -->
+
+</div>
+</div>
+<!-- Add applicant Section -->
+<div id="addApplicantLink_2" class="addApplicant hide">
+  <hr class="dotted">
+  <span>
+  <button type="button" class="primaryBtn margin0 tabFocus add_link_2 myButton border-form">Add an Applicant</button>
+    <input type="checkbox" name="second_joint_applicant__c" id="second_joint_applicant__c"
+           class="add_link_2_checkbox hidden" value="true" data-value="{{Application__c.second_joint_applicant__c}}"/>
+    </span>
+</div>
+
+
+<!--end of secondary application info -->
+<!-- third application info -->
+<div id="appl_3" class="applicant hide">
+<h4 class="sectionHeader">
+  <span class="pull-right remove btn"><button type="button" class="remove_link_3 primaryBtn margin0 tabFocus myButton border-form">Remove applicant</button></span>
+  Applicant 3: {{PageLabels.personal_information}}
+</h4>
+<div class="formFields sectionTitleContainer" id="appl_3_nameAdd">
+  <h4 class="sectionTitle">{{PageLabels.name_and_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="first_name_j2__c">First Name<span class="required"> *</span></label>
+      <input type="text" name="first_name_j2__c" id="first_name_j2__c"
+             class="col-xs-12 firstName appl_3_firstName validName"
+             value="{{Application__c.first_name_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="middle_name_j2__c">Middle Name</label>
+      <input name="middle_name_j2__c" type="text" id="middle_name_j2__c"
+             class="col-xs-12 appl_3_middleName validName" value="{{Application__c.middle_name_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="last_name_j2__c">Last Name<span class="required"> *</span></label>
+      <input type="text" name="last_name_j2__c" id="last_name_j2__c"
+             class="col-xs-12 lastName appl_3_lastName validName"
+             value="{{Application__c.last_name_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <div class="styled-select">
+        <label for="suffix_j2__c">Suffix</label>
+        <select id="suffix_j2__c" name="suffix_j2__c" class="col-xs-12 appl_3_suffix"
+                data-value="{{Application__c.suffix_j2__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="fieldItem col-xs-12">
+      <input type="checkbox" class="copy_prime_address_3">
+      <span class="tipLink sectionTitle">{{PageLabels.use_as_above__c}}</span>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_1_j2__c" class="appl_3_address1_label"
+             id="address_label_3">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="street_address_1_j2__c" id="street_address_1_j2__c" type="text"
+             class="col-xs-12 appl_3_address1 validAddress" value="{{Application__c.street_address_1_j2__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2_j2__c" class="appl_3_address2_label"
+             id="address_label_31">Street Address 2</label>
+      <input name="street_address_2_j2__c" id="street_address_2_j2__c" type="text" class="col-xs-12 appl_3_address2"
+             value="{{Application__c.street_address_2_j2__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city_j2__c" class="appl_3_city_label" id="city_label_3">City<span class="required"> *</span></label>
+      <input name="city_j2__c" id="city_j2__c" type="text" class="col-xs-12 appl_3_city alpha"
+             value="{{Application__c.city_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select styled-select-state">
+        <label for="state_j2__c">State<span class="required"> *</span></label>
+        <select id="state_j2__c" name="state_j2__c" class="col-xs-12 appl_3_state"
+                data-value="{{Application__c.state_j2__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code_j2__c" class="appl_3_zipcode_label" id="zipcode_label_3">ZIP Code<span
+          class="required"> *</span></label>
+      <input name="zip_code_j2__c" id="zip_code_j2__c" type="text" class="col-xs-12 appl_3_zipcode zipcodeUS" maxlength="5"
+             value="{{Application__c.zip_code_j2__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet sectionTitleContainer">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <h4 class="sectionTitle marginBtm15">{{PageLabels.housing_status__c}}</h4>
+
+      <div class="styled-select">
+        <label for="housing_status_j2__c">Select<span class="required"> *</span></label>
+        <select id="housing_status_j2__c" name="housing_status_j2__c" class="col-xs-12 appl_3_employmentStatus"
+                data-value="{{Application__c.housing_status_j2__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem col-xs-3">
+      <h4 class="sectionTitle">{{PageLabels.monthly_payment__c}}</h4>
+
+      <div class="row fieldSet marginTop10">
+        <div class="js-float-label-wrapper fieldItem">
+          <label for="monthly_payment_j2__c">$<span class="required"> *</span></label>
+          <input name="monthly_payment_j2__c" type="text" class="col-xs-12 appl_3_annualIncome currencyUS"
+                 id="monthly_payment_j2__c"
+                 maxlength="12" value="{{Application__c.monthly_payment_j2__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields sectionTitleContainer" id="prevAddDuration_3">
+  <h4 class="sectionTitle">{{PageLabels.how_long_have_you_lived_at_this_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="years_j2__c">Years<span class="required"> *</span></label>
+      <input id="years_j2__c" type="text" class="col-xs-12 appl_3_addYears durationYears" name="years_j2__c"
+             maxlength="2" value="{{Application__c.years_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="months_j2__c">Months<span class="required"> *</span></label>
+      <input name="months_j2__c" type="text" class="col-xs-12 appl_3_addMonths durationMonths"
+             id="months_j2__c" maxlength="2" value="{{Application__c.months_j2__c}}"/>
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide previousAddress sectionTitleContainer" id="appl_3_previousAdd">
+  <h4 class="sectionTitle">{{PageLabels.personalinfo_previous_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_1_jp2__c">Street Address 1<span class="required"> *</span></label>
+      <input id="street_address_1_jp2__c" type="text" class="col-xs-12 appl_3_prevAdd1 validAddress"
+             name="street_address_1_jp2__c" value="{{Application__c.street_address_1_jp2__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2_jp2__c">Street Address 2</label>
+      <input id="street_address_2_jp2__c" type="text" class="col-xs-12 appl_3_prevAdd2"
+             name="street_address_2_jp2__c" value="{{Application__c.street_address_2_jp2__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city_jp2__c">City<span class="required"> *</span></label>
+      <input name="city_jp2__c" id="city_jp2__c" type="text" class="col-xs-12 appl_3_prevCity alpha"
+             value="{{Application__c.city_jp2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select">
+        <label for="state_jp2__c">State<span class="required"> *</span></label>
+        <select id="state_jp2__c" name="state_jp2__c" class="col-xs-12 appl_3_prevState"
+                data-value="{{Application__c.state_jp2__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code_jp2__c">ZIP Code<span class="required"> *</span></label>
+      <input name="zip_code_jp2__c" id="zip_code_jp2__c" class="col-xs-12 appl_3_prevZIPCode zipcodeUS" type="text"
+             maxlength="5" value="{{Application__c.zip_code_jp2__c}}"/>
+    </div>
+  </div>
+</div>
+{{#if DisplayedFields.marital_status__c}}
+<div class="formFields sectionTitleContainer" id="maritalStatus_3">
+  <h4 class="sectionTitle">{{PageLabels.marital_status__c}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <div class="styled-select">
+        <label for="marital_status_j2__c">Select<span class="required"> *</span></label>
+        <select id="marital_status_j2__c" name="marital_status_j2__c" class="col-xs-12 appl_3_maritalStatus"
+                data-value="{{Application__c.marital_status_j2__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+<div class="formFields sectionTitleContainer" id="relationshipToPrimary_3">
+  <h4 class="sectionTitle">{{PageLabels.relationship_to_primary_applicant}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <div class="styled-select">
+        <label for="relationship_to_primary_applicant_j2__c">Select<span class="required"> *</span></label>
+        <select id="relationship_to_primary_applicant_j2__c" name="relationship_to_primary_applicant_j2__c"
+                class="col-xs-12 appl_3_relationshipToPrimary"
+                data-value="{{Application__c.relationship_to_primary_applicant_j2__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields sectionTitleContainer" id="contactInfo_3">
+  <h4 class="sectionTitle">{{PageLabels.contact_information}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="primary_phone_number_j2__c">Day Phone<span class="required"> *</span></label>
+      <input name="primary_phone_number_j2__c" id="primary_phone_number_j2__c" type="text"
+             class="col-xs-12 phoneUS appl_3_dayPhone" value="{{Application__c.primary_phone_number_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="secondary_phone_number_j2__c">Work Phone<span class="required"> *</span></label>
+      <input name="secondary_phone_number_j2__c" type="text" id="secondary_phone_number_j2__c"
+             class="col-xs-12 phoneUS appl_3_eveningPhone" value="{{Application__c.secondary_phone_number_j2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="email_address_j2__c">E-mail Address<span class="required"> *</span></label>
+      <input name="email_address_j2__c" id="email_address_j2__c" type="text" class="col-xs-12 appl_3_email required email"
+             value="{{Application__c.email_address_j2__c}}"/>
+    </div>
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure blue-heading2 marginTop20">
+    <p>
+    <h3 class="marginTop5 robotoBold" style="margin-left: 12px">{{#equal Application__c.current_channel__c 'Online' }}
+      {{PageLabels.contact_policy_disc_online}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Branch' }}
+      {{PageLabels.contact_policy_disc_branch}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Call Center' }}
+      {{PageLabels.contact_policy_disc_call_center}}
+    {{/equal}}</h3></p><br/>
+  </div>
+</div>
+</div>
+<!-- Add applicant Section -->
+<div id="addApplicantLink_3" class="addApplicant hide">
+  <hr class="dotted">
+  <span>
+    <button type="button" class="primaryBtn margin0 tabFocus add_link_3 myButton border-form">Add an Applicant</button>
+    <input type="checkbox" name="third_joint_applicant__c" id="third_joint_applicant__c" value="true"
+           class="add_link_3_checkbox hidden" data-value="{{Application__c.third_joint_applicant__c}}"/>
+  </span>
+</div>
+
+<!-- end of third application info --->
+
+<!-- fourth application ---->
+
+<div id="appl_4" class="applicant hide">
+<h4 class="sectionHeader">
+  <span class="pull-right remove btn"><button type="button" class="remove_link_4 primaryBtn margin0 tabFocus myButton border-form">Remove applicant</button></span>
+  Applicant 4: {{PageLabels.personal_information}}
+</h4>
+<div class="formFields sectionTitleContainer" id="appl_4_nameAdd">
+  <h4 class="sectionTitle">{{PageLabels.name_and_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="first_name_j3__c">First Name<span class="required"> *</span></label>
+      <input type="text" name="first_name_j3__c" id="first_name_j3__c"
+             class="col-xs-12 firstName  appl_4_firstName validName"
+             value="{{Application__c.first_name_j3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <label for="middle_name_j3__c">Middle Name</label>
+      <input name="middle_name_j3__c" type="text" id="middle_name_j3__c"
+             class="col-xs-12 appl_4_middleName validName" value="{{Application__c.middle_name_j3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="last_name_j3__c">Last Name<span class="required"> *</span></label>
+      <input type="text" name="last_name_j3__c" id="last_name_j3__c"
+             class="col-xs-12 lastName appl_4_lastName validName"
+             value="{{Application__c.last_name_j3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-2">
+      <div class="styled-select">
+        <label for="suffix_j3__c">Suffix</label>
+        <select id="suffix_j3__c" name="suffix_j3__c" class="col-xs-12 appl_4_suffix"
+                data-value="{{Application__c.suffix_j3__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="fieldItem col-xs-12">
+      <input type="checkbox" class="copy_prime_address_4">
+      <span class="tipLink sectionTitle">{{PageLabels.use_as_above__c}}</span>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_1_j3__c" class="appl_4_address1_label"
+             id="address_label_4">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="street_address_1_j3__c" id="street_address_1_j3__c" type="text"
+             class="col-xs-12 appl_4_address1 validAddress" value="{{Application__c.street_address_1_j3__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2_j3__c" class="appl_4_address2_label"
+             id="address_label_41">Street Address 2</label>
+      <input name="street_address_2_j3__c" id="street_address_2_j3__c" type="text" class="col-xs-12 appl_4_address2"
+             value="{{Application__c.street_address_2_j3__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city_j3__c" class="appl_4_city_label" id="city_label_4">City<span
+          class="required"> *</span></label>
+      <input name="city_j3__c" id="city_j3__c" type="text" class="col-xs-12 appl_4_city alpha"
+             value="{{Application__c.city_j3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select">
+        <label for="state_j3__c">State<span class="required"> *</span></label>
+        <select id="state_j3__c" name="state_j3__c" class="col-xs-12 appl_4_state"
+                data-value="{{Application__c.state_j3__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code_j3__c" class="appl_4_zipcode_label" id="zipcode_label_4">ZIP Code<span
+          class="required"> *</span></label>
+      <input name="zip_code_j3__c" id="zip_code_j3__c" type="text" class="col-xs-12 appl_4_zipcode zipcodeUS" maxlength="5"
+             value="{{Application__c.zip_code_j3__c}}"/>
+    </div>
+  </div>
+
+  <div class="row fieldSet sectionTitleContainer">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <h4 class="sectionTitle marginBtm15">{{PageLabels.housing_status__c}}</h4>
+
+      <div class="styled-select">
+        <label for="housing_status_j3__c">Select<span class="required"> *</span></label>
+        <select id="housing_status_j3__c" name="housing_status_j3__c" class="col-xs-12 appl_4_employmentStatus"
+                data-value="{{Application__c.housing_status_j3__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem col-xs-3">
+      <h4 class="sectionTitle">{{PageLabels.monthly_payment__c}}</h4>
+
+      <div class="row fieldSet marginTop10">
+        <div class="js-float-label-wrapper fieldItem">
+          <label for="monthly_payment_j3__c">$<span class="required"> *</span></label>
+          <input name="monthly_payment_j3__c" type="text" class="col-xs-12 appl_4_annualIncome currencyUS"
+                 id="monthly_payment_j3__c"
+                 maxlength="12" value="{{Application__c.monthly_payment_j3__c}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields sectionTitleContainer" id="prevAddDuration_4">
+  <h4 class="sectionTitle">{{PageLabels.how_long_have_you_lived_at_this_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="years_j3__c">Years<span class="required"> *</span></label>
+      <input id="years_j3__c" type="text" class="col-xs-12 appl_4_addYears durationYears" name="years_j3__c"
+             maxlength="2" value="{{Application__c.years_j3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="months_j3__c">Months<span class="required"> *</span></label>
+      <input name="months_j3__c" type="text" class="col-xs-12 appl_4_addMonths durationMonths"
+             id="months_j3__c" maxlength="2" value="{{Application__c.months_j3__c}}"/>
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide previousAddress sectionTitleContainer" id="appl_4_previousAdd">
+  <h4 class="sectionTitle">{{PageLabels.personalinfo_previous_address}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_1_jp3__c">Street Address 1<span class="required"> *</span></label>
+      <input id="street_address_1_jp3__c" type="text" class="col-xs-12 appl_4_prevAdd1 validAddress"
+             name="street_address_1_jp3__c" value="{{Application__c.street_address_1_jp3__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-12">
+      <label for="street_address_2_jp3__c">Street Address 2</label>
+      <input id="street_address_2_jp3__c" type="text" class="col-xs-12 appl_4_prevAdd2"
+             name="street_address_2_jp3__c" value="{{Application__c.street_address_2_jp3__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="city_jp3__c">City<span class="required"> *</span></label>
+      <input name="city_jp3__c" id="city_jp3__c" type="text" class="col-xs-12 appl_4_prevCity alpha"
+             value="{{Application__c.city_jp3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <div class="styled-select">
+        <label for="state_jp3__c">State<span class="required"> *</span></label>
+        <select id="state_jp3__c" name="state_jp3__c" class="col-xs-12 appl_4_prevState"
+                data-value="{{Application__c.state_jp3__c}}">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="zip_code_jp3__c">ZIP Code<span class="required"> *</span></label>
+      <input name="zip_code_jp3__c" id="zip_code_jp3__c" class="col-xs-12 appl_4_prevZIPCode zipcodeUS" type="text"
+             maxlength="5" value="{{Application__c.zip_code_jp3__c}}"/>
+    </div>
+  </div>
+</div>
+{{#if DisplayedFields.marital_status__c}}
+<div class="formFields sectionTitleContainer" id="maritalStatus_4">
+  <h4 class="sectionTitle">{{PageLabels.marital_status__c}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <div class="styled-select">
+        <label for="marital_status_j3__c">Select<span class="required"> *</span></label>
+        <select id="marital_status_j3__c" name="marital_status_j3__c" class="col-xs-12 appl_4_maritalStatus"
+                data-value="{{Application__c.marital_status_j3__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+<div class="formFields sectionTitleContainer" id="relationshipToPrimary_4">
+  <h4 class="sectionTitle">{{PageLabels.relationship_to_primary_applicant}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <div class="styled-select">
+        <label for="relationship_to_primary_applicant_j3__c">Select<span class="required"> *</span></label>
+        <select id="relationship_to_primary_applicant_j3__c" name="relationship_to_primary_applicant_j3__c"
+                class="appl_4_relationshipToPrimary col-xs-12"
+                data-value="{{Application__c.relationship_to_primary_applicant_j3__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields sectionTitleContainer" id="contactInfo_4">
+  <h4 class="sectionTitle">{{PageLabels.contact_information}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="primary_phone_number_j3__c">Day Phone<span class="required"> *</span></label>
+      <input name="primary_phone_number_j3__c" id="primary_phone_number_j3__c" type="text"
+             class="col-xs-12 phoneUS appl_4_dayPhone" value="{{Application__c.primary_phone_number_j3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="secondary_phone_number_jp3__c">Work Phone<span class="required"> *</span></label>
+      <input name="secondary_phone_number_jp3__c" type="text" id="secondary_phone_number_jp3__c"
+             class="col-xs-12 phoneUS appl_4_eveningPhone" value="{{Application__c.secondary_phone_number_jp3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="email_address_j3__c">E-mail Address<span class="required"> *</span></label>
+      <input name="email_address_j3__c" id="email_address_j3__c" type="text" class="col-xs-12 appl_4_email required email"
+             value="{{Application__c.email_address_j3__c}}"/>
+    </div>
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure blue-heading2 marginTop20">
+    <p>
+    <h3 class="marginTop5 robotoBold" style="margin-left: 12px"> {{#equal Application__c.current_channel__c 'Online' }}
+      {{PageLabels.contact_policy_disc_online}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Branch' }}
+      {{PageLabels.contact_policy_disc_branch}}
+    {{/equal}}
+    {{#equal Application__c.current_channel__c 'Call Center' }}
+      {{PageLabels.contact_policy_disc_call_center}}
+    {{/equal}}</h3></p><br/>
+  </div>
+  <!-- <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    <p>
+    <h3 class="font-style marginTop5">{{PageLabels.Personal_Info_Email_Contact_Policy_Heading}}{{PageLabels.Personal_Info_Email_Contact_policy}}</h3></p>
+  </div> -->
+
+</div>
+</div>
+</div>
+
+<!-- <div id="actionPanel">
+  <button type="submit" class="myButton floatRt primaryBtn margin0 tabFocus font144">{{PageLabels.next_button}}</button>
+  <a href="#cross-sell" id="personal-info-previous" class="button_font tabFocus"><span class="myButton secondaryBtn floatLft cancel marginRht20 font144">{{PageLabels.previous_button}}</span></a>
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo primaryBtn padding10 font144"  id="myButton">Save For later</span>
+  </div>
+</div> -->
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+<!-- Progress bar on top of the page -->
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+  {{#if Application__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow">{{Application__c.primary_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.second_offer__c}}
+  <li id="cs2_list" class="listRow">{{Application__c.second_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.third_offer__c}}
+  <li id="cs3_list" class="listRow">{{Application__c.third_offer__c}}</li>
+  {{/if}}
+</script>

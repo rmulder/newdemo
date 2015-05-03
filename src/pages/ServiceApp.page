@@ -1,0 +1,679 @@
+<apex:page StandardController="Service__c" extensions="ServiceAppController" standardStylesheets="true" showHeader="false" sidebar="false">
+
+<!-- <apex:stylesheet value="{!URLFOR($Resource.static, 'css/bootstrap.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.static, 'css/bootstrap-theme.min.css')}"/> -->
+
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.mask.min.js')}"/>
+
+<!-- <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-datepicker.js')}"/> -->
+<!-- <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-datetimepicker-min.js')}"/> -->
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modal.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modalmanager.js')}"/>
+<!-- <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap.js')}"/> -->
+<!-- <apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap.min.js')}"/> -->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Terafina Servicing</title>
+<link rel="shortcut icon" href="http://terafinainc.com/images/terafina-logo-minify.jpg"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style type="text/css">
+    h1{
+        margin: 30px 0;
+        padding: 0 200px 15px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    .bs-example{
+        margin: 20px;
+    }
+    .logo {
+        background-image: url(bootstrap/images/logo-terafina.png);
+        width:220px;
+        height:100px;
+        margin-left:10px;
+    }
+
+    .panel-default>.panel-heading {
+        background: #1c6b94; /* Old browsers */
+        background-repeat: repeat-x;
+        color:#ffffff;
+    }
+
+    .input-margin {
+        margin: 10px -16px;
+    }
+
+    .form-spacing {
+        margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 6px 12px;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    .btn:hover,
+    .btn:focus {
+      color: #333;
+      text-decoration: none;
+    }
+    .btn:active,
+    .btn.active {
+      background-image: none;
+      outline: 0;
+      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+              box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    }
+    .btn.disabled,
+    .btn[disabled],
+    fieldset[disabled] .btn {
+      pointer-events: none;
+      cursor: not-allowed;
+      filter: alpha(opacity=65);
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      opacity: .65;
+    }
+    .btn-default {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+    }
+    .btn-default:hover,
+    .btn-default:focus,
+    .btn-default:active,
+    .btn-default.active,
+    .open > .dropdown-toggle.btn-default {
+      color: #333;
+      background-color: #e6e6e6;
+      border-color: #adadad;
+    }
+    .btn-default:active,
+    .btn-default.active,
+    .open > .dropdown-toggle.btn-default {
+      background-image: none;
+    }
+    .btn-default.disabled,
+    .btn-default[disabled],
+    fieldset[disabled] .btn-default,
+    .btn-default.disabled:hover,
+    .btn-default[disabled]:hover,
+    fieldset[disabled] .btn-default:hover,
+    .btn-default.disabled:focus,
+    .btn-default[disabled]:focus,
+    fieldset[disabled] .btn-default:focus,
+    .btn-default.disabled:active,
+    .btn-default[disabled]:active,
+    fieldset[disabled] .btn-default:active,
+    .btn-default.disabled.active,
+    .btn-default[disabled].active,
+    fieldset[disabled] .btn-default.active {
+      background-color: #fff;
+      border-color: #ccc;
+    }
+    .btn-default .badge {
+      color: #fff;
+      background-color: #333;
+    }
+    .btn-primary {
+      color: #fff;
+      background-color: #428bca;
+      border-color: #357ebd;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+      color: #fff;
+      background-color: #3071a9;
+      border-color: #285e8e;
+    }
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+      background-image: none;
+    }
+    .btn-primary.disabled,
+    .btn-primary[disabled],
+    fieldset[disabled] .btn-primary,
+    .btn-primary.disabled:hover,
+    .btn-primary[disabled]:hover,
+    fieldset[disabled] .btn-primary:hover,
+    .btn-primary.disabled:focus,
+    .btn-primary[disabled]:focus,
+    fieldset[disabled] .btn-primary:focus,
+    .btn-primary.disabled:active,
+    .btn-primary[disabled]:active,
+    fieldset[disabled] .btn-primary:active,
+    .btn-primary.disabled.active,
+    .btn-primary[disabled].active,
+    fieldset[disabled] .btn-primary.active {
+      background-color: #428bca;
+      border-color: #357ebd;
+    }
+    .btn-primary .badge {
+      color: #428bca;
+      background-color: #fff;
+    }
+</style>
+</head>
+<body>
+<head>
+
+</head>
+<apex:form styleClass="form-horizontal">
+<apex:pageMessages ></apex:pageMessages>
+<div class="bs-example">
+
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-xs-3 logo"> -->
+                <center><apex:image value="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" height="25%" width="25%"/></center>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <apex:outputPanel rendered="{!renderStatusPosrtal}">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+            <div class="panel panel-default">
+            <div class="panel-heading"><strong>Service Application</strong></div>
+            <div class="panel-body">
+
+            <b><p>You need servicing for:</p></b>
+
+            <apex:outputPanel rendered="{!service.Product__c != null}">
+                <div class="form-group">&nbsp;    
+                    <apex:outputLabel for="firstName" styleClass="control-label col-xs-4 inlineLabel">Product</apex:outputLabel>
+                    <div class="col-xs-6">
+                        <apex:outputField value="{!service.Product__c}" id="productName" styleClass="form-control"/>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!service.Sub_Product__c != null}">
+                <div class="form-group">&nbsp;    
+                    <apex:outputLabel for="firstName" styleClass="control-label col-xs-4 inlineLabel">Sub-Product</apex:outputLabel>
+                    <div class="col-xs-6">
+                        <apex:outputField value="{!service.Sub_Product__c}" id="subProductName" styleClass="form-control"/>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="firstName" styleClass="control-label col-xs-4 inlineLabel">Service Request</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:outputField value="{!service.Service_Request__c}" id="serviceRequestName" styleClass="form-control"/>
+                </div>
+            </div>
+
+            <apex:outputPanel rendered="{!personalInfo}">
+            <b><p>Please provide the Following information:</p></b>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField1}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="firstName" styleClass="control-label col-xs-4 inlineLabel">First Name</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field1__c}" id="firstName" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField2}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="lastName" styleClass="control-label col-xs-4 inlineLabel">Last Name</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field2__c}" id="lastName" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField3}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="emailAddress" styleClass="control-label col-xs-4 inlineLabel">Email Address</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field3__c}" id="emailAddress" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField4}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="phoneNumber" styleClass="control-label col-xs-4 inlineLabel">Phone Number</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field4__c}" id="phoneNumber" styleClass="form-control phone-mask"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField4}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="dob" styleClass="control-label col-xs-4 inlineLabel">Date Of Birth</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Date_Of_Birth__c}" id="dob" styleClass="form-control date-mask"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispSSN}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="ssn" styleClass="control-label col-xs-4 inlineLabel">Social Security Number</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Social_Security_Number__c}" id="ssn" styleClass="form-control ssn-mask"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField5}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="streetAdd1" styleClass="control-label col-xs-4 inlineLabel">Street Address 1</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field5__c}" id="streetAdd1" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField6}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="streetAdd2" styleClass="control-label col-xs-4 inlineLabel">Street Address 2</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field6__c}" id="streetAdd2" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField7}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="city" styleClass="control-label col-xs-4 inlineLabel">City</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field7__c}" id="city" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispField8}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="state" styleClass="control-label col-xs-4 inlineLabel">State</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Field8__c}" id="state" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispLoanNumber}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="loanNumber" styleClass="control-label col-xs-4 inlineLabel">Loan Number</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Loan_Number__c}" id="loanNumber" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispAmtGAPMBP}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="amtGAPMBP" styleClass="control-label col-xs-4 inlineLabel">Amount of GAP/MBP</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Amount_of_GAP_MBP__c}" id="amtGAPMBP" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDeliStreet1}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="deliveryStreetAdd1" styleClass="control-label col-xs-4 inlineLabel">Delivery - Street Address 1</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Delivery_Street_Address_1__c}" id="deliveryStreetAdd1" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDeliStreet2}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="deliveryStreetAdd2" styleClass="control-label col-xs-4 inlineLabel">Delivery - Street Address 2</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Delivery_Street_Address_2__c}" id="deliveryStreetAdd2" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDeliCity}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="deliveryCity" styleClass="control-label col-xs-4 inlineLabel">Delivery - City</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Delivery_City__c}" id="deliveryCity" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDeliState}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="deliveryState" styleClass="control-label col-xs-4 inlineLabel">Delivery - State</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Delivery_State__c}" id="deliveryState" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDeliZipCode}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="deliveryZipCode" styleClass="control-label col-xs-4 inlineLabel">Delivery - Zip Code</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Delivery_Zip_Code__c}" id="deliveryZipCode" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispPurposeOfReq}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="purposeOfRequest" styleClass="control-label col-xs-4 inlineLabel">Purpose Of Request</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Purpose_of_Request__c}" id="purposeOfRequest" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDMVStreet1}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="dmvStreetAddress1" styleClass="control-label col-xs-4 inlineLabel">DMV - Street Address 1</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.DMV_Street_Address_1__c}" id="dmvStreetAddress1" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDMVStreet2}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="dmvStreetAddress2" styleClass="control-label col-xs-4 inlineLabel">DMV - Street Address 2</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.DMV_Street_Address_2__c}" id="dmvStreetAddress2" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDMVCity}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="dmvCity" styleClass="control-label col-xs-4 inlineLabel">DMV - City</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.DMV_City__c}" id="dmvCity" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDMVState}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="dmvState" styleClass="control-label col-xs-4 inlineLabel">DMV - State</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.DMV_State__c}" id="dmvState" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDMVZipcode}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="dmvZipCode" styleClass="control-label col-xs-4 inlineLabel">DMV - Zip Code</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.DMV_Zip_Code__c}" id="dmvZipCode" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!dispDMVZipcode}">
+            <div class="form-group">&nbsp;    
+                <apex:outputLabel for="titleReleaseInst" styleClass="control-label col-xs-4 inlineLabel">Title Release Instructions</apex:outputLabel>
+                <div class="col-xs-6">
+                    <apex:inputField value="{!service.Title_Release_Instructions__c}" id="titleReleaseInst" styleClass="form-control"/>
+                </div>
+            </div>
+            </apex:outputPanel>
+
+            <br/>
+            <br/>
+
+
+                    <div class="panel panel-default input-margin">
+                        <div class="panel-heading">
+                            <apex:outputPanel rendered="{!service.Current_Channel__c == 'Online'}"><strong>Disclosures <b>{!pageLabelMap["Online_Disclosure_Text"]}</b></strong></apex:outputPanel>
+                            <apex:outputPanel rendered="{!service.Current_Channel__c == 'Branch'}"><strong>Disclosures <b>{!pageLabelMap["Branch_Disclosure_Text"]}</b></strong></apex:outputPanel>
+                            <apex:outputPanel rendered="{!service.Current_Channel__c == 'Call Center'}"><strong>Disclosures <b>{!pageLabelMap["Call_Center_Disclosure_Text"]}</b></strong></apex:outputPanel>
+                        </div> 
+                        <div class="panel-body">
+                            <apex:outputPanel rendered="{!dispDisclosure1}">    
+                                <div class="row">
+                                    <div class="col-xs-1"><apex:inputCheckbox value="{!service.Service_Disclosure1__c}"/></div>
+                                    <div class="col-xs-6"><label for="cb">{!pageLabelMap["text_before_disclosure1"]} <a target="_blank" href='{!disclosure1Url}'>{!pageLabelMap["disclosure1_hyperlink_name"]} </a> </label></div>
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!dispDisclosure2}">    
+                                <div class="row">
+                                    <div class="col-xs-1"><apex:inputCheckbox value="{!service.Service_Disclosure2__c}"/></div>
+                                    <div class="col-xs-6"><label for="cb">{!pageLabelMap["text_before_disclosure2"]} <a target="_blank" href='{!disclosure2Url}'>{!pageLabelMap["disclosure2_hyperlink_name"]}</a></label></div>
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!dispDisclosure3}">    
+                                <div class="row">
+                                    <div class="col-xs-1"><apex:inputCheckbox value="{!service.Service_Disclosure3__c}"/></div>
+                                    <div class="col-xs-6"><label for="cb">{!pageLabelMap["text_before_disclosure3"]} <a target="_blank" href='{!disclosure3Url}'>{!pageLabelMap["disclosure3_hyperlink_name"]}</a></label></div>
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!dispDisclosure4}">    
+                                <div class="row">
+                                    <div class="col-xs-1"><apex:inputCheckbox value="{!service.Service_Disclosure4__c}"/></div>
+                                    <div class="col-xs-6"><label for="cb">{!pageLabelMap["text_before_disclosure4"]} <a target="_blank" href='{!disclosure4Url}'>{!pageLabelMap["disclosure4_hyperlink_name"]}</a></label></div>
+                                </div> 
+                            </apex:outputPanel>   
+                        </div>
+                        
+                    </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-offset-4 col-xs-1">
+                        <apex:commandButton value="Previous Step" action="{!previousStep}" rendered="{!dispPrevButton}" style="height:30px;width:100px;" styleClass="btn btn-primary"/>  
+                    </div>
+                
+                    <div class="col-xs-offset-1 col-xs-1">
+                        <apex:outputPanel rendered="{!dispSaveForLaterButton}"> <button type="button" data-toggle="modal" data-target="#myModal" style="height:30px;width:100px;" class="btn btn-primary"> Save For Later </button>&nbsp; </apex:outputPanel>   
+                    </div>
+                    <div class="col-xs-offset-1 col-xs-3">
+                        <apex:commandButton value="Next Step" action="{!nextStep}" rendered="{!dispButton}" style="height:30px;width:100px;" styleClass="btn btn-primary"/>
+                        <apex:commandButton value="Submit" action="{!submitRequest}" rendered="{!!dispButton}" style="height:30px;width:100px; " styleClass="btn btn-primary"/>
+                    </div>
+                 </div>
+            </div>
+
+            </div>
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+     </apex:outputPanel>
+
+<!-- STATUS PORTAL section -->
+    <apex:outputPanel rendered="{!!renderStatusPosrtal}">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Status Portal</strong></div>
+                            <div class="panel-body">   
+                                <div class="row">
+                                    <apex:pageBlock >
+                                        <apex:pageBlockTable style="width:100%" value="{!Service}" var="Serv" >
+                                            <apex:column style="width:250px"  title="Name" value="{!Serv.Service_Request__c}" styleClass="control-label"/>
+                                            <apex:column style="width:250px"  title="Status" value="{!Serv.Status__c}"/>
+                                        </apex:pageBlockTable>
+                                    </apex:pageBlock>
+                                </div>   
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:outputPanel>
+<!-- END OF STATUS PORTAL section -->   
+
+    <apex:outputPanel rendered="{!dispServiceDocRequest}">
+        <div class="container">
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><strong>Documentation Request</strong></div>
+                                <div class="panel-body">   
+                                    <div class="row">
+                                        <apex:pageBlock >
+                                            <apex:pageBlockTable style="width:100%" value="{!serviceDocumentList}" var="serviceDoc">
+                                                <apex:column style="width:250px"  title="Unique ID" value="{!serviceDoc.Type__c}"/>
+                                                <apex:column style="width:250px" value="{!serviceDoc.Status__c}"/>
+                                                <apex:column style="width:100px,height:100px"> 
+                                                    <apex:iframe src="/apex/uploadServiceDocReq?id={!serviceDoc.id}" height="30px"  scrolling="true"/>
+                                                    <!-- <apex:outputText value="Please upload file"/>
+                                                        <apex:inputFile value="{!attach.Body}" fileName="{!attach.name}"/>
+                                                            <apex:actionRegion >
+                                                                <apex:commandButton  value="Save" action="{!uploadDoc}" styleClass="sendID" reRender="stp">
+                                                                        <apex:param name="serDocReqid" value="{!serviceDoc.Id}" assignTo="{!cParam}"/>
+                                                                        <apex:param name="bodyParam" value="{!attach.Body}" assignTo="{!fileBody}"/>
+                                                                        <apex:param name="nameParam" value="{!attach.name}" assignTo="{!fileName}"/>
+                                                                </apex:commandButton>  
+                                                            </apex:actionRegion> -->
+                                                    <apex:repeat value="{!serviceDoc.Attachments}" var="att">
+                                                        <apex:outputText value="{!att.name}" />&nbsp;&nbsp;&nbsp;<a target="_blank" href="/servlet/servlet.FileDownload?file={!att.id}">View</a>&nbsp;&nbsp;
+                                                        <apex:commandLink value="Delete" action="{!deleteAttachment}" reRender="xyz">
+                                                            <apex:param name="delAtt" value="{!att.id}" assignTo="{!dParam}"/>
+                                                        </apex:commandLink><br></br>    
+                                                    </apex:repeat>  
+                                                </apex:column>
+                                            </apex:pageBlockTable>
+                                        </apex:pageBlock>
+                                    </div>   
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </apex:outputPanel>
+
+    <!-- NOTES AND COMMENTS section -->
+         <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><strong>Notes and Comments</strong></div>
+                    <div class="panel-body">      
+                        <div class="form-group">
+                            <label class="control-label col-xs-4" for="commentsTitle">Comments Title:</label>
+                            <div class="col-xs-6">
+                                <apex:inputText value="{!noteTitle}" label="Comment Title" styleClass="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-4" for="commentsDetails">Comments Details:</label>
+                            <div class="col-xs-6">
+                                <apex:inputTextarea value="{!noteDetails}" label="Comment Details" styleClass="form-control"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                         <div class="row">
+                             <div class="col-xs-offset-4 col-xs-4">
+                                <apex:commandButton action="{!addNote}" value="Upload Comments"/>
+                            </div>
+                         </div>
+                        </div>
+                    </div>  
+                    <apex:outputPanel rendered="{!dispNotes}">
+                        <apex:pageBlock >
+                            <apex:pageBlockTable style="width:100%" value="{!service.Notes}" var="note">
+                                <apex:column style="width:250px"  value="{!note.Owner.name}">
+                                    <apex:facet name="header">Comment Created by</apex:facet>
+                                 </apex:column> 
+                                 <apex:column style="width:250px"  value="{!note.CreatedDate}">
+                                     <apex:facet name="header">Comment Created Date</apex:facet>
+                                  </apex:column>  
+                                <apex:column style="width:250px" value="{!note.Title}">
+                                    <apex:facet name="header">Comment title</apex:facet>
+                                </apex:column>
+                                <apex:column style="width:250px" value="{!note.Body}">
+                                    <apex:facet name="header">Comment Details</apex:facet>
+                                </apex:column>
+                            </apex:pageBlockTable>
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+                </div>
+                </div>
+            </div>
+        </div>
+    <!-- END OF NOTES AND COMMENTS section -->    
+</div>
+
+    <!--Modal for SAVE FOR LATER-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <center><h4 class="modal-title" id="myModalLabel">Save For Later</h4></center>
+                </div>
+                <div class="modal-body">
+                    Please complete or confirm the following information to save your application.<br></br><br></br>
+                    <apex:outputLabel value="Last Name"/>&nbsp;:&nbsp;
+                    <apex:inputText value="{!lastNameSFLvalueHolder}"/>
+                    <br></br>
+                    <apex:outputLabel value="Email Address"/>&nbsp;:&nbsp;
+                    <apex:inputText value="{!emailSFLvalueHolder}"/>
+                    <br></br>
+                    <apex:outputLabel value="Date Of Birth(MM/DD/YYYY)"/>&nbsp;:&nbsp;
+                    <apex:inputText value="{!dobSFLvalueHolder}" styleClass="date-mask"/>
+                    <br></br>
+                    <apex:outputLabel value="Social Security Number"/>&nbsp;:&nbsp;
+                    <apex:inputText value="{!ssnSFLvalueHolder}" styleClass="misc-mask"/>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal" style="height:30px;width:130px;">Go Back to Service</button> -->
+                    <!-- <button type="button" class="btn btn-primary">Save For Later</button> -->
+                    <apex:commandButton value="Save For Later" styleClass="btn btn-primary" action="{!saveForLater}" style="height:30px;width:100px;">
+                    </apex:commandButton>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal for SAVE FOR LATER-->
+
+</apex:form> 
+
+<!-- <c:ServiceTimeout session="1234567" seconds="{!$Setup.Service_Configuration__c.Timeout_Seconds__c}" popSeconds="{!$Setup.Service_Configuration__c.Popup_Seconds__c}" serviceID="{!sID}"/> -->
+</body>
+</html>                                     
+
+<script type="text/javascript">
+function Opensflpage(){
+    /*alert('Came into before Opensflpage');*/
+  //  var newWindow = window.location.assign("/apex/servicesaveforlater",'height=10%','width=10%','target=_parent');
+    //newWindow.focus();
+    /*alert('Came into after Opensflpage'); */
+           
+}
+</script>
+
+<script>   
+$(document).ready(function () {
+    var custom_options = {
+    translation: {
+      '9': {pattern: /\d/},
+      '0': {pattern: /\d/, optional: true},
+      '#': {pattern: /\d/, recursive: true},
+      '*': {pattern: /[a-zA-Z0-9]/},
+      'S': {pattern: /[a-zA-Z]/}
+    }
+  };
+
+    $(".date-mask").mask('99/99/9999', custom_options);
+    $(".phone-mask").mask('(999) 999-9999', custom_options);
+    /*$(".ssn-mask").mask('999999999', custom_options);*/
+    
+}); 
+</script>
+
+</apex:page>

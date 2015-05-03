@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Barnstable County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Berkshire County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Bristol County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Dukes County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Essex County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Hampden County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Hampshire County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Middlesex County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Nantucket County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Norfolk County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Plymouth County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Suffolk County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Worcester County",
+    "state_abbreviation": "MA",
+    "fips_county_cd": "027"
+  }
+]

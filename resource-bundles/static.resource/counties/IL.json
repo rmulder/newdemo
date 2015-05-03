@@ -1,0 +1,512 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Alexander County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Bond County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bureau County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Champaign County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Christian County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Coles County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Cook County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "DeKalb County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "De Witt County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "DuPage County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Edgar County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Edwards County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Effingham County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Ford County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Fulton County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Gallatin County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Grundy County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Hardin County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Henderson County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Iroquois County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Jersey County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Jo Daviess County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Kane County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Kankakee County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Kendall County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "LaSalle County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Livingston County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "McDonough County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "McHenry County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "McLean County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Macon County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Macoupin County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Mason County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Massac County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Menard County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Moultrie County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Ogle County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Peoria County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Piatt County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Pope County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Pulaski County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Putnam County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Richland County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Rock Island County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "St. Clair County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Saline County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Sangamon County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Schuyler County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Stark County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Stephenson County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Tazewell County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Vermilion County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Wabash County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "White County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Whiteside County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Will County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "Williamson County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "199"
+  },
+  {
+    "name": "Winnebago County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "201"
+  },
+  {
+    "name": "Woodford County",
+    "state_abbreviation": "IL",
+    "fips_county_cd": "203"
+  }
+]

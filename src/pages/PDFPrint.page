@@ -1,0 +1,46 @@
+<apex:page standardController="Employment_Information__c" extensions="PDFPrintController" showHeader="false" sidebar="false">
+   <link href="{!URLFOR($resource.static, 'css/jquery.FloatLabel.css')}" rel="stylesheet" />
+   <link href="{!URLFOR($resource.static, 'css/bootstrap.css')}" rel="stylesheet" />
+   <link href="{!URLFOR($resource.static, 'css/bootstrap-theme.css')}" rel="stylesheet" />
+   <link href="{!URLFOR($resource.static, 'css/bootstrap-datetimepicker.css')}" rel="stylesheet" />
+   <link href="{!URLFOR($resource.static, 'css/autocomplete.css')}" rel="stylesheet" />
+   <link href="{!URLFOR($resource.static, 'css/dsp.css')}" rel="stylesheet" />
+   <link href="{!URLFOR($resource.static, 'css/jquery.datetimepicker.css')}" rel="stylesheet" />
+   
+  <apex:form >
+      <script>
+      var i = 1, len = {!totalPdf};
+      var pdfArr = [];
+      </script>
+      <apex:repeat value="{!PDF}" var="pdf" id="Id">
+        <script>pdfArr.push("{!pdf}");console.log(pdfArr);</script>
+        <div class="col-xs-12" style="background-color:#575757;height:20px;font-size:18px;color:#ffffff">
+        <span class="frame_name">Disclosure <script>document.write(i++)</script> of <script>document.write(len)</script></span> 
+        <!--<span class="frame_name"></span>-->
+        </div>
+        <apex:iframe src="{!URLFOR($Action.Attachment.Download, pdf)}" title="Document" width="100%" height="1068px"></apex:iframe>
+
+      </apex:repeat>
+</apex:form>
+<script type="text/javascript" src="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  var i=1, len = {!totalPdf};
+  $('iframe').each(function() {
+    console.log($(this));
+    console.log($(this).parent().find('.frame_name'));
+    //$(this).parent().find('.frame_name').text('Disclosure ' + i++ + ' of ' + len);
+  });
+});
+/*
+function printall() {
+  var l=window.frames.length;
+  for (var i=1; i<l; i++) {
+    //alert('Click here AFTER you have sent document ' + (i+1) + ' to the printer.');
+    //window.frames[i].focus();
+    //window.frames[i].print();
+    return 'Disc' + [i];
+  }
+}*/
+</script>
+</apex:page>

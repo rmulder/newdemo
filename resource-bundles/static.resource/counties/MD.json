@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Allegany County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Anne Arundel County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Baltimore County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Calvert County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Caroline County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Cecil County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Charles County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Dorchester County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Frederick County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Garrett County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Harford County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Howard County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Kent County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Prince George's County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Queen Anne's County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "St. Mary's County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Somerset County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Talbot County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Wicomico County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Worcester County",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Baltimore city",
+    "state_abbreviation": "MD",
+    "fips_county_cd": "510"
+  }
+]

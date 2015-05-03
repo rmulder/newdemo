@@ -1,0 +1,821 @@
+<apex:page docType="html-5.0" standardStylesheets="false" standardController="Promotion__c" recordSetvar="promotions" extensions="PromotionsController" showHeader="false" id="PageId" cache="false" applyHtmlTag="false">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="text/html" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>DSP - Promotions</title>
+  <link href="{!URLFOR($Resource.promotions, 'bootstrap/css/bootstrap.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource.promotions, 'promotions.css')}" rel="stylesheet" />
+  <link href="{!URLFOR($Resource.promotions, 'google-code-prettify/prettify.css')}" rel="stylesheet" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet" />
+  <link href="{!URLFOR($Resource.promotions, 'index.css')}" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  <link href="{!URLFOR($Resource.static, 'css/terafina.css')}" rel="stylesheet" />
+  <style type="text/css">
+    .js-float-label-wrapper input {
+      min-height: 0;
+    }
+    li {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+<apex:form >
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Promotions</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 sidebar">
+                <ul class="nav nav-sidebar">
+                  <apex:repeat value="{!promotionList}" var="promo" id="promoList" >
+                    <li><button class="btn btn-primary btn-xs pull-left"><i class="glyphicon glyphicon-edit" data-id="{!promo.id}"></i></button> <a href="Promotion?id={!promo.id}" target="_blank">{!promo.Description__c}</a> <i class="hidden glyphicon glyphicon-trash" data-id="{!promo.id}"></i></li>
+                  </apex:repeat>
+                  <li class="last-child"><button type="button" class="btn btn-primary btn-sm btn-new">New Promotion</button></li>
+                </ul>
+                <nav>
+                  <ul class="pagination">
+                    <!-- <li>
+                    <apex:outputPanel rendered="{!hasPrevious}" >
+                      <apex:CommandLink action="{!firstPage}" >
+                        <span aria-hidden="true">&laquo;</span>
+                      </apex:CommandLink>
+                    </apex:outputPanel>  
+                    </li> -->
+                    <li>
+                    <apex:outputPanel rendered="{!hasPrevious}">
+                      <apex:CommandLink action="{!previous}" >
+                        <span aria-hidden="true">&laquo;</span>
+                      </apex:CommandLink>
+                    </apex:outputPanel>  
+                    </li>
+                      <apex:repeat value="{!PageNumber}" var="pg" id="pg">
+                       <li><apex:outputPanel rendered="{!Count}"><a>{!pg}</a></apex:outputPanel></li>
+                      </apex:repeat>
+                      <li> <apex:outputPanel rendered="{!Count}"><a>of</a></apex:outputPanel></li>
+                      <li> <apex:outputPanel rendered="{!Count}"><a>{!totalPages}</a></apex:outputPanel></li>
+                    <li>
+                    <apex:outputPanel rendered="{!hasNext}" >
+                      <apex:CommandLink action="{!next}">
+                        <span aria-hidden="true">&raquo;</span>
+                      </apex:CommandLink>
+                    </apex:outputPanel>  
+                    </li>
+                     <!-- <li>
+                    <apex:outputPanel rendered="{!hasNext}" >
+                      <apex:CommandLink action="{!lastPage}">
+                        <span aria-hidden="true">&raquo;</span>
+                      </apex:CommandLink>
+                    </apex:outputPanel>  
+                    </li> -->
+                  </ul>
+                </nav>
+                   <!-- <apex:panelGrid columns="1">
+                  <apex:outputPanel rendered="{!hasPrevious}" >
+                    <apex:CommandLink action="{!firstPage}">First Page</apex:CommandLink>
+                  </apex:outputPanel>  
+                  <apex:outputPanel rendered="{!hasNext}">
+                    <apex:CommandLink action="{!next}" >Next</apex:CommandLink>&nbsp;
+                  </apex:outputPanel>
+                  
+                  <apex:outputPanel rendered="{!hasPrevious}" >
+                    <apex:CommandLink action="{!previous}" >Previous</apex:CommandLink>&nbsp;
+                  </apex:outputPanel>
+                  <apex:outputPanel rendered="{!hasNext}">  
+                    <apex:CommandLink action="{!lastPage}">Last Page</apex:CommandLink>&nbsp;
+                  </apex:outputPanel>  
+                  </apex:panelGrid>  -->
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 main hidden">
+                <h2 class="sub-header" id="v_description__c"></h2>
+                <div class="row">
+                    <div id="content">
+                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                            <li><a href="#promo-view" data-toggle="tab">View</a>
+                            </li>
+                            <li><a href="#promo-edit" data-toggle="tab">Edit</a>
+                            </li>
+                            <li><a href="#promo-preview" data-toggle="tab">Preview</a>
+                            </li>
+                        </ul>
+                        <div id="my-tab-content" class="tab-content">
+                            <div class="tab-pane" id="promo-view">
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_description__c">Description:</label>
+                                  </div>
+                                  <div class="col-md-10">
+                                    <span class="pull-left col-md-10" id="v_description__c"></span>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_keywords__c">Keywords:</label>
+                                  </div>
+                                  <div class="col-md-10">
+                                    <span class="pull-left col-md-10" id="v_keywords__c"></span>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_url__c">URL:</label>
+                                  </div>
+                                  <div class="col-md-10">
+                                    <span class="pull-left col-md-10" id="v_url__c"></span>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_campaignid__c">Campaign ID:</label>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <span class="pull-left" id="v_campaignid__c"></span>
+                                  </div>
+                                  <div class="col-md-6">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_template__c">Template:</label>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <span class="pull-left" id="v_template__c"></span>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_sub_product_code__c">SubProduct:</label>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <span class="pull-left" id="v_sub_product_code__c"></span>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_textarea1__c">TextArea:</label>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <p class="pull-left" id="v_textarea1__c"></p>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_richtextarea1__c">RichTextArea:</label>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <p class="pull-left" id="v_richtextarea1__c"></p>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_attachment1__c">Attachment 1:</label>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <span class="pull-left" id="v_attachment1__c"></span>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <img src="" id="attachment1__c_file" width="200"/>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_attachment2__c">Attachment 2:</label>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <span class="pull-left" id="v_attachment2__c"></span>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <img src="" id="attachment2__c_file" width="200"/>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <label class="control-label pull-right" for="v_attachment3__c">Attachment 3:</label>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <span class="pull-left" id="v_attachment3__c"></span>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <img src="" id="attachment3__c_file" width="200"/>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="promo-edit">
+                                <form class="pg-empty-placeholder">
+                                    <input type="hidden" id="id" name="id" />
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="description__c">Description:</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input placeholder="Enter a Description" id="description__c" name="description__c" maxlength="100" class="pull-left col-md-10" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="keywords__c">Keywords:</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input placeholder="Enter Campaign Keywords" id="keywords__c" name="keywords__c" maxlength="255" class="pull-left col-md-10" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="url__c">URL:</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input placeholder="Campaign URL" id="url__c" name="url__c" maxlength="255" class="pull-left col-md-10" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="campaignid__c">Campaign ID:</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input placeholder="Enter a Campaign ID" id="campaignid__c" size="35" maxlength="50" name="campaignid__c" class="pull-left" />
+                                        </div>
+                                        <div class="col-md-6">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="template__c">Template:</label>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select class="pull-left" id="template__c" name="template__c">
+                                              <option value="Template1">Template1</option>
+                                              <option value="Template2">Template2</option>
+                                              <option value="Template3">Template3</option>
+                                            </select>
+                                            <br />
+                                            <div class="template-layout">
+                                            
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="sub_product_code__c">SubProduct:</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="col-md-8 pull-left" id="sub_product_code__c" name="sub_product_code__c"></select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="textarea1__c">TextArea:</label>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <textarea class="pull-left input-lg" rows="3" id="textarea1__c" name="textarea1__c"></textarea>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="richtextarea1__c">RichTextArea:</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <input type="hidden" name="richtextarea1__c" id="richtextarea1__c" value=""/>
+                                          <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                                            <div class="btn-group">
+                                              <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
+                                              <ul class="dropdown-menu">
+                                              </ul>
+                                            </div>
+                                            <div class="btn-group">
+                                              <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
+                                              <ul class="dropdown-menu">
+                                                <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
+                                                <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+                                                <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+                                              </ul>
+                                            </div>
+                                            <div class="btn-group">
+                                              <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
+                                              <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
+                                              <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
+                                              <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
+                                            </div>
+                                            <div class="btn-group">
+                                              <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
+                                              <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
+                                              <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
+                                              <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
+                                            </div>
+                                            <div class="btn-group">
+                                              <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
+                                              <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
+                                              <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
+                                              <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
+                                            </div>
+                                          </div>
+
+                                          <div id="editor">
+                                          </div>
+                                          <!--
+                                            <textarea class="pull-left input-lg ckeditor" rows="3" id="richtextarea1__c" name="richtextarea1__c"></textarea>
+-->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-9">
+                                            <button type="submit" class="btn btn-success pull-left">Apply Changes</button>
+                                        </div>
+                                    </div>
+                                    <hr style="border-bottom: 2px solid black;"/>
+                                    <div class="row" id="alerts"></div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="attachment1__c">Attachment 1:</label>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input class="col-md-8 pull-left" id="attachment1__c" name="attachment1__c" disabled="disabled" />
+                                        </div>
+                                        <div class="col-md-2">
+                                          <span class="file_input_div pull-right">
+                                            <button class="btn btn-primary btn-sm file-upload margin_left_60" data-id="file1">Upload Image</button>
+                                            <input type="file" capture="" accept="*" id="file1" class="file_input_hidden" data-id="1" />
+                                          </span>
+                                        </div>
+                                        <div class="col-md-5">
+                                          <button class="btn btn-danger btn-sm delete-file pull-left hidden" data-id="1">Delete File</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="attachment2__c">Attachment 2:</label>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input class="col-md-8 pull-left" id="attachment2__c" name="attachment2__c" disabled="disabled" />
+                                        </div>
+                                        <div class="col-md-2">
+                                          <span class="file_input_div pull-right">
+                                            <button class="btn btn-primary btn-sm file-upload margin_left_60" data-id="file2">Upload Image</button>
+                                            <input type="file" capture="" accept="*" id="file2" class="file_input_hidden" data-id="2" />
+                                          </span>
+                                        </div>
+                                        <div class="col-md-5">
+                                          <button class="btn btn-danger btn-sm delete-file pull-left hidden" data-id="2">Delete File</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="attachment3__c">Attachment 3:</label>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input class="col-md-8 pull-left" id="attachment3__c" name="attachment3__c" disabled="disabled" />
+                                        </div>
+                                        <div class="col-md-2">
+                                          <span class="file_input_div pull-right">
+                                            <button class="btn btn-primary btn-sm file-upload margin_left_60" data-id="file3">Upload Image</button>
+                                            <input type="file" capture="" accept="*" id="file3" class="file_input_hidden" data-id="3" />
+                                          </span>
+                                        </div>
+                                        <div class="col-md-5">
+                                          <button class="btn btn-danger btn-sm delete-file pull-left hidden" data-id="3">Delete File</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="promo-preview">
+                              <iframe id="promo-preview-frame" height="800" width="100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="media-detection" style="display:none;"></div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{!URLFOR($Resource.promotions, 'bootstrap/js/bootstrap.min.js')}"></script>
+    <script src="{!URLFOR($Resource.promotions, 'jquery.hotkeys.js')}"></script>
+    <script src="{!URLFOR($Resource.promotions, 'google-code-prettify/prettify.js')}"></script>
+    <script src="{!URLFOR($Resource.promotions, 'bootstrap-wysiwyg.js')}"></script>
+    <script src="{!URLFOR($Resource.static, 'js/libs/underscore/underscore-min.js')}"></script>
+    <script src="{!URLFOR($Resource.static, 'js/libs/dsp/dsp-common.js')}"></script>
+
+    <script type="text/javascript">
+      var maxStringSize = 6000000;    //Maximum String size is 6,000,000 characters
+      var maxFileSize = 4350000;      //After Base64 Encoding, this is the max file size
+      var chunkSize = 950000;         //Maximum Javascript Remoting message size is 1,000,000 characters
+      var attachment;
+      var attachmentName;
+      var fileSize;
+      var positionIndex;
+      var doneUploading;
+      var size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+      var namespace = '';
+      var Controller;
+      if (typeof TF4SF === 'undefined') {
+        window["TF4SF"] = {};
+        TF4SF.PromotionsController = Controller = PromotionsController;
+      } else {
+        namespace = 'TF4SF__';
+        Controller = TF4SF.PromotionsController;
+      }
+
+      //$j = jQuery.noConflict();
+      $j(document).ready(function ($) {
+        $j('#tabs').tab();
+        function initToolbarBootstrapBindings() {
+          var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+                'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+                'Times New Roman', 'Verdana'],
+              fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+          $j.each(fonts, function (idx, fontName) {
+            fontTarget.append($('<li><a data-edit="fontName ' + fontName +'" style="font-family:\''+ fontName +'\'">'+fontName + '</a></li>'));
+          });
+          $j('a[title]').tooltip({container:'body'});
+          $j('.dropdown-menu input').click(function() {return false;})
+              .change(function () {$j(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');})
+              .keydown('esc', function () {this.value='';$j(this).change();});
+        }
+        function showErrorAlert (reason, detail) {
+          var msg='';
+          if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
+          else {
+            console.log("error uploading file", reason, detail);
+          }
+          $j('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+
+              '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
+        }
+        initToolbarBootstrapBindings();
+        $j('#editor').wysiwyg();
+        window.prettyPrint && prettyPrint();
+
+        var products = {}, productList = {!productListString};
+        console.log(productList);
+        for (var i = 0; i < productList.length; i++) {
+          var parts = productList[i].split("_"), pcode = parts[0], prod = parts[1], pos = prod.indexOf(' - '),
+            product = prod.substring(0, pos), subproduct = prod.substring(pos+1);
+          //console.log('pcode:', pcode, 'product:', product, 'subproduct:', subproduct);
+          //console.log(productList[i]);
+          if (!products[product]) {
+            products[product] = [];
+          }
+          products[product].push(pcode+'_'+subproduct);
+        }
+        //console.log(products);
+        $j.each(products, function (index, value) {
+          //console.log('Products are', view.products);
+          //console.log('Index is', index);
+          //console.log('Value is', value);
+          var optgroup = $j('<optgroup>');
+          optgroup.attr('label', index);
+          //console.log('index:', index, 'value:', value);
+          $j.each(value, function (i) {
+            var prod = value[i], parts = prod.split("_"), pcode = parts[0], subproduct = parts[1];
+            //console.log('productresult is', productResult);
+            var option = $j('<option></option>');
+            option.val(pcode);
+            option.text(index + ' ' + subproduct);
+            optgroup.append(option);
+          });
+          //console.log('optgroup:', optgroup);
+          $j("#sub_product_code__c").append(optgroup);
+        });
+
+        $j('li>i.glyphicon-trash').on('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (confirm('Are you sure you want to delete this promotion?')) {
+            Controller.deletePromo($j(this).data('id'), function(result, event) {
+              window.location.reload();
+            });
+          }
+        });
+        $j('li').hover(function() {
+            $j(this).find('.glyphicon-trash').removeClass('hidden');
+          }, function() {
+            $j(this).find('.glyphicon-trash').addClass('hidden');
+          }
+        );
+        $j('#template__c').on('change', function() {
+          console.log($j(this).val());
+          //$j('.template-layout').html($j('#' + $j(this).val()).html());
+        });
+
+        function clearFormFields() {
+          $j.each($j('input, textarea'), function() {
+            //console.log('field:', this);
+            $j(this).val('').html('');
+          });
+          $j('#attachment1__c_file,#attachment2__c_file,#attachment3__c_file').removeAttr('src');
+          $j('span[id*=v_]').html('');
+        }
+
+        function parseResult(result, callback) {
+          for (var res in result) {
+            var prefix = 'Promotion__c', key = '', parts;
+            if (res.indexOf(".") !== -1) {
+              //The object has been specified; use it as the prefix.
+              parts = res.split('.');
+              prefix = parts[0];
+              key = parts[1];
+            }
+            if (namespace !== '' && prefix.indexOf(namespace) != -1) {
+              prefix = prefix.substring(namespace.length);
+            }
+            if (namespace !== '' && key.indexOf(namespace.toLowerCase()) != -1) {
+              key = key.substring(namespace.length);
+            }
+      
+            if (prefix === 'Promotion__c') {
+              $j('#v_' + key).html(result[res]);
+              $j('#' + key).val(result[res]);
+              if (typeof callback === "function") {
+                callback(key,res);
+              }
+            }
+          }
+        }
+
+        function handleNavClick($elem, callback) {
+          //alert($j(this).data('id'));
+          clearFormFields();
+          Controller.getPromo($elem.data('id'), function(result, event) {
+            console.log('event:', event, 'result:', result);
+            if (event.status) {
+              //$j('#attachment1__c_file,#attachment2__c_file,#attachment3__c_file').removeAttr('src');
+              $j('form').find('input,textarea').each(function() {
+                var id = $elem.attr('id');
+                $elem.val('');
+                $j('#v_' + id).html('');
+              });
+              parseResult(result, function(key, res) {
+                if (key.indexOf('attachment')!== -1 && result[res] !== '') {
+                  $j('#' + key + '_file').attr('src', '/servlet/servlet.FileDownload?file=' + result[res]);
+                  $j('#' + key).closest('.row').find('.delete-file').removeClass('hidden');
+                }
+              });
+
+              $j('.main').removeClass('hidden');
+              $j('a[href=#promo-view]').tab('show');
+              $j('#promo-preview-frame').attr('src', 'Promotion?id=' + result[namespace + 'Promotion__c.id']);
+              $j('#editor').html($j('#richtextarea1__c').val());
+              if (typeof callback === "function") {
+                callback(result);
+              }
+            } else {
+              alert('problem contacting server' + ' ' + event.message + ' ' +event.where);
+            }
+          }, {escape:false});
+        };
+
+        $j('.nav-sidebar').on('click', 'i', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          handleNavClick($j(this));
+        });
+
+        $j('.btn-success').on('click', function(e) {
+          var th = this;
+          e.preventDefault();
+          e.stopPropagation();
+          try {
+              $j('#richtextarea1__c').val($('#editor').cleanHtml());
+              var data =  $j('form').serializeObject();
+              if (namespace !== '' ) {
+                $j.each(data, function (index, value) {
+                  if (index.indexOf(".") !== -1 && index.indexOf(namespace) === 0) {
+                    //strip the prefix off the model name
+                    delete data[index];
+                    index = index.substr(namespace.length);
+                  }
+                  data[index] = value;
+                });
+              }
+              console.log('form data:', data);
+
+              $j('body').css('cursor', 'progress');
+              Controller.updatePromo(data, function(result, event) {
+                console.log('event:', event, 'result:', result);
+                if (event.status) {
+                  $j('#attachment1__c_file,#attachment2__c_file,#attachment3__c_file').removeAttr('src');
+                  parseResult(result);
+                  $j('body').css('cursor', 'default');
+                  $j('<div class="row col-md-10 alert alert alert-success fade in" role="alert">\
+                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span>\
+                        <span class="sr-only">Close</span></button>\
+                        <strong>Promotion updated</strong>\
+                      </div>').prependTo('#alerts');
+                } else {
+                  alert('problem contacting server' + ' ' + event.message + ' ' +event.where);
+                }
+              }, {escape:false});
+          } catch (e) {
+            console.log('error:', e.stack);
+            alert('An error has occurred: ' + e.message);
+          }
+        });
+        $j('.btn-new').on('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var txt = prompt('Enter a description for the promotion:');
+          console.log('description:' + txt);
+          Controller.createPromo(txt, function(result, event) {
+            console.log('event:', event, 'result:', result);
+            if (event.status) {
+              parseResult(result, function(key, res) {
+              });
+              clearFormFields();
+
+              for (var res in result) {
+                var prefix = 'Promotion__c', key = '', parts;
+                if (res.indexOf(".") !== -1) {
+                  //The object has been specified; use it as the prefix.
+                  parts = res.split('.');
+                  prefix = parts[0];
+                  key = parts[1];
+                }
+                if (namespace !== '' && prefix.indexOf(namespace) != -1) {
+                  prefix = prefix.substring(namespace.length);
+                }
+                if (namespace !== '' && key.indexOf(namespace.toLowerCase()) != -1) {
+                  key = key.substring(namespace.length);
+                }
+          
+                if (prefix === 'Promotion__c') {
+                    $j('#v_' + key).html(result[res]);
+                    $j('#' + key).val(result[res]);
+                }
+              }
+              $j('.main').removeClass('hidden');
+              $j('#promo-preview-frame').attr('src', 'Promotion?id=' + result[namespace + 'Promotion__c.id']);
+              $j('.last-child').before('<li><i class="glyphicon glyphicon-edit" data-id="' + result['Promotion__c.id'] + '"></i> <a href="Promotion?id=' + result['Promotion__c.id'] + '" target="_blank">' + txt + '</a>  <i class="hidden glyphicon glyphicon-trash" data-id="' + 
+                result['Promotion__c.id'] +'"></i></li>');
+              $j('a[href=#promo-edit]').tab('show');
+            } else {
+              alert('problem contacting server' + ' ' + event.message + ' ' +event.where);
+            }
+          });
+        });
+
+      $j('.delete-file').on('click', function(e) {
+        var th = this;
+        e.preventDefault();
+        e.stopPropagation();
+        if (confirm('Are you sure you want to delete this file?')) {
+          var $th = $j(this), id = $th.data('id'), promoId = $j('#id').val(), fileId = $j('#attachment' + id + '__c').val();
+          Controller.deleteAttachment(
+            promoId, id, fileId, 
+            function(result, event) {
+              console.log(result, event);
+              if (event.type === 'exception') {
+                console.log("exception");
+                console.log(event);
+              } else {
+                console.log(event.message);
+              }
+
+              handleNavClick($j('i[class*="glyphicon-edit"][data-id="'+promoId+'"]'), function() {
+                $th.addClass('hidden');
+                $j('a[href=#promo-edit]').tab('show');
+                $j('<div class="row col-md-10 alert alert alert-danger fade in" role="alert">\
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span>\
+                      <span class="sr-only">Close</span></button>\
+                      <strong>File deleted</strong>\
+                    </div>').prependTo('#alerts');
+              });
+           }
+          );
+        }
+      });
+
+      //Method to prepare a file to be attached to the Promotion bound to the page by the standardController
+      $j('.file-upload').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $j('#' + $j(this).data('id')).click();
+      });
+      $j('.file_input_hidden').on('change', function(e) {
+/*
+        handleFileChangeEvent(e, this, Controller, function(parentId) {
+          handleNavClick($j('i[class*="glyphicon-edit"][data-id="'+parentId+'"]'), function() {
+            $j('a[href=#promo-edit]').tab('show');
+          });
+        });
+*/
+        e.preventDefault();
+        e.stopPropagation();
+        var $th = $j(this), id = $th.data('id'), file, parentId = $j('#id').val();
+        if (this.files) {
+          console.log('id:', id);
+          file = document.getElementById('file'+id).files[0];
+          console.log('$th:', $th, 'id:', id, 'promoId:', parentId, 'file:', file);
+          $j('body').css('cursor', 'progress');
+          if (file != undefined) {
+            if (file.size <= maxFileSize) {
+              attachmentName = file.name;
+              var fileReader = new FileReader();
+              fileReader.onloadend = function(e) {
+                attachment = _arrayBufferToBase64(this.result);  //Base 64 encode the file before sending it
+                positionIndex=0;
+                fileSize = attachment.length;
+                console.log("Total Attachment Length: " + fileSize);
+                doneUploading = false;
+                if (fileSize < maxStringSize) {
+                  uploadAttachment(parentId, id, null);
+                } else {
+                  alert("Base 64 Encoded file is too large.  Maximum size is " + maxStringSize + " your file is " + fileSize + ".");
+                }
+              }
+              fileReader.onerror = function(e) {
+                alert("There was an error reading the file.  Please try again.");
+              }
+              fileReader.onabort = function(e) {
+                alert("There was an error reading the file.  Please try again.");
+              }
+             
+              fileReader.readAsArrayBuffer(file);  //Read the body of the file
+            } else {
+              alert("File must be under 4.3 MB in size.  Your file is too large.  Please try again.");
+            }
+          } else {
+            alert("You must choose a file before trying to upload it");
+          }
+        } else {
+          alert('Notice: File upload capability is not available on outdated browsers. Please upgrade to a modern browser (such as: Internet Explorer >= version 10, Firefox, Chrome, Safari) in order to upload files.');
+        }
+      });
+
+      //Method to send a file to be attached to the Promotion bound to the page by the standardController
+      //Sends parameters: Promotion__c Id, Attachment (body), Attachment Name, and the Id of the Attachment if it exists to the controller   
+      function uploadAttachment(parentId, attachmentNumber, fileId) {
+        try {
+          var attachmentBody = "";
+          if (fileSize <= positionIndex + chunkSize) {
+            attachmentBody = attachment.substring(positionIndex);
+            doneUploading = true;
+          } else {
+            attachmentBody = attachment.substring(positionIndex, positionIndex + chunkSize);
+          }
+          console.log("Uploading " + attachmentBody.length + " chars of " + fileSize);
+          //if (size === 'xs' || size === 'sm') {alert("Uploading " + attachmentBody.length + " chars of " + fileSize);}
+          //alert("Uploading " + attachmentBody.length + " chars of " + fileSize);
+          //alert('promoId:' + parentId + '; attachmentNumber:' + attachmentNumber + '; attachmentName' + attachmentName + '; fileId:' + fileId);
+          Controller.uploadAttachment(
+            parentId, attachmentNumber, attachmentBody, attachmentName, fileId, 
+            function(result, event) {
+              console.log(result, event);
+              if (event.type === 'exception') {
+                console.log("exception");
+                console.log(event);
+              } else if(event.status) {
+                if (result.substring(0,3) == '00P') {
+                  if (doneUploading == true) {
+                    //window.open("/"+parentId, "_blank");
+                    //window.location.reload();
+                    $j('body').css('cursor', 'default');
+                    handleNavClick($j('i[class*="glyphicon-edit"][data-id="'+parentId+'"]'), function() {
+                      $j('a[href=#promo-edit]').tab('show');
+                    });
+                    $j('<div class="row col-md-10 alert alert alert-success fade in" role="alert">\
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span>\
+                          <span class="sr-only">Close</span></button>\
+                          <strong>Image Uploaded</strong>\
+                        </div>').prependTo('#alerts');
+                  } else {
+                    positionIndex += chunkSize;
+                    uploadAttachment(parentId, attachmentNumber, result);
+                  }
+                }
+              } else {
+                console.log(event.message);
+              }
+            },
+            {buffer: true, escape: true, timeout: 120000}
+          );
+        } catch (e) {
+            console.log('error:', e.stack);
+            alert('An error has occurred: ' + e.message);
+        }
+      }
+
+      $j('#media-detection').html(size);
+      if (size === 'xs' || size === 'sm') {  
+        // is mobile device or tablet
+        $j('.file_input_hidden').attr('capture', 'camera').attr('accept', 'image/*');
+      } else {
+        $j('.file_input_hidden').attr('capture', '').attr('accept', '*');
+      }    
+    });
+
+
+  </script>
+ 
+</apex:form>
+</body>
+</html>        
+</apex:page>

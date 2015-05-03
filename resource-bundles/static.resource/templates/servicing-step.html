@@ -1,0 +1,380 @@
+
+
+<!-- first tech code  -->
+
+
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Sales Platform</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Custom styles -->
+  <link href="../css/jquery.FloatLabel.css" rel="stylesheet">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link href="../css/bootstrap-theme.css" rel="stylesheet">
+  <link href="../css/datepicker.css" rel="stylesheet">
+  <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <link href="../css/autocomplete.css" rel="stylesheet">
+  <link href="../css/dsp.css" rel="stylesheet">
+  <link href="../css/jquery.datetimepicker.css" rel="stylesheet">
+  
+
+  <!-- Fix for scrolling on iOS prior to iOS 6 -->
+  <style type="text/css">
+    .scrollable > * {
+      -webkit-transform: translateZ(0px);
+    }
+
+    /* Space out content a bit */
+body {
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.section h5,
+.section .panel-heading {
+  background: black;
+  color: white;
+  padding: 4px;
+  margin-bottom: 0;
+}
+
+.ng-scope .row {
+  margin: 0;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  font-size: 0.85em;
+  color: #4a4a56;
+  font-family: Arial,Helvetica,sans-serif;
+  text-align: right;
+  padding: 5px 0;
+}
+
+.ng-scope .panel-body {
+  padding: 0;
+}
+
+.ng-scope .row span {
+  margin-top: 2px;
+}
+
+.chkbox-col {
+  padding-left: 0;
+}
+
+.row-striped:nth-child(2n+1) {
+  background-color: #efefef;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.modal-header {
+  background: #1c6b94;
+  color: #fff;
+}
+
+.modal-body {
+  font-size: 1.8em;
+}
+
+.modal-body a.dropdown-toggle {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #1c6b94;
+  border-color: #1c6b94;
+}
+
+.form-horizontal .form-group {
+  margin-right: 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+@media screen and ( min-width: 300px ) and (max-width: 767px) {
+  .ng-scope .row {
+    padding-top: 0;
+  }
+
+  .ng-scope .row:last-child {
+    padding-bottom: 10px;
+  }
+
+  .clearfix.visible-xs {
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
+  .btn-group-lg>.btn, .btn-lg {
+    font-size: 1.8em;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header h3 {
+    margin: 0;
+  }
+}
+
+  </style>
+  <!--[if lt IE 9]>
+  <script>
+    if (typeof String.prototype.trim !== 'function') {
+      String.prototype.trim = function() {
+        return this.replace(/^\s+|\s+$/g, '');
+      }
+    }
+  </script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="images/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body id="about-you">
+
+<div class="row">
+    <div class="col-xs-12">
+      <span class="pull-left">Please Provide the following information:</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group" ng-if="displayFields.indexOf('Field1__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field1__c">First Name</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field1__c" class="form-control" type="text" placeholder="First Name"
+               ng-class="{'required':(requiredFields.indexOf('Field1__c')>-1)}" ng-model="serviceRecord.Field1__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Field2__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field2__c">Last Name</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field2__c" class="form-control" type="text" placeholder="Last Name"
+               ng-class="{'required':(requiredFields.indexOf('Field2__c')>-1)}" ng-model="serviceRecord.Field2__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Field3__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field3__c">Email Address</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field3__c" class="form-control" type="text" placeholder="Email Address"
+               ng-class="{'required':(requiredFields.indexOf('Field3__c')>-1)}" ng-model="serviceRecord.Field3__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Field4__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field4__c">Phone Number</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field4__c" class="form-control" type="text"
+               placeholder="Phone Number" ng-model="serviceRecord.Field4__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Date_Of_Birth__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Date_Of_Birth__c">Date of Birth</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Date_Of_Birth__c" class="form-control" type="text"
+               placeholder="Date of Birth" ng-model="serviceRecord.Date_Of_Birth__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Social_Security_Number__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Social_Security_Number__c">SSN</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Social_Security_Number__c" class="form-control" type="text"
+               placeholder="Email Address" ng-model="serviceRecord.Social_Security_Number__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Field5__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field5__c">Street Address 1</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field5__c" class="form-control" type="text"
+               placeholder="Street Address 1" ng-model="serviceRecord.Field5__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Field6__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field6__c">Street Address 2</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field6__c" class="form-control" type="text"
+               placeholder="Street Address 2" ng-model="serviceRecord.Field6__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Field7__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field7__c">City</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field7__c" class="form-control" type="text"
+               placeholder="City" ng-model="serviceRecord.Field7__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Field8__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Field8__c">State</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Field8__c" class="form-control" type="text"
+               placeholder="State" ng-model="serviceRecord.Field8__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Loan_Number__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Loan_Number__c">Loan Number</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Loan_Number__c" class="form-control" type="text"
+               placeholder="Loan Number" ng-model="serviceRecord.Loan_Number__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Amount_of_GAP_MBP__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Amount_of_GAP_MBP__c">Amount for GAP/MBP</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Amount_of_GAP_MBP__c" class="form-control" type="text"
+               placeholder="Amount for GAP/MBP" ng-model="serviceRecord.Amount_of_GAP_MBP__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Delivery_Street_Address_1__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Delivery_Street_Address_1__c">Street Address 1</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Delivery_Street_Address_1__c" class="form-control" type="text"
+               placeholder="Street Address 1" ng-model="serviceRecord.Delivery_Street_Address_1__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Delivery_Street_Address_2__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Delivery_Street_Address_2__c">Street Address 2</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Delivery_Street_Address_2__c" class="form-control" type="text"
+               placeholder="Street Address 2" ng-model="serviceRecord.Delivery_Street_Address_2__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Delivery_City__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Delivery_City__c">City</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Delivery_City__c" class="form-control" type="text"
+               placeholder="City" ng-model="serviceRecord.Delivery_City__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Delivery_State__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Delivery_State__c">State</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Delivery_State__c" class="form-control" type="text"
+               placeholder="State" ng-model="serviceRecord.Delivery_State__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Delivery_Zip_Code__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Delivery_Zip_Code__c">Zip Code</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Delivery_Zip_Code__c" class="form-control" type="text"
+               placeholder="Zip Code" ng-model="serviceRecord.Delivery_Zip_Code__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Purpose_of_Request__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Purpose_of_Request__c">Purpose of Request</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Purpose_of_Request__c" class="form-control" type="text"
+               placeholder="Purpose of Request" ng-model="serviceRecord.Purpose_of_Request__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('DMV_Street_Address_1__c')>-1">
+      <label class="col-xs-5 col-md-3" for="DMV_Street_Address_1__c">Street Address 1</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="DMV_Street_Address_1__c" class="form-control" type="text"
+               placeholder="Street Address 1" ng-model="serviceRecord.DMV_Street_Address_1__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('DMV_Street_Address_2__c')>-1">
+      <label class="col-xs-5 col-md-3" for="DMV_Street_Address_2__c">Street Address 2</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="DMV_Street_Address_2__c" class="form-control" type="text"
+               placeholder="Street Address 2" ng-model="serviceRecord.DMV_Street_Address_2__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('DMV_City__c')>-1">
+      <label class="col-xs-5 col-md-3" for="DMV_City__c">City</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="DMV_City__c" class="form-control" type="text"
+               placeholder="City" ng-model="serviceRecord.DMV_City__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('DMV_State__c')>-1">
+      <label class="col-xs-5 col-md-3" for="DMV_State__c">State</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="DMV_State__c" class="form-control" type="text"
+               placeholder="State" ng-model="serviceRecord.DMV_State__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('DMV_Zip_Code__c')>-1">
+      <label class="col-xs-5 col-md-3" for="DMV_Zip_Code__c">Zip Code</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="DMV_Zip_Code__c" class="form-control" type="text"
+               placeholder="Zip Code" ng-model="serviceRecord.DMV_Zip_Code__c">
+      </div>
+    </div>
+    <div class="form-group" ng-if="displayFields.indexOf('Title_Release_Instructions__c')>-1">
+      <label class="col-xs-5 col-md-3" for="Title_Release_Instructions__c">Title Release Instructions</label>
+      <div class="col-xs-7 col-md-9">
+        <input type="text" id="Title_Release_Instructions__c" class="form-control" type="text"
+               placeholder="Title Release Instructions" ng-model="serviceRecord.Title_Release_Instructions__c">
+      </div>
+    </div>
+  </div>
+
+
+<script src="../js/libs/jquery/jquery.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--[if (lte IE 9)]><script type="text/javascript" src="js/placeholder_polyfill.jquery.js"></script><![endif]-->
+<script src="../js/libs/underscore/underscore-min.js"></script>
+<script src="../js/libs/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<!--<script src="js/bootstrap.js"></script>-->
+<script src="../js/bootstrap-modalmanager.js"></script>
+<script src="../js/bootstrap-modal.js"></script>
+<script src="../js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/jquery.validate.additional-methods.js"></script>
+<script src="../js/jquery.mask.min.js" type="text/javascript"></script>
+<script src="../js/jquery.maskMoney.js"></script>
+<script type="text/javascript" charset="utf-8">
+  
+</script>
+</body>
+</html>
+
+

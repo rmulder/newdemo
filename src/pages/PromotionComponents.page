@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:form >
+        <apex:PageBlock title="DSP Promotions">
+            <apex:pageBlockButtons title="Promotions" location="Top">
+                <apex:CommandButton value="Promotions" onclick="window.open('/apex/Promotions')"/>
+            </apex:pageBlockButtons>  
+        </apex:PageBlock>
+    </apex:form>
+</apex:page>

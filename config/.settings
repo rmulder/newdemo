@@ -1,0 +1,19 @@
+{
+    "username": "rmulder@terafinainc.com.newdemo", 
+    "environment": "production", 
+    "project_name": "NewDemo", 
+    "workspace": "/www/htdocs", 
+    "org_url": "", 
+    "namespace": "", 
+    "id": "GK6W8OOXSSOL5DAS1PMJ7J9P7UX5GO8C", 
+    "metadata_container": "1dc1a000000DJoHAAW", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "StaticResource", 
+        "CustomObject", 
+        "Profile"
+    ]
+}

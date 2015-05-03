@@ -1,0 +1,5 @@
+<apex:page controller="CallUpdateAppStatus">
+  <apex:form >
+      <apex:commandButton value="Call Batch" action="{!callBatch}"/>
+  </apex:form>
+</apex:page>

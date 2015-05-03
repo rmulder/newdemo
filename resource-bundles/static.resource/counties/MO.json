@@ -1,0 +1,577 @@
+[
+  {
+    "name": "Adair County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Andrew County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Atchison County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Audrain County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Barry County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Barton County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Bates County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bollinger County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Buchanan County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Caldwell County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Callaway County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Camden County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Cape Girardeau County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Carter County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Cedar County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Chariton County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Christian County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Cole County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Cooper County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Dade County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Dallas County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Daviess County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "DeKalb County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Dent County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Dunklin County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Gasconade County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Gentry County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Grundy County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Hickory County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Holt County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Howard County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Howell County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Iron County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Laclede County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Lafayette County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Lewis County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Linn County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Livingston County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "McDonald County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Macon County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Maries County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Miller County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Mississippi County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Moniteau County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "New Madrid County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Newton County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Nodaway County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Oregon County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Osage County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Ozark County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Pemiscot County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Pettis County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Phelps County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Platte County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Pulaski County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Putnam County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Ralls County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Ray County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Reynolds County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Ripley County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "St. Charles County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "St. Clair County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Ste. Genevieve County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "186"
+  },
+  {
+    "name": "St. Francois County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "St. Louis County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "Saline County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Schuyler County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "Scotland County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "199"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "201"
+  },
+  {
+    "name": "Shannon County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "203"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "205"
+  },
+  {
+    "name": "Stoddard County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "207"
+  },
+  {
+    "name": "Stone County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "209"
+  },
+  {
+    "name": "Sullivan County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "211"
+  },
+  {
+    "name": "Taney County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "213"
+  },
+  {
+    "name": "Texas County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "215"
+  },
+  {
+    "name": "Vernon County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "217"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "219"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "221"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "223"
+  },
+  {
+    "name": "Webster County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "225"
+  },
+  {
+    "name": "Worth County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "227"
+  },
+  {
+    "name": "Wright County",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "229"
+  },
+  {
+    "name": "St. Louis city",
+    "state_abbreviation": "MO",
+    "fips_county_cd": "510"
+  }
+]

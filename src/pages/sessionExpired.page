@@ -1,0 +1,78 @@
+<apex:page docType="html-5.0" showHeader="false" applyHtmlTag="false" >
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <apex:stylesheet value="{!URLFOR($Resource.DSP, 'dsp/css/dsp.css')}"/>
+  <title>Digital Sales Platform</title>
+</head>
+
+<body id="about-you">
+<form method="post" id="about-you-form" action="employment.html" accept-charset="utf-8">
+<div class="container">
+  <header class="header">
+    <a href="#">
+      <img class="logo" width="150" height="46"/>
+    </a>
+    <hr/>
+  </header><!-- end .header -->
+  <div id="pgAboutYou">
+
+  <!-- end .progrssBar -->
+  <div class="server-errors hidden"></div>
+
+</div>
+<div class="grid_16" style="margin-top:40px;">
+<div id="formContainer" style="min-height: 30px;">
+<!-- Primary Applicant Info -->
+<div id="appl_1" class="applicant">
+<!-- optional Previous Address -->
+<div class="formFields" id="contactInfo">
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+     <h2 class="blue-heading2">Your Application Has Expired.</h2><br /><br />
+     <h3 style="font-size:12px;">For your security, applications expire after 15 minutes without activity from you.</h3><br />
+     <h3 style="font-size:12px;">Visit &nbsp;<a href="https://www.terafinainc.com">terafinainc.com</a></h3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div id="ajax-modal" data-backdrop="static" class="modal hide fade" tabindex="-1"></div>
+</div>
+<!--<div class="grid_5">
+  &lt;!&ndash; Need Help &ndash;&gt;
+  <div class="rightPanel rightPanelGrad">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">Need Help?</h3>
+
+      <p class="cfh">Call: 1-800-111-1111</p>
+
+      <p class="cfh">M-F 8 a.m. - 5 p.m. PST</p>
+
+      <p class="cfh">Sat 9 a.m. - 2 p.m. PST</p>
+    </div>
+  </div>
+  &lt;!&ndash; You are applying for &ndash;&gt;
+</div>-->
+</div><!-- end .container -->
+
+<div class="clear"></div>
+</form>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="{!URLFOR($Resource.DSP, 'dsp/js/selectivizr.js')}"></script>
+  <script type="text/javascript" src="{!URLFOR($Resource.DSP, 'dsp/js/css3-mediaqueries.js')}"></script>
+  <![endif]-->
+<!--<script src="js/bootstrap.js"></script>-->
+
+</body>
+</html>
+</apex:page>

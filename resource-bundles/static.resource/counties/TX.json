@@ -1,0 +1,1272 @@
+[
+  {
+    "name": "Anderson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Andrews County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Angelina County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Aransas County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Archer County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Armstrong County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Atascosa County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Austin County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bailey County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Bandera County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Bastrop County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Baylor County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Bee County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Bell County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Bexar County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Blanco County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Borden County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Bosque County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Bowie County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Brazoria County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Brazos County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Brewster County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Briscoe County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Brooks County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Burleson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Burnet County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Caldwell County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Callahan County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Cameron County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Camp County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Carson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Castro County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Chambers County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Childress County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Cochran County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Coke County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Coleman County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Collin County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Collingsworth County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Colorado County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Comal County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Comanche County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Concho County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Cooke County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Coryell County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Cottle County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Crane County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Crockett County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Crosby County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Culberson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Dallam County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Dallas County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Dawson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Deaf Smith County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Delta County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Denton County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "DeWitt County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Dickens County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Dimmit County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Donley County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Duval County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Eastland County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Ector County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Edwards County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Ellis County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "El Paso County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Erath County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Falls County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Fannin County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Fisher County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Floyd County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Foard County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Fort Bend County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Freestone County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Frio County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Gaines County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Galveston County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Garza County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Gillespie County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Glasscock County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Goliad County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Gonzales County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Gray County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Grayson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Gregg County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Grimes County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Guadalupe County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Hale County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "Hall County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Hansford County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Hardeman County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "Hardin County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "199"
+  },
+  {
+    "name": "Harris County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "201"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "203"
+  },
+  {
+    "name": "Hartley County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "205"
+  },
+  {
+    "name": "Haskell County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "207"
+  },
+  {
+    "name": "Hays County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "209"
+  },
+  {
+    "name": "Hemphill County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "211"
+  },
+  {
+    "name": "Henderson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "213"
+  },
+  {
+    "name": "Hidalgo County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "215"
+  },
+  {
+    "name": "Hill County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "217"
+  },
+  {
+    "name": "Hockley County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "219"
+  },
+  {
+    "name": "Hood County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "221"
+  },
+  {
+    "name": "Hopkins County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "223"
+  },
+  {
+    "name": "Houston County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "225"
+  },
+  {
+    "name": "Howard County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "227"
+  },
+  {
+    "name": "Hudspeth County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "229"
+  },
+  {
+    "name": "Hunt County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "231"
+  },
+  {
+    "name": "Hutchinson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "233"
+  },
+  {
+    "name": "Irion County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "235"
+  },
+  {
+    "name": "Jack County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "237"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "239"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "241"
+  },
+  {
+    "name": "Jeff Davis County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "243"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "245"
+  },
+  {
+    "name": "Jim Hogg County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "247"
+  },
+  {
+    "name": "Jim Wells County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "249"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "251"
+  },
+  {
+    "name": "Jones County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "253"
+  },
+  {
+    "name": "Karnes County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "255"
+  },
+  {
+    "name": "Kaufman County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "257"
+  },
+  {
+    "name": "Kendall County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "259"
+  },
+  {
+    "name": "Kenedy County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "261"
+  },
+  {
+    "name": "Kent County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "263"
+  },
+  {
+    "name": "Kerr County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "265"
+  },
+  {
+    "name": "Kimble County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "267"
+  },
+  {
+    "name": "King County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "269"
+  },
+  {
+    "name": "Kinney County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "271"
+  },
+  {
+    "name": "Kleberg County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "273"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "275"
+  },
+  {
+    "name": "Lamar County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "277"
+  },
+  {
+    "name": "Lamb County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "279"
+  },
+  {
+    "name": "Lampasas County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "281"
+  },
+  {
+    "name": "La Salle County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "283"
+  },
+  {
+    "name": "Lavaca County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "285"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "287"
+  },
+  {
+    "name": "Leon County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "289"
+  },
+  {
+    "name": "Liberty County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "291"
+  },
+  {
+    "name": "Limestone County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "293"
+  },
+  {
+    "name": "Lipscomb County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "295"
+  },
+  {
+    "name": "Live Oak County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "297"
+  },
+  {
+    "name": "Llano County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "299"
+  },
+  {
+    "name": "Loving County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "301"
+  },
+  {
+    "name": "Lubbock County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "303"
+  },
+  {
+    "name": "Lynn County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "305"
+  },
+  {
+    "name": "McCulloch County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "307"
+  },
+  {
+    "name": "McLennan County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "309"
+  },
+  {
+    "name": "McMullen County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "311"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "313"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "315"
+  },
+  {
+    "name": "Martin County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "317"
+  },
+  {
+    "name": "Mason County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "319"
+  },
+  {
+    "name": "Matagorda County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "321"
+  },
+  {
+    "name": "Maverick County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "323"
+  },
+  {
+    "name": "Medina County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "325"
+  },
+  {
+    "name": "Menard County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "327"
+  },
+  {
+    "name": "Midland County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "329"
+  },
+  {
+    "name": "Milam County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "331"
+  },
+  {
+    "name": "Mills County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "333"
+  },
+  {
+    "name": "Mitchell County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "335"
+  },
+  {
+    "name": "Montague County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "337"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "339"
+  },
+  {
+    "name": "Moore County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "341"
+  },
+  {
+    "name": "Morris County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "343"
+  },
+  {
+    "name": "Motley County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "345"
+  },
+  {
+    "name": "Nacogdoches County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "347"
+  },
+  {
+    "name": "Navarro County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "349"
+  },
+  {
+    "name": "Newton County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "351"
+  },
+  {
+    "name": "Nolan County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "353"
+  },
+  {
+    "name": "Nueces County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "355"
+  },
+  {
+    "name": "Ochiltree County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "357"
+  },
+  {
+    "name": "Oldham County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "359"
+  },
+  {
+    "name": "Orange County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "361"
+  },
+  {
+    "name": "Palo Pinto County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "363"
+  },
+  {
+    "name": "Panola County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "365"
+  },
+  {
+    "name": "Parker County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "367"
+  },
+  {
+    "name": "Parmer County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "369"
+  },
+  {
+    "name": "Pecos County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "371"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "373"
+  },
+  {
+    "name": "Potter County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "375"
+  },
+  {
+    "name": "Presidio County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "377"
+  },
+  {
+    "name": "Rains County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "379"
+  },
+  {
+    "name": "Randall County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "381"
+  },
+  {
+    "name": "Reagan County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "383"
+  },
+  {
+    "name": "Real County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "385"
+  },
+  {
+    "name": "Red River County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "387"
+  },
+  {
+    "name": "Reeves County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "389"
+  },
+  {
+    "name": "Refugio County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "391"
+  },
+  {
+    "name": "Roberts County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "393"
+  },
+  {
+    "name": "Robertson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "395"
+  },
+  {
+    "name": "Rockwall County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "397"
+  },
+  {
+    "name": "Runnels County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "399"
+  },
+  {
+    "name": "Rusk County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "401"
+  },
+  {
+    "name": "Sabine County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "403"
+  },
+  {
+    "name": "San Augustine County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "405"
+  },
+  {
+    "name": "San Jacinto County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "407"
+  },
+  {
+    "name": "San Patricio County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "409"
+  },
+  {
+    "name": "San Saba County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "411"
+  },
+  {
+    "name": "Schleicher County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "413"
+  },
+  {
+    "name": "Scurry County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "415"
+  },
+  {
+    "name": "Shackelford County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "417"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "419"
+  },
+  {
+    "name": "Sherman County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "421"
+  },
+  {
+    "name": "Smith County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "423"
+  },
+  {
+    "name": "Somervell County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "425"
+  },
+  {
+    "name": "Starr County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "427"
+  },
+  {
+    "name": "Stephens County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "429"
+  },
+  {
+    "name": "Sterling County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "431"
+  },
+  {
+    "name": "Stonewall County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "433"
+  },
+  {
+    "name": "Sutton County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "435"
+  },
+  {
+    "name": "Swisher County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "437"
+  },
+  {
+    "name": "Tarrant County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "439"
+  },
+  {
+    "name": "Taylor County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "441"
+  },
+  {
+    "name": "Terrell County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "443"
+  },
+  {
+    "name": "Terry County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "445"
+  },
+  {
+    "name": "Throckmorton County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "447"
+  },
+  {
+    "name": "Titus County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "449"
+  },
+  {
+    "name": "Tom Green County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "451"
+  },
+  {
+    "name": "Travis County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "453"
+  },
+  {
+    "name": "Trinity County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "455"
+  },
+  {
+    "name": "Tyler County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "457"
+  },
+  {
+    "name": "Upshur County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "459"
+  },
+  {
+    "name": "Upton County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "461"
+  },
+  {
+    "name": "Uvalde County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "463"
+  },
+  {
+    "name": "Val Verde County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "465"
+  },
+  {
+    "name": "Van Zandt County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "467"
+  },
+  {
+    "name": "Victoria County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "469"
+  },
+  {
+    "name": "Walker County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "471"
+  },
+  {
+    "name": "Waller County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "473"
+  },
+  {
+    "name": "Ward County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "475"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "477"
+  },
+  {
+    "name": "Webb County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "479"
+  },
+  {
+    "name": "Wharton County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "481"
+  },
+  {
+    "name": "Wheeler County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "483"
+  },
+  {
+    "name": "Wichita County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "485"
+  },
+  {
+    "name": "Wilbarger County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "487"
+  },
+  {
+    "name": "Willacy County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "489"
+  },
+  {
+    "name": "Williamson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "491"
+  },
+  {
+    "name": "Wilson County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "493"
+  },
+  {
+    "name": "Winkler County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "495"
+  },
+  {
+    "name": "Wise County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "497"
+  },
+  {
+    "name": "Wood County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "499"
+  },
+  {
+    "name": "Yoakum County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "501"
+  },
+  {
+    "name": "Young County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "503"
+  },
+  {
+    "name": "Zapata County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "505"
+  },
+  {
+    "name": "Zavala County",
+    "state_abbreviation": "TX",
+    "fips_county_cd": "507"
+  }
+]

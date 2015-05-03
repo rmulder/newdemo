@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Belknap County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Cheshire County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Coos County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Grafton County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Hillsborough County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Merrimack County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Rockingham County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Strafford County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Sullivan County",
+    "state_abbreviation": "NH",
+    "fips_county_cd": "019"
+  }
+]

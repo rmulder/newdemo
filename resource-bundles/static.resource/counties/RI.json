@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Bristol County",
+    "state_abbreviation": "RI",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Kent County",
+    "state_abbreviation": "RI",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Newport County",
+    "state_abbreviation": "RI",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Providence County",
+    "state_abbreviation": "RI",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "RI",
+    "fips_county_cd": "009"
+  }
+]

@@ -1,0 +1,35 @@
+<apex:page Controller="ProductController" showHeader="true" sidebar="false" action="{!Accounttype}">
+  <apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection columns="1">
+<apex:pageBlockSectionItem >
+<apex:actionRegion >
+
+<apex:outputLabel value="Product"></apex:outputLabel>
+  <apex:selectList id="countries" value="{!PicklistResult}"
+         size="1" required="true">
+  <apex:selectOptions value="{!product}"/>
+  <apex:actionSupport event="onchange" reRender="a"/>
+</apex:selectList>
+</apex:actionRegion>
+</apex:pageBlockSectionItem>
+<!--
+<apex:pageBlockSectionItem>
+
+<apex:selectList id="countries1" 
+         size="1" required="true">
+  <apex:selectOptions value="{!SubProducts}"/>
+</apex:selectList>
+</apex:pageBlockSectionItem>  --> 
+<apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="SubProduct"></apex:outputLabel>
+<apex:selectList size="1" required="true" id="a" value="{!SubProductResult}">
+  <apex:selectOptions value="{!SubProduct}"/>
+</apex:selectList>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:commandButton value="Next" action="{!Accounttype}" />
+</apex:form> 
+</apex:page>

@@ -1,0 +1,310 @@
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D170000008iVa!ARwAQPDLJ1P1PTOuoMZhMgDJbKwAWf2IQWLnKTWKi9o4RndDFqgYyd3a_ev5Rc9QCJnSK5bAb8UheZ4sJjbdEGDtjFa830Xt</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): cs22.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D1a000000JibP!AQ0AQNfGOernecL7W_Y.wSrR8SjmM4LMg67b83IHgPxmO4PbumxqaeaLvRkUAlf5v7HEvTQ5ZBLFAffDQEDL97CmqFVpxrKH</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D1a000000JibP!AQ0AQPk7lcRPs0t0xGbfRg8ADa21k4fRFS6y0r14zyR69jokUHzBUpYlLa.eXDIlbvmsYeqZm8cmlFY1tusPvW_LTNGNEYuQ</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D1a000000JibP!AQ0AQOUGC2cg0h5.gp7EpADdQU0F05WmANFZB6SJbmvb4PNLekaEnuiI17L9dfALGYcykqYMNgGvV.CPAvGvDBIg0bzchfHW</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D1a000000JibP!AQ0AQBVOzXjxw8umswEN9by0JsPARareCILQR7Of.bRVEOGWXzHDuOQKn5WEnXMGi.CTuWnXfniQyWRlQDI7ZRNavU5Fi6J1</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D1a000000JibP!AQ0AQP1.8sw8IXKpgIns3CTZ7nPZ7ZG_.9A696dyUA5LJzHzcCW6JIv05idhpcVjvAcaOPZ7Vc.ILssrP7Qz7oMjqgxfu5ir</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com
+Starting new HTTPS connection (1): tfnewdemo.my.salesforce.com

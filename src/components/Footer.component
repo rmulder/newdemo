@@ -1,0 +1,16 @@
+<apex:component >
+
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br/>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <apex:image url="{!URLFOR($Resource.static, 'images/Compliance-Equal_Housing_Black-website_.jpeg')}" style="width: 128px;"/>
+      <apex:image url="{!URLFOR($Resource.static, 'images/Compliance-NCUA_Black-website_.jpeg')}" style="width: 160px;"/>
+    </div>
+  </div>
+</footer>
+
+</apex:component>

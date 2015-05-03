@@ -1,0 +1,13 @@
+<div class="clear"></div>
+<div class="disclosure_text paddingStyle borderStyle_disclosure blue-heading2" >
+  {{#equal Application__c.current_channel__c 'Online' }}
+  {{PageLabels.Patriot_Act_Disc_Online}}
+  {{/equal}}
+  {{#equal Application__c.current_channel__c 'Branch' }}
+  {{PageLabels.Patriot_Act_Disc_Branch}}
+  {{/equal}}
+  {{#equal Application__c.current_channel__c 'Call Center' }}
+  {{PageLabels.Patriot_Act_Disc_Call_Center}}
+  {{/equal}}
+</div>
+<div class="clear"></div>

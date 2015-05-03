@@ -1,0 +1,387 @@
+[
+  {
+    "name": "Adair County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Alfalfa County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Atoka County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Beaver County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Beckham County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Blaine County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Bryan County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Caddo County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Canadian County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Carter County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Choctaw County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Cimarron County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Cleveland County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Coal County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Comanche County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Cotton County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Craig County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Creek County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Custer County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Delaware County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Dewey County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Ellis County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Garfield County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Garvin County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Grady County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Greer County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Harmon County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Harper County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Haskell County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Hughes County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Johnston County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Kay County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Kingfisher County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Kiowa County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Latimer County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Le Flore County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Love County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "McClain County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "McCurtain County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "McIntosh County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Major County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Mayes County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Murray County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Muskogee County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Noble County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Nowata County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Okfuskee County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Oklahoma County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Okmulgee County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Osage County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Ottawa County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Pawnee County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Payne County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Pittsburg County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Pontotoc County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Pottawatomie County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Pushmataha County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Roger Mills County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Rogers County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Seminole County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Sequoyah County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Stephens County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Texas County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Tillman County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Tulsa County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Wagoner County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Washita County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Woods County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Woodward County",
+    "state_abbreviation": "OK",
+    "fips_county_cd": "153"
+  }
+]

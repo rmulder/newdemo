@@ -1,0 +1,288 @@
+<apex:page docType="html-5.0" standardStylesheets="false" controller="DSP" showHeader="false" id="PageId" cache="false" applyHtmlTag="false">
+<html ng-app="dsp" ng-controller="AppController">
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8"/>
+  <link rel="alternate" href="//{!hostUrl}/{!path}/mobileShortForm?Product={!product}&SubProduct={!subproduct}&id={!id}" id="phone" media="only screen and (touch-enabled: 1) and (max-device-width: 640px)"/>
+  <title>Digital Sales Platform</title>
+  <base href="{!$Site.CurrentSiteUrl}..{!URLFOR($Resource.dspnew, 'bin/')}"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <!-- font awesome from BootstrapCDN -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/dsp-0.0.1.min.css" />
+</head>
+<body>
+<script type="text/javascript">
+  var dataLayer = [];
+  var tmp = document.location.search.substring(1), args = [], i, arg,
+    DSP_CONFIG = {
+      //resources_url: "{!URLFOR(ApplicationCode, '/')}", 
+      //custom_resources_url: "{!URLFOR(Theme, '/')}", 
+      first: false, 
+      currentPage: "{!currentPage}",
+      iframe: false,
+      frame: "{!frame}",
+      location: "{!location}",
+      //pageJSONData: {!pageJSONData},
+      models: {
+        Application__c: {
+          Current_Channel__c: "{!channel}",
+          Support_Phone_Number__c: "{!support_phone_number}",
+          Product__c: "{!product}",
+          Sub_Product__c: "{!subproduct}"
+        }
+      }
+    };
+//    DSP = {resources_url: "{!URLFOR($Resource.static, '/')}", bust: "bust=" + (new Date()).getTime(), first: false, currentPage: ''};
+
+  if (tmp !== '') {
+    args = tmp.split('&');
+  }
+  //console.log(args);
+  for (i = 0; i < args.length; i++) {
+    arg = unescape(args[i]);
+    if (arg.indexOf('=') == -1) {
+      DSP_CONFIG[arg] = true;
+    } else {
+      kvp = arg.split('=');
+      DSP_CONFIG[kvp[0].trim()] = kvp[1].trim();
+    }
+  }
+
+  if (typeof TF4SF === 'undefined') {
+    //window["TF4SF"] = {};
+    DSP_CONFIG.controller = DSP;
+    DSP_CONFIG.namespace = DSP_CONFIG.namespace || '';
+  } else {
+    DSP_CONFIG.namespace = DSP_CONFIG.namespace || 'TF4SF__';
+    DSP_CONFIG.controller = TF4SF.DSP;
+  }
+
+  if (DSP_CONFIG.id) {
+    if (window.location.href.indexOf('app-retrieval') !== -1) {
+      window.location.href = "/{!path}/" + DSP.namespace + "index#app-retrieval";
+    }
+  }
+
+  DSP_CONFIG.id = "{!id}";
+  DSP_CONFIG.ut = "{!ut}";
+  DSP_CONFIG.referer = "{!referer}";
+  if (DSP_CONFIG.referer !== '') {
+    window.location.href = DSP_CONFIG.referer;
+  }
+  DSP_CONFIG.orgname = "{!orgName}";
+  DSP_CONFIG.debug = DSP_CONFIG.debug || true; //set to false for production!
+  DSP_CONFIG.fields = DSP_CONFIG.fields || false;
+  DSP_CONFIG.enable_google_analytics = "{!enable_google_analytics}";
+  DSP_CONFIG.google_tag_id_terafina = "{!google_tag_id_terafina}";
+  DSP_CONFIG.google_tag_id_client = "{!google_tag_id_client}";
+  DSP_CONFIG.preload = false;
+
+  //console.log(DSP_CONFIG);
+  //alert(DSP_CONFIG.id);
+  if (!DSP_CONFIG.frame) {
+    try {
+      if (window.self != window.top) {
+        DSP_CONFIG.iframe = true;
+      }
+    } catch (e) {
+      console.log('error:', e);
+      DSP_CONFIG.iframe = true;
+    }
+  } else {
+    if (DSP_CONFIG.frame === "1") {
+      DSP_CONFIG.iframe = true;
+    }
+  }
+  if (Storage !== "undefined") {
+    //clear out local storage if first coming to the 'Index' page
+    localStorage.clear();
+  }
+</script>
+<!-- Google Tag Manager -->
+<!--Terafina: GTM-NKTS24 -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id={!google_tag_id_terafina}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{!google_tag_id_terafina}');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<!-- Client: GTM-?????? -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id={!google_tag_id_client}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{!google_tag_id_client}');</script>
+<!-- End Google Tag Manager -->
+  <div class="row header_background">
+  <div class="col-xs-1"></div>
+    <div class="col-xs-11">
+      <div class="row main_configurator_menu breadcrumbs_list">
+        <div class="col-xs-2">
+          <a href="#"><img class="logo" src="assets/images/terafinalogo.png" /></a>
+        </div>
+        <div class="col-xs-8" id="progress-bar-div">
+          <div id="flags-container" class="row hidden">
+
+            <div class="col-xs-6">
+
+              <div class="flag-container" id="AboutYou">
+                <div class="left">
+                  <div class="right">
+                    <div class="text">About You</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+
+              <div class="flag-container" id="AboutAccount">
+                <div class="left">
+                  <div class="right">
+                    <div class="text">Account</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-2">
+
+              <div class="flag-container" id="Confirmation">
+                <div class="left">
+                  <div class="right">
+                    <div class="text">Confirm</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="breadcrumbs_list hidden">
+            <ul class="clearfix nav nav-pills">
+              <li id="step-1" class="col-xs-2 item step-completed">
+                <div class="content hidden">Personal Info</div>
+              </li>
+              <li id="step-2" class="col-xs-2 item step-completed">
+                <div class="content hidden">Employment</div>
+              </li>
+              <li id="step-3" class="col-xs-2 item step-completed">
+                <div class="content hidden">Identity</div>
+              </li>
+
+              <li id="step-4" class="col-xs-2 item step-completed">
+                <div class="content hidden">Account Details</div>
+              </li>
+
+
+              <li id="step-8" class="col-xs-2 item step-current">
+                <div class="content">Review &amp; Submit</div>
+              </li>
+              <li id="step-9" class="col-xs-2 item">
+                <div class="content hidden">Confirmation</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="row secure-link" data-toggle="popover" data-placement="left" data-title="Secure Connection"
+               data-content="We use the strongest available 128-bit encryption to protect any information sent to or from our servers. The “closed lock” icon in your browser lets you know that your information is being encrypted."
+               data-original-title="" title="">
+            <div class="text-center">
+              <img src="assets/images/lock.png" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="text-center">
+              <small>Connection Secured</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" ui-view="main"></div>
+
+  <footer class="container clearfix">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        Copyright &copy; 2015 Terafina, Inc
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        All rights reserved.
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <img src="assets/images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" width="140" height="44"/>
+        <img src="assets/images/Compliance-NCUA_Black-website_.jpeg" alt="" width="206" height="44"/>
+      </div>
+    </div>
+  </footer>
+
+  <!-- compiled JavaScript -->
+  <script type="text/javascript" src="assets/dsp-0.0.1.js"></script>
+  <script type="text/ng-template" id="multi-field-template.html">
+    <div class="row">
+      <div formly-field
+           ng-repeat="field in to.fields track by $index"
+           ng-if="!field.hide"
+           class="{{::colClass[$index]}} formly-field {{field.type ? 'formly-field-' + field.type : ''}}"
+           options="field"
+           model="field.model || model"
+           fields="fields"
+           form="form"
+           form-id="formId"
+           form-state="options.formState"
+           index="$index">
+      </div>
+    </div>
+  </script>
+<!-- TODO: Temporary only !! -->
+<!--
+<button id="getPageFields" type="button" class="btn btn-success">Get Page Fields</button>
+<script src="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"></script>
+<script src="{!URLFOR($Resource.static, 'js/libs/underscore/underscore-min.js')}"></script>
+<script src="{!URLFOR($Resource.static, 'js/libs/dsp/dsp-common.js')}"></script>
+
+<script>
+  jQuery(document).ready(function() {
+    jQuery('#getPageFields').on('click', function() {
+      var currentPage = DSP_CONFIG.appPages[location.hash];
+      console.log('currentPage:' + currentPage);
+      DSP.getPageFieldsJSON({id: DSP_CONFIG.id}, currentPage, function(results, event) {
+        console.log('event:', event);
+        if (event.status) {
+          if (results === null) {
+            /* We did not get a valid response back from the server; assume the id or ut is invalid. */
+            alert('Null response from server');
+            return false;
+          } else {
+            console.log('results:', results);
+            var jsonStr = _.unescape(results), json = JSON.parse(jsonStr);
+            console.log('jsonStr:', jsonStr);
+            console.log('json parsed:', json);
+            console.log('fields:', json['fields']);
+          }
+        } else {
+          alert('Error contacting server: ' + event.message);
+          console.log(event);
+        }
+      });
+    });
+  });
+</script>
+-->
+</body>
+</html>        
+</apex:page>

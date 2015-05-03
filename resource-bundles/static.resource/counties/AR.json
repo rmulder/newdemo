@@ -1,0 +1,377 @@
+[
+  {
+    "name": "Arkansas County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Ashley County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Baxter County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bradley County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Chicot County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Cleburne County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Cleveland County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Columbia County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Conway County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Craighead County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Crittenden County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Cross County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Dallas County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Desha County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Drew County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Faulkner County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Fulton County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Garland County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Hempstead County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Hot Spring County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Howard County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Independence County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Izard County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Lafayette County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Little River County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Lonoke County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Miller County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Mississippi County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Nevada County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Newton County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Ouachita County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Phillips County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Poinsett County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Pope County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Prairie County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Pulaski County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Randolph County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "St. Francis County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Saline County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Searcy County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Sebastian County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Sevier County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Sharp County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Stone County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Van Buren County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "White County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Woodruff County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Yell County",
+    "state_abbreviation": "AR",
+    "fips_county_cd": "149"
+  }
+]

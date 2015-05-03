@@ -1,0 +1,467 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Antelope County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Arthur County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Banner County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Blaine County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Box Butte County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Boyd County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Buffalo County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Burt County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Cedar County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Chase County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Cherry County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Cheyenne County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Colfax County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Cuming County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Custer County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Dakota County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Dawes County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Dawson County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Deuel County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Dixon County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Dodge County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Dundy County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Fillmore County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Frontier County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Furnas County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Gage County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Garden County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Garfield County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Gosper County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Greeley County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Hall County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Harlan County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Hayes County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Hitchcock County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Holt County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Hooker County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Howard County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Kearney County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Keith County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Keya Paha County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Kimball County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Lancaster County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Loup County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "McPherson County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Merrick County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Morrill County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Nance County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Nemaha County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Nuckolls County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Otoe County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Pawnee County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Perkins County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Phelps County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Pierce County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Platte County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Red Willow County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Richardson County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Rock County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Saline County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Sarpy County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Saunders County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Scotts Bluff County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Seward County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Sheridan County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Sherman County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Sioux County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Stanton County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Thayer County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Thomas County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Thurston County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Valley County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Webster County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Wheeler County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "York County",
+    "state_abbreviation": "NE",
+    "fips_county_cd": "185"
+  }
+]

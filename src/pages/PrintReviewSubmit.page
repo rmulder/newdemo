@@ -1,0 +1,6 @@
+<apex:page docType="html-5.0"  action="{!URLFOR($Resource.static, 'templates/review-submit.html')}">
+    <!--  -->
+   
+    <!-- <img src="{!URLFOR($Resource.static, 'images/loading-image-blue.gif')}"/> -->
+
+</apex:page>

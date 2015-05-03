@@ -1,0 +1,102 @@
+<apex:page showHeader="false" sidebar="false" standardController="Customer__c" extensions="EmailPageController">
+
+<apex:stylesheet value="{!URLFOR($Resource.static, 'css/bootstrap.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.mask.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modal.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modalmanager.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap.min.js')}"/>
+
+<apex:form >
+<apex:pageMessages ></apex:pageMessages>
+    <!--<apex:stylesheet value="{!URLFOR($Resource.Test_background, 'Samplecss.css')}"/>-->
+    <center> <apex:image value="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" height="25%" width="25%"/> </center>
+
+    <apex:pageBlock title="Send an email to: {!customer.First_Name__c} {!customer.Last_Name__c}" >
+        <p><b> Please verify the following information: </b></p>
+        <apex:pageBlockTable style="width:100%" value="{!customer}" var="cust">
+            <apex:column style="width:250px"  title="First Name" value="{!cust.First_Name__c}"/>
+            <apex:column style="width:250px"  title="Last Name" value="{!cust.Last_Name__c}"/>
+            <apex:column >
+                <apex:facet name="header">Email Address</apex:facet>
+                <apex:inputText value="{!eMailParam}" title="Email Address"/>
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">CC</apex:facet>
+                <apex:inputText value="{!ccParam}" title="CC"/>
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">BCC</apex:facet>
+                <apex:inputText value="{!bccParam}" title="BCC"/>
+            </apex:column>     
+        </apex:pageBlockTable>
+        <br/>
+        <p><b> Choose an email temaplate or select "None" to draft an email below: </b></p>
+        <br/>
+        <div>
+            <apex:selectList size="1" value="{!selectedTemplateId}" styleClass="sendtemplateId" required="true" id="xyz">
+                 <apex:selectOptions value="{!TemplateOptions}"/>    
+            </apex:selectList>
+        </div>
+        <br/>
+        <div class="preview-button hidden">
+            <button data-toggle="modal" data-target="#myModal" style="height:30px;width:100px;" > Preview </button>
+        </div>
+        <br/><br/>
+
+        <div class="freetext-email">
+            <apex:outputLabel value="Subject" for="Subject"/>:<br />     
+            <apex:inputText value="{!subject}" id="Subject" maxlength="80"/>
+            <br/>
+            <apex:outputLabel value="Body" for="Body"/>:<br />     
+            <apex:inputTextarea value="{!body}" id="Body"  rows="10" cols="80"/>           
+            <br/><br/>
+        </div>    
+
+        <center> <apex:commandButton value="Send Email" action="{!send}" style="height:30px;width:100px;" /> </center>
+    </apex:pageBlock>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <center><h4 class="modal-title" id="myModalLabel">Email Template Preview</h4></center>
+                </div>
+                <div class="modal-body" style="height:600px;">
+                    Here is the preview of the Email Template you have selected.<br></br><br></br>
+                    <div class="divframe"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" style="height:30px;width:130px;">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var selectedTempId = $('.sendtemplateId').val();
+            /*if(selectedTempId == 'None' || selectedTempId == null){
+                $('.freetext-email').addClass('hidden');
+            }*/
+            console.log('the result is '+selectedTempId);
+            $('.divframe').html('<iframe width="582" height="510" src="{!$Setup.SiteUrl__c.Url__c}email/templaterenderer?id='+selectedTempId+'&base_href={!$Setup.Application_Configuration__c.Instance_URL__c}&preview_frame=previewFrame&render_type=REPLACED_HTML_BODY"/>');
+            
+            $('.sendtemplateId').change(function(){
+                var selectedTempId = $('.sendtemplateId').val();
+                if(selectedTempId !== 'None' && selectedTempId !== null){
+                    $('.freetext-email').addClass('hidden');
+                    $('.preview-button').removeClass('hidden');
+                } else {
+                    $('.freetext-email').removeClass('hidden');
+                    $('.preview-button').addClass('hidden');
+                }
+                console.log('the result is '+selectedTempId);
+                $('.divframe').html('<iframe width="582" height="510" src="{!$Setup.SiteUrl__c.Url__c}email/templaterenderer?id='+selectedTempId+'&base_href={!$Setup.Application_Configuration__c.Instance_URL__c}&preview_frame=previewFrame&render_type=REPLACED_HTML_BODY"/>');
+            });
+        });
+    </script>
+
+</apex:form>    
+</apex:page>

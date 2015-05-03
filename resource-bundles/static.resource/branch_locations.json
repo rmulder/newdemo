@@ -1,0 +1,12 @@
+[
+  {"branch_state":"California","branch_state_code":"CA","branch_locations":["Cupertino", "Palo Alto", "Roseville", "San Jose", "Santa Clara", "Santa Rosa"]},
+  {"branch_state":"Colorado","branch_state_code":"CO","branch_locations":["Colorado Springs", "Englewood", "Fort Collins", "Loveland"]},
+  {"branch_state":"Georgia","branch_state_code":"GA","branch_locations":["Alpharetta"]},
+  {"branch_state":"Idaho","branch_state_code":"ID","branch_locations":["Boise"]},
+  {"branch_state":"Massachusetts","branch_state_code":"MA","branch_locations":["Andover"]},
+  {"branch_state":"Oregon","branch_state_code":"OR","branch_locations":["Beaverton", "Corvallis", "Eugene", "Hillsboro", "Keizer", "Oakridge", "Portland", "Salem", "Springfield", "Wilsonville"]},
+  {"branch_state":"Puerto Rico","branch_state_code":"PR","branch_locations":["Aguadilla"]},
+  {"branch_state":"Texas","branch_state_code":"TX","branch_locations":["Houston"]},
+  {"branch_state":"Washington","branch_state_code":"WA","branch_locations":["Bellevue", "Kirkland", "Redmond", "Seattle", "Vancouver"]},
+  {"branch_state":"Other","branch_state_code":"XX","branch_locations":["Other"]}
+]

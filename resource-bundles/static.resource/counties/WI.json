@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Ashland County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Barron County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Bayfield County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Buffalo County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Burnett County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Calumet County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Chippewa County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Columbia County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Dane County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Dodge County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Door County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Dunn County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Eau Claire County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Florence County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Fond du Lac County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Forest County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Green County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Green Lake County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Iowa County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Iron County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Juneau County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Kenosha County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Kewaunee County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "La Crosse County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Lafayette County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Langlade County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Manitowoc County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Marathon County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Marinette County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Marquette County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Menominee County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "078"
+  },
+  {
+    "name": "Milwaukee County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Oconto County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Oneida County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Outagamie County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Ozaukee County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Pepin County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Pierce County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Portage County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Price County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Racine County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Richland County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Rock County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Rusk County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "St. Croix County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Sauk County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Sawyer County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Shawano County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Sheboygan County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Taylor County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Trempealeau County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Vernon County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Vilas County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Walworth County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Washburn County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Waukesha County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Waupaca County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Waushara County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Winnebago County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Wood County",
+    "state_abbreviation": "WI",
+    "fips_county_cd": "141"
+  }
+]

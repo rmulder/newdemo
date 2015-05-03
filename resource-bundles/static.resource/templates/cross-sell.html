@@ -1,0 +1,459 @@
+<div class="server-errors hidden"></div>
+<div class="cross-sell-box paddingLeft20">
+<div>
+
+<h4 class="blue_heading">{{PageLabels.crosssell_header__c}}</h4>
+<div class='row' id="pgAboutYou2">
+  <div class='col-xs-12 col-sm-6 col-lg-8 column ckbox-col'>
+    <input type="checkbox" name="cross" checked="checked" disabled="disabled"/>
+    <span class="bodyText">{{Application__c.sub_product__c}}</span>
+  </div>
+  <div class='col-xs-6 col-lg-4 column'>
+    <div class="js-float-label-wrapper col-xs-12 hidden">
+      <div class="styled-select">
+        <label for="main_product_special_handling_code__c">Select Special Handling Code</label>
+        <select class="product_handling_code col-xs-12" id="main_product_special_handling_code__c" name="main_product_special_handling_code__c"
+                data-value="{{Application__c.main_product_special_handling_code__c}}">
+
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='row' id="cs1">
+  <div class='col-xs-12 col-sm-6 col-lg-8 column ckbox-col'>
+    {{#equal Application__c.current_channel__c 'Online' }}
+    <input type="checkbox" class="cross1" name="primary_offer__c" value="{{Cross_Sell_Logic__c.primary_offer__c}}"
+           data-value="{{Application__c.primary_offer__c}}"/>
+    {{/equal}}
+    {{#notequal Application__c.current_channel__c 'Online' }}
+    <input type="checkbox" name="cross1" class="cross1" data-value="{{Application__c.primary_offer__c}}"/>
+    <span><input type="hidden" name="primary_offer__c" class="cs1_hidden" value="{{Application__c.primary_offer__c}}"/></span>
+    {{/notequal}}
+    <span class="bodyText">{{Cross_Sell_Logic__c.primary_offer__c}}</span>
+  </div>
+  <div class='col-xs-6 col-lg-4 column'>
+    <div class=" js-float-label-wrapper col-xs-12 hidden">
+      <div class="styled-select">
+        <label for="primary_offer_special_handling_code__c">Select Special Handling Code</label>
+        <select class="cross1_options width283" id="primary_offer_special_handling_code__c"
+                name="primary_offer_special_handling_code__c"
+                data-value="{{Application__c.primary_offer_special_handling_code__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row' id="cs2">
+  <div class='col-xs-12 col-sm-6 col-lg-8 column ckbox-col'>
+    {{#equal Application__c.current_channel__c 'Online' }}
+    <input type="checkbox" class="cross2" name="second_offer__c" value="{{Cross_Sell_Logic__c.secondary_offer__c}}"
+           data-value="{{Application__c.second_offer__c}}"/>
+    {{/equal}}
+    {{#notequal Application__c.current_channel__c 'Online' }}
+    <input type="checkbox" name="cross2" class="cross2" data-value="{{Application__c.second_offer__c}}"/>
+    <span><input type="hidden" name="second_offer__c" class="cs2_hidden"
+                 value="{{Application__c.second_offer__c}}"/></span>
+    {{/notequal}}
+    <span class="bodyText">{{Cross_Sell_Logic__c.secondary_offer__c}}</span>
+  </div>
+  <div class='col-xs-6 col-lg-4 column'>
+    <div class="js-float-label-wrapper col-xs-12 hidden">
+      <div class="styled-select">
+        <label for="second_offer_special_handling_code__c">Select Special Handling Code</label>
+        <select class="cross2_options col-xs-12" id="second_offer_special_handling_code__c"
+                name="second_offer_special_handling_code__c"
+                data-value="{{Application__c.second_offer_special_handling_code__c}}">
+          <option value="">Select Special Handling Code</option>
+          <option value="HP VUC Fleet Loan">HP VUC Fleet Loan</option>
+          <option value="Share/Share Certificate Secure">Share/Share Certificate Secure</option>
+          <option value="Member Waiting at Branch">Member Waiting at Branch</option>
+          <option value="First Time Auto Buyer">First Time Auto Buyer</option>
+          <option value="Relocation Seg Member">Relocation Seg Member</option>
+          <option value="Workout-Online">Workout-Online</option>
+          <option value="Board Member Loan">Board Member Loan</option>
+          <option value="Insurance Settlement">Insurance Settlement</option>
+          <option value="Green Discount">Green Discount</option>
+          <option value="Agilent Fleet Auto Purchase">Agilent Fleet Auto Purchase</option>
+          <option value="HP Fleet Auto Purchase">HP Fleet Auto Purchase</option>
+          <option value="Microsoft Employee">Microsoft Employee</option>
+          <option value="Intel Employee">Intel Employee</option>
+          <option value="Microsoft and Green">Microsoft and Green</option>
+          <option value="Intel and Green">Intel and Green</option>
+          <option value="Internal Refi-Rate Reduction">Internal Refi-Rate Reduction</option>
+          <option value="Relocation SEG Member/Green">Relocation SEG Member/Green</option>
+          <option value="SEG Mbr/Microsoft-Intel Emp">SEG Mbr/Microsoft-Intel Emp</option>
+          <option value="Relo">Relo</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row' id="cs3">
+  <div class='col-xs-12 col-sm-6 col-lg-8 column ckbox-col'>
+    {{#equal Application__c.current_channel__c 'Online' }}
+    <input type="checkbox" class="cross3" name="third_offer__c" value="{{Cross_Sell_Logic__c.third_offer__c}}"
+           data-value="{{Application__c.third_offer__c}}"/>
+    {{/equal}}
+    {{#notequal Application__c.current_channel__c 'Online' }}
+    <input type="checkbox" name="cross3" class="cross3" data-value="{{Application__c.third_offer__c}}"/>
+    <span><input type="hidden" name="third_offer__c" class="cs3_hidden"
+                 value="{{Application__c.third_offer__c}}"/></span>
+    {{/notequal}}
+    <span class="bodyText">{{Cross_Sell_Logic__c.third_offer__c}}</span>
+  </div>
+  <div class='col-xs-6 col-lg-4 column'>
+    <div class="js-float-label-wrapper col-xs-12 hidden">
+      <div class="styled-select">
+        <label for="third_offer_special_handling_code__c">Select Special Handling Code</label>
+        <select class="cross3_options col-xs-12" id="third_offer_special_handling_code__c"
+                name="third_offer_special_handling_code__c"
+                data-value="{{Application__c.third_offer_special_handling_code__c}}">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>&nbsp;</p>
+
+<!--<p style="width:700px"></p>-->
+
+
+<!--<p style="width:700px"></p>-->
+<!--<br/>-->
+
+<div class="container-fluid">
+  {{#equal Application__c.current_channel__c 'Online' }}
+    {{#equal Application__c.created_channel__c 'Online' }}
+      {{#equal Application__c.assisted_application__c 'false' }}
+      <div class="row">
+        <h4 class="blue_heading">{{PageLabels.crosssell_options_online__c}}</h4>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-4 column padding_right">
+          <div class="product">
+            <div class="boxborder">
+              <p>&nbsp;</p>
+
+              <p style="padding:5px">
+                <span class="greenTextSmall">&nbsp;<br> {{Cross_Sell_Logic__c.primary_offer__c}}</span>
+              </p>
+
+              <p style="padding:5px">
+                <span class="bodyTextSmall"> {{Cross_Sell_Logic__c.primary_offer_text__c}} </span>
+              </p>
+            </div>
+            <div class="apDiv2 hidden"><span class="greenText"> <span
+                class="selected-item">&#10003;</span></span>
+            </div>
+            <div class="apDiv1" data-link="cs1"><span class="crossSellButton floatRt crossBtn">+ ADD</span></div>
+            <div class="panel">
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.primary_offer_textarea__c}}</li>
+
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.primary_offer_textarea2__c}}</li>
+              {{#if Cross_Sell_Logic__c.primary_offer_textarea3__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.primary_offer_textarea3__c}}</li>
+              {{/if}}
+              {{#if Cross_Sell_Logic__c.primary_offer_textarea4__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.primary_offer_textarea4__c}}</li>
+              {{/if}}
+              {{#if Cross_Sell_Logic__c.primary_offer_textarea5__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.primary_offer_textarea5__c}}</li>
+              {{/if}}
+              <!-- you can put content here -->
+            </div>
+            <p class="slide"><a href="#" class="btn-slide">LEARN MORE</a></p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4 column padding_right">
+          <div class="product">
+            <div class="boxborder">
+              <p>&nbsp;</p>
+
+              <p style="padding:5px">
+                <span class="greenTextSmall">&nbsp;<br> {{Cross_Sell_Logic__c.secondary_offer__c}}</span>
+              </p>
+
+              <p style="padding:5px">
+                <span class="bodyTextSmall"> {{Cross_Sell_Logic__c.secondary_offer_text__c}} </span>
+              </p>
+            </div>
+            <div class="apDiv2 hidden">
+                      <span class="greenText"> <span
+                          class="selected-item">&#10003;</span></span>
+            </div>
+            <div class="apDiv1" data-link="cs2"><span class="crossSellButton floatRt crossBtn">+ ADD</span></div>
+            <div class="panel">
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.secondary_offer_textarea__c}}</li>
+
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.secondary_offer_textarea2__c}}</li>
+              {{#if Cross_Sell_Logic__c.secondary_offer_textarea3__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.secondary_offer_textarea3__c}}</li>
+              {{/if}}
+              {{#if Cross_Sell_Logic__c.secondary_offer_textarea4__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.secondary_offer_textarea4__c}}</li>
+              {{/if}}
+              {{#if Cross_Sell_Logic__c.secondary_offer_textarea5__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.secondary_offer_textarea5__c}}</li>
+              {{/if}}
+              <!-- you can put content here -->
+            </div>
+            <p class="slide"><a href="#" class="btn-slide">LEARN MORE</a></p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4 column padding_right">
+          <div class="product">
+            <div class="boxborder">
+              <p>&nbsp;</p>
+
+              <p style="padding:5px">
+                <span class="greenTextSmall">&nbsp;<br>{{Cross_Sell_Logic__c.third_offer__c}}</span>
+              </p>
+
+              <p style="padding:5px">
+                <span class="bodyTextSmall"> {{Cross_Sell_Logic__c.third_offer_text__c}} </span>
+              </p>
+            </div>
+            <div class="apDiv2 hidden"><span class="greenText"> <span
+                class="selected-item">&#10003;</span></span>
+            </div>
+            <div class="apDiv1" data-link="cs3"><span class="crossSellButton floatRt crossBtn">+ ADD</span></div>
+            <div class="panel">
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.third_offer_textarea__c}}</li>
+
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.third_offer_textarea2__c}}</li>
+              {{#if Cross_Sell_Logic__c.third_offer_textarea3__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.third_offer_textarea3__c}}</li>
+              {{/if}}
+              {{#if Cross_Sell_Logic__c.third_offer_textarea4__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.third_offer_textarea4__c}}</li>
+              {{/if}}
+              {{#if Cross_Sell_Logic__c.third_offer_textarea5__c}}
+              <li class="bodyTextSmall">{{Cross_Sell_Logic__c.third_offer_textarea5__c}}</li>
+              {{/if}}
+              <!-- you can put content here -->
+            </div>
+            <p class="slide"><a href="#" class="btn-slide">LEARN MORE</a></p>
+          </div>
+        </div>
+      </div>
+      {{/equal}}
+    {{/equal}}
+  {{/equal}}
+  {{#notequal Application__c.current_channel__c 'Online' }}
+  <div class="row">
+    <h4 class="blue_heading">{{PageLabels.crosssell_options_offline__c}}</h4>
+  </div>
+  <div class="row">
+    <div class="row">
+      <div class="js-float-label-wrapper col-xs-6">
+        <div class="styled-select">
+            <label for="cross-select_1">Select an option</label>
+            <select class="cross-select_1 col-xs-12" id="cross-select_1" data-value="{{Application__c.primary_offer__c}}">
+            <option value=" ">Select an option</option>
+            </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="js-float-label-wrapper col-xs-6">
+        <div class="styled-select">
+          <label for="cross-select_2">Select an option</label>
+          <select class="cross-select_2 col-xs-12" id="cross-select_2" data-value="{{Application__c.secondary_offer__c}}">
+            <option value=" ">Select an option</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="js-float-label-wrapper col-xs-6">
+        <div class="styled-select">
+          <label for="cross-select_3">Select an option</label>
+          <select class="cross-select_3 col-xs-12" id="cross-select_3" data-value="{{Application__c.third_offer__c}}">
+            <option value=" ">Select an option</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    {{/notequal}}
+  </div>
+</div>
+{{#notequal Application__c.current_channel__c 'Online' }}
+<div class="insurance_products_section hidden">
+  <p>&nbsp;</p>
+
+  <hr/>
+  <h4 class="blue_heading">{{PageLabels.crosssell_insurance__c}}</h4>
+  <div class="container-fluid">
+    <div class="gap_protection_section hidden sectionTitleContainer">
+      <h4 class="sectionTitle">{{PageLabels.crosssell_gap__c}}</h4>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <label for="gap_protection" class="insuranceLabel">Interested in GAP Protection?</label>
+        </div>
+        <div class=" js-float-label-wrapper col-xs-5">
+          <div class="styled-select">
+              <label for="gap_protection">Select an option</label>
+              <select class="gap_protection col-xs-12 required" id="gap_protection" name="gap_protection_cs__c"
+                    data-value="{{Application__c.gap_protection_cs__c}}">
+                <option value="">Select an Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <div class="row include_gap_protection_div hidden">
+        <div class="col-xs-5">
+          <label for="include_gap_protection" class="insuranceLabel">Include in Loan Amount?</label>
+        </div>
+        <div class=" js-float-label-wrapper col-xs-5">
+          <div class="styled-select">
+              <label for="include_gap_protection">Select an option</label>
+              <select class="include_gap_protection col-xs-12 required" id="include_gap_protection"
+                      name="include_in_loan_amount_gp__c" data-value="{{Application__c.include_in_loan_amount_gp__c}}">
+                <option value="">Select an Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+    <div class="mbd_protection_section hidden sectionTitleContainer">
+      <h4 class="sectionTitle">{{PageLabels.crosssell_mbdp__c}}</h4>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <label for="mbd_protection" class="insuranceLabel">Interested in MBP?</label>
+        </div>
+
+        <div class="js-float-label-wrapper col-xs-5">
+          <div class="styled-select">
+            <label for="mbd_protection">Select an option</label>
+            <select class="mbd_protection col-xs-12 required" id="mbd_protection"
+                    name="mechanical_break_down_protection_cs__c"
+                    data-value="{{Application__c.mechanical_break_down_protection_cs__c}}">
+                <option value="">Select an Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row include_mbd_protection_div hidden">
+        <div class="col-xs-5">
+          <label for="include_mbd_protection" class="insuranceLabel">Include in Loan Amount?</label>
+        </div>
+        <div class="js-float-label-wrapper col-xs-5">
+          <div class="styled-select">
+            <label for="include_mbd_protection">Select an option</label>
+            <select class="include_mbd_protection col-xs-12 required" id="include_mbd_protection"
+                    name="include_in_loan_amount_mbp__c" data-value="{{Application__c.include_in_loan_amount_mbp__c}}">
+              <option value="">Select an Option</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class=" mbd_policy_amount_div hidden row">
+          <div class="col-xs-5 ">
+            <label for="mbd_policy_amount" class="insuranceLabel">MBP Policy Amount $</label>
+          </div>
+          <div class="js-float-label-wrapper fieldItem col-xs-5">
+            <input class="mbd_policy_amount col-xs-6 acceptZero currencyUS required"
+                   id="mbd_policy_amount" name="mbp_amount_of_policy__c" size="20" type="text"
+                   value="{{Application__c.mbp_amount_of_policy__c}}"/>
+          </div>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+    <br>
+    <div class="ds_protection_section hidden sectionTitleContainer">
+      <h4 class="sectionTitle" >{{PageLabels.crosssell_dsploans__c}}</h4>
+
+      <div class="row">
+        <div class="js-float-label-wrapper col-xs-5">
+          <div class="styled-select">
+            <label for="debt_safe_protection_option_loans__c" class="inlineLabel">Select an Option</label>
+            <select class="dsp_protection col-xs-12 required" id="debt_safe_protection_option_loans__c"
+                    name="debt_safe_protection_option_loans__c"
+                    data-value="{{Application__c.debt_safe_protection_option_loans__c}}">
+
+            </select>
+          </div>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+
+    <div class="ds_protection_cc_section hidden sectionTitleContainer">
+      <h4 class="sectionTitle">{{PageLabels.crosssell_dspcc__c}}</h4>
+
+      <div class="row">
+        <div class="js-float-label-wrapper col-xs-5">
+          <div class="styled-select">
+            <label for="debt_safe_protection_option_credits__c">Select an Option</label>
+            <select class="ds_protection_cc col-xs-12 required" id="debt_safe_protection_option_credits__c"
+                    name="debt_safe_protection_option_credits__c"
+                    data-value="{{Application__c.debt_safe_protection_option_credits__c}}">
+
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<p style="width:700px"></p>
+
+<p>&nbsp;</p>
+
+<hr/>
+<div class="notes_section hidden" style="min-height: 100px">
+
+  <p class="blue_heading">{{PageLabels.crosssell_notes__c}}</p>
+
+
+  <div class="row marginTop15">
+    <div class="col-xs-7">
+      <textarea id="cl_product_comments_only__c" name="cl_product_comments_only__c"
+                                                class="col-xs-12 validnotechars charlimit" cols="50" rows="4">{{Application__c.cl_product_comments_only__c}}</textarea>
+    </div>
+  </div>
+</div>
+{{/notequal}}
+<!-- content_wrap -->
+
+<div id="actionPanel">
+  <p style="color:#fff">
+  {{#equal Application__c.current_channel__c 'Online' }}
+  <p style="width:700px"></p>
+
+  <p>&nbsp;</p>
+
+  {{/equal}}
+  </p>
+</div>
+</div>
+<br/>
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+<script id="products-list" type="text/x-handlebars-template">
+  {{#if Cross_Sell_Logic__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow hidden">{{Cross_Sell_Logic__c.primary_offer__c}}</li>
+  <li id="cs2_list" class="listRow hidden">{{Cross_Sell_Logic__c.secondary_offer__c}}</li>
+  <li id="cs3_list" class="listRow hidden">{{Cross_Sell_Logic__c.third_offer__c}}</li>
+  {{/if}}
+</script>

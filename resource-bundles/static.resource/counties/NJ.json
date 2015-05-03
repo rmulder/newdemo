@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Atlantic County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Bergen County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Burlington County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Camden County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Cape May County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Essex County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Gloucester County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Hudson County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Hunterdon County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Middlesex County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Monmouth County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Morris County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Ocean County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Passaic County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Salem County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Somerset County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Sussex County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "NJ",
+    "fips_county_cd": "041"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Hawaii County",
+    "state_abbreviation": "HI",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Honolulu County",
+    "state_abbreviation": "HI",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Kalawao County",
+    "state_abbreviation": "HI",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Kauai County",
+    "state_abbreviation": "HI",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Maui County",
+    "state_abbreviation": "HI",
+    "fips_county_cd": "009"
+  }
+]

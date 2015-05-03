@@ -1,0 +1,442 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Allen County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Ashland County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Ashtabula County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Athens County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Auglaize County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Belmont County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Champaign County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Clermont County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Columbiana County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Coshocton County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Cuyahoga County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Darke County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Defiance County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Delaware County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Erie County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Fairfield County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Fulton County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Gallia County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Geauga County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Guernsey County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Hardin County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Highland County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Hocking County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Holmes County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Huron County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Licking County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Lorain County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Lucas County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Mahoning County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Medina County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Meigs County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Miami County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Morrow County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Muskingum County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Noble County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Ottawa County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Paulding County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Pickaway County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Portage County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Preble County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Putnam County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Richland County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Ross County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Sandusky County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Scioto County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Seneca County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Stark County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Summit County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Trumbull County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Tuscarawas County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Van Wert County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Vinton County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Williams County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Wood County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Wyandot County",
+    "state_abbreviation": "OH",
+    "fips_county_cd": "175"
+  }
+]

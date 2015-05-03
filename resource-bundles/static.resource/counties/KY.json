@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Adair County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Allen County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Anderson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Ballard County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Barren County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bath County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Bell County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bourbon County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Boyd County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Boyle County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Bracken County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Breathitt County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Breckinridge County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Bullitt County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Caldwell County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Calloway County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Campbell County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Carlisle County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Carter County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Casey County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Christian County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Crittenden County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Daviess County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Edmonson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Elliott County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Estill County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Fleming County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Floyd County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Fulton County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Gallatin County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Garrard County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Graves County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Grayson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Green County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Greenup County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Hardin County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Harlan County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Hart County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Henderson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Hickman County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Hopkins County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Jessamine County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Kenton County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Knott County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Knox County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Larue County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Laurel County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Leslie County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Letcher County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Lewis County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Livingston County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Lyon County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "McCracken County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "McCreary County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "McLean County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Magoffin County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Martin County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Mason County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Meade County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Menifee County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Metcalfe County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Morgan County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Muhlenberg County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Nelson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Nicholas County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Ohio County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Oldham County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Owen County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Owsley County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "Pendleton County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "Perry County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Pike County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Powell County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "Pulaski County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "199"
+  },
+  {
+    "name": "Robertson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "201"
+  },
+  {
+    "name": "Rockcastle County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "203"
+  },
+  {
+    "name": "Rowan County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "205"
+  },
+  {
+    "name": "Russell County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "207"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "209"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "211"
+  },
+  {
+    "name": "Simpson County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "213"
+  },
+  {
+    "name": "Spencer County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "215"
+  },
+  {
+    "name": "Taylor County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "217"
+  },
+  {
+    "name": "Todd County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "219"
+  },
+  {
+    "name": "Trigg County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "221"
+  },
+  {
+    "name": "Trimble County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "223"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "225"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "227"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "229"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "231"
+  },
+  {
+    "name": "Webster County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "233"
+  },
+  {
+    "name": "Whitley County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "235"
+  },
+  {
+    "name": "Wolfe County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "237"
+  },
+  {
+    "name": "Woodford County",
+    "state_abbreviation": "KY",
+    "fips_county_cd": "239"
+  }
+]

@@ -1,0 +1,37 @@
+<apex:page standardController="Service__c" extensions="ServiceAppRetrievalController" showHeader="false" sidebar="false">
+<apex:pageMessages ></apex:pageMessages>
+
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.mask.min.js')}"/>
+
+<apex:form >
+	<center> <apex:image value="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" height="25%" width="25%"/></center>
+
+	<apex:pageBlock > <center> <h> <b>Application Retrieval</b> </h> </center> <br></br>
+		<apex:pageBlockSection title="Please complete or confirm the following information to retrieve your Service Request." columns="1">
+			<apex:inputText value="{!lastName}" label="Last Name"/>
+			<apex:inputText value="{!dob}" label="Date of Birth" onclick="DynamicDatePicker(this);" size="10" id="dateid" styleclass="required date-mask dob dateUS"/>
+			<apex:inputText value="{!email}" label="Email Address"/>
+			<apex:inputText value="{!ssn}" label="Last 4 of SSN"/>
+			<apex:commandButton value="Retrieve Service" action="{!retrieveService}"/>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:form>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		var custom_options = {
+        translation: {
+          '9': {pattern: /\d/},
+          '0': {pattern: /\d/, optional: true},
+          '#': {pattern: /\d/, recursive: true},
+          '*': {pattern: /[a-zA-Z0-9]/},
+          'S': {pattern: /[a-zA-Z]/}
+        }
+      };
+
+		$(".date-mask").mask('99/99/9999', custom_options);
+	});
+
+</script>
+</apex:page>

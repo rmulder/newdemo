@@ -1,0 +1,8 @@
+<apex:page standardController="Service_Document_Request__c" extensions="uploadServiceDocReqController" showHeader="false" sidebar="false">
+<apex:form >
+	<apex:outputText value="Please upload a file"/>
+    <apex:inputFile value="{!attach.Body}" fileName="{!attach.Name}"/>
+    <apex:commandButton value="Save" action="{!upLoad}"/>
+<apex:pageMessages />
+</apex:form>
+</apex:page>

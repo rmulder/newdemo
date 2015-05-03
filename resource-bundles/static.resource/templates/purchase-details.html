@@ -1,0 +1,412 @@
+<div id="formContainer">
+<!-- Primary Applicant Info -->
+<div id="appl_1" class="applicant">
+<h4 class="sectionHeader"> &nbsp;
+  <span class="btn pull-right">
+    <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+      <span class="demo primaryBtn padding10 font144"  id="myButton">Save for Later</span>
+    </div>
+  </span>
+  </h4>
+{{#if DisplayedFields.display_mrt_fields}}
+<div class="formFields sectionTitleContainer" id="appl_1_mortgageDetails">
+  <h4 class="sectionTitle">{{PageLabels.home_loan_terms_and_purpose}}</h4>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="mortgage_applied_for__c">Select Type of Mortgage <span class="required">*</span></label>
+        <select id="mortgage_applied_for__c" name="mortgage_applied_for__c" class="col-xs-12 required appl_1_mortgageType"
+                data-value="{{About_Account__c.mortgage_applied_for__c}}">
+          <option value="">Select Type of Mortgage <span class="required">*</span></option>
+          <option value="Conventional">Conventional</option>
+          <option value="FHA">FHA</option>
+          <option value="VA">VA</option>
+          <option value="USDA">USDA/Rural Housing</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="purpose_of_loan__c">Select Purpose <span class="required">*</span></label>
+        <select id="purpose_of_loan__c" name="purpose_of_loan__c" class="col-xs-12 required appl_1_mortgagePurpose"
+                data-value="{{About_Account__c.purpose_of_loan__c}}">
+          <option value="">Select Purpose<span class="required"> *</span></option>
+          <option value="Purchase">Purchase</option>
+          <option value="RefiRateTerm">Refi Rate/Term</option>
+          <option value="RefiCashout">Refinance Cashout</option>
+          <option value="FHAStreamline">FHA Streamline Refi</option>
+          <option value="VAIRRRL">VA IRRRL</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- Other mortgage type -->
+  <div class="row fieldSet hidden">
+    <div class="js-float-label-wrapper fieldItem col-xs-5 other_type hidden">
+      <label for="mortgagetype_other__c">Other Type<span class="required"> *</span></label>
+      <input type="text" name="mortgagetype_other__c" id="mortgagetype_other__c" class="col-xs-12"
+             value="{{About_Account__c.mortgagetype_other__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5 other_purpose hidden">
+      <label for="mortgagepurchasepurpose_other__c">Other Purpose<span class="required"> *</span></label>
+      <input type="text" name="mortgagepurchasepurpose_other__c" id="mortgagepurchasepurpose_other__c" class="col-xs-12"
+             value="{{About_Account__c.mortgagepurchasepurpose_other__c}}"/>
+    </div>
+  </div>
+  <!-- Other mortgage type ends here-->
+  <div class="row fieldSet hl_purchase_fields">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="purchase_p__c">Purchase Price<span class="required"> *</span></label>
+      <input name="purchase_p__c" id="purchase_p__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.purchase_p__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="down_payment__c">Down Payment<span class="required"> *</span></label>
+      <input name="down_payment__c" id="down_payment__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.down_payment__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet hl_purchase_fields">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="total_loan_amount__c">Total Loan Amount<span class="required"> *</span></label>
+      <input name="total_loan_amount__c" id="total_loan_amount__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.total_loan_amount__c}}"/>
+    </div>
+  </div>
+
+  <div class="row fieldSet hl_refi_fields hidden">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="hl_requested_loan_amount__c">Requested Loan Amount<span class="required"> *</span></label>
+      <input name="hl_requested_loan_amount__c" id="hl_requested_loan_amount__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.hl_requested_loan_amount__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="mrt_estimated_home_value__c">Estimated Home Value<span class="required"> *</span></label>
+      <input name="mrt_estimated_home_value__c" id="mrt_estimated_home_value__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.mrt_estimated_home_value__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet hl_refi_fields hidden">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="mrt_balance_of_existing_mortgage__c">Balance Of Existing Mortgage<span class="required"> *</span></label>
+      <input name="mrt_balance_of_existing_mortgage__c" id="mrt_balance_of_existing_mortgage__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.mrt_balance_of_existing_mortgage__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="monthly__c">Monthly Taxes</label>
+      <input name="monthly__c" id="monthly__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.monthly__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="monthly_insurance__c">Monthly Insurance</label>
+      <input name="monthly_insurance__c" id="monthly_insurance__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.monthly_insurance__c}}"/>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{#if DisplayedFields.display_he_fields}}
+<div class="formFields sectionTitleContainer" id="appl_1_heDetails">
+  <h4 class="sectionTitle">{{PageLabels.home_equity_terms_and_purpose}}</h4>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="he_type_of_mortgage__c">Select Type of Mortgage <span class="required">*</span></label>
+        <select id="he_type_of_mortgage__c" name="he_type_of_mortgage__c" class="col-xs-12 required appl_1_equityType"
+                data-value="{{About_Account__c.he_type_of_mortgage__c}}">
+          <option value="">Select Type of Mortgage <span class="required">*</span></option>
+          <option value="Conventional">Conventional</option>
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="he_purpose__c">Select Purpose <span class="required">*</span></label>
+        <select id="he_purpose__c" name="he_purpose__c" class="col-xs-12 required appl_1_equityPurpose"
+                data-value="{{About_Account__c.he_purpose__c}}">
+          <option value="">Select Purpose<span class="required"> *</span></option>
+          <option value="Home Equity">Home Equity</option>
+          <option value="Purchase">Purchase</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row fieldSet he_homeequity_fields">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_requested_loan_amount__c">Requested Loan Amount $<span class="required"> *</span></label>
+      <input name="he_requested_loan_amount__c" id="he_requested_loan_amount__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.he_requested_loan_amount__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_estimated_home_value__c">Estimated Home Value $<span class="required"> *</span></label>
+      <input name="he_estimated_home_value__c" id="he_estimated_home_value__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.he_estimated_home_value__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet he_homeequity_fields">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_balance_of_existing_mortgage__c">Existing Mortgage Balance $<span class="required"> *</span></label>
+      <input name="he_balance_of_existing_mortgage__c" id="he_balance_of_existing_mortgage__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.he_balance_of_existing_mortgage__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet he_purchase_fields hidden">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_purchase_price__c">Purchase Price $<span class="required"> *</span></label>
+      <input name="he_purchase_price__c" id="he_purchase_price__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.he_purchase_price__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_down_payment__c">Down Payment $<span class="required"> *</span></label>
+      <input name="he_down_payment__c" id="he_down_payment__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.he_down_payment__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet he_purchase_fields hidden">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_total_loan_amount__c">Total Loan Amount<span class="required"> *</span></label>
+      <input name="he_total_loan_amount__c" id="he_total_loan_amount__c" type="text" class="col-xs-12 required currencyUS"
+             value="{{About_Account__c.he_total_loan_amount__c}}"/>
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_monthly_taxes__c">Monthly Taxes $</label>
+      <input name="he_monthly_taxes__c" id="he_monthly_taxes__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.he_monthly_taxes__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <label for="he_monthly_insurance__c">Monthly Insurance $</label>
+      <input name="he_monthly_insurance__c" id="he_monthly_insurance__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.he_monthly_insurance__c}}"/>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+<!-- Product selection Section -->
+{{#if DisplayedFields.display_mrt_fields}}
+<div class="formFields sectionTitleContainer" id="productSelection">
+  <h4 class="sectionTitle">{{PageLabels.home_loan}} {{PageLabels.product_selection}}</h4>
+
+  <div class="row fieldSet">
+    <input type="hidden" name="program_description_2__c" id="program_description_2__c"
+           class="program_description__c" value="{{About_Account__c.program_description_2__c}}"/>
+    <input type="hidden" name="discount_pt_buy_down_2__c" id="discount_pt_buy_down_2__c"
+           class="discount_pt_buydown__c" value="{{About_Account__c.discount_pt_buy_down_2__c}}"/>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="programDescription">Program Description <span class="required">*</span></label>
+        <select id="programDescription" class="col-xs-12 required programDescription">
+        </select>
+      </div>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="discountPoint">Discount Point/Buy Down <span class="required">*</span></label>
+        <select id="discountPoint" class="col-xs-12 required buydown">
+          <option value="">Discount Point/Buy Down<span class="required"> *</span></option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+{{#if DisplayedFields.display_he_fields}}
+<div class="formFields sectionTitleContainer" id="productSelection">
+  <h4 class="sectionTitle">{{PageLabels.home_equity}} {{PageLabels.product_selection}}</h4>
+
+  <div class="row fieldSet">
+    <div class="js-float-label-wrapper fieldItem col-xs-5">
+      <div class="styled-select">
+        <label for="he_program_description__c">Select Program Description <span class="required">*</span></label>
+        <select id="he_program_description__c" name="he_program_description__c" class="col-xs-12 required appl_1_mortgageType"
+                data-value="{{About_Account__c.he_program_description__c}}">
+          <option value="">Select Program Description <span class="required">*</span></option>
+          <option value="Conventional">Conventional</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+<!-- Product selection Section ends -->
+<div class="formFields sectionTitleContainer" id="financialAssets">
+  <h4 class="sectionTitle">{{PageLabels.financial_assets}}</h4>
+
+  <div class="row fieldSet">
+    <div class="formCopy">{{{PageLabels.financial_assets_text}}}
+    </div>
+  </div>
+  <div class="row fieldSet">
+    <div class="fieldItem marginRht10">
+      <label class="formLabel paddingTop10"><span>{{PageLabels.ownership_heading}}:</span> {{Application__c.full_name_pa__c}}</label>
+    </div>
+  </div>
+  <!-- financial asset 1 -->
+  <div class="row fieldSet" id="financialAsset1">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="fi_name1__c">Financial Institution Name</label>
+      <input name="fi_name1__c" id="fi_name1__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.fi_name1__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="type_of_asset__c">Type of Asset</label>
+      <input name="type_of_asset__c" id="type_of_asset__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.type_of_asset__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="value_or_balance__c">Value or Balance</label>
+      <input name="value_or_balance__c" id="value_or_balance__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.value_or_balance__c}}"/>
+    </div>
+  </div>
+  <!-- financial asset 2 -->
+  <div class="row fieldSet" id="financialAsset2">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="fi_name2__c">Financial Institution Name</label>
+      <input name="fi_name2__c" id="fi_name2__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.fi_name2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="type_of_asset2__c">Type of Asset</label>
+      <input name="type_of_asset2__c" id="type_of_asset2__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.type_of_asset2__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="value_or_balance2__c">Value or Balance</label>
+      <input name="value_or_balance2__c" id="value_or_balance2__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.value_or_balance2__c}}"/>
+    </div>
+  </div>
+  <!-- financial asset 3 -->
+  <div class="row fieldSet" id="financialAsset3">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="fi_name3__c">Financial Institution Name</label>
+      <input name="fi_name3__c" id="fi_name3__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.fi_name3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="type_of_asset3__c">Type of Asset</label>
+      <input name="type_of_asset3__c" id="type_of_asset3__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.type_of_asset3__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="value_or_balance3__c">Value or Balance</label>
+      <input name="value_or_balance3__c" id="value_or_balance3__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.value_or_balance3__c}}"/>
+    </div>
+  </div>
+  <!-- financial asset 4 -->
+  <div class="row fieldSet hidden" id="financialAsset4">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="fi_name4__c">Financial Institution Name</label>
+      <input name="fi_name4__c" id="fi_name4__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.fi_name4__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="type_of_asset4__c">Type of Asset</label>
+      <input name="type_of_asset4__c" id="type_of_asset4__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.type_of_asset4__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="value_or_balance4__c">Value or Balance</label>
+      <input name="value_or_balance4__c" id="value_or_balance4__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.value_or_balance4__c}}"/>
+    </div>
+  </div>
+  <!-- financial asset 5 -->
+  <div class="row fieldSet hidden" id="financialAsset5">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="fi_name5__c">Financial Institution Name</label>
+      <input name="fi_name5__c" id="fi_name5__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.fi_name5__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="type_of_asset5__c">Type of Asset</label>
+      <input name="type_of_asset5__c" id="type_of_asset5__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.type_of_asset5__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="value_or_balance5__c">Value or Balance</label>
+      <input name="value_or_balance5__c" id="value_or_balance5__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.value_or_balance5__c}}"/>
+    </div>
+  </div>
+  <!-- financial asset 6 -->
+  <div class="row fieldSet hidden" id="financialAsset6">
+    <div class="js-float-label-wrapper fieldItem col-xs-4">
+      <label for="fi_name6__c">Financial Institution Name</label>
+      <input name="fi_name6__c" id="fi_name6__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.fi_name6__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="type_of_asset6__c">Type of Asset</label>
+      <input name="type_of_asset6__c" id="type_of_asset6__c" type="text" class="col-xs-12"
+             value="{{About_Account__c.type_of_asset6__c}}"/>
+    </div>
+    <div class="js-float-label-wrapper fieldItem col-xs-3">
+      <label for="value_or_balance6__c">Value or Balance</label>
+      <input name="value_or_balance6__c" id="value_or_balance6__c" type="text" class="col-xs-12 currencyUS"
+             value="{{About_Account__c.value_or_balance6__c}}"/>
+    </div>
+  </div>
+  <div class="fieldset addBtn marginBtm40">
+    <div class="js-float-label-wrapper fieldItem" id="appl_1_addLink2">
+      <span class="tipLink">
+        <a class="add_btn">Add </a>
+        <a class="delete_btn hidden">Delete </a>
+      </span>
+    </div>
+    <!-- <button class="primaryBtn">+ Add</button>  -->
+  </div>
+</div>
+
+</div>
+<!-- Primary Applicant Info --><!-- Secondary Applicant Info -->
+</div>
+
+<!-- <div id="actionPanel">
+  <button type="submit" class="myButton floatRt primaryBtn margin0 font144">{{PageLabels.next_button}}</button>
+
+  <a href="#account-details" id="purchase-details-previous" class="button_font tabFocus">
+    <span class="myButton secondaryBtn floatLft marginRht20 cancel font144">{{PageLabels.previous_button}}</span>
+  </a>
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo primaryBtn padding10 font144"  id="myButton">Save For later</span>
+  </div>
+</div> -->
+
+<script id="action-panel" type="text/x-handlebars-template">
+</script>
+
+<script id="header-contents" type="text/x-handlebars-template">
+</script>
+
+<script id="disclosures" type="text/x-handlebars-template">
+</script>
+
+<script id="he-section1" type="text/x-handlebars-template">
+</script>
+
+<script id="he-section2" type="text/x-handlebars-template">
+</script>
+
+<script id="he-section3" type="text/x-handlebars-template">
+</script>
+
+<script id="products-list" type="text/x-handlebars-template">
+  {{#if Application__c.primary_offer__c}}
+  <li id="cs1_list" class="listRow">{{Application__c.primary_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.second_offer__c}}
+  <li id="cs2_list" class="listRow">{{Application__c.second_offer__c}}</li>
+  {{/if}}
+  {{#if Application__c.third_offer__c}}
+  <li id="cs3_list" class="listRow">{{Application__c.third_offer__c}}</li>
+  {{/if}}
+</script>

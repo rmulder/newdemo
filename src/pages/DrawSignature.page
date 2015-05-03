@@ -1,0 +1,125 @@
+<apex:page docType="html-5.0" controller="CaptureSignatureController" showheader="false" sidebar="false" standardStylesheets="false" id="pg">
+ <apex:includeScript value="/soap/ajax/28.0/connection.js"/>
+ 
+ <style>
+  .container {
+   text-align: center;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   color: cadetblue;
+   font-weight: 500;
+   font-size: 14px;
+  }
+  
+  .button {
+   font-family: calibri;
+   border-radius: 8px;
+   background-color: rgb(51, 116, 116);
+   height: 36px;
+   color: azure;
+   font-size: 17px;
+   border-width: 0px;
+   width: 116px;
+  }
+ </style>
+ <apex:form id="pbform">
+  <apex:pageMessages />
+  <div class="container">
+   <h1 class="labelCol vfLabelColTextWrap ">Record Signature:</h1>
+   <canvas id="signatureCanvas" height="150px" width="600px" style="border: 3px solid antiquewhite; border-radius: 8px;" ></canvas>
+  </div><br/>
+  
+  <div style="margin-left: 41%;">
+   <apex:commandButton value="Save Signature" onclick="saveSignature();return false;" styleClass="button"/>&nbsp;&nbsp;&nbsp;
+   <apex:commandButton value="Clear" onclick="clearSign();return false;" styleClass="button"/>
+  </div>
+ </apex:form>
+
+  <script>
+  var canvas;
+  var context;
+  var drawingUtil;
+  var isDrawing = false;
+  var accountId = '';
+  var prevX, prevY, currX, currY = 0;
+  var accountId;
+
+    function DrawingUtil() {
+    isDrawing = false;
+    canvas.addEventListener("mousedown", start, false);
+    canvas.addEventListener("mousemove", draw, false);
+    canvas.addEventListener("mouseup", stop, false);
+    canvas.addEventListener("mouseout", stop, false);
+    canvas.addEventListener("touchstart", start, false);
+    canvas.addEventListener("touchmove", draw, false);
+    canvas.addEventListener("touchend", stop, false);
+    w = canvas.width;
+    h = canvas.height;
+  }
+
+   function start(event) {
+   event.preventDefault();
+   
+   isDrawing = true;
+   prevX = currX;
+   prevX = currY;
+   currX = event.clientX - canvas.offsetLeft;
+   currY = event.clientY - canvas.offsetTop;
+   
+   context.beginPath();
+   context.fillStyle = "cadetblue";
+   context.fillRect(currX, currY, 2, 2);
+   context.closePath();
+   
+  }
+
+   function draw(event) {
+   event.preventDefault();
+   if (isDrawing) {
+       prevX = currX;
+       prevY = currY;
+       currX = event.clientX - canvas.offsetLeft;
+       currY = event.clientY - canvas.offsetTop;
+       context.beginPath();
+       context.moveTo(prevX, prevY);
+       context.lineTo(currX, currY);
+       context.strokeStyle = "cadetblue";
+       context.lineWidth = "2";
+       context.stroke();
+       context.closePath();
+   }
+  }
+
+   function stop(event) {
+   if (isDrawing) {
+    context.stroke();
+    context.closePath();
+    isDrawing = false;
+   }
+  }
+  
+  function clearSign() {
+   context.clearRect(0,0,w,h);
+  }
+
+  canvas = document.getElementById("signatureCanvas");
+  context = canvas.getContext("2d");
+  context.strokeStyle = "black";
+  context.lineWidth = "2";
+  drawingUtil = new DrawingUtil(canvas);
+  
+
+  function saveSignature() {
+      var strDataURI = canvas.toDataURL();
+      strDataURI = strDataURI.replace(/^data:image\/(png|jpg);base64,/, "");
+      var result = CaptureSignatureController.saveSignature(strDataURI,processResult);
+  }
+
+  function processResult(result) {
+      Console.log(JSON.stringify(result));
+   
+  }
+
+  </script>
+
+
+</apex:page>

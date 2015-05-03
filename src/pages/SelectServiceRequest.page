@@ -1,0 +1,387 @@
+<apex:page Controller="SelectServiceRequestController" showHeader="false" sidebar="false" action="{!generateServiceApp}" standardStylesheets="false" applyHtmlTag="false">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.mask.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modal.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.static, 'js/libs/bootstrap/bootstrap-modalmanager.js')}"/>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Terafina Servicing</title>
+
+<style type="text/css">
+    h1{
+        margin: 30px 0;
+        padding: 0 200px 15px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    .bs-example{
+        margin: 20px;
+    }
+    .logo {
+        background-image: url(bootstrap/images/logo-terafina.png);
+        width:220px;
+        height:100px;
+        margin-left:10px;
+    }
+
+    .panel-default>.panel-heading {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #437F8F),
+        color-stop(1, #004457)
+    );
+    background-image: -o-linear-gradient(bottom, #437F8F 0%, #004457 100%);
+    background-image: -moz-linear-gradient(bottom, #437F8F 0%, #004457 100%);
+    background-image: -webkit-linear-gradient(bottom, #437F8F 0%, #004457 100%);
+    background-image: -ms-linear-gradient(bottom, #437F8F 0%, #004457 100%);
+    background-image: linear-gradient(to bottom, #437F8F 0%, #004457 100%); /* IE6-9 */
+    background-repeat: repeat-x;
+    color:#ffffff;
+    }
+</style>
+</head>
+<body>
+
+<!-- <apex:stylesheet value="{!URLFOR($Resource.static, 'css/bootstrap.css')}"/> -->
+
+
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+<div class="bs-example">
+
+    <div class="container">
+        <div class="row">
+           
+              <center>
+                 <apex:image value="{!URLFOR($Resource.static, 'images/terafinalogo.png')}" height="25%" width="25%"/>
+              </center>
+           
+        </div>
+    </div>
+<apex:form id="fullForm">
+
+<!-- Apex Hidden fields to hold the value of Product and Sub-Product and pass to the controller-->
+<div class="hide"><apex:inputText value="{!productResult}" styleClass="prdval"/> </div>
+<div class="hide"><apex:inputText value="{!SubProductResult}" styleClass="subprdval"/> </div>
+<!-- Apex Hidden fields to hold the value of Product and Sub-Product and pass to the controller-->
+
+  <div class="container">
+ 
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <center><h4 class="modal-title" id="myModalLabel"><span class="servName sendName"></span></h4></center>
+
+                </div>
+
+                <div class="modal-body hidden prBody">
+                <apex:outputPanel id="ste">
+                      <!-- <apex:outputLabel value="Product"></apex:outputLabel>
+                        <apex:selectList id="x" value="{!productResult}"
+                               size="1" required="true" styleClass="product prodSelect" onchange="sendSubProdID();">
+                        <apex:selectOptions value="{!product}"/>
+                        
+                      </apex:selectList><br/>
+                  <apex:outputPanel id="y">
+                      <apex:outputLabel value="Sub-Product "></apex:outputLabel>
+                     
+                      <apex:selectList size="1" styleClass="subproduct" required="true" value="{!SubProductResult}">
+                        <apex:selectOptions value="{!SubProduct}"/>
+                 
+                      </apex:selectList>
+                    </apex:outputPanel> -->
+                    
+                  <apex:outputLabel value="Product"></apex:outputLabel>  
+                      <select id="x" class="product prodSelect" onchange="sendSubProdID();">
+                        <option value=""></option>
+                      </select>
+                      <br/>
+                  <apex:outputLabel value="Sub-Product"></apex:outputLabel>
+                      <select id="y" class="subproduct subprodSelect">
+                        <option value=""></option>
+                      </select>
+                      
+  <!--                 <div class="hide"><apex:inputText value="{!productResult}" styleClass="prdval"/>
+                  </div>
+                  <div class="hide"><apex:inputText value="{!SubProductResult}" styleClass="subprdval"/>
+                  </div> -->
+                </apex:outputPanel>
+                </div>
+                <div class="modal-body">
+                    <p><b>Short Description</b></p>
+                    <span class="shortDesc"></span>
+                    <apex:commandLink value="Hide Details" styleClass="hdetails hidden" onclick="return false;"/>
+                    <apex:commandLink value="Show Details" styleClass="sdetails" onclick="return false;"/>
+                  <div class="details hidden">
+                    <p><b>Long Description</b></p>
+                    <span class="longDesc"></span>
+                  </div>  
+                </div>
+
+                <div class="modal-footer">
+                 
+                    <!-- <center><apex:commandLink value="START SERVICE REQUEST" action="{!startServiceReq}" styleClass="btn btn-primary htmlSave"></apex:commandLink>  </center> -->
+                    <center><apex:commandLink value="START SERVICE REQUEST" styleClass="btn btn-primary htmlSave"></apex:commandLink>
+                    <apex:actionFunction name="sendproduct" action="{!startServiceReq}">
+                      <apex:param value="" name="prodnameParam"></apex:param>
+                      <apex:param value="" name="subprodnameParam"></apex:param>
+                    </apex:actionFunction></center>
+                </div>
+            </div>
+        </div>
+
+        <script>
+          //$ = jQuery.noConflict();
+          $('.htmlSave').on('click',function(){
+          
+          console.log('the Product Value are '+$('.prdval').val());
+          console.log('the Sub-product Value are '+$('.subprdval').val());
+          var prd = $('.prdval').val();
+          var subprd = $('.subprdval').val();
+          sendproduct(prd,subprd);
+        });
+
+          $('.sdetails').on('click',function(){
+             $('.sdetails').addClass('hidden');
+             $('.hdetails').removeClass('hidden');
+             $('.details').removeClass('hidden');
+           });
+
+           $('.hdetails').on('click',function(){
+             $('.hdetails').addClass('hidden');
+             $('.sdetails').removeClass('hidden');
+             $('.details').addClass('hidden');
+           });
+
+
+          </script>
+
+    </div>
+      <div class="row row-striped" >
+          <div class="col-xs-10 col-xs-offset-1">
+              <div class="panel panel-default">
+                  <div class="panel-heading"><strong>One N Done</strong></div>
+                  <div class="panel-body">           
+               
+                  <div class="form-group ">                                      
+                      <div class="col-xs-11 btn-group column">
+                      
+                          <apex:repeat value="{!serviceWrapperClassList}" var="servType">
+                            
+                            <div class="clearfix visible-xs"></div>
+                            <div class="clearfix visible-sm"></div>
+                           
+                              <apex:commandButton onclick="getSName('{!servType.serviceName}','{!servType.shortDesc}','fal');" html-data-toggle="modal" html-data-target="#myModal" value="{!servType.serviceName}" action="{!selectRequest}" reRender="amd" styleClass="btn btn-primary btn-md col-md-5 col-xs-offset-1" style="margin-bottom:10px;">
+                                <apex:param name="decision" value="{!servType.serviceChoice}" assignTo="{!choiceParam}"/>
+                                <apex:param name="selServRequest" value="{!servType.serviceName}"/>
+                              </apex:commandButton>
+                           
+                          </apex:repeat>
+                         </div>                                       
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+              <div class="panel panel-default">
+                  <div class="panel-heading"><strong>Search Text</strong></div>
+                  <div class="panel-body">           
+                      <apex:pageMessages ></apex:pageMessages><br></br>
+                      <apex:inputText label="How can we help you?" value="{!searchText}" size="100" style="width:75%;"/>
+                      <apex:commandButton value="Help me with Servicing" action="{!searchRequest}" styleClass="btn btn-primary" style="margin-left: 10px;" reRender="stex,fullForm"/>
+                      <apex:outputPanel rendered="{!dispServiceResult}" id="stext">
+                        <p> Here is the list of Services you might be interested in:</p> 
+                         <br/>
+                          <apex:repeat value="{!filteredServiceList}" var="filterService">
+                              <apex:commandButton onclick="sendProdID('{!filterService.name}');getSName('{!filterService.name}','{!filterService.Short_Description__c}','tru');" html-data-toggle="modal" html-data-target="#myModal" value="{!filterService.name}" action="{!startfilteredServiceRequest}" reRender="stex" styleClass="btn btn-primary" >&nbsp;&nbsp;
+                              <apex:param name="fsr" value="{!filterService.name}" />
+                            </apex:commandButton>  
+                          </apex:repeat>
+                      </apex:outputPanel>
+                </div>
+             </div>
+          </div>
+      </div>
+  </div>
+
+    <!-- <apex:pageBlock >
+      <apex:pageBlockSection title="One-N-Done" id="sup">
+        <apex:repeat value="{!serviceWrapperClassList}" var="servType">
+         
+          <apex:commandButton onclick="getSName('{!servType.serviceName}','{!servType.shortDesc}','fal');" html-data-toggle="modal" html-data-target="#myModal" value="{!servType.serviceName}" action="{!selectRequest}" reRender="amd" styleClass="btn btn-primary">
+            
+              <apex:param name="decision" value="{!servType.serviceChoice}" assignTo="{!choiceParam}"/>
+              <apex:param name="selServRequest" value="{!servType.serviceName}"/>
+           
+          </apex:commandButton>
+
+        </apex:repeat>
+      </apex:pageBlockSection>
+    </apex:pageBlock>  -->
+
+    <!-- <apex:pageBlock id="stexm">
+      <apex:pageBlockSection title="Search Text">
+
+ 
+       
+        <apex:pageMessages ></apex:pageMessages><br></br>
+        <apex:inputText label="How can we help you?" value="{!searchText}" size="100"/>
+        <apex:commandButton value="Help me with Servicing" action="{!searchRequest}" reRender="stex,fullForm"/>
+        <apex:outputPanel rendered="{!dispServiceResult}" id="stext">
+          <apex:pageBlockSectionItem > Here is the list of Services you might be interested in:</apex:pageBlockSectionItem> 
+          <br></br>
+            <apex:repeat value="{!filteredServiceList}" var="filterService">
+                <apex:commandButton onclick="getSName('{!filterService.name}','{!filterService.Short_Description__c}','tru');" html-data-toggle="modal" html-data-target="#myModal" value="{!filterService.name}" action="{!startfilteredServiceRequest}" reRender="stex">&nbsp;&nbsp;
+                <apex:param name="fsr" value="{!filterService.name}" />
+              </apex:commandButton>  
+            </apex:repeat>
+        </apex:outputPanel>    
+      </apex:pageBlockSection>
+    </apex:pageBlock>-->
+
+    
+  
+</apex:form> 
+</div>
+</body>
+<!-- <script type="text/javascript" src="{!URLFOR($Resource.static, 'js/libs/jquery/jquery.min.js')}"></script> -->
+<script>
+
+function getSName(serviceName,shortD,flag){
+  console.log('the value is '+shortD);
+  $('.servName').html(serviceName);
+  $('.shortDesc').html(shortD);
+  if(flag === 'fal'){
+    $('.prBody').addClass('hidden');
+  } else{
+    $('.prBody').removeClass('hidden');
+  }
+
+}
+
+function sendProdID(sProd){
+  
+      Visualforce.remoting.Manager.invokeAction(
+        '{!$RemoteAction.SelectServiceRequestController.fetchProduct}',
+        sProd, 
+        function(results, event){
+            if (event.status) {
+               console.log('RESULT is',results);
+               console.log('RESULT length is',results.length);
+               $('.product').html('');
+               for(var i=0; i< results.length;i++){
+                var productlist = results[i];
+                console.log(productlist);
+                
+                /*$('.product').append($row);*/
+                }
+                $.each(results, function(key, value) {
+                  $('.product').append($("<option/>", {
+                      value: key,
+                      text: value
+                  }));
+                });
+              } 
+        }, 
+        {escape: true}
+      );
+  }
+
+  function sendSubProdID(){
+      console.log("the value is "+$('.sendName').html());
+      console.log("the product value is "+$('.prodSelect option:selected').text());
+      var filteredServiceListname = $('.sendName').html();
+      var productName = $('.prodSelect option:selected').text();
+      Visualforce.remoting.Manager.invokeAction(
+        '{!$RemoteAction.SelectServiceRequestController.fetchSubProduct}',
+        productName,filteredServiceListname, 
+        function(results, event){
+            if (event.status) {
+               console.log('RESULT is',results);
+               console.log('RESULT length is',results.length);
+               $('.subproduct').html('');
+               for(var i=0; i< results.length;i++){
+                var productlist = results[i];
+                console.log(productlist);
+                }
+                $.each(results, function(key, value) {
+                  $('.subproduct').append($("<option/>", {
+                      value: key,
+                      text: value
+                  }));
+                });
+                $('.prdval').val($('.prodSelect option:selected').text());
+                $('.subprdval').val($('.subprodSelect option:selected').text());
+                console.log('the values stored are '+$('.prdval').val()+' and '+$('.subprdval').val());
+              } 
+        }, 
+        {escape: true}
+      );
+  }
+
+  function saveNstart(){
+    console.log("the Service Name is "+$('.sendName').html());
+    var srName = $('.sendName').html();
+    var pName = $('.prdval').val();
+    var spName = $('.subprdval').val();
+    console.log('the Product and Sub-product Value are '+$('.prdval').val()+' and '+$('.subprdval').val());
+    var params = {};
+
+    if (location.search) {
+        var parts = location.search.substring(1).split('&');
+
+        for (var i = 0; i < parts.length; i++) {
+            var nv = parts[i].split('=');
+            if (!nv[0]) continue;
+            params[nv[0]] = nv[1] || true;
+        }
+    }
+    var servID = 'a0Q17000000ZSYSEA4';
+    Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.SelectServiceRequestController.saveNStartService}',
+                servID, 
+                srName,
+                null,
+                pName,
+                spName
+            );
+  }
+</script>
+<script>
+//$ = jQuery.noConflict();
+$(document).ready(function() {
+  $('input[type=button]').on('click', '.pbBody', function() {
+    console.log(this);
+  });
+
+}); 
+  
+/*  $('.sdetails').on('click',function(){
+    $('.sdetails').addClass('hidden');
+    $('.hdetails').removeClass('hidden');
+    $('.details').removeClass('hidden');
+  });
+
+  $('.hdetails').on('click',function(){
+    $('.hdetails').addClass('hidden');
+    $('.sdetails').removeClass('hidden');
+    $('.details').addClass('hidden');
+  });*/
+ 
+
+
+</script>
+</html>
+</apex:page>

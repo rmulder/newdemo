@@ -1,0 +1,13 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" controller="ChatterUploadFileController" cache="false" sidebar="false" applyHtmlTag="false">
+<apex:form >
+    <apex:pageBlock title="Upload File">    
+        <apex:pageBlockSection title="Upload File">
+            <apex:pageBlockSectionItem >
+                <apex:inputFile value="{!myfile.Body}" fileName="{!myfile.name}"></apex:inputFile>
+            </apex:pageBlockSectionItem><br/><br/>
+            <apex:commandButton value="Upload" action="{!uploadAttachment}" styleClass="location:center"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:form>  
+</apex:page>

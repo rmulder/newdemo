@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Aurora County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Beadle County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Bennett County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Bon Homme County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Brookings County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Brown County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Brule County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Buffalo County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Butte County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Campbell County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Charles Mix County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Clark County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Codington County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Corson County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Custer County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Davison County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Day County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Deuel County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Dewey County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Douglas County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Edmunds County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Fall River County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Faulk County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Gregory County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Haakon County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Hamlin County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Hand County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Hanson County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Harding County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Hughes County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Hutchinson County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Hyde County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Jerauld County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Jones County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Kingsbury County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Lake County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Lawrence County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Lincoln County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Lyman County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "McCook County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "McPherson County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Meade County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Mellette County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Miner County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Minnehaha County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Moody County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Pennington County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Perkins County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Potter County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Roberts County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Sanborn County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Shannon County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Spink County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Stanley County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Sully County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Todd County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Tripp County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Turner County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Walworth County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Yankton County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Ziebach County",
+    "state_abbreviation": "SD",
+    "fips_county_cd": "137"
+  }
+]

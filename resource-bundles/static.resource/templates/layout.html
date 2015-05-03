@@ -1,0 +1,49 @@
+  <form method="post" id="application-form" accept-charset="utf-8" autocomplete="off">
+    <div class="container-fluid">
+      <div class="tabs-vertical tabs-left">
+        <ul id="navTabs" class="nav nav-pills nav-stacked">
+          <li class="btn schedule-link dropdown-toggle" id="schedule-link" data-toggle="dropdown">See Us &nbsp;<img src="{{config.custom_resources_url}}images/bank.png"/></li>
+          <li class="btn help-link dropdown-toggle" id="help-link" data-toggle="dropdown">Call Us &nbsp;<img src="{{config.custom_resources_url}}images/phone.png"/></li>
+          <li class="btn my-applications-link" id="applications-link" data-toggle="dropdown">Cart &nbsp;<img src="{{config.custom_resources_url}}images/cart.png"/></li>
+        </ul>
+      </div>
+      <div id="dropdown-panel-help" class="dropdown-panel col-xs-4 hidden">
+        <div class="panel-content">
+          <div class="containerPadding">
+            <h3 class="panelHeader marginBtm20">{{PageLabels.contact_us_header}}</h3>
+            <p class="cfh">{{PageLabels.contact_us_value}}</p>
+            <p class="cfh cfh-phone" id="support_phone_number__c">{{Application__c.support_phone_number__c}}</p>
+          </div>
+        </div>
+        <div class="panel-close">CLOSE</div>
+      </div>
+      <div id="dropdown-panel-products" class="dropdown-panel col-xs-4 hidden">
+        <div class="panel-content">
+          <div class="containerPadding">
+            <h3 class="panelHeader marginBtm20">{{PageLabels.crossell_header__c}}</h3>
+            <div class="productPanel">
+              <ul class="bulletList">
+                <li class="listRow sub-product" id="sub_product__c">{{Application__c.sub_product__c}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-close">CLOSE</div>
+      </div>
+    </div>
+    <div class="form-contents"></div>
+    <div class="row-fluid clearfix disclosures">
+    </div>
+    <footer class="row clearfix">
+      <div class="col-xs-12 column">
+        <div class="copyright">
+          <span id="footer-copyright">Copyright 2014 </span>   <br>
+          All rights reserved.
+        </div>
+        <div class="compliance col-xs-12">
+          <img src="{{config.custom_resources_url}}images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" width="140" height="44"/>
+          <img src="{{config.custom_resources_url}}images/Compliance-NCUA_Black-website_.jpeg" alt="" width="206" height="44"/>
+        </div>
+      </div>
+    </footer>
+  </form>

@@ -1,0 +1,19 @@
+<apex:page controller="UploadFromDB">
+
+   <apex:form >
+      <Center>
+      <br />
+      <br />
+      <br />
+      
+      <apex:commandButton value="UPLOAD" title="Upload" action="{!Upload}" style="font-size:12pt;font-weight:bold" />
+      <br />
+      <br />
+      <apex:OutputLabel title="Info" value="Click on the above button to Upload data into Salesforce for the first time" style="font-size:13pt"/>
+      <br />
+      <br />
+      <apex:OutputLabel value="The response is: "/>
+      <apex:InputText value="{!response}"/>
+      </Center>
+   </apex:form>
+</apex:page>

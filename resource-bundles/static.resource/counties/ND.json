@@ -1,0 +1,267 @@
+[
+  {
+    "name": "Adams County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Barnes County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Benson County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Billings County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Bottineau County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Bowman County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Burke County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Burleigh County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Cavalier County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Dickey County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Divide County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Dunn County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Eddy County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Emmons County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Foster County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Golden Valley County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Grand Forks County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Grant County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Griggs County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Hettinger County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Kidder County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "LaMoure County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Logan County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "McHenry County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "McIntosh County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "McKenzie County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "McLean County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Mercer County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Morton County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Mountrail County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Nelson County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Oliver County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Pembina County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Pierce County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Ramsey County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Ransom County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Renville County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Richland County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Rolette County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Sargent County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Sheridan County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Sioux County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Slope County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Stark County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Steele County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Stutsman County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Towner County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Traill County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Walsh County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Ward County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Wells County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Williams County",
+    "state_abbreviation": "ND",
+    "fips_county_cd": "105"
+  }
+]

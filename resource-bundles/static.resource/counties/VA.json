@@ -1,0 +1,682 @@
+[
+  {
+    "name": "Accomack County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Albemarle County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Alleghany County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Amelia County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Amherst County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Appomattox County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Arlington County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Augusta County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bath County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Bedford County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Bland County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Botetourt County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Brunswick County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Buchanan County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Buckingham County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Campbell County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Caroline County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Charles City County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "036"
+  },
+  {
+    "name": "Charlotte County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Chesterfield County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Clarke County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Craig County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Culpeper County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Cumberland County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Dickenson County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Dinwiddie County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Essex County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Fairfax County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Fauquier County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Floyd County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Fluvanna County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Frederick County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Giles County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Gloucester County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Goochland County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Grayson County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Greensville County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Halifax County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Hanover County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Henrico County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Highland County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Isle of Wight County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "James City County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "King and Queen County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "King George County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "King William County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Lancaster County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Loudoun County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Louisa County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Lunenburg County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Mathews County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Mecklenburg County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Middlesex County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Nelson County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "New Kent County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Northampton County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Northumberland County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Nottoway County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Orange County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Page County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "Patrick County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Pittsylvania County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Powhatan County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Prince Edward County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Prince George County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Prince William County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Pulaski County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Rappahannock County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Richmond County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Roanoke County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Rockbridge County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Rockingham County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Russell County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Shenandoah County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Smyth County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Southampton County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Spotsylvania County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Stafford County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Surry County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Sussex County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Tazewell County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "Westmoreland County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Wise County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Wythe County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "197"
+  },
+  {
+    "name": "York County",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "199"
+  },
+  {
+    "name": "Alexandria city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "510"
+  },
+  {
+    "name": "Bedford city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "515"
+  },
+  {
+    "name": "Bristol city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "520"
+  },
+  {
+    "name": "Buena Vista city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "530"
+  },
+  {
+    "name": "Charlottesville city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "540"
+  },
+  {
+    "name": "Chesapeake city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "550"
+  },
+  {
+    "name": "Clifton Forge City",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "560"
+  },
+  {
+    "name": "Colonial Heights city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "570"
+  },
+  {
+    "name": "Covington city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "580"
+  },
+  {
+    "name": "Danville city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "590"
+  },
+  {
+    "name": "Emporia city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "595"
+  },
+  {
+    "name": "Fairfax city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "600"
+  },
+  {
+    "name": "Falls Church city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "610"
+  },
+  {
+    "name": "Franklin city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "620"
+  },
+  {
+    "name": "Fredericksburg city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "630"
+  },
+  {
+    "name": "Galax city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "640"
+  },
+  {
+    "name": "Hampton city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "650"
+  },
+  {
+    "name": "Harrisonburg city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "660"
+  },
+  {
+    "name": "Hopewell city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "670"
+  },
+  {
+    "name": "Lexington city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "678"
+  },
+  {
+    "name": "Lynchburg city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "680"
+  },
+  {
+    "name": "Manassas city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "683"
+  },
+  {
+    "name": "Manassas Park city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "685"
+  },
+  {
+    "name": "Martinsville city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "690"
+  },
+  {
+    "name": "Newport News city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "700"
+  },
+  {
+    "name": "Norfolk city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "710"
+  },
+  {
+    "name": "Norton city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "720"
+  },
+  {
+    "name": "Petersburg city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "730"
+  },
+  {
+    "name": "Poquoson city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "735"
+  },
+  {
+    "name": "Portsmouth city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "740"
+  },
+  {
+    "name": "Radford city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "750"
+  },
+  {
+    "name": "Richmond city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "760"
+  },
+  {
+    "name": "Roanoke city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "770"
+  },
+  {
+    "name": "Salem city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "775"
+  },
+  {
+    "name": "South Boston City",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "780"
+  },
+  {
+    "name": "Staunton city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "790"
+  },
+  {
+    "name": "Suffolk city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "800"
+  },
+  {
+    "name": "Virginia Beach city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "810"
+  },
+  {
+    "name": "Waynesboro city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "820"
+  },
+  {
+    "name": "Williamsburg city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "830"
+  },
+  {
+    "name": "Winchester city",
+    "state_abbreviation": "VA",
+    "fips_county_cd": "840"
+  }
+]

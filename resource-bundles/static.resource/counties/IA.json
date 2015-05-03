@@ -1,0 +1,497 @@
+[
+  {
+    "name": "Adair County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "001"
+  },
+  {
+    "name": "Adams County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "003"
+  },
+  {
+    "name": "Allamakee County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "005"
+  },
+  {
+    "name": "Appanoose County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "007"
+  },
+  {
+    "name": "Audubon County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "009"
+  },
+  {
+    "name": "Benton County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "011"
+  },
+  {
+    "name": "Black Hawk County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Boone County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "015"
+  },
+  {
+    "name": "Bremer County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "017"
+  },
+  {
+    "name": "Buchanan County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "019"
+  },
+  {
+    "name": "Buena Vista County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "021"
+  },
+  {
+    "name": "Butler County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "023"
+  },
+  {
+    "name": "Calhoun County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "025"
+  },
+  {
+    "name": "Carroll County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "027"
+  },
+  {
+    "name": "Cass County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "029"
+  },
+  {
+    "name": "Cedar County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "031"
+  },
+  {
+    "name": "Cerro Gordo County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "033"
+  },
+  {
+    "name": "Cherokee County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "035"
+  },
+  {
+    "name": "Chickasaw County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "037"
+  },
+  {
+    "name": "Clarke County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "039"
+  },
+  {
+    "name": "Clay County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "041"
+  },
+  {
+    "name": "Clayton County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "043"
+  },
+  {
+    "name": "Clinton County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "045"
+  },
+  {
+    "name": "Crawford County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "047"
+  },
+  {
+    "name": "Dallas County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "049"
+  },
+  {
+    "name": "Davis County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "051"
+  },
+  {
+    "name": "Decatur County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "053"
+  },
+  {
+    "name": "Delaware County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "055"
+  },
+  {
+    "name": "Des Moines County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "057"
+  },
+  {
+    "name": "Dickinson County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "059"
+  },
+  {
+    "name": "Dubuque County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "061"
+  },
+  {
+    "name": "Emmet County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "063"
+  },
+  {
+    "name": "Fayette County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "065"
+  },
+  {
+    "name": "Floyd County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "067"
+  },
+  {
+    "name": "Franklin County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "069"
+  },
+  {
+    "name": "Fremont County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "071"
+  },
+  {
+    "name": "Greene County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "073"
+  },
+  {
+    "name": "Grundy County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "075"
+  },
+  {
+    "name": "Guthrie County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "077"
+  },
+  {
+    "name": "Hamilton County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "079"
+  },
+  {
+    "name": "Hancock County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "081"
+  },
+  {
+    "name": "Hardin County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "083"
+  },
+  {
+    "name": "Harrison County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "085"
+  },
+  {
+    "name": "Henry County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "087"
+  },
+  {
+    "name": "Howard County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "089"
+  },
+  {
+    "name": "Humboldt County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "091"
+  },
+  {
+    "name": "Ida County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "093"
+  },
+  {
+    "name": "Iowa County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "095"
+  },
+  {
+    "name": "Jackson County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "097"
+  },
+  {
+    "name": "Jasper County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "099"
+  },
+  {
+    "name": "Jefferson County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "101"
+  },
+  {
+    "name": "Johnson County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "103"
+  },
+  {
+    "name": "Jones County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Keokuk County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "107"
+  },
+  {
+    "name": "Kossuth County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "109"
+  },
+  {
+    "name": "Lee County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "111"
+  },
+  {
+    "name": "Linn County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "113"
+  },
+  {
+    "name": "Louisa County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "115"
+  },
+  {
+    "name": "Lucas County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "117"
+  },
+  {
+    "name": "Lyon County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "119"
+  },
+  {
+    "name": "Madison County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "121"
+  },
+  {
+    "name": "Mahaska County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "123"
+  },
+  {
+    "name": "Marion County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "125"
+  },
+  {
+    "name": "Marshall County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "127"
+  },
+  {
+    "name": "Mills County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "129"
+  },
+  {
+    "name": "Mitchell County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "131"
+  },
+  {
+    "name": "Monona County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "133"
+  },
+  {
+    "name": "Monroe County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "135"
+  },
+  {
+    "name": "Montgomery County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "137"
+  },
+  {
+    "name": "Muscatine County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "139"
+  },
+  {
+    "name": "O'Brien County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "141"
+  },
+  {
+    "name": "Osceola County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "143"
+  },
+  {
+    "name": "Page County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "145"
+  },
+  {
+    "name": "Palo Alto County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "147"
+  },
+  {
+    "name": "Plymouth County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "149"
+  },
+  {
+    "name": "Pocahontas County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "151"
+  },
+  {
+    "name": "Polk County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "153"
+  },
+  {
+    "name": "Pottawattamie County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "155"
+  },
+  {
+    "name": "Poweshiek County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "157"
+  },
+  {
+    "name": "Ringgold County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "159"
+  },
+  {
+    "name": "Sac County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "161"
+  },
+  {
+    "name": "Scott County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "163"
+  },
+  {
+    "name": "Shelby County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "165"
+  },
+  {
+    "name": "Sioux County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "167"
+  },
+  {
+    "name": "Story County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "169"
+  },
+  {
+    "name": "Tama County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "171"
+  },
+  {
+    "name": "Taylor County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "173"
+  },
+  {
+    "name": "Union County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "175"
+  },
+  {
+    "name": "Van Buren County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "177"
+  },
+  {
+    "name": "Wapello County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "179"
+  },
+  {
+    "name": "Warren County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "181"
+  },
+  {
+    "name": "Washington County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "183"
+  },
+  {
+    "name": "Wayne County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Webster County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "187"
+  },
+  {
+    "name": "Winnebago County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "189"
+  },
+  {
+    "name": "Winneshiek County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "191"
+  },
+  {
+    "name": "Woodbury County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "193"
+  },
+  {
+    "name": "Worth County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Wright County",
+    "state_abbreviation": "IA",
+    "fips_county_cd": "197"
+  }
+]

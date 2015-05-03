@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Aleutians East Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "013"
+  },
+  {
+    "name": "Aleutians West Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "016"
+  },
+  {
+    "name": "Anchorage Municipality",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "020"
+  },
+  {
+    "name": "Bethel Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "050"
+  },
+  {
+    "name": "Bristol Bay Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "060"
+  },
+  {
+    "name": "Denali Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "068"
+  },
+  {
+    "name": "Dillingham Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "070"
+  },
+  {
+    "name": "Fairbanks North Star Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "090"
+  },
+  {
+    "name": "Haines Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "100"
+  },
+  {
+    "name": "Hoonah-Angoon Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "105"
+  },
+  {
+    "name": "Juneau City and Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "110"
+  },
+  {
+    "name": "Kenai Peninsula Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "122"
+  },
+  {
+    "name": "Ketchikan Gateway Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "130"
+  },
+  {
+    "name": "Kodiak Island Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "150"
+  },
+  {
+    "name": "Lake and Peninsula Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "164"
+  },
+  {
+    "name": "Matanuska-Susitna Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "170"
+  },
+  {
+    "name": "Nome Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "180"
+  },
+  {
+    "name": "North Slope Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "185"
+  },
+  {
+    "name": "Northwest Arctic Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "188"
+  },
+  {
+    "name": "Petersburg Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "195"
+  },
+  {
+    "name": "Prince of Wales-Hyder Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "198"
+  },
+  {
+    "name": "Prince of Wales-Outer Ketchikan",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "201"
+  },
+  {
+    "name": "Sitka City and Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "220"
+  },
+  {
+    "name": "Skagway Municipality",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "230"
+  },
+  {
+    "name": "Skagway-Hoonah-Angoon",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "232"
+  },
+  {
+    "name": "Southeast Fairbanks Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "240"
+  },
+  {
+    "name": "Valdez-Cordova Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "261"
+  },
+  {
+    "name": "Wade Hampton Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "270"
+  },
+  {
+    "name": "Wrangell-Petersburg",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "280"
+  },
+  {
+    "name": "Wrangell City and Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "275"
+  },
+  {
+    "name": "Yakutat City and Borough",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "282"
+  },
+  {
+    "name": "Yukon-Koyukuk Census Area",
+    "state_abbreviation": "AK",
+    "fips_county_cd": "290"
+  }
+]
