@@ -104,21 +104,21 @@
         </p>
        </div>
       <div class="fieldSet row">
-        <div class="fieldItem js-float-label-wrapper col-xs-4">
+        <div class="fieldItem js-float-label-wrapper col-xs-8">
           <label for="appl_1_lastName" >Last Name<span class="required"> *</span></label>
           <!-- <apex:outputLabel for="appl_1_lastName" styleClass="inlineLabel">Last Name<span class="required"> *</span></apex:outputLabel> -->
           <apex:inputText value="{!lastname}" id="appl_1_lastName" styleClass="col-xs-12 lastName required validName"/>
         </div>
       </div>
       <div class="fieldSet row">
-        <div class="fieldItem js-float-label-wrapper col-xs-4">
+        <div class="fieldItem js-float-label-wrapper col-xs-8">
           <label for="datepicker3" >Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
 
           <apex:inputText value="{!dob}" id="datepicker3" styleclass="col-xs-12 datepicker1 dob dateUS required date-mask" />
         </div>
       </div>
       <div class="fieldSet row">
-        <div class="fieldItem marginRht20 js-float-label-wrapper col-xs-4">
+        <div class="fieldItem marginRht20 js-float-label-wrapper col-xs-8">
           <label for="appl_1_ssn" >Last 4 digits of SSN<span class="required"> *</span></label>
 
           <apex:inputText value="{!ssn}" id="appl_1_ssn" styleClass="col-xs-12 required appl_1_ssn" />

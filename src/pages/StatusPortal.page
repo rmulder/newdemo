@@ -99,17 +99,18 @@
           </div>
           <div class="panel-body">
             <div class="row">
-              <div class="col-xs-4"><em>Product</em></div>
-              <div class="col-xs-2"><em>Status</em></div>
+              <div class="col-xs-8 col-sm-6"><em>Product</em></div>
+              <div class="col-xs-4 col-sm-6"><em>Status</em></div>
             </div>
            <apex:repeat value="{!statusWrapperClassList}" var="swc" id="theRepeat">
              <div class="row">
-                  <div class="col-xs-4">{!swc.subProduct}</div>
-                  <div class="col-xs-2">{!swc.status}</div>
+                  <div class="col-xs-8 col-sm-6">{!swc.subProduct}</div>
+                  <div class="col-xs-4 col-sm-6">{!swc.status}</div>
               </div>
               </apex:repeat>
+              <div class="row"><div class="col-xs-12"></div></div>
               <div class="row">
-                <div class="col-xs-8 col-xs-offset-2">
+                <div class="col-sm-10 col-xs-12 col-xs-offset-0 col-sm-offset-1">
                   Approvals are conditional and are subject to verification of the data provided and membership with Terafina.
                 </div>
               </div>
@@ -122,21 +123,21 @@
           <h4 class="sectionHeaderThankyou">We Need the following additional information from you:</h4>
           <p>&nbsp;</p>
           <div class="bodyText row">
-            <div class="col-md-6 col-sm-6 col-xs-4 padding_left45"><em>Documentation Type</em></div>
+            <div class="col-md-6 col-sm-6 col-xs-7 padding_left45"><em>Documentation Type</em></div>
             <div class="col-md-2 col-sm-2 col-xs-3 text_align_center"><em>Status</em></div>
-            <div class="col-md-2 col-sm-2 col-xs-2"></div>  
+            <div class="col-md-2 col-sm-2 col-xs-1"></div>  
             <div class="col-md-2 col-sm-2 col-xs-1"></div>
           </div>
           <apex:repeat value="{!docRequestList}" var="dr" id="theRepeat2">
             <p>&nbsp;</p>
             <div class="bodyText row">
-              <div class="col-md-6 col-sm-6 col-xs-4 padding_left45">{!dr.Type__c}</div>
+              <div class="col-md-6 col-sm-6 col-xs-7 padding_left45">{!dr.Type__c}</div>
               <div class="col-md-2 col-sm-2 col-xs-3 text_align_center">{!dr.Status__c}</div>
-              <div class="col-md-2 col-sm-2 col-xs-2 file_input_div">
+              <div class="col-md-2 col-sm-2 col-xs-6 file_input_div">
                 <button class="btn btn-primary btn-sm file-upload margin_left_60" data-id="file_{!dr.Id}">Upload Document</button>
                 <input type="file" capture="" accept="*" id="file_{!dr.Id}" class="file_input_hidden" data-id="{!dr.Id}"/>
               </div>
-              <div class="col-md-2 col-sm-2 col-xs-1"></div>
+              <div class="col-md-2 col-sm-2 col-xs-6"></div>
             </div>
 
             <div class="row" id="alerts"></div>
@@ -163,18 +164,18 @@
           <apex:repeat value="{!app.Notes}" var="note" id="theRepeat4">
             <div class="bodyText">
               <div class="row">
-                <div class="span6">
+                <div class="col-xs-12">
                   <a href="/{!note.OwnerId}">{!note.Owner.Name}</a>&nbsp;added a note titled: 
                   <span class="bodyTextBold">{!note.Title}</span>
                 </div>
               </div>
               <div class="row">
-                <div class="span6">
+                <div class="col-xs-12">
                   {!note.Body}
                 </div>
               </div>
               <div class="row bodyTextSmall">
-                <div class="span6">
+                <div class="col-xs-12">
                   - on&nbsp;<a href="/{!note.Id}">
                   <apex:outputText value="{0,date,MMM dd, yyyy' at 'h:mm a z}"><apex:param value="{!note.CreatedDate}" /></apex:outputText>
                   </a>
@@ -184,26 +185,19 @@
             <div class="bottomPadding"></div>
           </apex:repeat>
           <div class="row">
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              
-            </div>
-            <div class="js-float-label-wrapper fieldItem col-md-10 col-sm-10 col-xs-10 marginRht30 padding-left20 marginBtm20">
+            <div class="js-float-label-wrapper fieldItem col-xs-12 marginBtm20">
               <label for="add-title" class="margin_left_20">Note Title<span class="required"> *</span></label>
               <input type="text" id="add-title" class="minheight30"></input>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              
-            </div>
-            <div class="js-float-label-wrapper fieldItem col-md-10 col-sm-10 col-xs-10 marginRht30 padding-left20">
+            <div class="js-float-label-wrapper fieldItem col-xs-12 marginBtm20">
               <label for="add-title" class="margin_left_20">Note Text<span class="required"> *</span></label>
               <textarea class="form-control" rows="3" id="add-note"></textarea>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-10 col-sm-10 col-xs-10"></div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
+            <div class="col-md-2 col-sm-2 col-xs-6">
               <button class="btn btn-primary btn-sm add-note" data-id="{!app.Id}">Add Note</button>
             </div>
           </div>
