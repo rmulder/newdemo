@@ -1,0 +1,523 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+<!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+  <link href="css/bootstrap-modal.css" rel="stylesheet" />
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="property-details">
+<form action="declarations.html" method="post" id="property-details-form" accept-charset="utf-8">
+<input type="hidden" value="" class="current_address1" />
+<input type="hidden" value="" class="current_address2" />
+<input type="hidden" value="Sunnyvale" class="current_city" />
+<input type="hidden" value="" class="current_state" />
+<input type="hidden" value="Santa Clara County" class="current_county" />
+<input type="hidden" value="" class="current_zipcode" />
+<input type="hidden" value="" class="new_address1" />
+<input type="hidden" value="" class="new_address2" />
+<input type="hidden" value="" class="new_city" />
+<input type="hidden" value="" class="new_state" />
+<input type="hidden" value="" class="new_county" />
+<input type="hidden" value="" class="new_zipcode" />
+<div class="container">
+<div id="dropdown-panel" class="hidden">
+  <div class="panel-content"></div>
+  <div class="panel-close">CLOSE</div>
+</div>
+
+<header class="header">
+  <a href="#">
+    <img class="logo" width="150" height="46"/>
+  </a>
+
+  <div class="tablet-links">
+    <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+    <a class="my-applications-link" data-toggle="dropdown" href="#">My&nbsp;Applications (2)</a>
+  </div>
+  <hr/>
+</header><!-- end .header -->
+<div id="pgAboutYou">
+  <ol id="progressBar" class="onextrapixel">
+    <li class="first completed">
+      <span class="stepIndicator">1</span>
+      <span class="stepName">About You</span>
+    </li>
+    <li class="currentStep">
+      <span class="stepIndicator">2</span>
+      <span class="stepName">About Account</span>
+    </li>
+    <li class="">
+      <span class="stepIndicator">3</span>
+      <span class="stepName">Review &amp; Submit</span>
+    </li>
+    <li class="last">
+      <span class="stepIndicator">4</span>
+      <span class="stepName">Confirmation</span>
+    </li>
+  </ol>
+  <!-- end .progrssBar -->
+  <div class="server-errors hidden"></div>
+  <div id="subSteps">
+    <ul id="aboutYouSub" class="">
+      <li class="completedSub">Account Details</li>
+      <li class="completedSub"><span class="chevron">&rsaquo;</span>Purchase Details</li>
+      <li class="currentSub"><span class="chevron">&rsaquo;</span>Property Details</li>
+      <li><span class="chevron">&rsaquo;</span>Application Declaration</li>
+    </ul>
+  </div>
+</div>
+<div class="grid_11">
+<div id="formContainer">
+<!-- Primary Applicant Info -->
+<div id="appl_1" class="applicant">
+<h4 class="sectionHeader"></h4>
+
+<div class="formFields" id="appl_1_loanDetails">
+  <h4 class="sectionTitle">Property Location</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem width150">
+      <label class="radioLabel" for="addressType1">Unknown address</label>
+      <input name="addressType" id="addressType1" type="radio" value="unknown" class="addressType" />
+    </div>
+    <div class="fieldItem width150">
+      <label class="radioLabel" for="addressType2">New address</label>
+      <input name="addressType" id="addressType2" type="radio" value="new" class="addressType" />
+    </div>
+    <div class="fieldItem width150">
+      <label for="addressType3" class="radioLabel">Current address</label>
+      <input name="addressType" id="addressType3" type="radio" value="current" class="addressType3 addressType" />
+    </div>
+  </div>
+  <div id="addressInfo">
+    <div class="fieldSet">
+      <div class="fieldItem">
+        <label for="appl_1_address1" class="inlineLabel address1_label">Street Address, No PO Boxes<span
+            class="required"> *</span></label>
+        <input name="appl_1_address1" id="appl_1_address1" type="text" class="textInput5 address1 required" />
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem">
+        <label for="appl_1_address2" class="inlineLabel address2_label">Street Address 2</label>
+        <input name="appl_1_address2" id="appl_1_address2" type="text" class="textInput5 address2" />
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem marginRht20">
+        <label for="appl_1_city" class="inlineLabel city_label">City<span class="required"> *</span></label>
+        <input name="appl_1_city" id="appl_1_city" type="text" class="textInput2 city alpha required" />
+      </div>
+      <div class="fieldItem styled-select marginRht20 width174">
+          <select id="j_id0:j_id27:appl_1_state" class="textInput1 appl_1_state width174 required state">
+            <option value="">State *</span></option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+      </div>
+      <div class="fieldItem">
+        <label for="appl_1_zipcode" class="inlineLabel zipcode_label">ZIP Code<span class="required"> *</span></label>
+        <input name="appl_1_zipcode" id="appl_1_zipcode" type="text" maxlength="5" class="textInput80 zipcode required" />
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem styled-select marginRht20 width208">
+        <select id="appl_1_citizenCounty" class="width208 appl_1_citizenCounty county required">
+          <option value="">County<span class="required"> *</span></option>
+        </select>
+      </div>
+      <div class="fieldItem marginRht20">
+        <label for="appl_1_year_built" class="inlineLabel">Year Built</label>
+        <input name="appl_1_year_built" id="appl_1_year_built" type="text" maxlength="5" class="textInput92 digit year" />
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="formFields" id="prevAddDuration">
+    <h4 class="sectionTitle">Property Details</h4>
+
+    <div class="fieldSet">
+      <div class="fieldItem styled-select width232 marginRht20">
+        <select id="appl_1_propertyType" class="width232 required">
+          <option value="">Property Type<span class="required"> *</span></option>
+          <option value="Type 1">Type 1</option>
+          <option value="Type 2">Type 2</option>
+          <option value="Type 3">Type 3</option>
+        </select>
+      </div>
+      <div class="fieldItem styled-select width174">
+        <select id="appl_1_numOfUnits" class="width174 required">
+          <option value="">No. of Units<span class="required"> *</span></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem styled-select width232 marginRht20">
+        <select id="appl_1_occupancy" class="width232 required">
+          <option value="">Occupancy<span class="required"> *</span></option>
+          <option value="Primary Residence">Primary Residence</option>
+          <option value="Secondary Residence">Secondary Residence</option>
+          <option value="Investment">Investment</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem marginRht10">
+        <label for="appl_1_grossRentalIncome" class="inlineLabel">Est. Gross Rental Income</label>
+        <input name="appl_1_grossRentalIncome" id="appl_1_grossRentalIncome" type="text" class="width224 number" />
+      <span class="fieldNote">&nbsp;&nbsp;<span
+          class="required"> *</span> Required for investment/Rental Properties</span>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem">
+        <label for="appl_1_hoaDues" class="inlineLabel">HOA Dues</label>
+        <input name="appl_1_hoaDues" id="appl_1_hoaDues" type="text" class="width224 number" />
+        <span class="fieldNote">&nbsp;&nbsp;<span class="required"> *</span> Required for condos</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="actionPanel">
+  <button type="submit" class="myButton floatRt primaryBtn margin0">Next</button>
+  <a href="purchaseDetails.html" class="button_font"><span class="myButton secondaryBtn floatLft marginRht20 cancel">Previous</span></a>
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later" data-toggle="modal">
+    <span class="demo btn btn-primary btn-large padding10"  id="myButton">Save For later</span>
+  </div>
+</div>
+  <div id="ajax-modal" data-backdrop="static" class="modal hide fade" tabindex="-1"></div>
+</div>
+<div class="grid_5 right-panel">
+  <!-- Need Help -->
+  <div id="helpPanel" class="rightPanel rightPanelGrad">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+      <p class="cfh">24-hour toll free number</p>
+
+      <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+      <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+    </div>
+  </div>
+  <!-- You are applying for -->
+  <div id="productPanel" class="rightPanel">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+
+      <div class="innerContainer">
+        <ul class="bulletList">
+          <li class="listRow">Mortgage</li>
+          <li class="listRow">Carefree Savings Account</li>
+          <li class="listRow lastRow">Carefree Checking Account</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- content_wrap -->
+<div class="content">
+
+  <!-- end .content -->
+</div>
+<div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+<!-- end .container -->
+</div>
+</form>
+<script src="js/jquery.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<!--<script src="js/bootstrap.js"></script>-->
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.validate.additional-methods.js"></script>
+<script src="js/jquery.mask.min.js" type="text/javascript"></script>
+<script src="js/dsp.js"></script>
+<script src="js/dsp-common.js"></script>
+<script type="text/javascript">
+  $j(document).ready(function () {
+    $j("label").inFieldLabels();
+    $j("input").attr("autocomplete", "off");
+    /*
+     url = 'http://api.sba.gov/geodata/county_links_for_state_of/' + state + '.json',
+     yql = 'http://query.yahooapis.com/v1/public/yql?'
+     + 'q=' + encodeURIComponent('select * from json where url=@url')
+     + '&url=' + encodeURIComponent(url)
+     + '&format=json&callback=?';
+     $j.getJSON(yql, function (data) {
+     console.log('data:', data);
+     if (data.query.results && data.query.results.json && data.query.results.json.json) {
+     $j.each(data.query.results.json.json, function (i, county) {
+     counties.push(county.name);
+     });
+     $j('.appl_1_citizenCounty').empty()
+     .append($j('<option></option>').val('').html('County<span class="required"> *</span>'));
+     for (i = 0; i < counties.length; i++) {
+     $j('<option/>').val(counties[i]).html(counties[i]).appendTo('.appl_1_citizenCounty');
+     }
+
+     if (county) {
+     //set the county
+     $j(".appl_1_citizenCounty > [value='" + county + "']").attr("selected", "true");
+     }
+     }
+     });
+     */
+
+    function updateCountyList(state, county) {
+      var counties = [], i,
+          url = 'counties/' + state + '.json';
+      $j.getJSON(url, function (data) {
+        if (data) {
+          $j.each(data, function (i, county) {
+            counties.push(county.name);
+          });
+          $j('.appl_1_citizenCounty').empty()
+              .append($j('<option></option>').val('').html('County<span class="required"> *</span>'));
+          for (i = 0; i < counties.length; i++) {
+            $j('<option/>').val(counties[i]).html(counties[i]).appendTo('.appl_1_citizenCounty');
+          }
+
+          if (county) {
+            //set the county
+            $j(".appl_1_citizenCounty > [value='" + county + "']").attr("selected", "true");
+          }
+        }
+      });
+    }
+    $j('.appl_1_state').on('change', function () {
+      if ($j(this).val() !== '') {
+        updateCountyList($j(this).val());
+      }
+    });
+
+    $j('.addressType').on('click', function () {
+      switch ($j(this).val()) {
+        case 'unknown':
+          $j('#addressInfo').addClass('hidden');
+          $j('.address1').removeAttr('validate');
+          $j('.city').removeAttr('validate');
+          $j('.state').removeAttr('validate');
+          $j('.county').removeAttr('validate');
+          $j('.zipcode').removeAttr('validate');
+          break;
+        case 'new':
+          $j('#addressInfo').removeClass('hidden');
+          var addr1 = $j(".new_address1").val() || '',
+              addr2 = $j(".new_address2").val() || '',
+              city = $j(".new_city").val() || '',
+              state = $j(".new_state").val() || '',
+              county = $j(".new_county").val() || '',
+              zip = $j(".new_zipcode").val() || '';
+          $j(".address1").val(addr1);
+          if (addr1 !== '') {
+            $j(".address1_label").hide();
+          } else {
+            $j(".address1_label").show();
+          }
+          $j(".address2").val(addr2);
+          if (addr2 !== '') {
+            $j(".address2_label").hide();
+          } else {
+            $j(".address2_label").show();
+          }
+          $j(".city").val(city);
+          if (city !== '') {
+            $j(".city_label").hide();
+          } else {
+            $j(".city_label").show();
+          }
+          $j(".state").val(state);
+          $j(".county").val(county);
+          $j(".zipcode").val(zip);
+          if (zip !== '') {
+            $j(".zipcode_label").hide();
+          } else {
+            $j(".zipcode_label").show();
+          }
+          if (state !== '') {
+            updateCountyList(state, county);
+          }
+          $j('.address1').attr('validate', '"required:true"');
+          $j('.city').attr('validate', '"required:true"');
+          $j('.state').attr('validate', '"required:true"');
+          $j('.county').attr('validate', '"required:true"');
+          $j('.zipcode').attr('validate', '"required:true"');
+          break;
+        case 'current':
+        default:
+          $j('#addressInfo').removeClass('hidden');
+          // populate fields from about you page if set...
+          var addr1 = $j(".current_address1").val() || '',
+              addr2 = $j(".current_address2").val() || '',
+              city = $j(".current_city").val() || '',
+              state = $j(".current_state").val() || '',
+              county = $j(".current_county").val() || '',
+              zip = $j(".current_zipcode").val() || '';
+          $j(".address1").val(addr1);
+          if (addr1 !== '') {
+            $j(".address1_label").hide();
+          } else {
+            $j(".address1_label").show();
+          }
+          $j(".address2").val(addr2);
+          if (addr2 !== '') {
+            $j(".address2_label").hide();
+          } else {
+            $j(".address2_label").show();
+          }
+          $j(".city").val(city);
+          if (city !== '') {
+            $j(".city_label").hide();
+          } else {
+            $j(".city_label").show();
+          }
+          $j(".state").val(state);
+          $j(".county").val(county);
+          $j(".zipcode").val(zip);
+          if (zip !== '') {
+            $j(".zipcode_label").hide();
+          } else {
+            $j(".zipcode_label").show();
+          }
+          if (state !== '') {
+            updateCountyList(state, county);
+          }
+          $j('.address1').attr('validate', '"required:true"');
+          $j('.city').attr('validate', '"required:true"');
+          $j('.state').attr('validate', '"required:true"');
+          $j('.county').attr('validate', '"required:true"');
+          $j('.zipcode').attr('validate', '"required:true"');
+          break;
+      }
+    });
+
+    //$j('form').on('submit', function() {return false});
+    $j('form').validate();
+    $j("form").data("validator").addCustomValidations(['year']);
+    var sel= $j('input[type=radio]:checked');
+    if (sel.val()) {
+      $j(sel).trigger('click');
+    } else {
+      $j('.addressType3').trigger('click');
+    }
+
+    /* jquery load for modal dialog window */
+    var $modal = $j('#ajax-modal');
+
+    $j('.ajax .demo').on('click', function(){
+      // create the backdrop and wait for next modal to be triggered
+      $j('body').modalmanager('loading');
+
+      setTimeout(function(){
+        $modal.load('modal_ajax_test.html', '', function(){
+          $modal.modal();
+        });
+      }, 1000);
+    });
+
+    $modal.on('click', '.update', function(){
+      $modal.modal('loading');
+      setTimeout(function(){
+        $modal
+            .modal('loading')
+            .find('.modal-body')
+            .prepend('<div class="alert alert-info fade in">' +
+                'Updated!<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                '</div>');
+      }, 1000);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="crosssell">
+<div class="container">
+ <form method="post" action="personalInfo.html" id="crosssell-form" accept-charset="utf-8">
+    <div id="dropdown-panel" class="hidden">
+      <div class="panel-content"></div>
+      <div class="panel-close">CLOSE</div>
+    </div>
+
+    <header class="header">
+      <a href="#">
+        <img class="logo" width="150" height="46"/>
+      </a>
+
+      <div class="tablet-links">
+        <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+      </div>
+      <hr/>
+    </header><!-- end .header -->
+    <div id="pgAboutYou"> <!-- end .progrssBar -->
+    <div class="server-errors hidden"></div>
+    <div id="subSteps">
+
+    </div>
+  </div>
+
+  <div class="grid_11">
+    <div>
+      <div>
+        <div id="pgAboutYou2">
+          <!-- end .progrssBar -->
+          <div class="subHeader">
+            <p class="blue_heading">You are applying for</p>
+            <hr/>
+          </div>
+          <p><br>
+          </p>
+
+          <p>
+            <input type="checkbox" name="checking" value="account" checked="checked" disabled="disabled" />
+          </p>
+        </div>
+
+        <div class="bodyText">Carefree Checking Account
+          <br>
+        </div>
+        <div id="cs1">
+          <p style="clear:both; z-index:100">
+            <input type="checkbox" name="savings" value="savings" checked="checked" />
+          </p>
+
+          <div class="bodyText">Carefree Savings Account</div>
+        </div>
+        <div id="cs2">
+          <p style="clear:both; z-index:100">
+            <input type="checkbox" name="certificate" value="certificate" checked="checked" />
+          </p>
+
+          <div class="bodyText">12-Month Share Certificate</div>
+        </div>
+        <div id="cs3">
+          <p style="clear:both; z-index:100">
+            <input type="checkbox" name="creditcard" value="creditcard" checked="checked" />
+          </p>
+
+          <div class="bodyText">Credit Card</div>
+        </div>
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p style="width:700px"></p>
+
+        <p class="blue_heading">You might also be interested in:</p>
+
+        <p style="width:700px"></p>
+        <br/>
+
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="span12">
+              <div class="row-fluid">
+                <div class="span4">
+                  <div class="product">
+                    <div class="boxborder">
+                      <p>&nbsp;</p>
+
+                      <p style="padding:5px">
+                        <span width="100%" class="greenTextSmall">&nbsp;<br> Carefree Savings Account</span>
+                      </p>
+
+                      <p style="padding:5px">
+                        <span class="bodyTextSmall"> With no minimum balance and <br> no annual fees.<br> </span>
+                      </p>
+                    </div>
+                    <div class="apDiv2"><span width="100%" class="greenText"> <span
+                        class="selected-item">&#10003;</span></span>
+                    </div>
+                    <div class="apDiv1" data-link="cs1"><span class="crossSellButton floatRt crossBtn">+ ADD</span></div>
+                    <div class="panel">
+                      <li class="bodyTextSmall">The perfect “goal” savings account</li>
+
+                      <li class="bodyTextSmall">Rename your account to make it easier to keep track of your goal.</li>
+
+                      <li class="bodyTextSmall">No monthly account fees</li>
+                      <li class="bodyTextSmall">All balances earn dividends</li>
+                      <li class="bodyTextSmall">Withdraw funds anytime</li>
+                      <!-- you can put content here -->
+                    </div>
+                    <p class="slide"><a href="#" class="btn-slide">LEARN MORE</a></p>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="product">
+                    <div class="boxborder">
+                      <p>&nbsp;</p>
+
+                      <p style="padding:5px">
+                        <span width="100%" class="greenTextSmall">&nbsp;<br> 12-Month Share Certificate</span>
+                      </p>
+
+                      <p style="padding:5px">
+                        <span class="bodyTextSmall"> Guaranteed return*<br> </span>
+                      </p>
+                    </div>
+                    <div class="apDiv2">
+                      <span width="100%" class="greenText"> <span
+                        class="selected-item">&#10003;</span></span>
+                    </div>
+                    <div class="apDiv1" data-link="cs2"><span class="crossSellButton floatRt crossBtn">+ ADD</span></div>
+                    <div class="panel">
+                      <li class="bodyTextSmall">The perfect “goal” savings account</li>
+
+                      <li class="bodyTextSmall">Rename your account to make it easier to keep track of your goal.</li>
+
+                      <li class="bodyTextSmall">No monthly account fees</li>
+                      <li class="bodyTextSmall">All balances earn dividends</li>
+                      <li class="bodyTextSmall">Withdraw funds anytime</li>
+                      <!-- you can put content here -->
+                    </div>
+                    <p class="slide"><a href="#" class="btn-slide">LEARN MORE</a></p>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="product">
+                    <div class="boxborder">
+                      <p>&nbsp;</p>
+
+                      <p style="padding:5px">
+                        <span width="100%" class="greenTextSmall">&nbsp;<br>Credit Card</span>
+                      </p>
+
+                      <p style="padding:5px">
+                        <span class="bodyTextSmall"> Earn 1% cash back on ALL <br> purchases<br> </span>
+                      </p>
+                    </div>
+                    <div class="apDiv2"><span width="100%" class="greenText"> <span
+                        class="selected-item">&#10003;</span></span>
+                    </div>
+                    <div class="apDiv1" data-link="cs3"><span class="crossSellButton floatRt crossBtn">+ ADD</span></div>
+                    <div class="panel">
+                      <li class="bodyTextSmall">The perfect “goal” savings account</li>
+
+                      <li class="bodyTextSmall">Rename your account to make it easier to keep track of your goal.</li>
+
+                      <li class="bodyTextSmall">No monthly account fees</li>
+                      <li class="bodyTextSmall">All balances earn dividends</li>
+                      <li class="bodyTextSmall">Withdraw funds anytime</li>
+                      <!-- you can put content here -->
+                    </div>
+                    <p class="slide"><a href="#" class="btn-slide">LEARN MORE</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>&nbsp;</p>
+        <!-- content_wrap -->
+      </div>
+      <hr/>
+      <div id="actionPanel">
+        <button type="submit" class="myButton floatRt primaryBtn">Start Application</button>
+      </div>
+    </div>
+    <br>
+
+    <!-- Secondary Applicant Info -->
+
+  </div>
+  <aside>
+    <div class="grid_5 right-panel">
+      <!-- Need Help -->
+      <div id="helpPanel" class="rightPanel rightPanelGrad">
+        <div class="containerPadding">
+          <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+          <p class="cfh">24-hour toll free number</p>
+
+          <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+          <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+        </div>
+      </div>
+      <!-- You are applying for -->
+      <div class="rightPanel">
+        <div class="containerPadding">
+          <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+
+          <div class="innerContainer">
+            <ul class="bulletList">
+              <li class="listRow">Carefree Checking Account</li>
+              <li id="cs1_list" class="listRow">Carefree Savings Account</li>
+              <li id="cs2_list" class="listRow">12-Month Share Certificate</li>
+              <li id="cs3_list" class="listRow">Credit Card</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-- content_wrap -->
+  <div class="content">
+
+    <!-- end .content -->
+  </div>
+  <div class="clear">
+    <aside>
+      <div style="width:200px" class="rightPanel">Insert sidebar stuff here.</div>
+    </aside>
+  </div>
+  <footer class="row">
+    <div>
+    <div style="text-align: center;font-size:12px;">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div style="opacity:0.5;padding: 0.625em 0 1.250em 20.625em;">
+      <div style="float:left;"><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+  </footer>
+ </form>
+</div>
+<!-- end .container -->
+<script src="js/jquery.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+
+<script src="js/dsp-common.js"></script>
+<script type="text/javascript">
+  $j(document).ready(function () {
+    $j(".btn-slide").click(function () {
+      $j(this).parent().parent().find(".panel").slideToggle("fast");
+      $j(this).toggleClass("active");
+      return false;
+    });
+    $j("#cs1").hide();
+    $j("#cs2").hide();
+    $j("#cs3").hide();
+    $j(".apDiv2").hide();
+    $j("#cs1_list").hide();
+    $j("#cs2_list").hide();
+    $j("#cs3_list").hide();
+
+    function clickCrosssellItem(obj) {
+      var div = $j(obj).data('link');
+      $j('#' + div).show();
+      $j('#' + div).find('input[type="checkbox"]').prop('checked', true);
+      $j(obj).hide();
+      $j(obj).parent().find(".apDiv2").show();
+      $j('#' + div + '_list')
+          .show()
+          .siblings()
+          .removeClass('lastRow')
+          .end()
+          .addClass('lastRow');
+    }
+
+    $j(".apDiv1").click(function () {
+      clickCrosssellItem(this);
+    });
+
+    $j('input[type="checkbox"]').click(function () {
+      var div = $j(this).parent().parent().attr('id'),
+          th = $j('.product').find('[data-link="' + div + '"]');
+      $j(th).parent().find('.apDiv2').hide();
+      $j(th).show();
+      $j('#' + div).hide();
+      $j('#' + div + '_list')
+          .removeClass('lastRow')
+          .hide();
+    });
+    if ($j('html').hasClass('ie8')) {
+      $j('.selected-item').html('<span style="font-family: wingdings;">&#252;</span>');
+    }
+    /*
+     if($j('.savings').prop('checked')){
+     $j(".apDiv1[data-link='savingsAc']").each(function(idx, el) {
+     clickCrosssellItem(el);
+     });
+     }
+
+     if($j('.certificate').prop('checked')){
+     $j(".apDiv1[data-link='shareCertificate']").each(function(idx, el) {
+     clickCrosssellItem(el);
+     });
+     }
+
+     if($j('.creditcard').prop('checked')){
+     $j(".apDiv1[data-link='creditCard']").each(function(idx, el) {
+     clickCrosssellItem(el);
+     });
+     }
+     */
+  });
+</script>
+</body>
+</html>

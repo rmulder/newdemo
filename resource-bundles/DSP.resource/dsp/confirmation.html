@@ -1,0 +1,295 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="confirmation">
+<form method="post" action="thankYou.html" id="confirmation-form">
+  <div class="container">
+  <div id="dropdown-panel" class="hidden">
+    <div class="panel-content"></div>
+    <div class="panel-close">CLOSE</div>
+  </div>
+
+  <header class="header">
+    <a href="#">
+      <img class="logo" width="150" height="46"/>
+    </a>
+
+    <div class="tablet-links">
+      <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+      <a class="my-applications-link" data-toggle="dropdown" href="#">My&nbsp;Applications (2)</a>
+    </div>
+    <hr/>
+  </header><!-- end .header -->
+    <div id="pgReviewSubmit">
+      <ol id="progressBar" class="onextrapixel">
+        <li class="first completed">
+          <span class="stepIndicator">1</span>
+          <span class="stepName">About You</span>
+        </li>
+        <li class="completed">
+          <span class="stepIndicator">2</span>
+          <span class="stepName">About Account</span>
+        </li>
+        <li class="completed">
+          <span class="stepIndicator">3</span>
+          <span class="stepName">Review &amp; Submit</span>
+        </li>
+        <li class="last currentStep">
+          <span class="stepIndicator">4</span>
+          <span class="stepName">Confirmation</span>
+        </li>
+      </ol>
+      <!-- end .progrssBar -->
+      <div class="server-errors hidden"></div>
+    </div>
+    <div id="pgAboutYou"> <!-- end .progrssBar -->
+      <div id="subSteps">
+
+      </div>
+    </div>
+
+    <div class="grid_11">
+      <div class="confirmGreen">
+        <div>
+          <h4 class="greenText">Your application has been approved and account created for:</h4>
+          <br>
+          <li class="bodyTextBold"><span>Carefree Checking A/c</span></li>
+          <ul><li class="bodyTextBold"><strong>&nbsp;&nbsp;&nbsp;Your Application Number: 1234567890</strong></li></ul>
+          <br/>
+          <span class="bodyText"> &nbsp;&nbsp;An confirmation e-mail detailing the next steps has been sent to <a href="mailto:jsmith@mail.com">jsmith@mail.com</a></span><br>
+          <br/>
+
+        </div>
+      </div>
+      <br>
+      <!-- Additional Options -->
+      <h2 class="bodyTextBold">Additional services you may be interested in:</h2>
+      <div id="formContainer">
+        <div style="padding-left:10px">
+            <input type="checkbox" name="checking2" value="online" checked="checked" />
+            <span class="bodyTextBold">Visa CashPlus Check Card</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Once the account is funded, each account owner will be mailed a Visa CashPlus Check Card.</p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" checked="checked" />
+            <span class="bodyTextBold">ATM Card</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Once the account is funded, each account owner will be mailed an ATM Card.</p>
+            <br/>
+
+            <div>
+              <p class="bodyTextBold"> &nbsp;Card Design</p>
+              <div class="row">
+                <!-- Button to trigger modal -->
+                <div class="span1 pull-left">
+                  <img src="images/visa1.png" height="49" alt="Choose card design"/>&nbsp;
+                </div>
+                <div class="span3">
+                  <a href="#chooseCardModal" data-toggle="modal">Choose your card design</a>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="chooseCardModal" class="modal hide" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="chooseCardModalLabel" aria-hidden="true">
+                <div class="modal-header btn-inverse">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="chooseCardModalLabel">Choose your credit card design</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="span3_5">
+
+                        <h4 class="sectionTitle">Selected card design</h4><br>
+
+                        <div id='imagedest'>
+                          <img src='images/carddesign1.jpg'>
+                        </div>
+                        <br>
+                        <br>
+
+                    </div>
+                    <div class="span4_5">
+                      <div id="apDiv1">
+
+                        <h4 class="sectionTitle">
+
+                        <p>Choose your card design</p>
+
+                        <p><br>
+                        </p>
+                        </h4>
+                            <fieldset class="form-inline span2">
+                              <input type="radio" name="cardSelected" value="1" checked="checked" />
+                              <img src='images/card_thumb1.jpg'>
+                            </fieldset>
+                            <fieldset class="form-inline span2">
+                              <input type="radio" name="cardSelected" value="2" />
+                              <img src='images/card_thumb2.jpg'>
+                            </fieldset>
+                        <br>
+                        <br>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="bodyText"><span class="bodyTextBold">Note:</span> The card design selected will apply to
+                      the cards of primary and other co-applicants.
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="myButton floatRt primaryBtn">Save</button>
+                  <!-- <div><a class="greenText" data-dismiss="modal" aria-hidden="true">Cancel</a></div> -->
+                </div>
+              </div>
+            </div>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" />
+            <span class="bodyTextBold">Overdraft Protection</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Overdraft Protection boiler plate text goes here.</p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" />
+            <span class="bodyTextBold">Check Order</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Your first order of &lt;50&gt; standard checks will be mailed once the
+              account is funded.
+            </p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" checked="checked" />
+            <span class="bodyTextBold">Bill pay</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Make payments online to virtually any company or person in the
+              United States with Bill Pay.
+            </p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" checked="checked" />
+            <span class="bodyTextBold">Online Banking Enrollment</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Yes, I would like to sign up for free and secure online banking.
+              Check balances, view statements, transfer fund and more - virtually anytime, anywhere, and with
+              just one username and password.</p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" checked="checked" />
+            <span class="bodyTextBold">eDeposit</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;eDeposit boilerplate text goes here...</p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" checked="checked" />
+            <span class="bodyTextBold">E-Statements</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;E-Statements boilerplate text goes here...</p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" />
+            <span class="bodyTextBold">Gap Insurance</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Gap Insurance boilerplate text goes here...</p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" />
+            <span class="bodyTextBold">Debt Safe Protection</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Debt Safe Protection boilerplate text goes here...</p>
+            <br/>
+
+            <input type="checkbox" name="checking2" value="online" />
+            <span class="bodyTextBold">Mechanical Break down Protection</span>
+            <p class="bodyTextSmall">&nbsp;&nbsp;Mechanical Break down Protection boilerplate text goes here...</p>
+            <br/>
+
+        </div>
+      </div>
+      <div id="actionPanel">
+        <button type="submit" class="margin0 myButton floatRt primaryBtn">Finish</button>
+      </div>
+    </div>
+    <div class="grid_5 right-panel">
+        <!-- Need Help -->
+        <div id="helpPanel" class="rightPanel rightPanelGrad">
+          <div class="containerPadding">
+            <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+            <p class="cfh">24-hour toll free number</p>
+
+            <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+            <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+          </div>
+        </div>
+        <!-- You are applying for -->
+        <div id="productPanel" class="rightPanel">
+          <div class="containerPadding">
+            <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+
+            <div class="innerContainer">
+              <ul class="bulletList">
+                <li class="listRow">Mortgage</li>
+                <li class="listRow">Carefree Savings Account</li>
+                <li class="listRow lastRow">Carefree Checking Account</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- content_wrap -->
+    <div class="content">
+
+      <!-- end .content -->
+    </div>
+    <div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+    <!-- end .container -->
+  </div>
+
+
+</form>
+<script src="js/jquery.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="js/selectivizr.js"></script>
+  <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/dsp-common.js"></script>
+<script>
+  $j(document).ready(function () {
+    $j('input[type="radio"]').click(function () {
+      $j('#imagedest').html("<img src='images/carddesign" + $j(this).val() + ".jpg'>");
+    });
+
+    $j('.modal-footer button').click(function (e) {
+      var cardValue = $j("input[type='radio']:checked").val();
+      console.log(cardValue);
+      e.preventDefault();
+      $j('#chooseCardModal').modal('hide');
+      //saveCardValue(cardValue);
+    });
+  });
+</script>
+</body>
+</html>

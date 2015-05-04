@@ -1,0 +1,208 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link rel="alternate" href="mobileShortform.html" id="phone" media="only screen and (touch-enabled: 1) and (max-device-width: 640px)"/>
+  <script src="js/device.js"></script>
+  <link rel="stylesheet" href="css/dsp.css" />
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <script type="text/javascript" src="js/cssua.min.js"></script>
+  <script>
+    var DSP = {resources_url: ''};
+  </script>
+</head>
+
+<body id="get-started">
+<div id="web-page" class="container">
+    <form method="post" action="crossSell.html" id="contact-form" accept-charset="utf-8">
+    <div id="dropdown-panel" class="hidden">
+      <div class="panel-content"></div>
+      <div class="panel-close">CLOSE</div>
+    </div>
+
+    <header class="header">
+      <a href="#">
+        <img class="logo"/>
+      </a>
+
+      <div class="tablet-links">
+        <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+      </div>
+      <hr/>
+    </header><!-- end .header -->
+    <div class="server-errors hidden"></div>
+    <div class="blue_heading"> &nbsp;&nbsp;Begin your application here</div>
+    <p>&nbsp;</p>
+
+    <div class="grid_11">
+      <div class="loginForm loginFormHeight"><br/>
+        <!-- content_wrap -->
+        <div class="content">
+          <div>
+            <h4 class="sectionTitle">Requirements</h4>
+            <li class="bodyText">18 years or older</li>
+            <br/>
+            <li class="bodyText">Legal resident of the United States</li>
+            <p>&nbsp;</p>
+            <br/>
+
+            <h4 class="sectionTitle">You will need</h4>
+            <li class="bodyText">Social Security Number</li>
+            <br/>
+            <li class="bodyText">Driver's License <br />
+            </li>
+            <br />
+          </div>
+
+        </div>
+      </div>
+      
+
+      <div id="apDiv1">
+        <!--
+        <h4 class="sectionTitle">Are you a member?</h4>
+
+        <p style="clear:both">
+          <input type="radio" name="mem" value="yes" />
+          <span class="bodyText">Yes, I'm already a member</span>
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p style="clear:both">
+          <input type="radio" name="mem" value="no" />
+          <span class="bodyText">No, I would like to become a member</span>
+        </p>
+
+        <div class="input-fields hidden"> -->
+
+        <h4 class="sectionTitle">Let's get started</h4>
+        <h4 class="sectionTitle">Please provide your</h4>
+        <div class="input-fields">
+          <div class="fieldSet">
+            <div class="fieldItem">
+              <label for="firstName" class="inlineLabel">First Name<span class="required"> *</span></label>
+              <input type="text" class="textInput2 firstName required" name="firstName" id="firstName" />
+            </div>
+          </div>
+          <div class="fieldSet">
+            <div class="fieldItem">
+              <label for="lastName" class="inlineLabel">Last Name<span class="required"> *</span></label>
+              <input type="text" class="textInput2 lastName required" name="lastName" id="lastName" />
+            </div>
+          </div>
+          <div class="fieldSet">
+            <div class="fieldItem">
+              <label for="phone" class="inlineLabel">Phone Number<span class="required"> *</span></label>
+              <input type="text" class="textInput2 required phoneUS" name="phone" id="phone" />
+            </div>
+          </div>
+          <div class="fieldSet">
+            <div class="fieldItem">
+              <label for="email" class="inlineLabel">Email<span class="required"> *</span></label>
+              <input type="text" class="textInput2 required email" name="email" id="email" />
+            </div>
+          </div>
+
+          <!--<div><img src="img/loading.gif" width="50" height="50"></div>-->
+        </div>
+      </div>
+      <div id="actionPanel">
+        <button type="submit" class="myButton floatRt primaryBtn">Get Started</button>
+      </div>
+    </div>
+    <div class="grid_5 right-panel">
+      <!-- Need Help -->
+      <div id="helpPanel" class="rightPanel rightPanelGrad">
+        <div class="containerPadding">
+          <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+          <p class="cfh">24-hour toll free number</p>
+
+          <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+          <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+        </div>
+      </div>
+      <!-- You are applying for -->
+      <div id="productPanel" class="rightPanel">
+        <div class="containerPadding">
+          <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+          <div class="innerContainer">
+            <ul class="bulletList">
+              <li class="listRow lastRow">Carefree Checking Account</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="clear"></div>
+<div class="borderStyle_disclosure app_style">Insert Disclosure Text</div>
+  <div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+</form>
+</div>
+<!-- end .container -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/ietest.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.validate.additional-methods.js"></script>
+<script src="js/jquery.mask.min.js" type="text/javascript"></script>
+<script src="js/dsp.js"></script>
+<script src="js/dsp-common.js"></script>
+<script>
+  $j(document).ready(function () {
+    $j("label").inFieldLabels();
+    $j("input").attr("autocomplete", "off");
+    //$j('.loginForm').removeClass('loginFormHeight');
+    //$j('.content').addClass('contentHeight');
+/*
+    $j("input[type='radio']").change(function () {
+      if ($j(this).val() === "no") {
+        $j('.input-fields').removeClass('hidden');
+        $j('.loginForm').removeClass('loginFormHeight');
+        $j('.content').addClass('contentHeight');
+      } else {
+        $j('.input-fields').addClass('hidden');
+        $j('.loginForm').addClass('loginFormHeight');
+        $j('.content').removeClass('contentHeight');
+      }
+    });
+*/
+    $j('form').each(function () {
+      $j(this).validate();
+      $j(this).data("validator").addCustomValidations(['firstName', 'lastName', 'phoneUS']);
+    });
+  });
+</script>
+</body>
+</html>

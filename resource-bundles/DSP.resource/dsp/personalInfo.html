@@ -1,0 +1,1554 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <!--<meta http-equiv="MSThemeCompatible" content="NO" />  -->
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+  <link href="css/bootstrap-modal.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="about-you">
+<div class="container">
+<form method="post" id="about-you-form" action="employment.html" accept-charset="utf-8">
+<div id="dropdown-panel" class="hidden">
+  <div class="panel-content"></div>
+  <div class="panel-close">CLOSE</div>
+</div>
+
+<header class="header">
+  <a href="#">
+    <img class="logo" width="150" height="46"/>
+  </a>
+
+  <div class="tablet-links">
+    <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+    <a class="my-applications-link" data-toggle="dropdown" href="#">My&nbsp;Applications (2)</a>
+  </div>
+  <hr/>
+</header><!-- end .header -->
+<div>
+<div id="pgAboutYou">
+  <ol id="progressBar" class="onextrapixel">
+    <li class="first currentStep"> <span class="stepIndicator">1</span> <span class="stepName">About You</span> </li>
+    <li class=""> <span class="stepIndicator">2</span> <span class="stepName">About Account</span> </li>
+    <li class=""> <span class="stepIndicator">3</span> <span class="stepName">Review &amp; Submit</span> </li>
+    <li class="last"> <span class="stepIndicator">5</span> <span class="stepName">Confirm</span> </li>
+  </ol>
+  <!-- end .progrssBar -->
+  <div class="server-errors hidden"></div>
+  <div id="subSteps">
+    <ul id="aboutYouSub" class="">
+      <li class="currentSub">Personal Information</li>
+      <li><span class="chevron">&rsaquo;</span>Employment Information</li>
+      <li><span class="chevron">&rsaquo;</span>Identity Information</li>
+    </ul>
+  </div>
+</div>
+<div class="grid_11">
+<div id="formContainer">
+<!-- Primary Applicant Info -->
+<div id="appl_1" class="applicant">
+<h4 class="sectionHeader">Applicant 1: Personal Information</h4>
+
+<div class="formFields" id="appl_1_nameAdd">
+  <h4 class="sectionTitle">Name and Address</h4>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht10">
+      <label for="appl_1_firstName" class="inlineLabel">First Name<span class="required"> *</span></label>
+      <input type="text" name="appl_1_firstName" id="appl_1_firstName" class="textInput2 firstName width150 required validName" />
+    </div>
+    <div class="fieldItem marginRht10" >
+      <label for="appl_1_middleName" class="inlineLabel">Middle Name</label>
+      <input name="appl_1_middleName" type="text" id="appl_1_middleName" class="width150 middleName validName" />
+    </div>
+    <div class="fieldItem marginRht10" >
+      <label for="appl_1_lastName" class="inlineLabel">Last Name<span class="required"> *</span></label>
+      <input type="text" name="appl_1_lastName" id="appl_1_lastName" class="textInput2 lastName width150 required validName" />
+    </div>
+    <div class="fieldItem">
+      <div class="styled-select">
+        <select id="appl_1_suffix" name="appl_1_suffix" class="textInput80">
+          <option value="">Suffix</option>
+          <option value="JR">Jr.</option>
+          <option value="SR">Sr.</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_1_address1" class="inlineLabel ">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="appl_1_address1" id="appl_1_address1" type="text" class="textInput5 appl_1_address1 required validAddress" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_1_address2" class="inlineLabel">Street Address 2</label>
+      <input name="appl_1_address2" id="appl_1_address2" type="text" class="textInput5 appl_1_address2" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_1_city" class="inlineLabel">City<span class="required"> *</span></label>
+      <input name="appl_1_city" id="appl_1_city" type="text" class="textInput2 appl_1_city required alpha" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_1_state" name="appl_1_state" class="textInput1 appl_1_state">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_1_zipcode" class="inlineLabel">Zipcode<span class="required"> *</span></label>
+      <input name="appl_1_zipcode" id="appl_1_zipcode" type="text" maxlength="5" class="appl_1_zipcode required zipcodeUS" />
+    </div>
+    <div class="fieldItem margin_right_40">
+      <h4 class="sectionTitle marginBtm10">Housing Status</h4>
+
+      <div class="styled-select width208">
+        <select id="appl_1_housingStatus" name="appl_1_housingStatus" class="width208 required">
+          <option value="">Select<span class="required"> *</span></option>
+          <option value="Own">Own</option>
+          <option value="Rent">Rent</option>
+          <option value="Parents">Parents/Relative</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem marginRht20">
+      <h4 class="sectionTitle">Monthly Payment</h4>
+
+      <div class="fieldSet marginTop10">
+        <div class="fieldItem">
+          <label for="appl_1_annualIncome" class="inlineLabel">$<span class="required"> *</span></label>
+          <input name="appl_1_annualIncome" type="text" class="textInput1 required currencyUS" id="appl_1_annualIncome" maxlength="12" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="prevAddDuration">
+  <h4 class="sectionTitle">How long have you lived at this address?</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_1_addYears" class="inlineLabel">Years<span class="required"> *</span></label>
+      <input id="appl_1_addYears" type="text" class="textInput1 required durationYears" name="appl_1_addYears" />
+    </div>
+    <div class="fieldItem">
+      <label for="appl_1_addMonths" class="inlineLabel">Months<span class="required"> *</span></label>
+      <input name="appl_1_addMonths" type="text" class="textInput1 required durationMonths" id="appl_1_addMonths" />
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide" id="appl_1_previousAdd">
+  <h4 class="sectionTitle">Previous Address</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_1_prevAdd1" class="inlineLabel street-address-1">Street Address 1<span class="required"> *</span></label>
+      <input id="appl_1_prevAdd1" class="appl_1_prevAdd1_c textInput5 validAddress" type="text" name="appl_1_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_1_prevAdd2" class="inlineLabel street-address-2">Street Address 2</label>
+      <input id="appl_1_prevAdd2" class="appl_1_prevAdd2_c textInput5" type="text" name="appl_1_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_1_prevCity" class="inlineLabel city-optional">City<span class="required"> *</span></label>
+      <input name="appl_1_prevCity" id="appl_1_prevCity" class="appl_1_prevCity alpha" type="text" class="textInput2" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_1_prevState" name="appl_1_prevState" class="appl_1_prevState_c textInput1">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_1_prevZipcode" class="inlineLabel">Zipcode<span class="required"> *</span></label>
+      <input name="appl_1_prevZipcode" id="appl_1_prevZipcode" class="appl_1_prevZipcode_c zipcodeUS" type="text" maxlength="5" />
+    </div>
+  </div>
+</div>
+<div class="formFields" id="maritalStatus">
+  <h4 class="sectionTitle">Marital Status</h4>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <div class="styled-select styled-select-marital">
+        <select id="appl_1_maritalStatus" name="appl_1_maritalStatus" class="textInput1 required">
+          <option value="">Select<span class="required"> *</span></option>
+          <option value="Married">Married</option>
+          <option value="Unmarried">Unmarried</option>
+          <option value="Separated">Separated</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="contactInfo">
+  <h4 class="sectionTitle">Contact Information</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+
+      <label for="appl_1_dayPhone" class="inlineLabel">Day Phone<span class="required"> *</span></label>
+      <input type="text" name="appl_1_dayPhone" id="appl_1_dayPhone" class="textInput2 width150 required phoneUS" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <label for="appl_1_eveningPhone" class="inlineLabel">Work Phone<span class="required"> *</span></label>
+      <input name="appl_1_eveningPhone" type="text" id="appl_1_eveningPhone" class="textInput2 width150 required phoneUS" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_1_email" class="inlineLabel">E-mail Address<span class="required"> *</span></label>
+      <input name="appl_1_email" id="appl_1_email" type="text" class="emailPrimary required email" />
+    </div>
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+
+</div>
+</div>
+<!-- secondary applicant info -->
+<!-- Add applicant Section -->
+<div id="addApplicantLink" class="addApplicant">
+  <hr class="dotted"></hr>
+  <a class="add_link_1">Add an applicant</a>
+  <input type="checkbox" name="add_applicant" class="add_link_1_checkbox" />
+</div>
+
+<div id="appl_2" class="applicant">
+<h4 class="sectionHeader">
+  <div class="floatRt remove "><a href="#" class="remove_link_2">Remove applicant</a></div>
+  Applicant 2: Personal Information
+</h4>
+<div class="formFields" id="appl_2_nameAdd">
+  <h4 class="sectionTitle">Name and Address</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht10">
+      <label for="appl_2_firstName" class="inlineLabel appl_2_firstName_label">First Name<span class="required"> *</span></label>
+      <input type="text" name="appl_2_firstName" id="appl_2_firstName" class="textInput2 firstName width150 appl_2_firstName validName" />
+    </div>
+    <div class="fieldItem marginRht10">
+      <label for="appl_2_middleName" class="inlineLabel">Middle Name</label>
+      <input name="appl_2_middleName" type="text" id="appl_2_middleName" class="width150 middleName appl_2_middleName validName" />
+    </div>
+    <div class="fieldItem marginRht10">
+      <label for="appl_2_lastName" class="inlineLabel">Last Name<span class="required"> *</span></label>
+      <input type="text" name="appl_2_lastName" id="appl_2_lastName" class="textInput2 lastName width150 appl_2_lastName validName" />
+    </div>
+    <div class="fieldItem">
+      <div class="styled-select">
+        <select id="appl_2_suffix" name="appl_2_suffix" class="textInput1 appl_2_suffix">
+          <option value="">Suffix</option>
+          <option value="JR">Jr.</option>
+          <option value="SR">Sr.</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <input type="checkbox" class="copy_prime_address_2" />
+      <span class="tipLink sectionTitle">Use Primary Applicants Address</span>
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_2_address1" class="inlineLabel appl_2_address1_label" id="address_label_2">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="appl_2_address1" id="appl_2_address1" type="text" class="textInput5 appl_2_address1 validAddress" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_2_address2" class="inlineLabel appl_2_address2_label" id="address_label_21">Street Address 2</label>
+      <input name="appl_2_address2" id="appl_2_address2"  type="text" class="textInput5 appl_2_address2" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_2_city" class="inlineLabel appl_2_city_label" id="city_label_2">City<span class="required"> *</span></label>
+      <input name="appl_2_city" id="appl_2_city" type="text" class="textInput2 appl_2_city alpha" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_2_state" name="appl_2_state" class="textInput1 appl_2_state">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_2_zipcode" class="inlineLabel appl_2_zipcode_label" id="zipcode_label_2">Zipcode<span class="required"> *</span></label>
+      <input name="appl_2_zipcode" id="appl_2_zipcode" type="text" class="appl_2_zipcode zipcodeUS" maxlength="5" />
+    </div>
+    <div class="fieldItem margin_right_40">
+      <h4 class="sectionTitle marginBtm10">Housing Status</h4>
+
+      <div class="styled-select styled-select-housing width208">
+        <select id="appl_2_employmentStatus" name="appl_2_employmentStatus" class="width208 appl_2_employmentStatus">
+          <option value="">Select<span class="required"> *</span></option>
+          <option value="Own">Own</option>
+          <option value="Rent">Rent</option>
+          <option value="Other">Other</option>
+          <option value="Parents">Parents/Relative</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem marginRht20">
+      <h4 class="sectionTitle">Monthly Payment</h4>
+
+      <div class="fieldSet marginTop10">
+        <div class="fieldItem">
+          <label for="appl_2_annualIncome" class="inlineLabel">$<span class="required"> *</span></label>
+          <input name="appl_2_annualIncome" type="text" class="textInput1 appl_2_annualIncome currencyUS" id="appl_2_annualIncome"
+                 maxlength="12" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="prevAddDuration">
+  <h4 class="sectionTitle">How long have you lived at this address?</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_2_addYears" class="inlineLabel">Years<span class="required"> *</span></label>
+      <input id="appl_2_addYears" type="text" class="textInput1 appl_2_addYears durationYears" name="appl_2_addYears" maxlength="2" />
+    </div>
+    <div class="fieldItem">
+      <label for="appl_2_addMonths" class="inlineLabel">Months<span class="required"> *</span></label>
+      <input name="appl_2_addMonths" type="text" class="textInput1 appl_2_addMonths durationMonths" id="appl_2_addMonths" maxlength="2" />
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide" id="appl_2_previousAdd">
+  <h4 class="sectionTitle">Previous Address</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_2_prevAdd1" class="inlineLabel">Street Address 1<span class="required"> *</span></label>
+      <input id="appl_2_prevAdd1" type="text" class="textInput5 appl_2_prevAdd1 validAddress" name="appl_2_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_2_prevAdd2" class="inlineLabel">Street Address 2</label>
+      <input id="appl_2_prevAdd2" type="text" class="textInput5 appl_2_prevAdd2" name="appl_2_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_2_prevCity" class="inlineLabel">City<span class="required"> *</span></label>
+      <input name="appl_2_prevCity" id="appl_2_prevCity" type="text" class="textInput2 appl_2_prevCity alpha" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_2_prevState" name="appl_2_prevState" class="textInput1 appl_2_prevState">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_2_prevZipcode" class="inlineLabel">Zipcode<span class="required"> *</span></label>
+      <input name="appl_2_prevZipcode" id="appl_2_prevZipcode" class="appl_2_prevZipcode zipcodeUS" type="text" maxlength="5" />
+    </div>
+  </div>
+</div>
+<div class="formFields" id="maritalStatus">
+  <h4 class="sectionTitle">Marital Status</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem styled-select">
+      <select id="appl_2_maritalStatus" name="appl_2_maritalStatus" class="textInput1 appl_2_maritalStatus">
+        <option value="">Select<span class="required"> *</span></option>
+        <option value="Married">Married</option>
+        <option value="Unmarried">Unmarried</option>
+        <option value="Separated">Separated</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="relationshipToPrimary">
+  <h4 class="sectionTitle">Relationship to Primary Applicant</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem styled-select">
+      <select id="appl_2_relationshipToPrimary" name="appl_2_relationshipToPrimary" class="textInput1 appl_2_relationshipToPrimary">
+        <option value="">Select<span class="required"> *</span></option>
+        <option value="Spouse">Spouse</option>
+        <option value="Co-Signer">Co-Signer</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="contactInfo">
+  <h4 class="sectionTitle">Contact Information</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_2_dayPhone" class="inlineLabel">Day Phone<span class="required"> *</span></label>
+      <input name="appl_2_dayPhone" id="appl_2_dayPhone" type="text" class="textInput2 phoneUS appl_2_dayPhone" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <label for="appl_2_eveningPhone" class="inlineLabel">Work Phone<span class="required"> *</span></label>
+      <input name="appl_2_eveningPhone" type="text" id="appl_2_eveningPhone" class="textInput2 phoneUS appl_2_eveningPhone" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_2_email" class="inlineLabel">E-mail Address<span class="required"> *</span></label>
+      <input name="appl_2_email" id="appl_2_email" type="text" class="emailPrimary appl_2_email email" />
+    </div>
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+
+</div>
+</div>
+<!-- Add applicant Section -->
+<div id="addApplicantLink_2" class="addApplicant">
+  <hr class="dotted"></hr>
+  <a class="add_link_2">Add an applicant</a>
+  <input type="checkbox" name="add_applicant" class="add_link_2_checkbox" />
+</div>
+
+
+<!--end of secondary application info -->
+<!-- third application info -->
+<div id="appl_3" class="applicant">
+<h4 class="sectionHeader">
+  <div class="floatRt remove "><a href="#" class="remove_link_3">Remove applicant</a></div>
+  Applicant 3: Personal Information
+</h4>
+<div class="formFields" id="appl_3_nameAdd">
+  <h4 class="sectionTitle">Name and Address</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht10">
+      <label for="appl_3_firstName" class="inlineLabel">First Name<span class="required"> *</span></label>
+      <input type="text" name="appl_3_firstName" id="appl_3_firstName" class="textInput2 firstName width150 appl_3_firstName validName" />
+    </div>
+    <div class="fieldItem marginRht10">
+      <label for="appl_3_middleName" class="inlineLabel">Middle Name</label>
+      <input name="appl_3_middleName" type="text" id="appl_3_middleName" class="width150 middleName appl_3_middleName validName" />
+    </div>
+    <div class="fieldItem marginRht10">
+      <label for="appl_3_lastName" class="inlineLabel">Last Name<span class="required"> *</span></label>
+      <input type="text" name="appl_3_lastName" id="appl_3_lastName" class="textInput2 lastName width150 appl_3_lastName validName" />
+    </div>
+    <div class="fieldItem">
+      <div class="styled-select">
+        <select id="appl_3_suffix" name="appl_3_suffix" class="textInput1 appl_3_suffix">
+          <option value="">Suffix</option>
+          <option value="JR">Jr.</option>
+          <option value="SR">Sr.</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <input type="checkbox" class="copy_prime_address_3" />
+      <span class="tipLink sectionTitle">Use Primary Applicants Address</span>
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_3_address1" class="inlineLabel appl_3_address1_label" id="address_label_3">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="appl_3_address1" id="appl_3_address1" type="text" class="textInput5 appl_3_address1 validAddress" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_3_address2" class="inlineLabel appl_3_address2_label" id="address_label_31">Street Address 2</label>
+      <input name="appl_3_address2" id="appl_3_address2" type="text" class="textInput5 appl_3_address2" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_3_city" class="inlineLabel appl_3_city_label" id="city_label_3">City<span class="required"> *</span></label>
+      <input name="appl_3_city" id="appl_3_city" type="text" class="textInput2 appl_3_city alpha" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_3_state" name="appl_3_state" class="textInput1 appl_3_state">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_3_zipcode" class="inlineLabel appl_3_zipcode_label" id="zipcode_label_3">Zipcode<span class="required"> *</span></label>
+      <input name="appl_3_zipcode" id="appl_3_zipcode" type="text" class="appl_3_zipcode zipcodeUS" maxlength="5" />
+    </div>
+    <div class="fieldItem margin_right_40">
+      <h4 class="sectionTitle marginBtm10">Housing Status</h4>
+
+      <div class="styled-select width208">
+        <select id="appl_3_employmentStatus" name="appl_3_employmentStatus" class="width228 appl_3_employmentStatus">
+          <option value="">Select<span class="required"> *</span></option>
+          <option value="Own">Own</option>
+          <option value="Rent">Rent</option>
+          <option value="Other">Other</option>
+          <option value="Parents">Parents/Relative</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem marginRht20">
+      <h4 class="sectionTitle">Monthly Payment</h4>
+
+      <div class="fieldSet marginTop10">
+        <div class="fieldItem">
+          <label for="appl_3_annualIncome" class="inlineLabel">$<span class="required"> *</span></label>
+          <input name="appl_3_annualIncome" type="text" class="textInput1 appl_3_annualIncome currencyUS" id="appl_3_annualIncome"
+                 maxlength="12" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="prevAddDuration">
+  <h4 class="sectionTitle">How long have you lived at this address?</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_3_addYears" class="inlineLabel">Years<span class="required"> *</span></label>
+      <input id="appl_3_addYears" type="text" class="textInput1 appl_3_addYears durationYears" name="appl_3_addYears" maxlength="2" />
+    </div>
+    <div class="fieldItem">
+      <label for="appl_3_addMonths" class="inlineLabel">Months<span class="required"> *</span></label>
+      <input name="appl_3_addMonths" type="text" class="textInput1 appl_3_addMonths durationMonths" id="appl_3_addMonths" maxlength="2" />
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide" id="appl_3_previousAdd">
+  <h4 class="sectionTitle">Previous Address</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_3_prevAdd1" class="inlineLabel">Street Address 1<span class="required"> *</span></label>
+      <input id="appl_3_prevAdd1" type="text" class="textInput5 appl_3_prevAdd1 validAddress" name="appl_3_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_3_prevAdd2" class="inlineLabel">Street Address 2</label>
+      <input id="appl_3_prevAdd2" type="text" class="textInput5 appl_3_prevAdd2" name="appl_3_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_3_prevCity" class="inlineLabel">City<span class="required"> *</span></label>
+      <input name="appl_3_prevCity" id="appl_3_prevCity" type="text" class="textInput2 appl_3_prevCity alpha" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_3_prevState" name="appl_3_prevState" class="textInput1 appl_3_prevState">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_3_prevZipcode" class="inlineLabel">Zipcode<span class="required"> *</span></label>
+      <input name="appl_3_prevZipcode" id="appl_3_prevZipcode" class="appl_3_prevZipcode zipcodeUS" type="text" maxlength="5" />
+    </div>
+  </div>
+</div>
+<div class="formFields" id="maritalStatus">
+  <h4 class="sectionTitle">Marital Status</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem styled-select">
+      <select id="appl_3_maritalStatus" name="appl_3_maritalStatus" class="textInput1 appl_3_maritalStatus">
+        <option value="">Select<span class="required"> *</span></option>
+        <option value="Married">Married</option>
+        <option value="Unmarried">Unmarried</option>
+        <option value="Separated">Separated</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="relationshipToPrimary">
+  <h4 class="sectionTitle">Relationship to Primary Applicant</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem styled-select">
+      <select id="appl_3_relationshipToPrimary" name="appl_3_relationshipToPrimary" class="textInput1 appl_3_relationshipToPrimary">
+        <option value="">Select<span class="required"> *</span></option>
+        <option value="Spouse">Spouse</option>
+        <option value="Co-Signer">Co-Signer</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="contactInfo">
+  <h4 class="sectionTitle">Contact Information</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_3_dayPhone" class="inlineLabel">Day Phone<span class="required"> *</span></label>
+      <input name="appl_3_dayPhone" id="appl_3_dayPhone" type="text" class="textInput2 phoneUS appl_3_dayPhone" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <label for="appl_3_eveningPhone" class="inlineLabel">Work Phone<span class="required"> *</span></label>
+      <input name="appl_3_eveningPhone" type="text" id="appl_3_eveningPhone" class="textInput2 phoneUS appl_3_eveningPhone" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_3_email" class="inlineLabel">E-mail Address<span class="required"> *</span></label>
+      <input name="appl_3_email" id="appl_3_email" type="text" class="emailPrimary appl_3_email email" />
+    </div>
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+
+
+</div>
+</div>
+<!-- Add applicant Section -->
+<div id="addApplicantLink_3" class="addApplicant">
+  <hr class="dotted"></hr>
+  <a class="add_link_3">Add an applicant</a>
+  <input type="checkbox" name="add_applicant" class="add_link_3_checkbox" />
+</div>
+
+<!-- end of third application info --->
+
+<!-- fourth application ---->
+
+<div id="appl_4" class="applicant">
+<h4 class="sectionHeader">
+  <div class="floatRt remove "><a href="#" class="remove_link_4">Remove applicant</a></div>
+  Applicant 4: Personal Information
+</h4>
+<div class="formFields" id="appl_4_nameAdd">
+  <h4 class="sectionTitle">Name and Address</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht10">
+      <label for="appl_4_firstName" class="inlineLabel">First Name<span class="required"> *</span></label>
+      <input type="text" name="appl_4_firstName" id="appl_4_firstName" class="textInput2 firstName width150 appl_4_firstName validName" />
+    </div>
+    <div class="fieldItem marginRht10">
+      <label for="appl_4_middleName" class="inlineLabel">Middle Name</label>
+      <input name="appl_4_middleName" type="text" id="appl_4_middleName" class="width150 middleName appl_4_middleName validName" />
+    </div>
+    <div class="fieldItem marginRht10">
+      <label for="appl_4_lastName" class="inlineLabel">Last Name<span class="required"> *</span></label>
+      <input type="text" name="appl_4_lastName" id="appl_4_lastName" class="textInput2 lastName width150 appl_4_lastName validName" />
+    </div>
+    <div class="fieldItem">
+      <div class="styled-select">
+        <select id="appl_4_suffix" name="appl_4_suffix" class="textInput1 appl_4_suffix">
+          <option value="">Suffix</option>
+          <option value="JR">Jr.</option>
+          <option value="SR">Sr.</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <input type="checkbox" class="copy_prime_address_4" />
+      <span class="tipLink sectionTitle">Use Primary Applicants Address</span>
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_4_address1" class="inlineLabel appl_4_address1_label" id="address_label_4">Street Address, No PO Boxes<span class="required"> *</span></label>
+      <input name="appl_4_address1" id="appl_4_address1" type="text" class="textInput5 appl_4_address1 validAddress" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_4_address2" class="inlineLabel appl_4_address2_label" id="address_label_41">Street Address 2</label>
+      <input name="appl_4_address2" id="appl_4_address2" type="text" class="textInput5 appl_4_address2" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_4_city" class="inlineLabel appl_4_city_label" id="city_label_4">City<span class="required"> *</span></label>
+      <input name="appl_4_city" id="appl_4_city" type="text" class="textInput2 appl_4_city alpha" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_4_state" name="appl_4_state" class="textInput1 appl_4_state">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_4_zipcode" class="inlineLabel appl_4_zipcode_label" id="zipcode_label_4">Zipcode<span class="required"> *</span></label>
+      <input name="appl_4_zipcode" id="appl_4_zipcode" type="text" class="appl_4_zipcode zipcodeUS" maxlength="5" />
+    </div>
+    <div class="fieldItem margin_right_40">
+      <h4 class="sectionTitle marginBtm10">Housing Status</h4>
+
+      <div class="styled-select width208">
+        <select id="appl_4_employmentStatus" name="appl_4_employmentStatus" class="width228 appl_4_employmentStatus">
+          <option value="">Select<span class="required"> *</span></option>
+          <option value="Own">Own</option>
+          <option value="Rent">Rent</option>
+          <option value="Other">Other</option>
+          <option value="Parents">Parents/Relative</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem marginRht20">
+      <h4 class="sectionTitle">Monthly Payment</h4>
+
+      <div class="fieldSet marginTop10">
+        <div class="fieldItem">
+          <label for="appl_4_annualIncome" class="inlineLabel">$<span class="required"> *</span></label>
+          <input name="appl_4_annualIncome" type="text" class="textInput1 appl_4_annualIncome currencyUS" id="appl_4_annualIncome"
+                 maxlength="12" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="prevAddDuration">
+  <h4 class="sectionTitle">How long have you lived at this address?</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_4_addYears" class="inlineLabel">Years<span class="required"> *</span></label>
+      <input id="appl_4_addYears" type="text" class="textInput1 appl_4_addYears durationYears" name="appl_4_addYears" maxlength="2" />
+    </div>
+    <div class="fieldItem">
+      <label for="appl_4_addMonths" class="inlineLabel">Months<span class="required"> *</span></label>
+      <input name="appl_4_addMonths" type="text" class="textInput1 appl_4_addMonths durationMonths" id="appl_4_addMonths" maxlength="2" />
+    </div>
+  </div>
+</div>
+<!-- optional Previous Address -->
+<div class="formFields hide" id="appl_4_previousAdd">
+  <h4 class="sectionTitle">Previous Address</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_4_prevAdd1" class="inlineLabel" >Street Address 1<span class="required"> *</span></label>
+      <input id="appl_4_prevAdd1" type="text" class="textInput5 appl_4_prevAdd1 validAddress" name="appl_4_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_4_prevAdd2" class="inlineLabel">Street Address 2</label>
+      <input id="appl_4_prevAdd2" type="text" class="textInput5 appl_4_prevAdd2" name="appl_4_prevEmployerName" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_4_prevCity" class="inlineLabel">City<span class="required"> *</span></label>
+      <input name="appl_4_prevCity" id="appl_4_prevCity" type="text" class="textInput2 appl_4_prevCity alpha" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <div class="styled-select styled-select-state">
+        <select id="appl_4_prevState" name="appl_4_prevState" class="textInput1 appl_4_prevState">
+          <option value="">State <span class="required"> *</span></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldItem">
+      <label for="appl_4_prevZipcode" class="inlineLabel">Zipcode<span class="required"> *</span></label>
+      <input name="appl_4_prevZipcode" id="appl_4_prevZipcode" class="appl_4_prevZipcode zipcodeUS" type="text" maxlength="5" />
+    </div>
+  </div>
+</div>
+<div class="formFields" id="maritalStatus">
+  <h4 class="sectionTitle">Marital Status</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem styled-select">
+      <select id="appl_4_maritalStatus" name="appl_4_maritalStatus" class="textInput1 appl_4_maritalStatus">
+        <option value="">Select<span class="required"> *</span></option>
+        <option value="Married">Married</option>
+        <option value="Unmarried">Unmarried</option>
+        <option value="Separated">Separated</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="relationshipToPrimary">
+  <h4 class="sectionTitle">Relationship to Primary Applicant</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem styled-select">
+      <select id="appl_4_relationshipToPrimary" name="appl_4_relationshipToPrimary" class="textInput1 appl_4_relationshipToPrimary">
+        <option value="">Select<span class="required"> *</span></option>
+        <option value="Spouse">Spouse</option>
+        <option value="Co-Signer">Co-Signer</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="formFields" id="contactInfo">
+  <h4 class="sectionTitle">Contact Information</h4>
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <label for="appl_4_dayPhone" class="inlineLabel">Day Phone<span class="required"> *</span></label>
+      <input name="appl_4_dayPhone" id="appl_4_dayPhone" type="text" class="textInput2 phoneUS appl_4_dayPhone" />
+    </div>
+    <div class="fieldItem marginRht20">
+      <label for="appl_4_eveningPhone" class="inlineLabel">Work Phone<span class="required"> *</span></label>
+      <input name="appl_4_eveningPhone" type="text" id="appl_4_eveningPhone" class="textInput2 phoneUS appl_4_eveningPhone" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <label for="appl_4_email" class="inlineLabel">E-mail Address<span class="required"> *</span></label>
+      <input name="appl_4_email" id="appl_4_email" type="text" class="emailPrimary appl_4_email email" />
+    </div>
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+  <div class="disclosure_text paddingStyle borderStyle_disclosure">
+    Disclosure text here.
+  </div>
+
+</div>
+</div>
+</div>
+
+<!-- end of fourth application -- >
+
+<!-- fourth application info -- >
+<div id="appl_4" class="applicant">
+
+</div>
+<!-- end of fourth application info -->
+
+
+<div id="actionPanel">
+  <button type="submit" class="myButton floatRt primaryBtn margin0 tabFocus">Next</button>
+  <a href="crosssell.html" class="button_font tabFocus"><span class="myButton secondaryBtn floatLft marginRht20 cancel">Previous</span></a>
+  <!--<span class="myButton secondaryBtn floatLft" >Save for later</span>-->
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later tabFocus"  data-toggle="modal">
+    <span class="demo btn btn-primary btn-large padding10"  id="myButton">Save For later</span>
+  </div>
+</div>
+
+
+
+<div id="ajax-modal" data-backdrop="static" class="modal hide fade" tabindex="-1"></div>
+
+
+</div>
+<div class="grid_5 right-panel">
+  <!-- Need Help -->
+  <div id="helpPanel" class="rightPanel rightPanelGrad">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+      <p class="cfh">24-hour toll free number</p>
+
+      <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+      <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+    </div>
+  </div>
+  <!-- You are applying for -->
+  <div id="productPanel" class="rightPanel">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+
+      <div class="innerContainer">
+        <ul class="bulletList">
+          <li class="listRow">Home Loan</li>
+          <li class="listRow">Carefree Savings Account</li>
+          <li class="listRow lastRow">Carefree Checking Account</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- end .container -->
+
+<div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+</form>
+</div>
+<script src="js/jquery.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--[if (lte IE 9)]><script type="text/javascript" src="js/placeholder_polyfill.jquery.js"></script><![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<!--<script src="js/bootstrap.js"></script>-->
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.validate.additional-methods.js"></script>
+<script src="js/jquery.mask.min.js" type="text/javascript"></script>
+<script src="js/dsp.js"></script>
+<script src="js/dsp-common.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $j(document).ready(function () {
+    $j("label").inFieldLabels();
+    $j("input").attr("autocomplete", "off");
+
+    var numberFields = ".tabFocus";
+
+    $j(numberFields).keypress(function(e) {
+         //if tab key is pressed, move to next form field.
+         if(e.keycode == 9) {
+            $j(this).next().focus();
+            $j(this).next().select();
+         } else {
+            //filter data with digits function
+            $j(this).keyup(function() {
+               $j(this).digits();
+            });
+         }
+      });
+
+    $j('#appl_1_addYears').keyup(function () {
+      if ($j(this).val() <= 1) {
+        $j('#appl_1_previousAdd').slideDown('slow');
+      } else {
+        $j('#appl_1_previousAdd').hide('slow');
+        $j('.appl_1_prevAdd1_c').val("");
+        $j('.appl_1_prevAdd2_c').val("");
+        $j('.appl_1_prevCity').val("");
+        $j('.appl_1_prevState_c option[value=""]').attr("selected", "selected");
+        $j('.appl_1_prevZipcode_c').val("");
+      }
+    });
+
+    $j('.remove_link_2').click(function(){
+      $j('.appl_2_firstName, .appl_2_middleName, .appl_2_lastName, .appl_2_address1, .appl_2_address2, .appl_2_city, .appl_2_state, .appl_2_zipcode, .appl_2_employmentStatus, .appl_2_annualIncome, .appl_2_addYears, .appl_2_addMonths, .appl_2_dayPhone, .appl_2_eveningPhone, .appl_2_email').removeClass('valid error').val("").blur();
+      $j('.appl_2_suffix, .appl_2_state, .appl_2_maritalStatus option[value=""]').attr("selected", "selected");
+      $j('.appl_2_firstName_label').show();
+      // $j('.appl_2_firstName').removeClass('valid');
+    });
+
+    $j('#appl_4_addYears').keyup(function () {
+      if ($j(this).val() <= 1)
+        $j('#appl_2_previousAdd').slideDown('slow');
+      else
+      {
+        $j('#appl_2_previousAdd').hide('slow');
+        $j('.appl_1_prevAdd1_c').val("");
+        $j('.appl_1_prevAdd2_c').val("");
+      }
+
+    });
+
+    $j("#appl_2,#addApplicantLink_2").hide();
+    $j("#appl_3,#addApplicantLink_3").hide();
+    $j("#appl_4").hide();
+    // alert("first name value" + addr1);
+    if ($j('.appl_2_firstName').val() !== '') {
+      $j('.appl_2_firstName_label').html('');
+    } else {
+      //alert("inside the label show");
+      //$j('.appl_2_firstName_label').html('First Name');
+      //alert($j(".appl_2_firstName_label").show());
+    }
+
+    $j('.add_link_1').click(function(){
+      //$j('.appl_2_firstName_label').html('First Name');
+      $j("#appl_2,#addApplicantLink_2").show();
+      $j('.add_link_1_checkbox').prop('checked', true);
+      var check_value = $j('.add_link_1_checkbox').val();
+      $j('#appl_2')
+          .find('#contactInfo .phoneUS,.email')
+          .addClass('required')
+          .end()
+          .find('#appl_2_nameAdd .firstName,.lastName,.appl_2_address1,.appl_2_city,.appl_2_state,.appl_2_zipcode,\
+            .appl_2_housingstatus,.appl_2_annualIncome,.durationYears,.durationMonths,.appl_2_maritalStatus')
+          .addClass('required');
+    });
+
+    $j('.remove_link_2').click(function(){
+      $j("#appl_2,#addApplicantLink_2").hide();
+      $j('.add_link_1_checkbox').prop('checked', false);
+      $j('#appl_2')
+          .find('#contactInfo .phoneUS,.email')
+          .removeClass('required')
+          .end()
+          .find('#appl_2_nameAdd .firstName,.lastName,.appl_2_address1,.appl_2_city,.appl_2_state,.appl_2_zipcode,\
+              .appl_2_housingstatus,.appl_2_annualIncome,.durationYears,.durationMonths,.appl_2_maritalStatus')
+          .removeClass('required')
+          .end()
+          .find('input[type=text],select').val('');
+    });
+
+    $j('.add_link_2').click(function(){
+      $j("#appl_3,#addApplicantLink_3").show();
+      $j('.add_link_2_checkbox').prop('checked', true);
+      $j('#appl_3')
+          .find('#contactInfo .phoneUS,.email')
+          .addClass('required')
+          .end()
+          .find('#appl_3_nameAdd .firstName,.lastName,.appl_3_address1,.appl_3_city,.appl_3_state,.appl_3_zipcode,\
+              .appl_3_housingstatus,.appl_3_annualIncome,.durationYears,.durationMonths,.appl_3_maritalStatus')
+          .addClass('required');
+    });
+
+    $j('.remove_link_3').click(function(){
+      $j("#appl_3,#addApplicantLink_3").hide();
+      $j('.add_link_2_checkbox').prop('checked', false);
+      $j('#appl_3')
+          .find('#contactInfo .phoneUS,.email')
+          .removeClass('required')
+          .end()
+          .find('#appl_3_nameAdd .firstName,.lastName,.appl_3_address1,.appl_3_city,.appl_3_state,.appl_3_zipcode,\
+              .appl_3_housingstatus,.appl_3_annualIncome,.durationYears,.durationMonths,.appl_3_maritalStatus')
+          .removeClass('required')
+          .end()
+          .find('input[type=text],select').val('');
+    });
+
+    $j('.add_link_3').click(function(){
+      $j("#appl_4").show();
+      $j('.add_link_3_checkbox').prop('checked', true);
+      $j('#appl_4')
+          .find('#contactInfo .phoneUS,.email')
+          .addClass('required')
+          .end()
+          .find('#appl_4_nameAdd .firstName,.lastName,.appl_4_address1,.appl_4_city,.appl_4_state,.appl_4_zipcode,\
+            .appl_4_housingstatus,.appl_4_annualIncome,.durationYears,.durationMonths,.appl_4_maritalStatus')
+          .addClass('required');
+    });
+
+    $j('.remove_link_4').click(function(){
+      $j("#appl_4").hide();
+      $j('.add_link_3_checkbox').prop('checked', false);
+      $j('#appl_4')
+          .find('#contactInfo .phoneUS,.email')
+          .removeClass('required')
+          .end()
+          .find('#appl_4_nameAdd .firstName,.lastName,.appl_4_address1,.appl_4_city,.appl_4_state,.appl_4_zipcode,\
+              .appl_4_housingstatus,.appl_4_annualIncome,.durationYears,.durationMonths,.appl_4_maritalStatus')
+          .removeClass('required')
+          .end()
+          .find('input[type=text],select').val('');
+    });
+
+    $j('[class*="copy_prime_address"]').click(function () {
+      var className = $j(this).attr('class'), appl = className.substr(19);
+      $j(".appl_" + appl + "_address1").val($j(".appl_1_address1").val());
+      $j(".appl_" + appl + "_address1_label").text('');
+      $j(".appl_" + appl + "_address2").val($j(".appl_1_address2").val());
+      $j(".appl_" + appl + "_address2_label").text('');
+      $j(".appl_" + appl + "_city").val($j(".appl_1_city").val());
+      $j(".appl_" + appl + "_city_label").text('');
+      $j(".appl_" + appl + "_state").val($j(".appl_1_state").val());
+      $j(".appl_" + appl + "_zipcode").val($j(".appl_1_zipcode").val());
+      $j(".appl_" + appl + "_zipcode_label").text('');
+    });
+
+    $j('form').validate();
+    $j("form").data("validator")
+        .addCustomValidations(['firstName', 'middleName', 'lastName', 'durationYears', 'durationMonths', 'phoneUS', 'zipcodeUS', 'currencyUS']);
+
+    /* jquery load for modal dialog window */
+    var $modal = $j('#ajax-modal');
+
+    $j('.ajax .demo').on('click', function(){
+      // create the backdrop and wait for next modal to be triggered
+      $j('body').modalmanager('loading');
+
+      setTimeout(function(){
+        $modal.load('modal_ajax_test.html', '', function(){
+          $modal.modal();
+        });
+      }, 1000);
+    });
+
+    $modal.on('click', '.update', function(){
+      $modal.modal('loading');
+      setTimeout(function(){
+        $modal
+            .modal('loading')
+            .find('.modal-body')
+            .prepend('<div class="alert alert-info fade in">' +
+                'Updated!<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                '</div>');
+      }, 1000);
+    });
+
+  });
+</script>
+</body>
+</html>

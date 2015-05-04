@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="status-application">
+<form method="post" accept-charset="utf-8">
+<div class="container">
+  <div id="dropdown-panel" class="hidden">
+    <div class="panel-content"></div>
+    <div class="panel-close">CLOSE</div>
+  </div>
+
+  <header class="header">
+    <a href="#">
+      <img src="images/ftLogo.png" alt="Terafina Inc." name="logo" width="150" height="46"/>
+    </a>
+
+    <div class="tablet-links">
+      <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+      <a class="my-applications-link" data-toggle="dropdown" href="#">My&nbsp;Applications (2)</a>
+    </div>
+    <hr/>
+  </header><!-- end .header -->
+<div class="grid_11">
+<div id="formContainer" class="minHeightStyle">
+<!-- Primary Applicant Info -->
+<div id="appl_1" class="applicant">
+<h4 class="sectionHeader">Application Retrieval</h4>
+
+<div class="formFields" id="appl_1_loanDetails">
+
+  <div id="addressInfo">
+    <div>
+      <p style="font-size: 13px;margin-top: 25px;"><span style="color:indianred;">*</span>= Required Field</p>
+      <p style="font-size: 13px;margin-top: 10px;margin-bottom: 25px;">
+        Please complete or confirm the following information to retrieve your application.Then click submit.
+      </p>
+     </div>
+    <div class="fieldSet textInput5">
+      <div class="fieldItem">
+        <label for="appl_1_address1" class="inlineLabel">Last Name<span
+            class="required"> *</span></label>
+        <input name="appl_1_address1" id="appl_1_address1" type="text" class="textInput2" />
+      </div>
+    </div>
+    <div class="fieldSet textInput5">
+      <div class="fieldItem">
+        <label for="appl_1_address2" class="inlineLabel">Date of Birth (MM/DD/YYYY)<span class="required"> *</span></label>
+        <input name="appl_1_address2" id="appl_1_address2" type="text" class="textInput2" />
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem marginRht20">
+        <label for="appl_1_city" class="inlineLabel">Last 4 digits of SSN<span class="required"> *</span></label>
+        <input name="appl_1_city" id="appl_1_city" type="text" class="textInput2" />
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+<div id="actionPanel">
+  <a href="declarations.html" class="button_font"><span class="myButton floatRt primaryBtn">Submit</span></a>
+</div>
+</div>
+<div class="grid_5">
+  <!-- Need Help -->
+
+  <!-- You are applying for -->
+
+</div>
+</div>
+
+<!-- content_wrap -->
+<div class="content">
+
+  <!-- end .content -->
+</div>
+<div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+<!-- end .container -->
+</div>
+</form>
+<script src="js/jquery.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/dsp-common.js"></script>
+
+<script type="text/javascript">
+  $j(document).ready(function () {
+    $j("label").inFieldLabels();
+    $j("input").attr("autocomplete", "off");
+    $j('#appl_1_state').on('change', function () {
+      var state = $j(this).val(), counties = [], i,
+          url = 'http://api.sba.gov/geodata/county_links_for_state_of/' + state + '.json',
+          yql = 'http://query.yahooapis.com/v1/public/yql?'
+              + 'q=' + encodeURIComponent('select * from json where url=@url')
+              + '&url=' + encodeURIComponent(url)
+              + '&format=json&callback=?';
+
+      $j.getJSON(yql, function (data) {
+        $j.each(data.query.results.json.json, function (i, county) {
+          counties.push(county.name);
+        });
+        $j('#appl_1_citizenCounty').empty()
+            .append($j('<option></option>').val('').html('County<span class="required"> *</span>'));
+        for (i = 0; i < counties.length; i++) {
+          $j('<option/>').val(counties[i]).html(counties[i]).appendTo('#appl_1_citizenCounty');
+        }
+      });
+    });
+
+    /*
+     $j('.addBtn>button.primaryBtn').on('click', function () {
+     var el = $j('#financialAssets').find('.hidden').first();
+     $j(el).removeClass('hidden');
+     if ($j(el).attr('id') === 'financialAsset6') {
+     $j(this).addClass('hidden');
+     }
+     return false;
+     });
+     */
+    $j('input[name=addressType]').on('change', function () {
+      if ($j(this).val() === 'unknown') {
+        $j('#addressInfo').addClass('hidden');
+      } else {
+        $j('#addressInfo').removeClass('hidden');
+        if ($j(this).val() === 'current') {
+          // populate fields from about you page...
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>

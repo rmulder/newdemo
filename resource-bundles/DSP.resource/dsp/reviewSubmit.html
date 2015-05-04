@@ -1,0 +1,631 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+  <link href="css/bootstrap-modal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="review-submit">
+<form method="post" action="confirmation.html" id="review-submit-form">
+<div class="container">
+<div id="dropdown-panel" class="hidden">
+  <div class="panel-content"></div>
+  <div class="panel-close">CLOSE</div>
+</div>
+
+<header class="header">
+  <a href="#">
+    <img class="logo" width="150" height="46"/>
+  </a>
+
+  <div class="tablet-links">
+    <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+    <a class="my-applications-link" data-toggle="dropdown" href="#">My&nbsp;Applications (2)</a>
+  </div>
+  <hr/>
+</header><!-- end .header -->
+<div id="pgReviewSubmit">
+  <ol id="progressBar" class="onextrapixel">
+    <li class="first completed">
+      <span class="stepIndicator">1</span>
+      <span class="stepName">About You</span>
+    </li>
+    <li class="completed">
+      <span class="stepIndicator">2</span>
+      <span class="stepName">About Account</span>
+    </li>
+    <li class="currentStep">
+      <span class="stepIndicator">3</span>
+      <span class="stepName">Review &amp; Submit</span>
+    </li>
+    <li class="last">
+      <span class="stepIndicator">4</span>
+      <span class="stepName">Confirmation</span>
+    </li>
+  </ol>
+  <!-- end .progrssBar -->
+  <div class="server-errors hidden"></div>
+</div>
+<div class="grid_11">
+<div id="formContainer">
+<!-- Primary Applicant Info -->
+<div id="primary" class="applicant">
+  <h4 class="sectionHeader">Review information for John - Primary applicant</h4>
+
+<a class="tooltip-print print-position print-button" href="#"><img src="images/print.png" alt="Help" height="25" width="25" />
+  <span class="custom help">
+    Print
+  </span>
+  </a>
+
+
+ <!--  <a class="tooltip" href="#">
+  <span class="custom help">
+    <img src="images/print-icon.jpeg" alt="Print" height="48" width="48" />
+    <em>Help</em>This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own tooltips!
+  </span>
+  </a> -->
+  <!-- <a class="btn" href="#"><i class="icon-print print-button" data-toggle="tooltip" title="Print" ></i></a> -->
+
+  <div class="formFields" id="revSubmitBlock">
+    <!--<h4 class="sectionTitle">Name and Address</h4>-->
+    <!-- Personal -->
+    <div id="appl_1_reviewPersonal">
+      <div class="reviewSection">
+        <div class="editSection" id="EditField1"><a href="#" class="editLink">Edit</a></div>
+        Personal Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">First Name</div>
+        <div class="value">John</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Middle Name</div>
+        <div class="value">Matthew</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Last Name</div>
+        <div class="value">Smith</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 1</div>
+        <div class="value">1335 Terra Bella Ave, Mountain View, CA 94043</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 2</div>
+        <div class="value">--</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Duration at the
+          current address
+        </div>
+        <div class="value">3 years 2 months</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Day Phone</div>
+        <div class="value">123-456-7890</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Evening Phone</div>
+        <div class="value">234-567-8901</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">E-mail address</div>
+        <div class="value">jsmith@mail.com</div>
+      </div>
+    </div>
+    <!-- Employment -->
+    <div id="appl_1_reviewEmployment">
+      <div class="reviewSection">
+        <div class="editSection" id="EditField2"><a href="#" class="editLink">Edit</a></div>
+        Employment Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employment Status</div>
+        <div class="value">Full Time</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employer</div>
+        <div class="value">Microsoft</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Occupation</div>
+        <div class="value">Software Engineer</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Time Employed</div>
+        <div class="value">3 years 2 months</div>
+      </div>
+    </div>
+    <!-- Identity -->
+    <div id="appl_1_reviewIdentity">
+      <div class="reviewSection">
+        <div class="editSection" id="EditField3"><a href="#" class="editLink">Edit</a></div>
+        Identity Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">Identity Type</div>
+        <div class="value">Driving License</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Identity Number</div>
+        <div class="value">XXXXXX5678</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Issuing State</div>
+        <div class="value">CA</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Valid From</div>
+        <div class="value">MM/DD/YYYY</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Expires On</div>
+        <div class="value">MM/DD/YYYY</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Date of Birth</div>
+        <div class="value">MM/DD/YYYY</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">SSN</div>
+        <div class="value">XXX-XX-1246</div>
+      </div>
+    </div>
+    <!-- AccountInfo -->
+    <div id="appl_1_reviewAccountInfo">
+      <div class="reviewSection">
+        <div class="editSection" id="EditField4"><a href="#" class="editLink">Edit</a></div>
+        Account Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">Account Holder</div>
+        <div class="value">John Smith</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Bank</div>
+        <div class="value">ABC Bank</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Account Type</div>
+        <div class="value">Checking</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Account Number</div>
+        <div class="value">XXXXXX5566</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Routing Number</div>
+        <div class="value">123456789</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Dollar Amount</div>
+        <div class="value">200</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Secondary Applicant Info -->
+<div id="secondary" class="applicant">
+  <h4 class="sectionHeader">Review information for Anna - Secondary applicant</h4>
+
+  <div class="formFields" id="revSubmitBlock">
+    <!--<h4 class="sectionTitle">Name and Address</h4>-->
+    <!-- Personal -->
+    <div id="appl_2_reviewPersonal">
+      <div class="reviewSection">
+        <div class="editSection" id="EditField21"><a href="#" class="editLink">Edit</a></div>
+        Personal Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">First Name</div>
+        <div class="value">Anna</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Middle Name</div>
+        <div class="value">--</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Last Name</div>
+        <div class="value">Smith</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 1</div>
+        <div class="value">1335 Terra Bella Ave, Mountain View, CA 94043</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Street Address 2</div>
+        <div class="value">--</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Duration at the
+          current address
+        </div>
+        <div class="value">2 years 2 months</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Day Phone</div>
+        <div class="value">123-456-7231</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Evening Phone</div>
+        <div class="value">234-567-8901</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">E-mail address</div>
+        <div class="value">asmith@mail.com</div>
+      </div>
+
+    </div>
+    <!-- Employment -->
+    <div id="appl_2_reviewEmployment">
+      <div class="reviewSection">
+        <div class="editSection" id="EditField22"><a href="#" class="editLink">Edit</a></div>
+        Employment Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employment Status</div>
+        <div class="value">Full Time</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Employer</div>
+        <div class="value">Google</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Occupation</div>
+        <div class="value">Quality Engineer</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Time Employed</div>
+        <div class="value">2 years 5 months</div>
+      </div>
+
+    </div>
+    <!-- Identity -->
+    <div id="appl_2_reviewIdentity">
+      <div class="reviewSection">
+        <div class="editSection" id="EditField23"><a href="#" class="editLink">Edit</a></div>
+        Identity Information
+      </div>
+      <div class="reviewRow">
+        <div class="name">Identity Type</div>
+        <div class="value">State ID</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Identity Number</div>
+        <div class="value">XXXXXX5538</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Issuing State</div>
+        <div class="value">CA</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Valid From</div>
+        <div class="value">MM/DD/YYYY</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Expires On</div>
+        <div class="value">MM/DD/YYYY</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">Date of Birth</div>
+        <div class="value">MM/DD/YYYY</div>
+      </div>
+      <div class="reviewRow">
+        <div class="name">SSN</div>
+        <div class="value">XXX-XX-5336</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- DSP  Disclosures content -->
+<div class="alert-text">Please check all the Disclosures in order to submit the application </div>
+<div id="disclosure_content" style="width: 43.750em;">
+  <h4 class="sectionTitle">Electronics Communications and Disclosures</h4>
+
+  <div class="margintop">
+    <!--<a style="color:#000000;"href="#" class="enable_check">ajlsdfhlsdfgl asjhdfgajsd asjkhfgasj</a>     -->
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_1" value="Orange" /></div>
+    <div class="disclosure_text">I have reviewed Terafina Inc. <a href="http://firstsand-terafinainc.cs10.force.com/microsite/servlet/servlet.FileDownload?file=00PJ0000000ohmmMAA" class="enable_check">E-Sign
+      Consent</a> and agree to receive disclosures and agreements electronically.
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_2" value="Orange" /></div>
+    <div class="disclosure_text">
+      I certify my TIN is correct and I am not subject to back-up withholding
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_3" value="Orange" /></div>
+    <div class="disclosure_text">I have reviewed Terafina Inc. <a href="https://c.cs11.content.force.com/servlet/servlet.FileDownload?file=00PZ00000012UHt"  class="enable_check_1">Membership
+      Agreement</a> and agree to receive disclosures and agreements electronically
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_4" value="Orange" /></div>
+    <div class="disclosure_text">I have reviewed Terafina Inc. <a href="https://c.cs11.content.force.com/servlet/servlet.FileDownload?file=00PZ00000012UHe"
+                                                                                    class="enable_check_2">Privacy
+      Policy</a> and agree to receive disclosures and agreements electronically
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_5" value="Orange" /></div>
+    <div class="disclosure_text">I have read the <a href="#" class="enable_check_3">Truth in Savings</a></div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_6" value="Orange" /></div>
+    <div class="disclosure_text">I have read the <a href="#" class="enable_check_3">CD - Truth in Savings</a>
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_7" value="Orange" /></div>
+    <div class="disclosure_text">I have reviewed Terafina Inc. <a href="https://c.cs11.content.force.com/servlet/servlet.FileDownload?file=00PZ00000012UHj"
+                                                                                    class="enable_check_4">Liens
+      on Shares Authorization</a> and agree to receive disclosures and agreements electronically.
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_8" value="Orange" /></div>
+    <div class="disclosure_text">I have reviewed Terafina Inc. <a href="#" class="enable_check_6">Visa Disclosures</a> and agree to receive disclosures and agreements electronically.
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_9" value="Orange" /></div>
+    <div class="disclosure_text"> I have reviewed Terafina Inc. <a href="https://c.cs11.content.force.com/servlet/servlet.FileDownload?file=00PZ00000012UHP" class="enable_check_5">Authorization</a>
+      and agree to receive disclosures and agreements electronically.
+    </div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_11" value="Orange" />
+    </div>
+    <div class="disclosure_text">I have read the <a href="#" class="enable_check_3">
+      Handbook on ARM’s</a></div>
+  </div>
+  <div class="margintop">
+    <div class="floatLft"><input type="checkbox" name="favorite_color" class="disclosure_12" value="Orange" />
+    </div>
+    <div class="disclosure_text">I have read
+      the <a href="#" class="enable_check_3">ARM Program Disclosure</a></div>
+    <div style="clear:left;"></div>
+  </div>
+</div>
+<div id="actionPanel">
+  <button type="submit" class="margin0 myButton floatRt primaryBtn submit-button">Submit</button>
+  <div id="display-submit-modal" data-backdrop="static" class="modal hide fade" tabindex="-1">
+    <div class="modal-header">
+      <h3 class="head_title">Application submitted</h3>
+    </div>
+    <div class="modal-body">
+      <p class="bodyTextBold marginTop marginBottom marginBtm20">
+        Please wait while we process your application. This may take a few minutes.<br> Thank you.  <span id="display-loading-image" class="ui-icon-loading" style="width: 50px; height: 50px; margin: -12px 0; float: right;"></span>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <div></div>
+    </div>
+  </div>
+  <a href="declarations.html" class="button_font"><span class="myButton secondaryBtn floatLft marginRht20 cancel">Previous</span></a>
+  <div class="ajax myButton secondaryBtn floatLft demo save-for-later" data-toggle="modal">
+    <span class="demo btn btn-primary btn-large padding10"  id="myButton">Save For later</span>
+  </div>
+</div>
+<div id="ajax-modal" data-backdrop="static" class="modal hide fade" tabindex="-1"></div>
+
+</div>
+<div class="grid_5 right-panel">
+  <!-- Need Help -->
+  <div id="helpPanel" class="rightPanel rightPanelGrad">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+      <p class="cfh">24-hour toll free number</p>
+
+      <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+      <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+    </div>
+  </div>
+  <!-- You are applying for -->
+  <div id="productPanel" class="rightPanel">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+
+      <div class="innerContainer">
+        <ul class="bulletList">
+          <li class="listRow">Mortgage</li>
+          <li class="listRow">Carefree Savings Account</li>
+          <li class="listRow lastRow">Carefree Checking Account</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- content_wrap -->
+<div class="content">
+
+  <!-- end .content -->
+</div>
+<div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+<!-- end .container -->
+</div>
+
+</form>
+<script src="js/jquery.min.js"></script>
+<script src="js/jspopunder.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/dsp-common.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $j(document).ready(function () {
+     $j('.icon-print').tooltip();
+    $j('a').click(function () {
+      var checkbox = $j(this).prev('input[type="checkbox"]');
+      checkbox.attr('checked', checkbox.is(':checked'));
+    });
+
+    if ($j('input[type=checkbox]:checked').length != $j('input[type=checkbox]').length) {
+      $j('.primaryBtn').css('opacity', 0.5);
+      $j(".remove_link_next").removeAttr('href');
+      $j('.alert-text' ).removeClass("hidden");
+
+    }
+    $j("input[type=checkbox]").change(function () {
+      //console.log($j('input[type=checkbox]:checked').length);
+      //console.log($j('input[type=checkbox]').length);
+      if ($j('input[type=checkbox]:checked').length == $j('input[type=checkbox]').length) {
+        //do something
+        //alert('all checkboxes have been checked!');
+        $j(".remove_link_next").attr("href", "confirmation.html");
+        $j('.primaryBtn').css('opacity', 1);
+        $j('.alert-text' ).addClass("hidden");
+        //alert("inside the addclass");
+      }
+      else {
+        //alert("inside the removeclass");
+        $j('.alert-text' ).removeClass("hidden");
+        $j('.primaryBtn').css('opacity', 0.5);
+        $j(".remove_link_next").removeAttr('href');
+
+      }
+    });
+    //$('#favorite_color_1').checkboxradio('disable');
+    $j(".disclosure_1,.disclosure_3,.disclosure_4,.disclosure_7,.disclosure_9,.disclosure_8").attr("disabled", true);
+    //$j('.disclosure_1').prop('checked', true);
+    if ($j('.disclosure_1').prop('checked')) {
+      $j(".disclosure_1").attr("disabled", false);
+    }
+    if ($j('.disclosure_3').prop('checked')) {
+      $j(".disclosure_3").attr("disabled", false);
+    }
+    if ($j('.disclosure_4').prop('checked')) {
+      $j(".disclosure_4").attr("disabled", false);
+    }
+    if ($j('.disclosure_7').prop('checked')) {
+      $j(".disclosure_7").attr("disabled", false);
+    }
+    if ($j('.disclosure_9').prop('checked')) {
+      $j(".disclosure_9").attr("disabled", false);
+    }
+    $j('.enable_check').click(function () {
+      $j(".disclosure_1").attr("disabled", false);
+      //$('#isAgeSelected').is(':checked') ? $("#txtAge").show() : $("#txtAge").hide();
+    });
+    $j('.enable_check_1').click(function () {
+      $j(".disclosure_3").attr("disabled", false);
+    });
+    $j('.enable_check_2').click(function () {
+      $j(".disclosure_4").attr("disabled", false);
+    });
+    $j('.enable_check_4').click(function () {
+      $j(".disclosure_7").attr("disabled", false);
+    });
+    $j('.enable_check_5').click(function () {
+      $j(".disclosure_9").attr("disabled", false);
+    });
+    $j('.enable_check_6').click(function () {
+      $j(".disclosure_8").attr("disabled", false);
+    });
+
+    /* For testing purposes ONLY! */
+    $j('a[class*=enable_check').trigger('click');
+    $j('input[class*=disclosure').trigger('click');
+
+    /* jquery load for modal dialog window */
+    var $modal = $j('#ajax-modal');
+
+    $j('.ajax .demo').on('click', function(){
+      // create the backdrop and wait for next modal to be triggered
+      $j('body').modalmanager('loading');
+
+      setTimeout(function(){
+        $modal.load('modal_ajax_test.html', '', function(){
+          $modal.modal();
+        });
+      }, 1000);
+    });
+
+    $modal.on('click', '.update', function(){
+      $modal.modal('loading');
+      setTimeout(function(){
+        $modal
+            .modal('loading')
+            .find('.modal-body')
+            .prepend('<div class="alert alert-info fade in">' +
+                'Updated!<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                '</div>');
+      }, 1000);
+    });
+
+    $j('.disclosure_text>a').on('click', function (e) {
+      jsPopunder($j(this).attr('href'), {name: $j(this).attr('class'), width: 700, height: 800});
+      //alert($j(th).attr('href'));
+      //popUnder("http://192.168.1.9:8888/dsp", 1024, 768);
+      e.preventDefault();
+      //e.stopPropagation();
+    });
+
+    $j('.print-button').click(function() {
+      window.print();
+      return false;
+    });
+
+    $j('form').on('submit', function () {
+      var $form = $j(this);
+      if ($form.data('submitted') === true) {
+        alert('This form has already been submitted. Please wait...');
+        return false;
+      } else {
+        $form.data('submitted', true);
+        var $modal = $j('#display-submit-modal');
+        $modal.modal();
+        //alert("please wait while loading");
+        window.setTimeout(function(){
+          location.href = 'confirmation.html'+ location.search;
+        }, 100000);
+        // return true;
+        return false;
+      }
+    });
+  });
+</script>
+</body>
+</html>

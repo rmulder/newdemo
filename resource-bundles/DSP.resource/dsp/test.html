@@ -1,0 +1,112 @@
+<!doctype html>
+<!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+    .modal {
+      display:none;
+      width:350px;
+      text-align:left;
+      -moz-border-radius:6px;
+      -webkit-border-radius:6px;
+    }
+
+    .modal h2 {
+      background:url(/media/img/global/info.png) 0 50% no-repeat;
+      margin:0px;
+      padding:10px 0 10px 45px;
+      border-bottom:1px solid #333;
+      font-size:20px;
+    }
+  </style>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+  <script src="js/dsp-common.js"></script>
+  <script>
+    $j(document).ready(function () {
+      var triggers = $j(".modalInput").overlay({
+        // some mask tweaks suitable for modal dialogs
+        mask: {
+          color: '#646464',
+          loadSpeed: 200,
+          opacity: 0.9
+        },
+        closeOnClick: false
+      });
+
+      $j('.cancel').click(function (e) {
+      triggers.eq(1).html(input);
+      });
+    });
+  </script>
+</head>
+<body id="save_as_later">
+<!-- the triggers -->
+<p>
+  <button class="modalInput" rel="#prompt">User input</button>
+</p>
+
+
+
+<!-- user input dialog -->
+<div class="modal" id="prompt">
+  <div class="modal-header btn-inverse">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="chooseCardModalLabel"></h3>
+  </div>
+  <div class="head_title">
+    Save Your Application
+  </div>
+  <p class="bodyTextBold marginTop">
+    Please complete or confirm the following information to save your application. Then select Save.
+  </p>
+  <p class="bodyTextBold marginTop">
+    If you select Cancel or close, your information will not be saved.
+  </p>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <input name="appl_1_address1" id="appl_1_address1" type="text" class="emailPrimary appl_1_address1 required validAddress" placeholder="Last Name" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <input name="appl_2_email" id="appl_2_email" type="text" class="emailPrimary" placeholder="E-mail Address" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+      <input type="text" id="datepicker33" class="textInputDP datepicker33" placeholder="Date of Birth mm/dd/yyyy" />
+    </div>
+  </div>
+  <div class="fieldSet">
+    <div class="fieldItem">
+      <input name="appl_1_ssn" id="appl_1_ssn" type="text" class="textInput2 ssn required" placeholder="Social Security Number" />
+    </div>
+  </div>
+  <div>
+    <div class="bodyText"><span class="bodyTextBold"></span>
+    </div>
+  </div>
+
+<div class="modal-footer">
+  <div><a class="greenText close" data-dismiss="modal" aria-hidden="true">Cancel</a></div>
+  <button class="myButton floatRt primaryBtn">Save</button>
+
+</div>
+
+</div>
+
+
+</body>
+</html>

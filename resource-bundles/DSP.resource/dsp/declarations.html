@@ -1,0 +1,1783 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+  <link href="css/bootstrap-modal.css" rel="stylesheet" />
+  <link href="css/dsp.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="declarations">
+<form method="post" id="declarations-form" action="reviewSubmit.html" accept-charset="utf-8">
+  <div class="container">
+  
+  <div id="dropdown-panel" class="hidden">
+    <div class="panel-content"></div>
+    <div class="panel-close">CLOSE</div>
+  </div>
+
+  <header class="header">
+    <a href="#">
+      <img class="logo" width="150" height="46"/>
+    </a>
+
+    <div class="tablet-links">
+      <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+      <a class="my-applications-link" data-toggle="dropdown" href="#">My&nbsp;Applications (2)</a>
+    </div>
+    <hr/>
+  </header><!-- end .header -->
+  <div id="pgAboutYou">
+    <ol id="progressBar" class="onextrapixel">
+      <li class="first completed">
+        <span class="stepIndicator">1</span>
+        <span class="stepName">About You</span>
+      </li>
+      <li class="currentStep">
+        <span class="stepIndicator">2</span>
+        <span class="stepName">About Account</span>
+      </li>
+      <li class="">
+        <span class="stepIndicator">3</span>
+        <span class="stepName">Review &amp; Submit</span>
+      </li>
+      <li class="last">
+        <span class="stepIndicator">4</span>
+        <span class="stepName">Confirmation</span>
+      </li>
+    </ol>
+    <!-- end .progrssBar -->
+<!--
+    <div class="server-errors"><span id="j_id0:j_id5:j_id7"><span id="j_id0:j_id5:j_id7:j_id8:j_id9:0:j_id10">
+    <div class="message errorM3" role="alert">
+      <table border="0" cellpadding="0" cellspacing="0" class="messageTable" style="padding:0px;margin:0px;">
+        <tbody><tr valign="top">
+          <td>
+          </td>
+          <td class="messageCell"><div id="j_id0:j_id5:j_id7:j_id8:j_id9:0:j_id10:j_id11:j_id13" class="messageText"><span id="j_id0:j_id5:j_id7:j_id8:j_id9:0:j_id10:j_id11:j_id14" style="color:#cc0000">
+                                <h4>Errors</h4></span><br></div>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><span id="j_id0:j_id5:j_id7:j_id8:j_id9:0:j_id10:j_id11:j_id23">
+                <ul style="padding-left:10px;padding-top:0px;margin:0px">
+                  <li style="padding-top:5px">Please enter Ethnicity for Primary Applicant.If you wish not to enter, please select the checkbox that I do not wish to furnish this infromation
+                  </li>
+                  <li style="padding-top:5px">Please enter Sex for Primary Applicant.If you wish not to enter, please select the checkbox that I do not wish to furnish this infromation
+                  </li>
+                </ul></span>
+          </td>
+        </tr>
+        </tbody></table>
+    </div></span></span>
+    </div>
+    -->
+    <div class="server-errors hidden"></div>
+    <div id="subSteps">
+      <ul id="aboutYouSub" class="">
+        <li class="completedSub">Account Details</li>
+        <li class="completedSub"><span class="chevron">&rsaquo;</span>Purchase Details</li>
+        <li class="completedSub"><span class="chevron">&rsaquo;</span>Property Details</li>
+        <li class="currentSub"><span class="chevron">&rsaquo;</span>Application Declaration</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid_11">
+  <div id="formContainer">
+  <!-- Primary Applicant Info -->
+
+  <div id="appl_1" class="applicant">
+  <h4 class="sectionHeader">Application Declarations - John</h4>
+  <!-- Declaration 1 -->
+  <div class="formFields" id="appl_1_appDecl1">
+    <h4 class="sectionTitle">Please read the important information in this section.</h4>
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        a. Do you have any outstanding judgements against you?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl1" id="appl_1_appDecl1_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl1_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl1" id="appl_1_appDecl1_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl1_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_1_div" class="hide">
+        <label for="desc1_1" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_1" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 2 -->
+  <div class="formFields" id="appl_1_appDecl2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">b. Have you declared bankruptcy within the past 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl2" id="appl_1_appDecl2_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl2" id="appl_1_appDecl2_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_2_div" class="hide">
+        <label for="desc1_2" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_2" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 3 -->
+  <div class="formFields" id="appl_1_appDecl3">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        c. Have you had property foreclosed upon or given title or deed in lieu thereof in the last 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl3" id="appl_1_appDecl3_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl3_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl3" id="appl_1_appDecl3_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl3_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_3_div" class="hide">
+        <label for="desc1_3" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_3" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 4 -->
+  <div class="formFields" id="appl_1_appDecl4">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">d. Are you party to a lawsuit?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl4" id="appl_1_appDecl4_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl4_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl4" id="appl_1_appDecl4_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl4_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_4_div" class="hide">
+        <label for="desc1_4" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_4" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 5 -->
+  <div class="formFields" id="appl_1_appDecl5">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        e. Have you directly or indirectly been obligated on any loan which resulted in foreclosure,
+        transfer of title in lieu of foreclosure, or judgement? (This would include such loans as home
+        mortgage loans, SBA loans, home improvement loans, educational loans, manufactured (mobile) home
+        loans, any mortgage, financial obligation, bond, or loan guarantee. If "Yes", provide details,
+        including if any, reasons for the action.)
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl5" id="appl_1_appDecl5_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl5_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl5" id="appl_1_appDecl5_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl5_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_5_div" class="hide">
+        <label for="desc1_5" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_5" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 6 -->
+  <div class="formFields" id="appl_1_appDecl6">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        f. Are you presently delinquent or in default on any Federal debt or any other loan, mortgage,
+        financial obligation, bond or loan guarantee? If "Yes", give details as described in the preceding question.
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl6" id="appl_1_appDecl6_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl6_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl6" id="appl_1_appDecl6_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl6_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_6_div" class="hide">
+        <label for="desc1_6" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_6" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 7 -->
+  <div class="formFields" id="appl_1_appDecl7">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        g. Are you obligated to pay alimony, child support, or separate maintenance?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl7" id="appl_1_appDecl7_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl7_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl7" id="appl_1_appDecl7_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl7_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_7_div" class="hide">
+        <label for="desc1_7" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_7" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 8 -->
+  <div class="formFields" id="appl_1_appDecl8">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">h. Did you borrow any part of your down payment?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl8" id="appl_1_appDecl8_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl8_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl8" id="appl_1_appDecl8_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl8_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_8_div" class="hide">
+        <label for="desc1_8" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_8" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 9 -->
+  <div class="formFields" id="appl_1_appDecl9">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">i. Are you a co-maker or endorser on a note?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl9" id="appl_1_appDecl9_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl9_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl9" id="appl_1_appDecl9_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl9_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc1_9_div" class="hide">
+        <label for="desc1_9" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc1_9" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 10 -->
+  <div class="formFields" id="appl_1_appDecl10">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">j. Are you a U.S. citizen?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl10" id="appl_1_appDecl10_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl10_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl10" id="appl_1_appDecl10_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl10_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11 -->
+  <div class="formFields" id="appl_1_appDecl11">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">k. Are you a permanent resident alien?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel perm-resident"><tr><td>
+          <input type="radio" name="appl_1_appDecl11" id="appl_1_appDecl11_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl11_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl11" id="appl_1_appDecl11_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl11_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11_2 -->
+  <div class="formFields hidden" id="appl_1_appDecl11_2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">&nbsp;&nbsp;&nbsp;&nbsp;Are you a non-resident alien (foreign national)?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl11_2" id="appl_1_appDecl11_2_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl11_2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl11_2" id="appl_1_appDecl11_2_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl11_2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 12 -->
+  <div class="formFields" id="appl_1_appDecl12">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        l. Do you intend to occupy the property as your primary residence? If "Yes," complete question m below
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl12" id="appl_1_appDecl12_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl12_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl12" id="appl_1_appDecl12_1" value="No" autocomplete="off" />
+          <label for="appl_1_appDecl12_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 13 -->
+  <div class="formFields" id="appl_1_appDecl13">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">m. Have you had an ownership interest in a property in the last 3 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel ownership-interest"><tr><td>
+          <input type="radio" name="appl_1_appDecl13" id="appl_1_appDecl13_0" value="true" autocomplete="off" />
+          <label for="appl_1_appDecl13_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_1_appDecl13" id="appl_1_appDecl13_1" value="false" autocomplete="off" />
+          <label for="appl_1_appDecl13_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet ownership-interest-details hidden" id="desc1_13">
+      <div class="fieldItem styled-select width208 marginRht20">
+        <select id="appl_1_propertyType" class="width228">
+          <option value="">Type of Property<span class="required"> *</span></option>
+          <option value="PR">PR - Principle Residence</option>
+          <option value="SH">SH - Second Home</option>
+          <option value="IP">IP - Investment Property</option>
+        </select>
+      </div>
+      <div class="fieldItem styled-select width208">
+        <select id="appl_1_titleHeld" class="width228">
+          <option value="">Title Held<span class="required"> *</span></option>
+          <option value="S">Solely by Yourself</option>
+          <option value="SP">Jointly w/Spouse</option>
+          <option value="O">Jointly w/Another Person</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hamda Declaration -->
+  <div class="formFields">
+    <h4 class="sectionTitle">Other information for government monitoring purposes</h4>
+
+    <div id="appl_1_Hamda" class="hamda">
+      <div class="hamdaFields">
+        <label for="appl_1_hamdaNoDecl" class="hamdaLabel">I do not wish to furnish this information</label>
+        <input name="appl_1_hamdaNoDecl" type="checkbox" value="DoNotFurnish" id="appl_1_hamdaNoDecl" class="appl_1_hamdaNoDecl" />
+      </div>
+    </div>
+    <div id="appl_1_hamdaEthnicity" class="hamda">
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_1_ethnicity" class="width228 appl_1_ethnicity">
+          <option value="">Select Ethnicity<span class="required"> *</span></option>
+          <option value="Hispanic or Latino">Hispanic or Latino</option>
+          <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+        </select>
+      </div>
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_1_Sex" class="width228 appl_1_Sex">
+          <option value="">Sex<span class="required"> *</span></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div id="appl_1_hamdaRace" class="hamda">
+      <div>
+        <h5 class="panelHeader">Race (check all that apply)</h5>
+      </div>
+      <table class="hamdaFields">
+        <tbody><tr><td>
+          <input name="appl_1_AmerIndianAlaskaNat" type="checkbox" value="American_Indian_or_Alaska_Native"
+                 id="appl_1_AmerIndianAlaskaNat" />
+          <label for="appl_1_AmerIndianAlaskaNat">American Indian or Alaska Native</label>
+        </td></tr></tbody>
+      </table>
+      <table class="hamdaFields">
+        <tbody><tr>
+          <td>
+            <input name="appl_1_Asian" type="checkbox" value="Asian" id="appl_1_Asian" />
+            <label for="appl_1_Asian" class="hamdaLabel">Asian</label>
+          </td>
+        </tr></tbody>
+      </table>
+      <div class="hamdaFields">
+        <label for="appl_1_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+        <input name="appl_1_BlackAfricanAmerican" type="checkbox" value="Black_or_African_American"
+               id="appl_1_BlackAfricanAmerican" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_1_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+          Highlander</label>
+        <input name="appl_1_NatHawaiianOtherPacIslander" type="checkbox"
+               value="Native_Hawaiian_or_Other_Pacific_Highlander" id="appl_1_NatHawaiianOtherPacIslander" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_1_White" class="hamdaLabel">White</label>
+        <input name="appl_1_White" type="checkbox" value="White" id="appl_1_White" />
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <!-- Secondary Applicant Info -->
+  <div id="appl_2" class="applicant">
+  <h4 class="sectionHeader">Application Declarations - Anna</h4>
+  <!-- Declaration 1 -->
+  <div class="formFields" id="appl_2_appDecl1">
+    <h4 class="sectionTitle">Please read the important information in this section.</h4>
+
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        a. Are there any outstanding judgements against you?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl1" id="appl_2_appDecl1_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl1_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl1" id="appl_2_appDecl1_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl1_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_1_div" class="hide">
+        <label for="desc2_1" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_1" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 2 -->
+  <div class="formFields" id="appl_2_appDecl2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">b. Have you been declared bankrupt within the past 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl2" id="appl_2_appDecl2_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl2" id="appl_2_appDecl2_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_2_div" class="hide">
+        <label for="desc2_2" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_2" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 3 -->
+  <div class="formFields" id="appl_2_appDecl3">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        c. Have you had a property foreclosed upon or given title or deed in lieu thereof in the last 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl3" id="appl_2_appDecl3_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl3_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl3" id="appl_2_appDecl3_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl3_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_3_div" class="hide">
+        <label for="desc2_3" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_3" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 4 -->
+  <div class="formFields" id="appl_2_appDecl4">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">d. Are you a party to lawsuit?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl4" id="appl_2_appDecl4_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl4_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl4" id="appl_2_appDecl4_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl4_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_4_div" class="hide">
+        <label for="desc2_4" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_4" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 5 -->
+  <div class="formFields" id="appl_2_appDecl5">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        e. Have you directly or indirectly been obligated on any loan which resulted in foreclosure,
+        transfer of title in lieu of foreclosure, or judgement? (This would include such loans as home
+        mortgage loans, SBA loans, home improvement loans, educational loans, manufactured (mobile) home
+        loans, any mortgage, financial obligation, bond, or loan guarantee. If "Yes", provide details,
+        including if any, reasons for the action.)
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl5" id="appl_2_appDecl5_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl5_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl5" id="appl_2_appDecl5_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl5_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_5_div" class="hide">
+        <label for="desc2_5" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_5" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 6 -->
+  <div class="formFields" id="appl_2_appDecl6">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        f. Are you presently delinquent or in default on any Federal debt or any other loan, mortgage,
+        financial obligation, bond or loan guarantee? If "Yes", give details as described in the preceding question.
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl6" id="appl_2_appDecl6_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl6_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl6" id="appl_2_appDecl6_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl6_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_6_div" class="hide">
+        <label for="desc2_6" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_6" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 7 -->
+  <div class="formFields" id="appl_2_appDecl7">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        g. Are you obligated to pay alimony, child support, or separate maintenance?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl7" id="appl_2_appDecl7_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl7_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl7" id="appl_2_appDecl7_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl7_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_7_div" class="hide">
+        <label for="desc2_7" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_7" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 8 -->
+  <div class="formFields" id="appl_2_appDecl8">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">h. Is any part of the down payment borrowed?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl8" id="appl_2_appDecl8_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl8_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl8" id="appl_2_appDecl8_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl8_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_8_div" class="hide">
+        <label for="desc2_8" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_8" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 9 -->
+  <div class="formFields" id="appl_2_appDecl9">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">i. Are you a co-maker or endorser on a note?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl9" id="appl_2_appDecl9_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl9_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl9" id="appl_2_appDecl9_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl9_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc2_9_div" class="hide">
+        <label for="desc2_9" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc2_9" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 10 -->
+  <div class="formFields" id="appl_2_appDecl10">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">j. Are you a U.S. citizen?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl10" id="appl_2_appDecl10_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl10_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl10" id="appl_2_appDecl10_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl10_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11 -->
+  <div class="formFields" id="appl_2_appDecl11">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">k. Are you a permanent resident alien?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel perm-resident"><tr><td>
+          <input type="radio" name="appl_2_appDecl11" id="appl_2_appDecl11_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl11_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl11" id="appl_2_appDecl11_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl11_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11_2 -->
+  <div class="formFields hidden" id="appl_2_appDecl11_2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">&nbsp;&nbsp;&nbsp;&nbsp;Are you a non-resident alien (foreign national)?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl11_2" id="appl_2_appDecl11_2_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl11_2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl11_2" id="appl_2_appDecl11_2_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl11_2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 12 -->
+  <div class="formFields" id="appl_2_appDecl12">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        l. Do you intend to occupy the property as your primary residence? If "Yes," complete question m below
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_2_appDecl12" id="appl_2_appDecl12_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl12_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl12" id="appl_2_appDecl12_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl12_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 13 -->
+  <div class="formFields" id="appl_2_appDecl13">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">m. Have you had an ownership interest in a property in the last 3 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel ownership-interest"><tr><td>
+          <input type="radio" name="appl_2_appDecl13" id="appl_2_appDecl13_0" value="Yes" autocomplete="off" />
+          <label for="appl_2_appDecl13_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_2_appDecl13" id="appl_2_appDecl13_1" value="No" autocomplete="off" />
+          <label for="appl_2_appDecl13_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet ownership-interest-details hidden" id="desc2_13">
+      <div class="fieldItem styled-select width208 marginRht20">
+        <select id="appl_2_propertyType" class="width228">
+          <option value="">Type of Property<span class="required"> *</span></option>
+          <option value="PR">PR - Principle Residence</option>
+          <option value="SH">SH - Second Home</option>
+          <option value="IP">IP - Investment Property</option>
+        </select>
+      </div>
+      <div class="fieldItem styled-select width208">
+        <select id="appl_2_titleHeld" class="width228">
+          <option value="">Title Held<span class="required"> *</span></option>
+          <option value="S">Solely by Yourself</option>
+          <option value="SP">Jointly w/Spouse</option>
+          <option value="O">Jointly w/Another Person</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hamda Declaration -->
+  <div class="formFields">
+    <h4 class="sectionTitle">Other information for government monitoring purposes</h4>
+
+    <div id="appl_2_Hamda" class="hamda">
+      <div class="hamdaFields">
+        <label for="appl_2_hamdaNoDecl" class="hamdaLabel">I do not wish to furnish this information</label>
+        <input name="appl_2_hamdaNoDecl" type="checkbox" value="DoNotFurnish" id="appl_2_hamdaNoDecl" class="appl_2_hamdaNoDecl" />
+      </div>
+    </div>
+    <div id="appl_2_hamdaEthnicity" class="hamda">
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_2_ethnicity" class="width228 appl_2_ethnicity">
+          <option value="">Select Ethnicity<span class="required"> *</span></option>
+          <option value="Hispanic or Latino">Hispanic or Latino</option>
+          <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+        </select>
+      </div>
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_2_Sex" class="width228 appl_2_Sex">
+          <option value="">Sex<span class="required"> *</span></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div id="appl_2_hamdaRace" class="hamda">
+      <div>
+        <h5 class="panelHeader">Race (check all that apply)</h5>
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_2_AmerIndianAlaskaNat" class="hamdaLabel">American Indian or Alaska Native</label>
+        <input name="appl_2_AmerIndianAlaskaNat" type="checkbox" value="American_Indian_or_Alaska_Native"
+               id="appl_2_AmerIndianAlaskaNat" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_2_Asian" class="hamdaLabel">Asian</label>
+        <input name="appl_2_Asian" type="checkbox" value="Asian" id="appl_2_Asian" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_2_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+        <input name="appl_2_BlackAfricanAmerican" type="checkbox" value="Black_or_African_American"
+               id="appl_2_BlackAfricanAmerican" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_2_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+          Highlander</label>
+        <input name="appl_2_NatHawaiianOtherPacIslander" type="checkbox"
+               value="Native_Hawaiian_or_Other_Pacific_Highlander" id="appl_2_NatHawaiianOtherPacIslander" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_2_White" class="hamdaLabel">White</label>
+        <input name="appl_2_White" type="checkbox" value="White" id="appl_2_White" />
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+
+  <!-- 3rd Applicant Info -->
+  <div id="appl_3" class="applicant">
+  <h4 class="sectionHeader">Application Declarations - Bob</h4>
+  <!-- Declaration 1 -->
+  <div class="formFields" id="appl_3_appDecl1">
+    <h4 class="sectionTitle">Please read the important information in this section.</h4>
+
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        a. Are there any outstanding judgements against you?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl1" id="appl_3_appDecl1_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl1_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl1" id="appl_3_appDecl1_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl1_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_1_div" class="hide">
+        <label for="desc3_1" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_1" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 2 -->
+  <div class="formFields" id="appl_3_appDecl2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">b. Have you been declared bankrupt within the past 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl2" id="appl_3_appDecl2_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl2" id="appl_3_appDecl2_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_2_div" class="hide">
+        <label for="desc3_2" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_2" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 3 -->
+  <div class="formFields" id="appl_3_appDecl3">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        c. Have you had a property foreclosed upon or given title or deed in lieu thereof in the last 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl3" id="appl_3_appDecl3_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl3_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl3" id="appl_3_appDecl3_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl3_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_3_div" class="hide">
+        <label for="desc3_3" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_3" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 4 -->
+  <div class="formFields" id="appl_3_appDecl4">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">d. Are you a party to lawsuit?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl4" id="appl_3_appDecl4_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl4_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl4" id="appl_3_appDecl4_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl4_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_4_div" class="hide">
+        <label for="desc3_4" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_4" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 5 -->
+  <div class="formFields" id="appl_3_appDecl5">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        e. Have you directly or indirectly been obligated on any loan which resulted in foreclosure,
+        transfer of title in lieu of foreclosure, or judgement? (This would include such loans as home
+        mortgage loans, SBA loans, home improvement loans, educational loans, manufactured (mobile) home
+        loans, any mortgage, financial obligation, bond, or loan guarantee. If "Yes", provide details,
+        including if any, reasons for the action.)
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl5" id="appl_3_appDecl5_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl5_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl5" id="appl_3_appDecl5_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl5_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_5_div" class="hide">
+        <label for="desc3_5" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_5" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 6 -->
+  <div class="formFields" id="appl_3_appDecl6">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        f. Are you presently delinquent or in default on any Federal debt or any other loan, mortgage,
+        financial obligation, bond or loan guarantee? If "Yes", give details as described in the preceding question.
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl6" id="appl_3_appDecl6_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl6_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl6" id="appl_3_appDecl6_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl6_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_6_div" class="hide">
+        <label for="desc3_6" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_6" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 7 -->
+  <div class="formFields" id="appl_3_appDecl7">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        g. Are you obligated to pay alimony, child support, or separate maintenance?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl7" id="appl_3_appDecl7_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl7_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl7" id="appl_3_appDecl7_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl7_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_7_div" class="hide">
+        <label for="desc3_7" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_7" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 8 -->
+  <div class="formFields" id="appl_3_appDecl8">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">h. Is any part of the down payment borrowed?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl8" id="appl_3_appDecl8_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl8_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl8" id="appl_3_appDecl8_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl8_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_8_div" class="hide">
+        <label for="desc3_8" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_8" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 9 -->
+  <div class="formFields" id="appl_3_appDecl9">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">i. Are you a co-maker or endorser on a note?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl9" id="appl_3_appDecl9_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl9_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl9" id="appl_3_appDecl9_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl9_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc3_9_div" class="hide">
+        <label for="desc3_9" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc3_9" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 10 -->
+  <div class="formFields" id="appl_3_appDecl10">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">j. Are you a U.S. citizen?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl10" id="appl_3_appDecl10_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl10_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl10" id="appl_3_appDecl10_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl10_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11 -->
+  <div class="formFields" id="appl_3_appDecl11">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">k. Are you a permanent resident alien?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel perm-resident"><tr><td>
+          <input type="radio" name="appl_3_appDecl11" id="appl_3_appDecl11_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl11_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl11" id="appl_3_appDecl11_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl11_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11_2 -->
+  <div class="formFields hidden" id="appl_3_appDecl11_2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">&nbsp;&nbsp;&nbsp;&nbsp;Are you a non-resident alien (foreign national)?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl11_2" id="appl_3_appDecl11_2_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl11_2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl11_2" id="appl_3_appDecl11_2_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl11_2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 12 -->
+  <div class="formFields" id="appl_3_appDecl12">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        l. Do you intend to occupy the property as your primary residence? If "Yes," complete question m below
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_3_appDecl12" id="appl_3_appDecl12_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl12_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl12" id="appl_3_appDecl12_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl12_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 13 -->
+  <div class="formFields" id="appl_3_appDecl13">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">m. Have you had an ownership interest in a property in the last 3 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel ownership-interest"><tr><td>
+          <input type="radio" name="appl_3_appDecl13" id="appl_3_appDecl13_0" value="Yes" autocomplete="off" />
+          <label for="appl_3_appDecl13_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_3_appDecl13" id="appl_3_appDecl13_1" value="No" autocomplete="off" />
+          <label for="appl_3_appDecl13_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet ownership-interest-details hidden" id="desc3_13">
+      <div class="fieldItem styled-select width208 marginRht20">
+        <select id="appl_3_propertyType" class="width228">
+          <option value="">Type of Property<span class="required"> *</span></option>
+          <option value="PR">PR - Principle Residence</option>
+          <option value="SH">SH - Second Home</option>
+          <option value="IP">IP - Investment Property</option>
+        </select>
+      </div>
+      <div class="fieldItem styled-select width208">
+        <select id="appl_3_titleHeld" class="width228">
+          <option value="">Title Held<span class="required"> *</span></option>
+          <option value="S">Solely by Yourself</option>
+          <option value="SP">Jointly w/Spouse</option>
+          <option value="O">Jointly w/Another Person</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hamda Declaration -->
+  <div class="formFields">
+    <h4 class="sectionTitle">Other information for government monitoring purposes</h4>
+
+    <div id="appl_3_Hamda" class="hamda">
+      <div class="hamdaFields">
+        <label for="appl_3_hamdaNoDecl" class="hamdaLabel">I do not wish to furnish this information</label>
+        <input name="appl_3_hamdaNoDecl" type="checkbox" value="DoNotFurnish" id="appl_3_hamdaNoDecl" class="appl_3_hamdaNoDecl" />
+      </div>
+    </div>
+    <div id="appl_3_hamdaEthnicity" class="hamda">
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_3_ethnicity" class="width228 appl_3_ethnicity">
+          <option value="">Select Ethnicity<span class="required"> *</span></option>
+          <option value="Hispanic or Latino">Hispanic or Latino</option>
+          <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+        </select>
+      </div>
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_3_Sex" class="width228 appl_3_Sex">
+          <option value="">Sex<span class="required"> *</span></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div id="appl_3_hamdaRace" class="hamda">
+      <div>
+        <h5 class="panelHeader">Race (check all that apply)</h5>
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_3_AmerIndianAlaskaNat" class="hamdaLabel">American Indian or Alaska Native</label>
+        <input name="appl_3_AmerIndianAlaskaNat" type="checkbox" value="American_Indian_or_Alaska_Native"
+               id="appl_3_AmerIndianAlaskaNat" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_3_Asian" class="hamdaLabel">Asian</label>
+        <input name="appl_3_Asian" type="checkbox" value="Asian" id="appl_3_Asian" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_3_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+        <input name="appl_3_BlackAfricanAmerican" type="checkbox" value="Black_or_African_American"
+               id="appl_3_BlackAfricanAmerican" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_3_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+          Highlander</label>
+        <input name="appl_3_NatHawaiianOtherPacIslander" type="checkbox"
+               value="Native_Hawaiian_or_Other_Pacific_Highlander" id="appl_3_NatHawaiianOtherPacIslander" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_3_White" class="hamdaLabel">White</label>
+        <input name="appl_3_White" type="checkbox" value="White" id="appl_3_White" />
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+
+  <!-- 4th Applicant Info -->
+  <div id="appl_4" class="applicant">
+  <h4 class="sectionHeader">Application Declarations - Sue</h4>
+  <!-- Declaration 1 -->
+  <div class="formFields" id="appl_4_appDecl1">
+    <h4 class="sectionTitle">Please read the important information in this section.</h4>
+
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        a. Are there any outstanding judgements against you?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl1" id="appl_4_appDecl1_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl1_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl1" id="appl_4_appDecl1_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl1_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_1_div" class="hide">
+        <label for="desc4_1" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_1" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 2 -->
+  <div class="formFields" id="appl_4_appDecl2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">b. Have you been declared bankrupt within the past 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl2" id="appl_4_appDecl2_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl2" id="appl_4_appDecl2_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_2_div" class="hide">
+        <label for="desc4_2" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_2" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 3 -->
+  <div class="formFields" id="appl_4_appDecl3">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        c. Have you had a property foreclosed upon or given title or deed in lieu thereof in the last 7 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl3" id="appl_4_appDecl3_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl3_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl3" id="appl_4_appDecl3_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl3_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_3_div" class="hide">
+        <label for="desc4_3" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_3" class="inputText" required></textarea>
+      </div>
+    </div>
+
+  </div>
+  <!-- Declaration 4 -->
+  <div class="formFields" id="appl_4_appDecl4">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">d. Are you a party to lawsuit?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl4" id="appl_4_appDecl4_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl4_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl4" id="appl_4_appDecl4_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl4_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_4_div" class="hide">
+        <label for="desc4_4" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_4" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 5 -->
+  <div class="formFields" id="appl_4_appDecl5">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        e. Have you directly or indirectly been obligated on any loan which resulted in foreclosure,
+        transfer of title in lieu of foreclosure, or judgement? (This would include such loans as home
+        mortgage loans, SBA loans, home improvement loans, educational loans, manufactured (mobile) home
+        loans, any mortgage, financial obligation, bond, or loan guarantee. If "Yes", provide details,
+        including if any, reasons for the action.)
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl5" id="appl_4_appDecl5_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl5_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl5" id="appl_4_appDecl5_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl5_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_5_div" class="hide">
+        <label for="desc4_5" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_5" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 6 -->
+  <div class="formFields" id="appl_4_appDecl6">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        f. Are you presently delinquent or in default on any Federal debt or any other loan, mortgage,
+        financial obligation, bond or loan guarantee? If "Yes", give details as described in the preceding question.
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl6" id="appl_4_appDecl6_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl6_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl6" id="appl_4_appDecl6_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl6_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_6_div" class="hide">
+        <label for="desc4_6" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_6" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 7 -->
+  <div class="formFields" id="appl_4_appDecl7">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        g. Are you obligated to pay alimony, child support, or separate maintenance?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl7" id="appl_4_appDecl7_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl7_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl7" id="appl_4_appDecl7_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl7_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_7_div" class="hide">
+        <label for="desc4_7" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_7" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 8 -->
+  <div class="formFields" id="appl_4_appDecl8">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">h. Is any part of the down payment borrowed?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl8" id="appl_4_appDecl8_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl8_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl8" id="appl_4_appDecl8_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl8_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_8_div" class="hide">
+        <label for="desc4_8" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_8" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 9 -->
+  <div class="formFields" id="appl_4_appDecl9">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">i. Are you a co-maker or endorser on a note?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl9" id="appl_4_appDecl9_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl9_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl9" id="appl_4_appDecl9_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl9_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div id="desc4_9_div" class="hide">
+        <label for="desc4_9" class="inlineLabel">Please provide an explanation<span class="required"> *</span></label>
+        <textarea cols="" rows="" id="desc4_9" class="inputText" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 10 -->
+  <div class="formFields" id="appl_4_appDecl10">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">j. Are you a U.S. citizen?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl10" id="appl_4_appDecl10_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl10_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl10" id="appl_4_appDecl10_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl10_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11 -->
+  <div class="formFields" id="appl_4_appDecl11">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">k. Are you a permanent resident alien?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel perm-resident"><tr><td>
+          <input type="radio" name="appl_4_appDecl11" id="appl_4_appDecl11_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl11_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl11" id="appl_4_appDecl11_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl11_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 11_2 -->
+  <div class="formFields hidden" id="appl_4_appDecl11_2">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">&nbsp;&nbsp;&nbsp;&nbsp;Are you a non-resident alien (foreign national)?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl11_2" id="appl_4_appDecl11_2_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl11_2_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl11_2" id="appl_4_appDecl11_2_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl11_2_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 12 -->
+  <div class="formFields" id="appl_4_appDecl12">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        l. Do you intend to occupy the property as your primary residence? If "Yes," complete question m below
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_4_appDecl12" id="appl_4_appDecl12_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl12_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl12" id="appl_4_appDecl12_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl12_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!-- Declaration 13 -->
+  <div class="formFields" id="appl_4_appDecl13">
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">m. Have you had an ownership interest in a property in the last 3 years?
+      </div>
+      <div class="fieldItem">
+        <table class="radioTableLabel ownership-interest"><tr><td>
+          <input type="radio" name="appl_4_appDecl13" id="appl_4_appDecl13_0" value="Yes" autocomplete="off" />
+          <label for="appl_4_appDecl13_0"> Yes</label>
+        </td><td>
+          <input type="radio" name="appl_4_appDecl13" id="appl_4_appDecl13_1" value="No" autocomplete="off" />
+          <label for="appl_4_appDecl13_1"> No</label>
+        </td></tr></table>
+      </div>
+    </div>
+    <div class="fieldSet ownership-interest-details hidden" id="desc4_13">
+      <div class="fieldItem styled-select width208 marginRht20">
+        <select id="appl_4_propertyType" class="width228">
+          <option value="">Type of Property<span class="required"> *</span></option>
+          <option value="PR">PR - Principle Residence</option>
+          <option value="SH">SH - Second Home</option>
+          <option value="IP">IP - Investment Property</option>
+        </select>
+      </div>
+      <div class="fieldItem styled-select width208">
+        <select id="appl_4_titleHeld" class="width228">
+          <option value="">Title Held<span class="required"> *</span></option>
+          <option value="S">Solely by Yourself</option>
+          <option value="SP">Jointly w/Spouse</option>
+          <option value="O">Jointly w/Another Person</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hamda Declaration -->
+  <div class="formFields">
+    <h4 class="sectionTitle">Other information for government monitoring purposes</h4>
+
+    <div id="appl_4_Hamda" class="hamda">
+      <div class="hamdaFields">
+        <label for="appl_4_hamdaNoDecl" class="hamdaLabel">I do not wish to furnish this information</label>
+        <input name="appl_4_hamdaNoDecl" type="checkbox" value="DoNotFurnish" id="appl_4_hamdaNoDecl" class="appl_4_hamdaNoDecl" />
+      </div>
+    </div>
+    <div id="appl_4_hamdaEthnicity" class="hamda">
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_4_ethnicity" class="width228 appl_4_ethnicity">
+          <option value="">Select Ethnicity<span class="required"> *</span></option>
+          <option value="Hispanic or Latino">Hispanic or Latino</option>
+          <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+        </select>
+      </div>
+      <div class="hamdaFieldsInline styled-select width208">
+        <select id="appl_4_Sex" class="width228 appl_4_Sex">
+          <option value="">Sex<span class="required"> *</span></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div id="appl_4_hamdaRace" class="hamda">
+      <div>
+        <h5 class="panelHeader">Race (check all that apply)</h5>
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_4_AmerIndianAlaskaNat" class="hamdaLabel">American Indian or Alaska Native</label>
+        <input name="appl_4_AmerIndianAlaskaNat" type="checkbox" value="American_Indian_or_Alaska_Native"
+               id="appl_4_AmerIndianAlaskaNat" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_4_Asian" class="hamdaLabel">Asian</label>
+        <input name="appl_4_Asian" type="checkbox" value="Asian" id="appl_4_Asian" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_4_BlackAfricanAmerican" class="hamdaLabel">Black or African American</label>
+        <input name="appl_4_BlackAfricanAmerican" type="checkbox" value="Black_or_African_American"
+               id="appl_4_BlackAfricanAmerican" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_4_NatHawaiianOtherPacIslander" class="hamdaLabel">Native Hawaiian or Other Pacific
+          Highlander</label>
+        <input name="appl_4_NatHawaiianOtherPacIslander" type="checkbox"
+               value="Native_Hawaiian_or_Other_Pacific_Highlander" id="appl_4_NatHawaiianOtherPacIslander" />
+      </div>
+      <div class="hamdaFields">
+        <label for="appl_4_White" class="hamdaLabel">White</label>
+        <input name="appl_4_White" type="checkbox" value="White" id="appl_4_White" />
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+
+  </div>
+    <div id="actionPanel">
+      <button type="submit" class="margin0 myButton floatRt primaryBtn">Next</button>
+      <a href="propertyDetails.html" class="button_font"><span class="myButton secondaryBtn floatLft marginRht20 cancel">Previous</span></a>
+      <div class="ajax myButton secondaryBtn floatLft demo save-for-later" style="position: relative; overflow: hidden"  data-toggle="modal">
+        <span class="demo btn btn-primary btn-large padding10"  id="myButton">Save For later</span>
+      </div>
+    </div>
+  <div id="ajax-modal" data-backdrop="static" class="modal hide fade" tabindex="-1"></div>
+  </div>
+  <div class="grid_5 right-panel">
+    <!-- Need Help -->
+    <div id="helpPanel" class="rightPanel rightPanelGrad">
+      <div class="containerPadding">
+        <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+        <p class="cfh">24-hour toll free number</p>
+
+        <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+        <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+      </div>
+    </div>
+    <!-- You are applying for -->
+    <div id="productPanel" class="rightPanel">
+      <div class="containerPadding">
+        <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+
+        <div class="innerContainer">
+          <ul class="bulletList">
+            <li class="listRow">Mortgage</li>
+            <li class="listRow">Carefree Savings Account</li>
+            <li class="listRow lastRow">Carefree Checking Account</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- content_wrap -->
+  <div class="content">
+
+    <!-- end .content -->
+  </div>
+  <div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+  <!-- end .container -->
+</form>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.mask.min.js" type="text/javascript"></script>
+<script src="js/dsp.js"></script>
+<script src="js/dsp-common.js"></script>
+<script>
+  $j(document).ready(function () {
+    $j("label").inFieldLabels();
+    $j("input").attr("autocomplete", "off");
+
+    $j('input[type="radio"]').click(function () {
+      var name = $j(this).attr('name'), val = $j(this).val(), parts = name.split('_'),
+          div = 'desc' + parts[1] + '_' + parts[2].substr(7) + '_div';
+      if (val === 'Yes') {
+        $j('#' + div).show('slow').find('textarea').addClass('required');
+      } else {
+        $j('#' + div).hide().find('textarea').removeClass('required');
+      }
+    });
+
+    $j('.perm-resident input[type=radio]').on('click', function () {
+      var id = $j(this).attr('name');
+      if ($j(this).val() === 'No') {
+        $j('#' + id + '_2').removeClass('hidden');
+      } else {
+        $j('#' + id + '_2').addClass('hidden');
+      }
+    });
+
+    $j('.ownership-interest input[type=radio]').on('click', function () {
+      if ($j(this).val() === 'true') {
+        $j(this).closest('.formFields').find('.ownership-interest-details').removeClass('hidden');
+      } else {
+        $j(this).closest('.formFields').find('.ownership-interest-details').addClass('hidden');
+      }
+    });
+
+    $j('form').validate();
+    //$j('form').on('submit', function (e) {alert('here');e.preventDefault(); return false;});
+
+    var hamda_arr = [], tmpobj;
+    for (var i = 1; i < 5; i++) {
+      tmpobj = {
+        selector: 'appl_'+i+'_hamdaNoDecl',
+        index: i
+      };
+      hamda_arr.push(tmpobj);
+    }
+
+    $j.each(hamda_arr, function () {
+      var th = this, $current = $j('.'+th.selector);
+      if ($current.is(":checked")) {
+        $j('.appl_'+th.index+'_ethnicity').prop("disabled", true).removeClass('required');
+        $j('.appl_'+th.index+'_Sex').prop("disabled", true).removeClass('required');
+        $j('form').validate();
+      }
+      $current.click(function() {
+        if ($j(this).is(":checked")) {
+          $j('.appl_'+th.index+'_ethnicity').prop("disabled", true).removeClass('required');
+          console.log($j('.appl_'+th.index+'_ethnicity'));
+          $j('.appl_'+th.index+'_Sex').prop("disabled", true).removeClass('required');
+          console.log($j('.appl_'+th.index+'_Sex'));
+          $j('form').validate();
+        } else {
+          $j('.appl_'+th.index+'_ethnicity').prop("disabled", false).addClass('required');
+          $j('.appl_'+th.index+'_Sex').prop("disabled", false).addClass('required');
+          $j('form').validate();
+        }
+      });
+    });
+
+    /* jquery load for modal dialog window */
+    var $modal = $j('#ajax-modal');
+
+    $j('.ajax .demo').on('click', function(){
+      // create the backdrop and wait for next modal to be triggered
+      $j('body').modalmanager('loading');
+
+      setTimeout(function(){
+        $modal.load('modal_ajax_test.html', '', function(){
+          $modal.modal();
+        });
+      }, 1000);
+    });
+
+    $modal.on('click', '.update', function(){
+      $modal.modal('loading');
+      setTimeout(function(){
+        $modal
+            .modal('loading')
+            .find('.modal-body')
+            .prepend('<div class="alert alert-info fade in">' +
+                'Updated!<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                '</div>');
+      }, 1000);
+    });
+
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <!--<meta http-equiv="MSThemeCompatible" content="NO" />  -->
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+  <link href="css/bootstrap-modal.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="about-you">
+<form method="post" id="about-you-form" action="employment.html" accept-charset="utf-8">
+<div class="container">
+  <header class="header">
+    <a href="#">
+      <img class="logo" width="150" height="46"/>
+    </a>
+
+    <hr/>
+  </header><!-- end .header -->
+<div id="pgAboutYou">
+
+  <!-- end .progrssBar -->
+  <div class="server-errors hidden"></div>
+
+</div>
+<div class="grid_11">
+<div id="formContainer" style="min-height: 300px;">
+<!-- Primary Applicant Info -->
+<div id="appl_1" class="applicant">
+<h4 class="sectionHeader" style="background-color: #E4EEF6;border-bottom:1px solid #cccccc;;text-align: center;">Mortgage Short Application</h4>
+
+<div class="formFields" id="appl_1_nameAdd">
+  <h4 class="sectionTitle" style="font-size:12px;">Personal Information</h4>
+  <div class="fieldSet">
+    <div class="fieldItem marginRht10">
+      <label for="appl_1_firstName" class="inlineLabel">First Name<span class="required"> *</span></label>
+      <input type="text" name="appl_1_firstName" id="appl_1_firstName" class="textInput2 firstName width150 required validName" />
+    </div>
+    <div class="fieldItem marginRht10" >
+      <label for="appl_1_middleName" class="inlineLabel">Middle Name</label>
+      <input name="appl_1_middleName" type="text" id="appl_1_middleName" class="width150 middleName validName" />
+    </div>
+    <div class="fieldItem marginRht10" >
+      <label for="appl_1_lastName" class="inlineLabel">Last Name<span class="required"> *</span></label>
+      <input type="text" name="appl_1_lastName" id="appl_1_lastName" class="textInput2 lastName width150 required validName" />
+    </div>
+  </div>
+
+</div>
+
+<!-- optional Previous Address -->
+
+<div class="formFields" id="contactInfo">
+
+  <div class="fieldSet">
+    <div class="fieldItem marginRht20">
+
+      <label for="appl_1_dayPhone" class="inlineLabel">Primary Phone<span class="required"> *</span></label>
+      <input type="text" name="appl_1_dayPhone" id="appl_1_dayPhone" class="textInput2 width150 required phoneUS" />
+    </div>
+
+    <div class="fieldItem marginRht20">
+    </div>
+  </div>
+  <div class="fieldSet" style="margin-right: 200em;">
+    <div class="fieldItem">
+      <label for="appl_1_email" class="inlineLabel">E-mail Address<span class="required"> *</span></label>
+      <input name="appl_1_email" id="appl_1_email" type="text" class="emailPrimary required email" />
+    </div>
+  </div>
+  <div class="fieldSet">
+  <div class="fieldItem">
+    <label for="appl_1_zipcode" class="inlineLabel">ZIP Code<span class="required"> *</span></label>
+    <input name="appl_1_zipcode" id="appl_1_zipcode" type="text" maxlength="5" class="appl_1_zipcode required zipcodeUS" />
+  </div>
+  </div>
+    <div class="member_title" style="font-size:12px;margin-left:0px;"><h4>What type of Loan are you interested in?</h4></div>
+    <div class="fieldSet">
+      <div class="fieldItem width160 margin_left_20">
+        <label class="radioLabel" for="relative">Purchase</label>
+        <input name="memberType" id="relative" type="radio" value="unknown" />
+      </div>
+      <div class="fieldItem width183">
+        <label class="radioLabel" for="association">Refinance</label>
+        <input name="memberType" id="association" type="radio" value="new" />
+      </div>
+      <div class="fieldItem width160">
+        <label for="FFA" class="radioLabel">Home Equity</label>
+        <input name="memberType" id="FFA" type="radio" value="current" />
+      </div>
+    </div>
+</div>
+</div>
+</div>
+<div id="actionPanel">
+  <button type="submit" class="myButton floatRt primaryBtn">Submit</button>
+  <!--<span class="myButton secondaryBtn floatLft" >Save for later</span>-->
+</div>
+<div id="ajax-modal" data-backdrop="static" class="modal hide fade" tabindex="-1"></div>
+</div>
+<!--<div class="grid_5">
+  &lt;!&ndash; Need Help &ndash;&gt;
+  <div class="rightPanel rightPanelGrad">
+    <div class="containerPadding">
+      <h3 class="panelHeader marginBtm20">Need Help?</h3>
+
+      <p class="cfh">Call: 1-800-111-1111</p>
+
+      <p class="cfh">M-F 8 a.m. - 5 p.m. PST</p>
+
+      <p class="cfh">Sat 9 a.m. - 2 p.m. PST</p>
+    </div>
+  </div>
+  &lt;!&ndash; You are applying for &ndash;&gt;
+</div>-->
+</div><!-- end .container -->
+
+<div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+</form>
+<script src="js/jquery.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<!--<script src="js/bootstrap.js"></script>-->
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.validate.additional-methods.js"></script>
+<script src="js/jquery.mask.min.js" type="text/javascript"></script>
+<script src="js/dsp.js"></script>
+
+<script type="text/javascript">
+  $j = jQuery.noConflict();
+  $j(document).ready(function () {
+    $j("label").inFieldLabels();
+    $j("input").attr("autocomplete", "off");
+
+    $j('#appl_1_addYears').keyup(function () {
+      if ($j(this).val() <= 1)
+        $j('#appl_1_previousAdd').slideDown('slow');
+      else
+        $j('#appl_1_previousAdd').hide('slow');
+    });
+
+    $j('#appl_4_addYears').keyup(function () {
+      if ($j(this).val() <= 1)
+        $j('#appl_2_previousAdd').slideDown('slow');
+      else
+        $j('#appl_2_previousAdd').hide('slow');
+    });
+
+    $j("#appl_2,#addApplicantLink_2").hide();
+    $j("#appl_3,#addApplicantLink_3").hide();
+    $j("#appl_4").hide();
+
+    $j('.add_link_1').click(function(){
+      $j("#appl_2,#addApplicantLink_2").show();
+      $j('.add_link_1_checkbox').prop('checked', true);
+      var check_value = $j('.add_link_1_checkbox').val();
+      //alert(check_value);
+    });
+
+    $j('.remove_link_2').click(function(){
+      $j("#appl_2,#addApplicantLink_2").hide();
+      $j('.add_link_1_checkbox').prop('checked', false);
+    });
+
+    $j('.add_link_2').click(function(){
+      $j("#appl_3,#addApplicantLink_3").show();
+      $j('.add_link_2_checkbox').prop('checked', true);
+    });
+
+    $j('.remove_link_3').click(function(){
+      $j("#appl_3,#addApplicantLink_3").hide();
+      $j('.add_link_2_checkbox').prop('checked', false);
+    });
+
+    $j('.add_link_3').click(function(){
+      $j("#appl_4").show();
+      $j('.add_link_3_checkbox').prop('checked', true);
+    });
+
+    $j('.remove_link_4').click(function(){
+      $j("#appl_4").hide();
+      $j('.add_link_3_checkbox').prop('checked', false);
+    });
+
+    $j('[class*="copy_prime_address"]').click(function () {
+      var className = $j(this).attr('class'), appl = className.substr(19);
+      $j(".appl_" + appl + "_address1").val($j(".appl_1_address1").val());
+      $j(".appl_" + appl + "_address1_label").text('');
+      $j(".appl_" + appl + "_address2").val($j(".appl_1_address2").val());
+      $j(".appl_" + appl + "_address2_label").text('');
+      $j(".appl_" + appl + "_city").val($j(".appl_1_city").val());
+      $j(".appl_" + appl + "_city_label").text('');
+      $j(".appl_" + appl + "_state").val($j(".appl_1_state").val());
+      $j(".appl_" + appl + "_zipcode").val($j(".appl_1_zipcode").val());
+      $j(".appl_" + appl + "_zipcode_label").text('');
+    });
+
+    $j('form').validate();
+    $j("form").data("validator")
+        .addCustomValidations(['firstName', 'middleName', 'lastName', 'durationYears', 'durationMonths', 'phoneUS', 'zipcodeUS']);
+
+    /* jquery load for modal dialog window */
+    var $modal = $j('#ajax-modal');
+
+    $j('.ajax .demo').on('click', function(){
+      // create the backdrop and wait for next modal to be triggered
+      $j('body').modalmanager('loading');
+
+      setTimeout(function(){
+        $modal.load('modal_ajax_test.html', '', function(){
+          $modal.modal();
+        });
+      }, 1000);
+    });
+
+    $modal.on('click', '.update', function(){
+      $modal.modal('loading');
+      setTimeout(function(){
+        $modal
+            .modal('loading')
+            .find('.modal-body')
+            .prepend('<div class="alert alert-info fade in">' +
+                'Updated!<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                '</div>');
+      }, 1000);
+    });
+
+  });
+</script>
+</body>
+</html>

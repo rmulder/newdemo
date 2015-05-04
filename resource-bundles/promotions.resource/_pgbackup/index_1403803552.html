@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Promotions</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="promotions.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Promotions</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <!--
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a>
+                    </li>
+                    <li><a href="#">Settings</a>
+                    </li>
+                    <li><a href="#">Profile</a>
+                    </li>
+                    <li><a href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><i class="icon-edit icon-small"></i>  <a href="#">Promotion 1</a>
+                    </li>
+                    <li><i class="glyphicon glyphicon-edit"></i>  <a href="#">Promotion 2</a>
+                    </li>
+                    <li><i class="icon-edit icon-small"></i>  <a href="#">Promotion 3</a>
+                    </li>
+                    <li><i class="icon-edit icon-small"></i>  <a href="#">Promotion 4</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 main">
+
+
+                <h2 class="sub-header">Promotion #1</h2>
+                <div class="row">
+                    <div id="content">
+                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                            <li><a href="#promo-view" data-toggle="tab">View</a>
+                            </li>
+                            <li class="active"><a href="#promo-edit" data-toggle="tab">Edit</a>
+                            </li>
+                            <li><a href="#promo-preview" data-toggle="tab">Preview</a>
+                            </li>
+                            <button type="button" class="btn btn-primary btn-new">New</button>
+                        </ul>
+                        <div id="my-tab-content" class="tab-content">
+                            <div class="tab-pane" id="promo-view">
+                                <h1>View</h1>
+                            </div>
+                            <div class="tab-pane active" id="promo-edit">
+                                <form class="pg-empty-placeholder">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="description__c">Description:</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input placeholder="Enter a Description" id="description__c" name="description__c" maxlength="100" class="pull-left col-md-10">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="keywords__c">Keywords:</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input placeholder="Enter Campaign Keywords" id="keywords__c" name="keywords__c" maxlength="255" class="pull-left col-md-10">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="url__c">URL:</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input placeholder="Enter Campaign URL" id="url__c" name="url__c" maxlength="255" class="pull-left col-md-10">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="campaign_id__c">Campaign ID:</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input placeholder="Enter a Campaign ID" id="campaign_id__c" size="35" maxlength="50" name="campaign_id__c" class="pull-left">
+                                        </div>
+                                        <div class="col-md-6">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="sub_product_code__c">SubProduct:</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="pull-left" id="sub_product_code__c" name="sub_product_code__c"></select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="template__c">Template:</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="pull-left" id="template__c" name="template__c"></select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="textarea1__c">TextArea:</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <textarea class="pull-left input-lg" rows="3" id="textarea1__c" name="textarea1__c"></textarea>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="rich_textarea1__c">RichTextArea:</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <textarea class="pull-left input-lg" rows="3" id="rich_textarea1__c" name="rich_textarea1__c"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="attachment1__c">Attachment 1:</label>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input class="pull-left" id="attachment1__c" size="15" name="attachment1__c" disabled="disabled">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="file" id="file1">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="attachment2__c">Attachment 2:</label>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input class="pull-left" id="attachment2__c" size="15" name="attachment2__c" disabled="disabled">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="file" id="file2">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label class="control-label pull-right" for="attachment3__c">Attachment 3:</label>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input class="pull-left" id="attachment3__c" size="15" name="attachment3__c" disabled="disabled">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="file" id="file3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-9">
+                                            <button type="submit" class="btn btn-success pull-left">Apply Changes</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="promo-preview">
+                                <h1>Preview</h1>
+                                <div class="row placeholders">
+                                    <div class="col-xs-6 col-sm-3 placeholder">
+                                        <img src="http://pinegrow.com/placeholders/img4.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                                        <h4>Label</h4>
+                                        <span class="text-muted">Something else</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 placeholder">
+                                        <img src="http://pinegrow.com/placeholders/img3.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                                        <h4>Label</h4>
+                                        <span class="text-muted">Something else</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 placeholder">
+                                        <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                                        <h4>Label</h4>
+                                        <span class="text-muted">Something else</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 placeholder">
+                                        <img src="http://pinegrow.com/placeholders/img6.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                                        <h4>Label</h4>
+                                        <span class="text-muted">Something else</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="promo-add">
+                                <h1>+ADD</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $('#tabs').tab();
+        });
+    </script>
+
+
+</body>
+
+</html>

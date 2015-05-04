@@ -1,0 +1,26 @@
+/*
+WARNING: mobile-dsp.less is used to dynamically generate mobile-dsp.css. Do *NOT* edit mobile-dsp.css directly!!
+Declare LESS Variables here:
+*/
+.logo {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url('../images/terafinalogo.png') no-repeat;
+  width: 200px;
+  /* Width of new image */
+
+  height: 76px;
+  /* Height of new image */
+
+  padding-left: 200px;
+  /* Equal to width of new image */
+
+  margin-left: 20px;
+}
+#docs {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

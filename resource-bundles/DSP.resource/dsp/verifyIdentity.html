@@ -1,0 +1,334 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+  <!-- Force IE8 to run in Standards Mode: http://stackoverflow.com/questions/13896176/force-ie8-or-ie9-document-mode-to-standards -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>Digital Sales Platform</title>
+  <link href="css/dsp.css" rel="stylesheet" type="text/css"/>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+  <link href="css/bootstrap-modal.css" rel="stylesheet" />
+  <link href="css/dsp.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+
+<body id="verify-identity">
+<form method="post" accept-charset="utf-8" action="confirmation.html" id="verify-identity-form">
+  <div class="container">
+  <div id="dropdown-panel" class="hidden">
+    <div class="panel-content"></div>
+    <div class="panel-close">CLOSE</div>
+  </div>
+
+  <header class="header">
+    <a href="#">
+      <img class="logo" width="150" height="46"/>
+    </a>
+
+    <div class="tablet-links">
+      <a class="help-link dropdown-toggle" id="help-link" data-toggle="dropdown" href="#">Contact Us</a>
+      <a class="my-applications-link" data-toggle="dropdown" href="#">My&nbsp;Applications (2)</a>
+    </div>
+    <hr/>
+  </header><!-- end .header -->
+  <div id="pgAboutYou">
+    <ol id="progressBar" class="onextrapixel">
+      <li class="first completed">
+        <span class="stepIndicator">1</span>
+        <span class="stepName">About You</span>
+      </li>
+      <li class="completed">
+        <span class="stepIndicator">2</span>
+        <span class="stepName">About Account</span>
+      </li>
+      <li class="completed">
+        <span class="stepIndicator">3</span>
+        <span class="stepName">Review &amp; Submit</span>
+      </li>
+      <li class="currentStep">
+        <span class="stepIndicator">4</span>
+        <span class="stepName">Verify</span>
+      </li>
+      <li class="last">
+        <span class="stepIndicator">5</span>
+        <span class="stepName">Confirmation</span>
+      </li>
+    </ol>
+    <!-- end .progrssBar -->
+    <div class="server-errors hidden"></div>
+
+  </div>
+  <div class="grid_11">
+  <div id="formContainer">
+  <!-- Primary Applicant Info -->
+
+  <div id="appl_1" class="applicant">
+  <h4 class="sectionHeader">Verify Your Identity</h4>
+  <!-- Declaration 1 -->
+  <div class="formFields" id="appl_1_appDecl1">
+    <h4 class="sectionTitle " >To protect you from Identity Theft and to confirm your identity we pull public information and ask you to validate the following questions. If the correct answer is not here, just choose none of the above.</h4>
+
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        1)Please select the county for the address you provided.
+
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl1" id="appl_1_appDecl1_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl1_0"> POWELL</label>
+        </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="appl_1_appDecl1" id="appl_1_appDecl1_1" value="No" autocomplete="off" />
+            <label for="appl_1_appDecl1_1"> CLINTON</label>
+          </td>
+        </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl1" id="appl_1_appDecl1_2" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl1_2"> DAVIESS</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl1" id="appl_1_appDecl1_3" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl1_3"> GALLATIN</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl1" id="appl_1_appDecl1_4" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl1_4"> NONE OF THE ABOVE</label>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        2)Please select the model year of the vehicle you purchased or leased prior to August 2010.
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl2" id="appl_1_appDecl2_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl2_0"> 2006</label>
+        </td></tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl2" id="appl_1_appDecl2_1" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl2_1"> 2007</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl2" id="appl_1_appDecl2_2" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl2_2"> 2008</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl2" id="appl_1_appDecl2_3" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl2_3"> 2009</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl2" id="appl_1_appDecl2_4" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl2_4"> NONE OF THE ABOVE</label>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        3)Which of the following is a current or previous employer? If there is not a matched employer name, please select 'NONE OF THE ABOVE'.
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl3" id="appl_1_appDecl3_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl3_0"> AGENCY COMESTIC</label>
+        </td></tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl3" id="appl_1_appDecl3_1" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl3_1"> SMITH S GROCERY STOR</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl3" id="appl_1_appDecl3_2" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl3_2"> HAIR CONNECTIONS</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl3" id="appl_1_appDecl3_3" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl3_3"> ST JOHN OF GOD HOSP</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl3" id="appl_1_appDecl3_4" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl3_4"> NONE OF THE ABOVE</label>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+    <div class="fieldSet">
+      <div class="fieldItem declarationText">
+        4)Which of the following institutions do you have a bank account with? If there is not a matched bank name, please select 'NONE OF THE ABOVE'.
+        <table class="radioTableLabel"><tr><td>
+          <input type="radio" name="appl_1_appDecl4" id="appl_1_appDecl4_0" value="Yes" autocomplete="off" />
+          <label for="appl_1_appDecl4_0"> MID CENTURY BANK</label>
+        </td></tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl4" id="appl_1_appDecl4_1" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl4_1"> AMERIBANK</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl4" id="appl_1_appDecl4_2" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl4_2"> CASCADE RANGE FCU</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl4" id="appl_1_appDecl4_3" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl4_3"> STAR BANK</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="appl_1_appDecl4" id="appl_1_appDecl4_4" value="No" autocomplete="off" />
+              <label for="appl_1_appDecl4_4"> NONE OF THE ABOVE</label>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+    <div id="actionPanel">
+      <button type="submit" class="margin0 myButton floatRt primaryBtn submit-button">Continue</button>
+<!--
+      <a href="reviewSubmit.html" class="button_font"><span class="myButton floatRt primaryBtn">Continue</span></a>
+-->
+      <div id="display-submit-modal" data-backdrop="static" class="modal hide fade" tabindex="-1">
+        <div class="modal-header">
+          <h3 class="head_title">Verify Identity</h3>
+        </div>
+        <div class="modal-body">
+          <p class="bodyTextBold marginTop marginBottom marginBtm20">
+            Please wait while we process your answers. This may take a few minutes. <br>Thank you.  <span id="display-loading-image" class="ui-icon-loading" style="width: 50px; height: 50px; margin: -12px 0; float: right;"></span>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  <div id="ajax-modal" data-backdrop="static" class="modal hide fade" tabindex="-1"></div>
+  </div>
+  <div class="grid_5 right-panel">
+    <!-- Need Help -->
+    <div id="helpPanel" class="rightPanel rightPanelGrad">
+      <div class="containerPadding">
+        <h3 class="panelHeader marginBtm20">Need Help? Contact Us</h3>
+
+        <p class="cfh">24-hour toll free number</p>
+
+        <p class="cfh cfh-phone">CALL: 855.855.8805</p>
+
+        <!--<p class="cfh cfh-email">Email: <a href="mailto:info@terafinainc.com">info@terafinainc.com</a></p>-->
+      </div>
+    </div>
+    <!-- You are applying for -->
+    <div id="productPanel" class="rightPanel">
+      <div class="containerPadding">
+        <h3 class="panelHeader marginBtm20">You are applying for:</h3>
+
+        <div class="innerContainer">
+          <ul class="bulletList">
+            <li class="listRow">Mortgage</li>
+            <li class="listRow">Carefree Savings Account</li>
+            <li class="listRow lastRow">Carefree Checking Account</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- content_wrap -->
+  <div class="content">
+
+    <!-- end .content -->
+  </div>
+  <div class="clear"></div>
+<br /><br />
+<footer class="row">
+  <div>
+    <div class="copyright">
+      <span id="footer-copyright">Copyright 2014 </span>   <br>
+      All rights reserved.
+    </div>
+    <div class="compliance">
+      <div class="floatLft" ><img src="images/Compliance-Equal_Housing_Black-website_.jpeg" alt="" style="width: 128px;"/></div>
+      <div ><img src="images/Compliance-NCUA_Black-website_.jpeg" alt="" style="width: 160px;"/></div>
+    </div>
+  </div>
+</footer>
+  <!-- end .container -->
+</form>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/underscore-min.js"></script>
+<script src="js/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.mask.min.js" type="text/javascript"></script>
+<script src="js/dsp.js"></script>
+<script src="js/dsp-common.js"></script>
+<script>
+  $j(document).ready(function () {
+    $j('form').on('submit', function () {
+      var $form = $j(this);
+      if ($form.data('submitted') === true) {
+        alert('This form has already been submitted. Please wait...');
+        return false;
+      } else {
+        $form.data('submitted', true);
+        var $modal = $j('#display-submit-modal');
+        $modal.modal();
+        //alert("please wait while loading");
+        window.setTimeout(function(){
+          location.href = 'confirmation.html'+ location.search;
+        }, 100000);
+        // return true;
+        return false;
+      }
+    });
+  });
+</script>
+</body>
+</html>
