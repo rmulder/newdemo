@@ -8,6 +8,7 @@
 apex-scripts/*
 apex-scripts/log/*.json
 /config/
+/config/.*
 */*.zip
 /src/profiles/
 /src/classes/*.cls-meta.xml
