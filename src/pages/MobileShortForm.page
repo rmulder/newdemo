@@ -13,6 +13,12 @@ background-color: #5d9026;
 border: 1px solid #4b8f29;
 color: #ffffff !important;
 }
+
+input[type="checkbox"] {
+    width: 5px;
+    height: 5px;
+    padding:0.4em;
+}
 </style>
 <html>
 <head>
@@ -269,9 +275,9 @@ color: #ffffff !important;
     </apex:outputPanel>
 
     <div class="form-group">
-      <div class="margintop row" style="margin-top:10px">
-        <div class="col-xs-2" style="margin-top:2px"><apex:inputcheckbox value="{!newApplication.Disclosure1__c}" styleclass="disclosure_100" /></div>
-        <div class="disclosure_text_mobile col-xs-10"> I have reviewed the <a href="http://dev3sand-dev3sand.cs22.force.com/servlet/servlet.FileDownload?file=00P17000000KNBG" >Disclosure 1</a></div>
+      <div class="margintop row" style="margin-top:8px">
+        <div class="col-xs-2"><apex:inputcheckbox value="{!newApplication.Disclosure1__c}" styleclass="disclosure_100" style="font-size:18px !important;"/></div>
+        <div class="disclosure_text_mobile col-xs-10" style="font-size:18px !important;"> I have reviewed the <a href="http://dev3sand-dev3sand.cs22.force.com/servlet/servlet.FileDownload?file=00P17000000KNBG" >Disclosure 1</a></div>
       </div> 
    </div>
     

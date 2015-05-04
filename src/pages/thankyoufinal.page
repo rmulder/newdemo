@@ -13,6 +13,21 @@
   <title>Digital Sales Platform</title>
   <apex:stylesheet value="{!URLFOR($Resource.DSP, 'dsp/css/dsp.css')}"/>
   <apex:includeScript value="{!URLFOR($Resource.DSP, 'dsp/js/modernizr.js')}"/>
+
+
+<style>
+    .bodyText {
+    padding-left: 7px !important;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  h4.sectionHeaderThankyou {
+  padding: 10px 12px !important;
+}
+.thankyouBox {
+min-height: 110px !important;
+}
+</style>
 </head>
 <body id="thank-you">
 <apex:form forceSSL="true">
@@ -20,7 +35,7 @@
   <div class="container">
     <header class="header">
      <a href="#">
-    <img class="logo" style="margin-left:40px !important;" width="150" height="46"/>
+    <img class="logo" style="margin-left:29px !important;" width="150" height="46"/>
   </a>
 
       <hr/>
@@ -30,14 +45,14 @@
       </div>
     </div>
 
-    <div class="grid_11"><!-- Secondary Applicant Info --><div class="thankyouBox" style="width:380px !important;">
+    <div class="grid_5"><!-- Secondary Applicant Info --><div class="thankyouBox" style="width:352px !important;">
 
       <div>
         <h4 class="sectionHeaderThankyou">Thank you</h4>
         <p>&nbsp;</p>
 
         <div class="bodyText">
-          <p class="bodyText">{!$Label.Mobile_Submit_Thank_you_Message}<br/>
+          <p class="bodyText">{!$Label.Mobile_Submit_Thank_you_Message}
           </p>
 
         </div>
@@ -54,7 +69,6 @@
 
     <!-- end .content -->
 
-    <br/>
     <div class="clear"></div>
 
     <footer class="row"></footer>

@@ -69,7 +69,7 @@
       <div class="panel-close">CLOSE</div>
     </div>
     <div class="row clearfix">
-      <header class="header col-md-12 col-xs-10 column">
+      <header class="header col-md-12 col-xs-12 column">
          <div class="row clearfix">
            <div class="col-md-8 col-xs-8 column">
             <a href="#">
