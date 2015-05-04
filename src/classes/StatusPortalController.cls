@@ -69,27 +69,33 @@ public with sharing class StatusPortalController {
     @RemoteAction
     public static String uploadAttachment(String docReqId, String attachmentBody, String attachmentName, String attachmentId) {
         if (docReqId != null) {
-            Documentation_Request__c docReq = [SELECT Id, Name FROM Documentation_Request__c WHERE Id=:docReqId];
-            if (docReq != null) {
-                if (attachmentBody != null) {
-                    Attachment att = getAttachment(attachmentId);
-                    String newBody = '';
-                    if (att.Body != null) {
-                        newBody = EncodingUtil.base64Encode(att.Body);
+            try {
+                Documentation_Request__c docReq = [SELECT Id, Name FROM Documentation_Request__c WHERE Id=:docReqId];
+                if (docReq != null) {
+                    if (attachmentBody != null) {
+                        Attachment att = getAttachment(attachmentId);
+                        transient String newBody = '';
+                        //String newBody = '';
+                        if (att.Body != null) {
+                            newBody = EncodingUtil.base64Encode(att.Body);
+                        }
+                        newBody += attachmentBody;
+                        att.Body = EncodingUtil.base64Decode(newBody);
+                        if (attachmentId == null) {
+                            att.Name = attachmentName;
+                            att.parentId = docReq.Id;
+                        }
+                        if (Attachment.SObjectType.getDescribe().isUpdateable() && Attachment.SObjectType.getDescribe().isCreateable()) {upsert att;}
+                        return att.Id;
+                    } else {
+                        return 'Attachment Body was null';
                     }
-                    newBody += attachmentBody;
-                    att.Body = EncodingUtil.base64Decode(newBody);
-                    if (attachmentId == null) {
-                        att.Name = attachmentName;
-                        att.parentId = docReq.Id;
-                    }
-                    if (Attachment.SObjectType.getDescribe().isUpdateable() && Attachment.SObjectType.getDescribe().isCreateable()) {upsert att;}
-                    return att.Id;
                 } else {
-                    return 'Attachment Body was null';
+                    return 'Document Request record could not be found';
                 }
-            } else {
-                return 'Document Request record could not be found';
+            } catch(Exception e) {
+                system.debug('The error is ' + e.getMessage());
+                return 'Error encountered: ' + e.getMessage();
             }
         } else {
             return 'Document Request Id was null';
